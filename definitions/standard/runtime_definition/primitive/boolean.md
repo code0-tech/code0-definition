@@ -266,13 +266,72 @@ Will convert the string to a boolean.
 
 "true" --> true
 
+## negate
+Will negate the boolean value.
+
+```json
+{
+  "runtime_name": "std::boolean::negate",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "data_type_identifier": "BOOLEAN"
+      },
+      "runtime_name": "value",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The boolean value to negate."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Negates a boolean value."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "data_type_identifier": "BOOLEAN"
+  },
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Negate"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Negates a boolean value."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Negates a boolean value."
+    }
+  ],
+  "deprecation_message": [],
+  "error_type_identifiers": [],
+  "generic_keys": [],
+  "generic_mappers": []
+}
+```
 
 ## isEqual
 Will compare one boolean to another.
 
 ```json
 {
-  "runtime_name": "std::boolean::isEqual",
+  "runtime_name": "std::boolean::is_equal",
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
