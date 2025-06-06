@@ -16,10 +16,7 @@
     {
       "item_of_collection": {
         "items": [
-            "ASCII",
-            "UTF-8",
-            "UTF-16",
-            "UTF-32"
+            "BASE64",
           ]
         }
     }

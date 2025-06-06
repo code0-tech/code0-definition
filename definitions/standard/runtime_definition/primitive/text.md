@@ -2332,6 +2332,94 @@ Encodes the text using a specified encoding.
 
 "hello", "base64" --> "aGVsbG8="
 
+## decode
+Decodes the text using a specified encoding.
+
+```json
+{
+  "runtime_name": "std::text::decode",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "data_type_identifier": "TEXT"
+      },
+      "runtime_name": "value",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to decode."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The text string to decode."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "data_type_identifier": "TEXT_ENCODING"
+      },
+      "runtime_name": "encoding",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Encoding Type"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The decoding scheme to apply (e.g. Base64)."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The decoding scheme to apply (e.g. Base64)."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "data_type_identifier": "TEXT"
+  },
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Decode Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Decodes the input text from the specified encoding format."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Decodes the input text from the specified encoding format."
+    }
+  ],
+  "generic_keys": [],
+  "generic_mappers": [],
+  "error_type_identifiers": [],
+  "deprecation_message": []
+}
+```
+
+**Example**:
+
+"aGVsbG8=", "base64" --> "hello"
+
 ## isEqual
 
 ```json
