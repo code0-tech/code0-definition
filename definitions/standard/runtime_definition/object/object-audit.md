@@ -17,3 +17,8 @@
 
 ## Renamed:
  - put -> set
+
+# 05.06.2025
+
+## Removed
+- remove
