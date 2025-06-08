@@ -76,7 +76,7 @@
   "deprecation_message": [],
   "generic_keys": [],
   "generic_mappers": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -117,10 +117,13 @@
   "generic_keys": ["T"],
   "generic_mappers": [
     {
-      "source": {
-        "data_type_identifier": "TEXT"
-      },
-      "target": "T"
+      "source": [
+        {
+          "data_type_identifier": "TEXT"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -142,7 +145,7 @@
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -200,7 +203,7 @@
   "deprecation_message": [],
   "generic_keys": [],
   "generic_mappers": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -307,13 +310,16 @@
   "generic_mappers": [
     {
       "parameter_id": "value",
-      "source": {
-        "generic_key": "I"
-      },
-      "target": "I"
+      "source": [
+        {
+          "generic_key": "I"
+        }
+      ],
+      "target": "I",
+      "generic_combinations": []
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```

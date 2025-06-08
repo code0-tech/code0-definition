@@ -78,7 +78,7 @@ Adds two numbers together.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -147,7 +147,7 @@ Multiplies two numbers together.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -235,7 +235,7 @@ Subtracts the second number from the first.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -323,7 +323,7 @@ Divides the first number by the second.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -411,7 +411,7 @@ Returns the remainder after division of the first number by the second.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -475,7 +475,7 @@ Converts a number to its absolute value.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -539,7 +539,7 @@ Checks if a number is positive.
   "return_type_identifier": {
     "data_type_identifier": "BOOLEAN"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -628,7 +628,7 @@ Checks if the first number is greater than the second.
   "return_type_identifier": {
     "data_type_identifier": "BOOLEAN"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -717,7 +717,7 @@ Checks if the first number is less than the second.
   "return_type_identifier": {
     "data_type_identifier": "BOOLEAN"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -782,7 +782,7 @@ Checks if a number is zero.
   "return_type_identifier": {
     "data_type_identifier": "BOOLEAN"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -847,7 +847,7 @@ Multiplies a number by itself.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -935,7 +935,7 @@ Raises a number to the specified power.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -974,7 +974,7 @@ Returns the mathematical constant Pi.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1013,7 +1013,7 @@ Returns the mathematical constant e (Euler's number).
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1052,7 +1052,7 @@ Returns the representation of infinity.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1140,7 +1140,7 @@ Rounds a number up to the nearest integer.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1231,7 +1231,7 @@ Rounds a number down to the nearest integer.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1323,7 +1323,7 @@ Rounds a number to the nearest integer.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1391,7 +1391,7 @@ Calculates the square root of a number.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1479,7 +1479,7 @@ Calculates the nth root of a number.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1567,7 +1567,7 @@ Calculates the logarithm of a number with the specified base.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1631,7 +1631,7 @@ Calculates the natural logarithm (base e) of a number.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1695,7 +1695,7 @@ Converts a string to a number.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1760,7 +1760,7 @@ Converts a number to a text.
   "return_type_identifier": {
     "data_type_identifier": "TEXT"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1850,7 +1850,7 @@ Returns the smaller of two numbers.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -1939,7 +1939,7 @@ Returns the larger of two numbers.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2004,7 +2004,7 @@ Returns the additive inverse of a number.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2111,7 +2111,7 @@ Generates a random number between the specified minimum and maximum values.
       "content": "Returns a randomly generated number within the given range, inclusive of both minimum and maximum."
     }
   ],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "deprecation_message": [],
   "generic_keys": [],
   "generic_mappers": []
@@ -2181,7 +2181,7 @@ Calculates the sine of an angle (in radians).
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2246,7 +2246,7 @@ Calculates the cosine of an angle (in radians).
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2311,7 +2311,7 @@ Calculates the tangent of an angle (in radians).
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2376,7 +2376,7 @@ Calculates the inverse sine (in radians).
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2441,7 +2441,7 @@ Calculates the inverse cosine (in radians).
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2506,7 +2506,7 @@ Calculates the inverse tangent (in radians).
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2571,7 +2571,7 @@ Calculates the hyperbolic sine of a number.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2636,7 +2636,7 @@ Calculates the hyperbolic cosine of a number.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2749,7 +2749,7 @@ Constrains a number to be within a specified range.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -2839,7 +2839,7 @@ Will compare one boolean to another.
   "return_type_identifier": {
     "data_type_identifier": "BOOLEAN"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",

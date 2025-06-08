@@ -79,14 +79,17 @@ Will return the value at the index of the array.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -170,27 +173,36 @@ Will merge to arrays together and return a new one.
   "generic_mappers": [
     {
       "parameter_id": "first",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "second",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -275,27 +287,33 @@ Will filter the array by the given node and return all values, the filter node r
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "predicate",
-      "source": {
+      "source": [{
         "generic_key": "R"
-      },
-      "target": "T"
+      }],
+      "target": "T",
+      "generic_combinations": []
+
     },
     {
-      "source": {
+      "source": [{
         "generic_key": "R"
-      },
-      "target": "T"
+      }],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -362,17 +380,23 @@ Will return the first item of an array that match the predicate.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "predicate",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -394,7 +418,7 @@ Will return the first item of an array that match the predicate.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -461,17 +485,21 @@ Will return the last item of an array that match the predicate.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "predicate",
-      "source": {
+      "source": [{
         "generic_key": "R"
-      },
-      "target": "T"
+      }],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -493,7 +521,7 @@ Will return the last item of an array that match the predicate.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -560,17 +588,23 @@ Will return the index of the first item that matches the predicate.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "predicate",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -592,7 +626,7 @@ Will return the index of the first item that matches the predicate.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -635,10 +669,13 @@ Will return the first item of the array.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -660,7 +697,7 @@ Will return the first item of the array.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -703,10 +740,13 @@ Will return the last item of the array.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -728,7 +768,7 @@ Will return the last item of the array.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -792,17 +832,23 @@ Will call a consumer on every item in the array. No return value.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "consumer",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -824,7 +870,7 @@ Will call a consumer on every item in the array. No return value.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -891,30 +937,42 @@ Will call a node on each value and expect a return value of the node, collect al
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "IN"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "IN"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "transform",
-      "source": {
-        "generic_key": "IN"
-      },
-      "target": "I"
+      "source": [
+        {
+          "generic_key": "IN"
+        }
+      ],
+      "target": "I",
+      "generic_combinations": []
     },
     {
       "parameter_id": "transform",
-      "source": {
-        "generic_key": "OUT"
-      },
-      "target": "R"
+      "source": [
+        {
+          "generic_key": "OUT"
+        }
+      ],
+      "target": "R",
+      "generic_combinations": []
     },
     {
-      "source": {
-        "generic_key": "OUT"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "OUT"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -936,7 +994,7 @@ Will call a node on each value and expect a return value of the node, collect al
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1003,10 +1061,13 @@ Will add the given item to the array and returns the new length of the array.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "T"
-      },
-      "target": "I"
+      "source": [
+        {
+          "generic_key": "T"
+        }
+      ],
+      "target": "I",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1028,7 +1089,7 @@ Will add the given item to the array and returns the new length of the array.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1073,10 +1134,13 @@ Will remove the last entry of the array and return the item.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1098,7 +1162,7 @@ Will remove the last entry of the array and return the item.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1167,10 +1231,13 @@ Will remove the given item of the array and return the array without it.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1192,7 +1259,7 @@ Will remove the given item of the array and return the array without it.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1235,10 +1302,13 @@ Will check if the array is empty or not. Will return true if its empty.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1260,7 +1330,7 @@ Will check if the array is empty or not. Will return true if its empty.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1303,10 +1373,13 @@ Will return the amount of items inside the array.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1328,7 +1401,7 @@ Will return the amount of items inside the array.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1392,13 +1465,16 @@ Will return the index of the given item.
   "return_type_identifier": {
     "data_type_identifier":  "NUMBER"
   },
-  "generic_mapper": [
+  "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1420,8 +1496,7 @@ Will return the index of the given item.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
-  "generic_mappers": []
+  "throws_error": false
 }
 ```
 
@@ -1464,16 +1539,22 @@ Will remove all duplicated items of the array.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1495,7 +1576,7 @@ Will remove all duplicated items of the array.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1562,17 +1643,23 @@ Will sort the array by the given COMPARATOR.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "comparator",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "I"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "I",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1594,7 +1681,7 @@ Will sort the array by the given COMPARATOR.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1660,17 +1747,23 @@ Will sort the array by the given COMPARATOR.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     },
     {
       "parameter_id": "comparator",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "I"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "I",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1692,7 +1785,7 @@ Will sort the array by the given COMPARATOR.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1734,10 +1827,13 @@ Will sort the array by the given COMPARATOR.
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "generic_key": "R"
-      },
-      "target": "T"
+      "source": [
+        {
+          "generic_key": "R"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1759,7 +1855,7 @@ Will sort the array by the given COMPARATOR.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1809,14 +1905,22 @@ Result:
     {
       "parameter_id": "filter",
       "target": "R",
-      "soruce": "T"
+      "source": [
+        {
+          "generic_key": "T"
+        }
+      ],
+      "generic_combinations": []
     },
     {
       "parameter_id": "array",
-      "source": {
-        "data_type_identifier": "ARRAY"
-      },
-      "target": "T"
+      "source": [
+        {
+          "data_type_identifier": "ARRAY"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "name": [
@@ -1838,7 +1942,7 @@ Result:
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1896,15 +2000,18 @@ Returns the smallest number in the array
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "data_type_identifier": "NUMBER"
-      },
-      "target": "T"
+      "source": [
+        {
+          "data_type_identifier": "NUMBER"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ]
 }
@@ -1967,14 +2074,17 @@ Returns the largest number in the array
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "data_type_identifier": "NUMBER"
-      },
-      "target": "T"
+      "source": [
+        {
+          "data_type_identifier": "NUMBER"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ],
   "generic_keys": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -2034,14 +2144,17 @@ Returns the sum of all the numbers in the array
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_mappers": [
     {
       "parameter_id": "array",
-      "source": {
-        "data_type_identifier": "NUMBER"
-      },
-      "target": "T"
+      "source": [
+        {
+          "data_type_identifier": "NUMBER"
+        }
+      ],
+      "target": "T",
+      "generic_combinations": []
     }
   ]
 }
@@ -2061,10 +2174,13 @@ Will join every item by a given text
         },
         "generic_mappers": [
           {
-            "source": {
-              "data_type_identifier": "TEXT"
-            },
-            "target": "T"
+             "source": [
+              {
+                "data_type_identifier": "TEXT"
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
           }
         ]
       },
@@ -2137,6 +2253,6 @@ Will join every item by a given text
   "deprecation_message": [],
   "generic_keys": [],
   "generic_mappers": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```

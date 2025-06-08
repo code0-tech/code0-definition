@@ -54,7 +54,7 @@ Will convert the boolean to a number.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -120,7 +120,7 @@ Will convert the boolean to a string.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -187,7 +187,7 @@ Will convert the number to a boolean.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -254,7 +254,7 @@ Will convert the string to a boolean.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -320,7 +320,7 @@ Will negate the boolean value.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -404,7 +404,7 @@ Will compare one boolean to another.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }

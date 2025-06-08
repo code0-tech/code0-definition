@@ -2,7 +2,7 @@
 ## HTTP Method - Type
 ```json
 {
-  "variant": "TYPE",
+  "variant": 2,
   "identifier": "HTTP_METHOD",
   "name": [
     {
@@ -17,7 +17,7 @@
       }
     }
   ],
-  "parent_type_identifier": null
+  "generic_keys": []
 }
 ```
 
@@ -40,6 +40,6 @@
       }
     }
   ],
-  "parent_type_identifier": null
+  "generic_keys": []
 }
 ```

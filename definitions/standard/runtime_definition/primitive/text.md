@@ -43,7 +43,7 @@ Converts the text to a number array.
       "target": "T"
     }
   ],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -106,7 +106,7 @@ Returns the size of the text in bytes.
   "return_type_identifier": {
     "data_type_identifier": "NUMBER"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -170,7 +170,7 @@ Capitalizes the first character of the text.
   "return_type_identifier": {
     "data_type_identifier": "TEXT"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -236,7 +236,7 @@ Converts all characters in the text to uppercase.
   "return_type_identifier": {
     "data_type_identifier": "TEXT"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -302,7 +302,7 @@ Converts all characters in the text to lowercase.
   "return_type_identifier": {
     "data_type_identifier": "TEXT"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -368,7 +368,7 @@ Swaps the case of all characters in the text.
   "return_type_identifier": {
     "data_type_identifier": "TEXT"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -462,7 +462,7 @@ Splits the text into an array of characters.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -529,7 +529,7 @@ Returns the character at the specified index.
   "return_type_identifier": {
     "data_type_identifier": "TEXT"
   },
-  "error_type_identifiers": [],
+  "throws_error": false,
   "name": [
     {
       "code": "en-US",
@@ -614,7 +614,7 @@ Removes whitespace from both ends of the text.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -704,7 +704,7 @@ Concatenates two strings together.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -794,7 +794,7 @@ Adds text to the beginning of the string.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -908,7 +908,7 @@ Inserts text at the specified position.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -974,7 +974,7 @@ Returns the length of the text.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1088,7 +1088,7 @@ Removes a portion of text from the specified start index to end index.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1202,7 +1202,7 @@ Replaces all occurrences of a substring with another string.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1316,7 +1316,7 @@ Replaces the first occurrence of a substring with another string.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1430,7 +1430,7 @@ Replaces the last occurrence of a substring with another string.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1496,7 +1496,7 @@ Converts the text to a hexadecimal representation.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1562,7 +1562,7 @@ Converts the text to an octal representation.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1652,7 +1652,7 @@ Returns the index of the first occurrence of a substring, or -1 if not found.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -1743,7 +1743,7 @@ Checks if the text contains a specified substring.
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_mappers": []
 }
 ```
@@ -1841,7 +1841,7 @@ Splits the text into an array of strings based on a delimiter.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1907,7 +1907,7 @@ Reverses the text.
   "deprecation_message": [],
   "generic_keys": [],
   "generic_mappers": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -1995,7 +1995,7 @@ Checks if the text starts with a specified prefix.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -2085,7 +2085,7 @@ Checks if the text ends with a specified suffix.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "generic_keys": [],
   "generic_mappers": []
 }
@@ -2160,7 +2160,7 @@ Converts each character to its ASCII code as an array of numbers.
     }
   ],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -2234,7 +2234,7 @@ Converts an array of ASCII codes to a text string.
   ],
   "generic_keys": [],
   "deprecation_message": [],
-  "error_type_identifiers": []
+  "throws_error": false
 }
 ```
 
@@ -2323,7 +2323,7 @@ Encodes the text using a specified encoding.
   ],
   "generic_keys": [],
   "generic_mappers": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "deprecation_message": []
 }
 ```
@@ -2411,7 +2411,7 @@ Decodes the text using a specified encoding.
   ],
   "generic_keys": [],
   "generic_mappers": [],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "deprecation_message": []
 }
 ```
@@ -2496,7 +2496,7 @@ Decodes the text using a specified encoding.
       "content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
     }
   ],
-  "error_type_identifiers": [],
+  "throws_error": false,
   "deprecation_message": [],
   "generic_keys": [],
   "generic_mappers": []

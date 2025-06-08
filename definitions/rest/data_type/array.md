@@ -1,6 +1,6 @@
 ```json
 {
-  "variant": "ARRAY",
+  "variant": 5,
   "identifier": "HTTP_HEADER_MAP",
   "name": [
     {
@@ -15,6 +15,7 @@
       }
     }
   ],
-  "parent_type_identifier": "ARRAY"
+  "parent_type_identifier": "ARRAY",
+  "generic_keys": []
 }
 ```

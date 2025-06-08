@@ -1,6 +1,6 @@
 ```json
 {
-  "variant": "OBJECT",
+  "variant": 3,
   "identifier": "HTTP_HEADER_ENTRY",
   "name": [
     {
@@ -22,18 +22,19 @@
       }
     }
   ],
-  "parent_type_identifier": "OBJECT"
+  "parent_type_identifier": "OBJECT",
+  "generic_keys": []
 }
 ```
 
 ```json
 {
-  "variant": "OBJECT",
+  "variant": 3,
   "identifier": "HTTP_REQUEST_OBJECT",
   "name": [
     {
       "code": "en-US",
-      "content": "HTTP Request",
+      "content": "HTTP Request"
     }
   ],
   "rules": [
@@ -62,13 +63,14 @@
       }
     }
   ],
-  "parent_type_identifier": "OBJECT"
+  "parent_type_identifier": "OBJECT",
+  "generic_keys": []
 }
 ```
 
 ```json
 {
-  "variant": "OBJECT",
+  "variant": 3,
   "identifier": "HTTP_RESPONSE_OBJECT",
   "name": [
     {
@@ -90,6 +92,7 @@
       }
     }
   ],
-  "parent_type_identifier": "OBJECT"
+  "parent_type_identifier": "OBJECT",
+  "generic_keys": []
 }
 ```

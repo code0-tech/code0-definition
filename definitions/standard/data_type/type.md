@@ -16,7 +16,7 @@
     {
       "item_of_collection": {
         "items": [
-            "BASE64",
+            {"kind":{"StringValue":"BASE64"}}
           ]
         }
     }
