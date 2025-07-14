@@ -12,10 +12,12 @@
     {
       "contains_type": {
         "type": "HTTP_HEADER_ENTRY"
+      },
+      "parent_type": {
+        "data_type_identifier": "ARRAY"
       }
     }
   ],
-  "parent_type_identifier": "ARRAY",
   "generic_keys": []
 }
 ```
