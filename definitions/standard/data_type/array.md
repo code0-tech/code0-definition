@@ -20,7 +20,6 @@
       }
     }
   ],
-  "generic_keys": ["T"],
-  "parent_type_identifier": null
+  "generic_keys": ["T"]
 }
 ```
