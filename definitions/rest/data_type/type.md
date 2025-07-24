@@ -25,7 +25,7 @@
 
 ```json
 {
-  "variant": "TYPE",
+  "variant": 2,
   "identifier": "HTTP_URL",
   "name": [
     {

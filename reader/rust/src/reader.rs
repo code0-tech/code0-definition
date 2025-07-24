@@ -1,14 +1,25 @@
+use serde::Serialize;
 use std::{
     fs::{self, DirEntry},
     io::Error,
     path::Path,
 };
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Serialize, Debug, Clone, Copy)]
 pub enum MetaType {
     FlowType,
     DataType,
     RuntimeFunction,
+}
+
+impl std::fmt::Display for MetaType {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            MetaType::FlowType => write!(f, "FlowType"),
+            MetaType::DataType => write!(f, "DataType"),
+            MetaType::RuntimeFunction => write!(f, "RuntimeFunction"),
+        }
+    }
 }
 
 #[derive(Debug)]
