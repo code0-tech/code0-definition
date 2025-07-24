@@ -1,9 +1,14 @@
-[package]
-name = "code0-definition"
-version = "0.1.0"
+[workspace]
+members = ["cli", "reader/rust"]
+
+[workspace.package]
+version = "0.0.1"
 edition = "2024"
 
-[build-dependencies]
+[workspace.dependencies]
 serde = "1.0.219"
 serde_json = "1.0.140"
-tucana = "0.0.31"
+tucana = "0.0.32"
+
+[workspace.dependencies.reader]
+path = "../code0-definition/reader/rust"
