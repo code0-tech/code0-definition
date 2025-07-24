@@ -9,6 +9,10 @@ edition = "2024"
 serde = "1.0.219"
 serde_json = "1.0.140"
 tucana = "0.0.32"
+clap = { version = "4.5.41" }
+colored = "2.0"
+tabled = "0.15"
+notify = "6.0"
 
 [workspace.dependencies.reader]
 path = "../code0-definition/reader/rust"

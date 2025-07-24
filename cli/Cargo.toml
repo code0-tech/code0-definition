@@ -4,5 +4,9 @@ version.workspace = true
 edition.workspace = true
 
 [dependencies]
-clap = { version = "4.5.41", features = ["derive"] }
+clap = { workspace = true, features = ["derive"] }
 reader = { workspace = true }
+tucana = { workspace = true }
+colored = { workspace = true }
+tabled = { workspace = true }
+notify = { workspace = true }
