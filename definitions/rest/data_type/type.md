@@ -7,7 +7,7 @@
   "name": [
     {
       "code": "en-US",
-      "content": "HTTP Method",
+      "content": "HTTP Method"
     }
   ],
   "rules": [
@@ -30,13 +30,13 @@
   "name": [
     {
       "code": "en-US",
-      "content": "HTTP Route",
+      "content": "HTTP Route"
     }
   ],
   "rules": [
     {
       "regex": {
-        "pattern": "/^\/\w+(?:[.:~-]\w+)*(?:\/\w+(?:[.:~-]\w+)*)*$/"
+        "pattern": "/^\/\\w+(?:[.:~-]\\w+)*(?:\/\\w+(?:[.:~-]\\w+)*)*$/"
       }
     }
   ],

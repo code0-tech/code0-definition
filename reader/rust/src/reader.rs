@@ -46,7 +46,7 @@ impl Meta {
         let content = match fs::read_to_string(file_path) {
             Ok(content) => content,
             Err(err) => {
-                println!("Error reading file: {}", err);
+                println!("Error reading file: {err}");
                 return Err(err);
             }
         };
@@ -72,8 +72,8 @@ impl Meta {
         }
 
         Ok(Meta {
-            name: name,
-            r#type: r#type,
+            name,
+            r#type,
             data: code_snippets,
         })
     }
@@ -109,7 +109,6 @@ impl Reader {
 
             // Reading the feature folder
             for type_path in fs::read_dir(feature_path_result.path()).unwrap() {
-
                 let type_path_result = match type_path {
                     Ok(path) => path,
                     Err(_) => continue,
@@ -127,7 +126,6 @@ impl Reader {
 
                 // Reading the type folder
                 for definition_path in fs::read_dir(type_path_result.path()).unwrap() {
-
                     let definition_path_result = match definition_path {
                         Ok(path) => path,
                         Err(_) => continue,
@@ -145,7 +143,7 @@ impl Reader {
                                 result.push(meta_result);
                             }
                             Err(err) => {
-                                println!("Error reading meta: {:?}", err);
+                                println!("Error reading meta: {err:?}");
                             }
                         }
                     } else {
@@ -168,7 +166,7 @@ impl Reader {
                                     result.push(meta_result);
                                 }
                                 Err(err) => {
-                                    println!("Error reading meta: {:?}", err);
+                                    println!("Error reading meta: {err:?}");
                                 }
                             }
                         }
@@ -182,9 +180,8 @@ impl Reader {
 }
 
 fn get_file_name(entry: &DirEntry) -> Option<String> {
-    if let Some(file_name) = entry.file_name().to_str() {
-        Some(file_name.to_string())
-    } else {
-        None
-    }
+    entry
+        .file_name()
+        .to_str()
+        .map(|file_name| file_name.to_string())
 }

@@ -1,10 +1,9 @@
-use clap::{Parser as ClapParser, Subcommand};
-use reader::parser::Parser;
-use notify::{Watcher, RecursiveMode, Event, EventKind, recommended_watcher};
-use std::sync::mpsc::channel;
-use colored::*;
 use crate::table::*;
-use serde_json;
+use clap::{Parser as ClapParser, Subcommand};
+use colored::*;
+use notify::{Event, EventKind, RecursiveMode, Watcher, recommended_watcher};
+use reader::parser::Parser;
+use std::sync::mpsc::channel;
 
 mod table;
 
@@ -71,28 +70,28 @@ fn main() {
         Commands::Feature { name, path } => {
             let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
 
-           let parser = match Parser::from_path(dir_path.as_str()) {
-               Some(reader) => reader,
-               None => {
-                   panic!("Error reading definitions");
-               }
-           };
+            let parser = match Parser::from_path(dir_path.as_str()) {
+                Some(reader) => reader,
+                None => {
+                    panic!("Error reading definitions");
+                }
+            };
 
-           if let Some(feature_name) = name {
-               let mut features_to_report = Vec::new();
-               for feature in &parser.features {
-                   if feature.name == feature_name {
-                       feature_table(&feature);
-                       features_to_report.push(feature.clone());
-                   }
-               }
-               summary_table(&features_to_report);
-           } else {
-               for feature in &parser.features {
-                   feature_table(&feature);
-               }
-               summary_table(&parser.features);
-           }
+            if let Some(feature_name) = name {
+                let mut features_to_report = Vec::new();
+                for feature in &parser.features {
+                    if feature.name == feature_name {
+                        feature_table(feature);
+                        features_to_report.push(feature.clone());
+                    }
+                }
+                summary_table(&features_to_report);
+            } else {
+                for feature in &parser.features {
+                    feature_table(feature);
+                }
+                summary_table(&parser.features);
+            }
         }
         Commands::Definition { name, path } => {
             let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
@@ -109,7 +108,12 @@ fn main() {
         Commands::Watch { path } => {
             let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
 
-            println!("{}", format!("Watching directory: {}", dir_path).bright_yellow().bold());
+            println!(
+                "{}",
+                format!("Watching directory: {dir_path}")
+                    .bright_yellow()
+                    .bold()
+            );
             println!("{}", "Press Ctrl+C to stop watching...".dimmed());
 
             {
@@ -126,30 +130,42 @@ fn main() {
             // Set up file watcher
             let (tx, rx) = channel();
             let mut watcher = recommended_watcher(tx).unwrap();
-            watcher.watch(std::path::Path::new(&dir_path), RecursiveMode::Recursive).unwrap();
+            watcher
+                .watch(std::path::Path::new(&dir_path), RecursiveMode::Recursive)
+                .unwrap();
 
             loop {
                 match rx.recv() {
-                    Ok(event) => {
-                        match event {
-                            Ok(Event { kind: EventKind::Create(_), .. }) |
-                            Ok(Event { kind: EventKind::Modify(_), .. }) |
-                            Ok(Event { kind: EventKind::Remove(_), .. }) => {
-                                println!("\n{}", "Change detected! Regenerating report...".bright_yellow());
+                    Ok(event) => match event {
+                        Ok(Event {
+                            kind: EventKind::Create(_),
+                            ..
+                        })
+                        | Ok(Event {
+                            kind: EventKind::Modify(_),
+                            ..
+                        })
+                        | Ok(Event {
+                            kind: EventKind::Remove(_),
+                            ..
+                        }) => {
+                            println!(
+                                "\n{}",
+                                "Change detected! Regenerating report...".bright_yellow()
+                            );
 
-                                let parser = match Parser::from_path(dir_path.as_str()) {
-                                    Some(reader) => reader,
-                                    None => {
-                                        panic!("Error reading definitions");
-                                    }
-                                };
+                            let parser = match Parser::from_path(dir_path.as_str()) {
+                                Some(reader) => reader,
+                                None => {
+                                    panic!("Error reading definitions");
+                                }
+                            };
 
-                                error_table(&parser.features);
-                            }
-                            _ => {}
+                            error_table(&parser.features);
                         }
-                    }
-                    Err(e) => println!("Watch error: {:?}", e),
+                        _ => {}
+                    },
+                    Err(e) => println!("Watch error: {e:?}"),
                 }
             }
         }
@@ -159,7 +175,12 @@ fn main() {
 fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     let mut found_any = false;
     let mut total_matches = 0;
-    println!("{}", format!("Searching for definitions matching: '{}'", search_name).bright_yellow().bold());
+    println!(
+        "{}",
+        format!("Searching for definitions matching: '{search_name}'")
+            .bright_yellow()
+            .bold()
+    );
     println!("{}", "─".repeat(60).dimmed());
 
     for feature in &parser.features {
@@ -217,7 +238,11 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!("{} {}", format!("{}:", index).bright_blue(), line.bright_green());
+                            println!(
+                                "{} {}",
+                                format!("{index}:").bright_blue(),
+                                line.bright_green()
+                            );
                         }
                     }
                     Err(_) => println!("{}", "Error serializing RuntimeFunction".red()),
@@ -227,9 +252,17 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     }
 
     if !found_any {
-        println!("\n{}", format!("No definitions found matching '{}'", search_name).red().bold());
+        println!(
+            "\n{}",
+            format!("No definitions found matching '{search_name}'")
+                .red()
+                .bold()
+        );
     } else {
         println!("\n{}", "─".repeat(60).dimmed());
-        println!("{}", format!("Found {} matching definition(s)", total_matches).bright_yellow());
+        println!(
+            "{}",
+            format!("Found {total_matches} matching definition(s)").bright_yellow()
+        );
     }
 }

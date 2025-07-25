@@ -36,12 +36,8 @@ impl Feature {
 }
 
 impl Parser {
-
     pub fn from_path(path: &str) -> Option<Self> {
-        let reader = match Reader::from_path(path) {
-            Some(reader) => reader,
-            None => return None,
-        };
+        let reader = Reader::from_path(path)?;
 
         Some(Self::from_reader(reader))
     }
@@ -71,16 +67,16 @@ impl Parser {
         };
 
         // Look for the field pattern: "field_name": "value" or "field_name":"value"
-        if let Some(start) = definition.find(&format!("\"{}\"", field_name)) {
+        if let Some(start) = definition.find(&format!("\"{field_name}\"")) {
             // Find the colon after the field name
             if let Some(colon_pos) = definition[start..].find(':') {
                 let after_colon = &definition[start + colon_pos + 1..];
 
                 // Skip whitespace and find the opening quote
                 let trimmed = after_colon.trim_start();
-                if trimmed.starts_with('"') {
+                if let Some(stripped) = trimmed.strip_prefix('"') {
                     // Find the closing quote
-                    if let Some(end_quote) = trimmed[1..].find('"') {
+                    if let Some(end_quote) = stripped.find('"') {
                         return trimmed[1..end_quote + 1].to_string();
                     }
                 }
@@ -100,8 +96,8 @@ impl Parser {
                         Err(err) => feature.errors.push(DefinitionError {
                             definition: Parser::extract_identifier(definition, MetaType::DataType),
                             definition_type: MetaType::DataType,
-                            error: err.to_string()
-                        })
+                            error: err.to_string(),
+                        }),
                     }
                 }
                 MetaType::FlowType => match serde_json::from_str::<FlowType>(definition) {
@@ -109,17 +105,20 @@ impl Parser {
                     Err(err) => feature.errors.push(DefinitionError {
                         definition: Parser::extract_identifier(definition, MetaType::FlowType),
                         definition_type: MetaType::FlowType,
-                        error: err.to_string()
-                    })
+                        error: err.to_string(),
+                    }),
                 },
                 MetaType::RuntimeFunction => {
                     match serde_json::from_str::<RuntimeFunctionDefinition>(definition) {
                         Ok(func) => feature.runtime_functions.push(func),
                         Err(err) => feature.errors.push(DefinitionError {
-                            definition: Parser::extract_identifier(definition, MetaType::RuntimeFunction),
+                            definition: Parser::extract_identifier(
+                                definition,
+                                MetaType::RuntimeFunction,
+                            ),
                             definition_type: MetaType::RuntimeFunction,
-                            error: err.to_string()
-                        })
+                            error: err.to_string(),
+                        }),
                     }
                 }
             }
