@@ -10,3 +10,4 @@ tucana = { workspace = true }
 colored = { workspace = true }
 tabled = { workspace = true }
 notify = { workspace = true }
+serde_json = { workspace = true }
