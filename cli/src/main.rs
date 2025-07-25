@@ -110,7 +110,7 @@ fn main() {
 
             println!(
                 "{}",
-                format!("Watching directory: {}", dir_path)
+                format!("Watching directory: {dir_path}")
                     .bright_yellow()
                     .bold()
             );
@@ -165,7 +165,7 @@ fn main() {
                         }
                         _ => {}
                     },
-                    Err(e) => println!("Watch error: {:?}", e),
+                    Err(e) => println!("Watch error: {e:?}"),
                 }
             }
         }
@@ -177,7 +177,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     let mut total_matches = 0;
     println!(
         "{}",
-        format!("Searching for definitions matching: '{}'", search_name)
+        format!("Searching for definitions matching: '{search_name}'")
             .bright_yellow()
             .bold()
     );
@@ -240,7 +240,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                             index += 1;
                             println!(
                                 "{} {}",
-                                format!("{}:", index).bright_blue(),
+                                format!("{index}:").bright_blue(),
                                 line.bright_green()
                             );
                         }
@@ -254,7 +254,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     if !found_any {
         println!(
             "\n{}",
-            format!("No definitions found matching '{}'", search_name)
+            format!("No definitions found matching '{search_name}'")
                 .red()
                 .bold()
         );
@@ -262,7 +262,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
         println!("\n{}", "─".repeat(60).dimmed());
         println!(
             "{}",
-            format!("Found {} matching definition(s)", total_matches).bright_yellow()
+            format!("Found {total_matches} matching definition(s)").bright_yellow()
         );
     }
 }

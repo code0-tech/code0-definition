@@ -200,7 +200,7 @@ pub fn feature_table(feature: &Feature) {
                     },
                 )| ErrorRow {
                     index: i + 1,
-                    definition_type: format!("{}", definition_type),
+                    definition_type: format!("{definition_type}"),
                     definition: definition.clone(),
                     error: error.clone(),
                 },
@@ -355,8 +355,7 @@ pub fn summary_table(features: &[Feature]) {
         println!(
             "{}",
             format!(
-                "PROCESS SUCCESSFUL! All {} feature(s) processed without errors.",
-                total_features
+                "PROCESS SUCCESSFUL! All {total_features} feature(s) processed without errors.",
             )
             .bright_green()
             .bold()
@@ -365,8 +364,7 @@ pub fn summary_table(features: &[Feature]) {
         println!(
             "{}",
             format!(
-                "PROCESS FAILED! {} error(s) found across {} feature(s).",
-                total_errors, total_features
+                "PROCESS FAILED! {total_errors} error(s) found across {total_features} feature(s)."
             )
             .bright_red()
             .bold()
