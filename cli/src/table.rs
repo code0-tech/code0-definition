@@ -290,7 +290,7 @@ pub fn error_table(features: &Vec<Feature>) {
     }
 }
 
-pub fn summary_table(features: &Vec<Feature>) {
+pub fn summary_table(features: &[Feature]) {
     println!(
         "\n{}",
         "╔══════════════════════════════════════════════════════════════════════════════╗"

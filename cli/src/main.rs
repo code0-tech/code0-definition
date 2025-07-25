@@ -3,7 +3,6 @@ use clap::{Parser as ClapParser, Subcommand};
 use colored::*;
 use notify::{Event, EventKind, RecursiveMode, Watcher, recommended_watcher};
 use reader::parser::Parser;
-use serde_json;
 use std::sync::mpsc::channel;
 
 mod table;
@@ -82,14 +81,14 @@ fn main() {
                 let mut features_to_report = Vec::new();
                 for feature in &parser.features {
                     if feature.name == feature_name {
-                        feature_table(&feature);
+                        feature_table(feature);
                         features_to_report.push(feature.clone());
                     }
                 }
                 summary_table(&features_to_report);
             } else {
                 for feature in &parser.features {
-                    feature_table(&feature);
+                    feature_table(feature);
                 }
                 summary_table(&parser.features);
             }

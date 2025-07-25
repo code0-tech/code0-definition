@@ -72,8 +72,8 @@ impl Meta {
         }
 
         Ok(Meta {
-            name: name,
-            r#type: r#type,
+            name,
+            r#type,
             data: code_snippets,
         })
     }
@@ -180,9 +180,8 @@ impl Reader {
 }
 
 fn get_file_name(entry: &DirEntry) -> Option<String> {
-    if let Some(file_name) = entry.file_name().to_str() {
-        Some(file_name.to_string())
-    } else {
-        None
-    }
+    entry
+        .file_name()
+        .to_str()
+        .map(|file_name| file_name.to_string())
 }

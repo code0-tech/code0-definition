@@ -37,10 +37,7 @@ impl Feature {
 
 impl Parser {
     pub fn from_path(path: &str) -> Option<Self> {
-        let reader = match Reader::from_path(path) {
-            Some(reader) => reader,
-            None => return None,
-        };
+        let reader = Reader::from_path(path)?;
 
         Some(Self::from_reader(reader))
     }
@@ -77,9 +74,9 @@ impl Parser {
 
                 // Skip whitespace and find the opening quote
                 let trimmed = after_colon.trim_start();
-                if trimmed.starts_with('"') {
+                if let Some(stripped) = trimmed.strip_prefix('"') {
                     // Find the closing quote
-                    if let Some(end_quote) = trimmed[1..].find('"') {
+                    if let Some(end_quote) = stripped.find('"') {
                         return trimmed[1..end_quote + 1].to_string();
                     }
                 }
