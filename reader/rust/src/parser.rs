@@ -67,7 +67,7 @@ impl Parser {
         };
 
         // Look for the field pattern: "field_name": "value" or "field_name":"value"
-        if let Some(start) = definition.find(&format!("\"{}\"", field_name)) {
+        if let Some(start) = definition.find(&format!("\"{field_name}\"")) {
             // Find the colon after the field name
             if let Some(colon_pos) = definition[start..].find(':') {
                 let after_colon = &definition[start + colon_pos + 1..];

@@ -46,7 +46,7 @@ impl Meta {
         let content = match fs::read_to_string(file_path) {
             Ok(content) => content,
             Err(err) => {
-                println!("Error reading file: {}", err);
+                println!("Error reading file: {err}");
                 return Err(err);
             }
         };
@@ -143,7 +143,7 @@ impl Reader {
                                 result.push(meta_result);
                             }
                             Err(err) => {
-                                println!("Error reading meta: {:?}", err);
+                                println!("Error reading meta: {err:?}");
                             }
                         }
                     } else {
@@ -166,7 +166,7 @@ impl Reader {
                                     result.push(meta_result);
                                 }
                                 Err(err) => {
-                                    println!("Error reading meta: {:?}", err);
+                                    println!("Error reading meta: {err:?}");
                                 }
                             }
                         }
