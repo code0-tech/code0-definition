@@ -243,6 +243,7 @@ dependencies = [
  "colored",
  "notify",
  "reader",
+ "serde_json",
  "tabled",
  "tucana",
 ]
