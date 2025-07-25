@@ -1,13 +1,10 @@
 use clap::{Parser as ClapParser, Subcommand};
 use reader::parser::Parser;
-use reader::parser::DefinitionError;
-use reader::parser::Feature;
-use tucana::shared::{RuntimeFunctionDefinition, DefinitionDataType, FlowType};
 use notify::{Watcher, RecursiveMode, Event, EventKind, recommended_watcher};
 use std::sync::mpsc::channel;
-use std::time::Duration;
 use colored::*;
 use crate::table::*;
+use serde_json;
 
 mod table;
 
@@ -33,7 +30,7 @@ enum Commands {
     Feature {
         /// Optional name of the definition set.
         #[arg(short, long)]
-        featurename: Option<String>,
+        name: Option<String>,
         /// Optional path to root directory of all definitions.
         #[arg(short, long)]
         path: Option<String>,
@@ -60,10 +57,7 @@ fn main() {
 
     match cli.command {
         Commands::Report { path } => {
-            let dir_path = match path {
-                Some(p) => p,
-                None => "../definitions".to_string(),
-            };
+            let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
 
             let parser = match Parser::from_path(dir_path.as_str()) {
                 Some(reader) => reader,
@@ -74,11 +68,8 @@ fn main() {
             error_table(&parser.features);
             summary_table(&parser.features);
         }
-        Commands::Feature { featurename, path } => {
-            let dir_path = match path {
-                Some(p) => p,
-                None => "../definitions".to_string(),
-            };
+        Commands::Feature { name, path } => {
+            let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
 
            let parser = match Parser::from_path(dir_path.as_str()) {
                Some(reader) => reader,
@@ -87,10 +78,10 @@ fn main() {
                }
            };
 
-           if let Some(featurename) = featurename {
+           if let Some(feature_name) = name {
                let mut features_to_report = Vec::new();
                for feature in &parser.features {
-                   if feature.name == featurename {
+                   if feature.name == feature_name {
                        feature_table(&feature);
                        features_to_report.push(feature.clone());
                    }
@@ -104,19 +95,19 @@ fn main() {
            }
         }
         Commands::Definition { name, path } => {
-            println!("Handling definition with name: {}", name);
-            let dir_path = match path {
-                Some(p) => p,
-                None => "../definitions".to_string(),
+            let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
+
+            let parser = match Parser::from_path(dir_path.as_str()) {
+                Some(reader) => reader,
+                None => {
+                    panic!("Error reading definitions");
+                }
             };
 
-            todo!("Implement definition query and display command!");
+            search_and_display_definitions(&name, &parser);
         }
         Commands::Watch { path } => {
-            let dir_path = match path {
-                Some(p) => p,
-                None => "../definitions".to_string(),
-            };
+            let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
 
             println!("{}", format!("Watching directory: {}", dir_path).bright_yellow().bold());
             println!("{}", "Press Ctrl+C to stop watching...".dimmed());
@@ -162,5 +153,83 @@ fn main() {
                 }
             }
         }
+    }
+}
+
+fn search_and_display_definitions(search_name: &str, parser: &Parser) {
+    let mut found_any = false;
+    let mut total_matches = 0;
+    println!("{}", format!("Searching for definitions matching: '{}'", search_name).bright_yellow().bold());
+    println!("{}", "─".repeat(60).dimmed());
+
+    for feature in &parser.features {
+        // Search FlowTypes
+        for flow_type in &feature.flow_types {
+            if flow_type.identifier == search_name {
+                total_matches += 1;
+                if !found_any {
+                    found_any = true;
+                }
+
+                println!("\n{}", "FlowType".bright_cyan().bold());
+                match serde_json::to_string_pretty(flow_type) {
+                    Ok(json) => {
+                        for line in json.lines() {
+                            println!("{}", line.bright_green());
+                        }
+                    }
+                    Err(_) => println!("{}", "Error serializing FlowType".red()),
+                }
+            }
+        }
+
+        // Search DataTypes
+        for data_type in &feature.data_types {
+            if data_type.identifier == search_name {
+                total_matches += 1;
+                if !found_any {
+                    found_any = true;
+                }
+
+                println!("\n{}", "DataType".bright_cyan().bold());
+                match serde_json::to_string_pretty(data_type) {
+                    Ok(json) => {
+                        for line in json.lines() {
+                            println!("{}", line.bright_green());
+                        }
+                    }
+                    Err(_) => println!("{}", "Error serializing DataType".red()),
+                }
+            }
+        }
+
+        // Search RuntimeFunctions
+        for runtime_func in &feature.runtime_functions {
+            if runtime_func.runtime_name == search_name {
+                total_matches += 1;
+                if !found_any {
+                    found_any = true;
+                }
+
+                println!("\n{}", "RuntimeFunction".bright_cyan().bold());
+                match serde_json::to_string_pretty(runtime_func) {
+                    Ok(json) => {
+                        let mut index = 0;
+                        for line in json.lines() {
+                            index += 1;
+                            println!("{} {}", format!("{}:", index).bright_blue(), line.bright_green());
+                        }
+                    }
+                    Err(_) => println!("{}", "Error serializing RuntimeFunction".red()),
+                }
+            }
+        }
+    }
+
+    if !found_any {
+        println!("\n{}", format!("No definitions found matching '{}'", search_name).red().bold());
+    } else {
+        println!("\n{}", "─".repeat(60).dimmed());
+        println!("{}", format!("Found {} matching definition(s)", total_matches).bright_yellow());
     }
 }
