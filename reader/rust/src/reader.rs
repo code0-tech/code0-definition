@@ -109,7 +109,6 @@ impl Reader {
 
             // Reading the feature folder
             for type_path in fs::read_dir(feature_path_result.path()).unwrap() {
-
                 let type_path_result = match type_path {
                     Ok(path) => path,
                     Err(_) => continue,
@@ -127,7 +126,6 @@ impl Reader {
 
                 // Reading the type folder
                 for definition_path in fs::read_dir(type_path_result.path()).unwrap() {
-
                     let definition_path_result = match definition_path {
                         Ok(path) => path,
                         Err(_) => continue,

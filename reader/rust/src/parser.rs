@@ -36,7 +36,6 @@ impl Feature {
 }
 
 impl Parser {
-
     pub fn from_path(path: &str) -> Option<Self> {
         let reader = match Reader::from_path(path) {
             Some(reader) => reader,
@@ -100,8 +99,8 @@ impl Parser {
                         Err(err) => feature.errors.push(DefinitionError {
                             definition: Parser::extract_identifier(definition, MetaType::DataType),
                             definition_type: MetaType::DataType,
-                            error: err.to_string()
-                        })
+                            error: err.to_string(),
+                        }),
                     }
                 }
                 MetaType::FlowType => match serde_json::from_str::<FlowType>(definition) {
@@ -109,17 +108,20 @@ impl Parser {
                     Err(err) => feature.errors.push(DefinitionError {
                         definition: Parser::extract_identifier(definition, MetaType::FlowType),
                         definition_type: MetaType::FlowType,
-                        error: err.to_string()
-                    })
+                        error: err.to_string(),
+                    }),
                 },
                 MetaType::RuntimeFunction => {
                     match serde_json::from_str::<RuntimeFunctionDefinition>(definition) {
                         Ok(func) => feature.runtime_functions.push(func),
                         Err(err) => feature.errors.push(DefinitionError {
-                            definition: Parser::extract_identifier(definition, MetaType::RuntimeFunction),
+                            definition: Parser::extract_identifier(
+                                definition,
+                                MetaType::RuntimeFunction,
+                            ),
                             definition_type: MetaType::RuntimeFunction,
-                            error: err.to_string()
-                        })
+                            error: err.to_string(),
+                        }),
                     }
                 }
             }
