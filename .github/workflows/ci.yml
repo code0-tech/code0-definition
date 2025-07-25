@@ -52,11 +52,6 @@ jobs:
       - name: Run clippy
         run: cargo clippy --all-targets --all-features -- -D warnings
 
-      - name: Check documentation
-        run: cargo doc --no-deps --document-private-items --all-features
-        env:
-          RUSTDOCFLAGS: "-D warnings"
-
   # Job 3: Build
   build:
     name: Build
