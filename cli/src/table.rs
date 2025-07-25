@@ -386,6 +386,7 @@ pub fn summary_table(features: &[Feature]) {
                 "features"
             }
         );
+        panic!("Process failed due to errors");
     }
 
     println!("\n{}", "═".repeat(80).bright_cyan());
