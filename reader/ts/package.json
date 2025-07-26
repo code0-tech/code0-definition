@@ -1,0 +1,31 @@
+{
+  "name": "@code0-tech/definition-reader",
+  "version": "0.0.0",
+  "description": "Reader for Code0-Definitions",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@code0-tech/sagittarius-graphql-types": "^0.0.0-f91466f0f343596ad170e7e5c5316a70b072594d",
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code0-tech/code0-definitions.git"
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "index.js",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
