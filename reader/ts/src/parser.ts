@@ -3,9 +3,9 @@ import {DataType, FlowType, RuntimeFunctionDefinition} from "@code0-tech/sagitta
 
 export interface Feature {
     name: string;
-    data_types: DataType[];
-    flow_types: FlowType[];
-    runtime_functions: RuntimeFunctionDefinition[];
+    dataTypes: DataType[];
+    flowTypes: FlowType[];
+    runtimeFunctions: RuntimeFunctionDefinition[];
 }
 
 export const Definition = (rootPath: string): Feature[] => {
@@ -21,9 +21,9 @@ export const Definition = (rootPath: string): Feature[] => {
         } else {
             feature = {
                 name: m.name,
-                data_types: [],
-                flow_types: [],
-                runtime_functions: [],
+                dataTypes: [],
+                flowTypes: [],
+                runtimeFunctions: [],
             };
             appendMeta(feature, m);
             features.push(feature);
@@ -39,17 +39,17 @@ function appendMeta(feature: Feature, meta: Meta): void {
             switch (meta.type) {
                 case MetaType.DataType: {
                     const parsed = JSON.parse(definition) as DataType;
-                    feature.data_types.push(parsed);
+                    feature.dataTypes.push(parsed);
                     break;
                 }
                 case MetaType.FlowType: {
                     const parsed = JSON.parse(definition) as FlowType;
-                    feature.flow_types.push(parsed);
+                    feature.flowTypes.push(parsed);
                     break;
                 }
                 case MetaType.RuntimeFunction: {
                     const parsed = JSON.parse(definition) as RuntimeFunctionDefinition;
-                    feature.runtime_functions.push(parsed);
+                    feature.runtimeFunctions.push(parsed);
                     break;
                 }
             }
