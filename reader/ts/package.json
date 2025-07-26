@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Reader for Code0-Definitions",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,17 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-
-export enum MetaType {
-  FlowType = 'FlowType',
-  DataType = 'DataType',
-  RuntimeFunction = 'RuntimeFunction',
-}
-
-export interface Meta {
-  name: string;
-  type: MetaType;
-  data: string[];
-}
+import {Meta, MetaType} from "../index";
 
 export const Reader = (rootPath: string): Meta[] => {
     const result: Meta[] = [];

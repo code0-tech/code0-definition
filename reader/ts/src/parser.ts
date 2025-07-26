@@ -1,12 +1,6 @@
-import {Meta, MetaType, Reader} from './reader';
+import {Reader} from './reader';
 import {DataType, FlowType, RuntimeFunctionDefinition} from "@code0-tech/sagittarius-graphql-types";
-
-export interface Feature {
-    name: string;
-    dataTypes: DataType[];
-    flowTypes: FlowType[];
-    runtimeFunctions: RuntimeFunctionDefinition[];
-}
+import {Feature, Meta, MetaType} from "../index";
 
 export const Definition = (rootPath: string): Feature[] => {
     const meta = Reader(rootPath);
