@@ -1,6 +1,6 @@
 {
   "name": "@code0-tech/definition-reader",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Reader for Code0-Definitions",
   "main": "index.js",
   "types": "index.d.ts",
