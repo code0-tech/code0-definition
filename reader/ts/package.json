@@ -1,0 +1,16 @@
+{
+  "name": "code0-definition-reader",
+  "version": "0.0.1",
+  "description": "Reader for Code0-Definitions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@code0-tech/sagittarius-graphql-types": "^0.0.0-f91466f0f343596ad170e7e5c5316a70b072594d",
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  }
+}
