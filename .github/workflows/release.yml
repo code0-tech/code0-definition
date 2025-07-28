@@ -1,0 +1,43 @@
+name: Publish YML
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  publish-ts-reader:
+    if: startsWith(github.ref, 'refs/tags/pkg-') || startsWith(github.ref, 'refs/tags/all-')
+    defaults:
+      run:
+        working-directory: "./reader/ts"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm version from-git --git-tag-version=false
+      - run: npm ci
+      - run: npm run build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+  publish-defintions:
+    if: startsWith(github.ref, 'refs/tags/def-') || startsWith(github.ref, 'refs/tags/all-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: |
+            definitions
+          generate_release_notes: true
+          make_latest: true
