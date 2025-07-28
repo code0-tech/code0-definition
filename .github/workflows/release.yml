@@ -41,3 +41,5 @@ jobs:
             definitions
           generate_release_notes: true
           make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
