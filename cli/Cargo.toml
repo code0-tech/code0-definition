@@ -5,7 +5,7 @@ edition.workspace = true
 
 [dependencies]
 clap = { workspace = true, features = ["derive"] }
-reader = { workspace = true }
+code0-definition-reader = { workspace = true }
 tucana = { workspace = true }
 colored = { workspace = true }
 tabled = { workspace = true }

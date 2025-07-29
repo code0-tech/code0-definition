@@ -15,5 +15,5 @@ colored = "2.0"
 tabled = "0.15"
 notify = "6.0"
 
-[workspace.dependencies.reader]
+[workspace.dependencies.code0-definition-reader]
 path = "../code0-definition/reader/rust"

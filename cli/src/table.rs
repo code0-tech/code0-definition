@@ -1,6 +1,6 @@
+use code0_definition_reader::parser::DefinitionError;
+use code0_definition_reader::parser::Feature;
 use colored::*;
-use reader::parser::DefinitionError;
-use reader::parser::Feature;
 use tabled::{
     Table, Tabled,
     settings::{Modify, Style, Width, object::Columns},

@@ -240,11 +240,20 @@ name = "cli"
 version = "0.0.1"
 dependencies = [
  "clap",
+ "code0-definition-reader",
  "colored",
  "notify",
- "reader",
  "serde_json",
  "tabled",
+ "tucana",
+]
+
+[[package]]
+name = "code0-definition-reader"
+version = "0.0.0"
+dependencies = [
+ "serde",
+ "serde_json",
  "tucana",
 ]
 
@@ -916,15 +925,6 @@ name = "r-efi"
 version = "5.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f"
-
-[[package]]
-name = "reader"
-version = "0.1.0"
-dependencies = [
- "serde",
- "serde_json",
- "tucana",
-]
 
 [[package]]
 name = "redox_syscall"

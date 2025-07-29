@@ -1,8 +1,8 @@
 use crate::table::*;
 use clap::{Parser as ClapParser, Subcommand};
+use code0_definition_reader::parser::Parser;
 use colored::*;
 use notify::{Event, EventKind, RecursiveMode, Watcher, recommended_watcher};
-use reader::parser::Parser;
 use std::sync::mpsc::channel;
 
 mod table;
