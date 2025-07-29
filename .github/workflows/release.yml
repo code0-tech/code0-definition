@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish-ts-reader:
-    if: startsWith(github.ref, 'refs/tags/pkg-') || startsWith(github.ref, 'refs/tags/all-')
+    if: startsWith(github.ref, 'refs/tags/pkg-')
     defaults:
       run:
         working-directory: "./reader/ts"
@@ -25,11 +25,29 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
+  publish-rs-reader:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/pkg-')
+    defaults:
+      run:
+        working-directory: "./reader/rust"
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Set version
+        run: |
+          VERSION=$(echo "${{ github.ref_name }}" | sed 's/^pkg-//')
+          sed -i "s/version = \"0.0.0\"/version = \"$VERSION\"/" Cargo.toml
+      - name: Cargo Login
+        run: cargo login ${{secrets.CRATES_IO_PUBLISH}}
+      - name: Publish crate
+        run: cargo publish
+
   publish-defintions:
     permissions:
       contents: write
       packages: read
-    if: startsWith(github.ref, 'refs/tags/def-') || startsWith(github.ref, 'refs/tags/all-')
+    if: startsWith(github.ref, 'refs/tags/def-')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -38,7 +56,6 @@ jobs:
       - name: Archive definitions folder
         run: |
           zip -r definitions.zip definitions
-
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
