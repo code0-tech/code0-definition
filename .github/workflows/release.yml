@@ -35,13 +35,18 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Archive definitions folder
+        run: |
+          zip -r definitions.zip definitions
+
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
           files: |
-            definitions
+            definitions.zip
           generate_release_notes: true
           make_latest: true
         env:
