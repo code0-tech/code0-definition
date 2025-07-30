@@ -11,3 +11,9 @@ colored = { workspace = true }
 tabled = { workspace = true }
 notify = { workspace = true }
 serde_json = { workspace = true }
+reqwest = { workspace = true, features = ["json", "stream"] }
+serde = { workspace = true, features = ["derive"] }
+tokio = { workspace = true, features = ["rt", "rt-multi-thread", "macros"] }
+futures = { workspace = true }
+zip = { workspace = true }
+bytes = { workspace = true }
