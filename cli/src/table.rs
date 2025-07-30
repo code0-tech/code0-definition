@@ -1,10 +1,7 @@
 use code0_definition_reader::parser::DefinitionError;
 use code0_definition_reader::parser::Feature;
 use colored::*;
-use tabled::{
-    Table, Tabled,
-    settings::{Modify, Style, Width, object::Columns},
-};
+use tabled::{Table, Tabled, settings::Style};
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
 #[derive(Tabled)]
@@ -207,13 +204,7 @@ pub fn feature_table(feature: &Feature) {
             )
             .collect();
 
-        let table = Table::new(error_rows)
-            .with(Style::rounded())
-            .with(Modify::new(Columns::single(0)).with(Width::wrap(5))) // Index column
-            .with(Modify::new(Columns::single(1)).with(Width::wrap(15))) // Type column
-            .with(Modify::new(Columns::single(2)).with(Width::wrap(20))) // Definition column
-            .with(Modify::new(Columns::single(3)).with(Width::wrap(40))) // Error column
-            .to_string();
+        let table = Table::new(error_rows).with(Style::rounded()).to_string();
         println!("{}", table.bright_red());
     } else {
         println!("{}", "  No errors found!".bright_green());
@@ -275,13 +266,10 @@ pub fn error_table(features: &Vec<Feature>) {
 
         let table = Table::new(error_rows)
             .with(Style::rounded())
-            .with(Modify::new(Columns::single(0)).with(Width::wrap(5))) // Index column
-            .with(Modify::new(Columns::single(1)).with(Width::wrap(15))) // Feature column
-            .with(Modify::new(Columns::single(2)).with(Width::wrap(12))) // Type column
-            .with(Modify::new(Columns::single(3)).with(Width::wrap(18))) // Definition column
-            .with(Modify::new(Columns::single(4)).with(Width::wrap(35))) // Error column
-            .to_string();
-        println!("{}", table.bright_red());
+            .to_string()
+            .bright_red();
+
+        println!("{table}");
     } else {
         println!(
             "{}",
@@ -331,15 +319,7 @@ pub fn summary_table(features: &[Feature]) {
         .collect();
 
     if !summary_rows.is_empty() {
-        let table = Table::new(summary_rows)
-            .with(Style::rounded())
-            .with(Modify::new(Columns::single(0)).with(Width::wrap(20))) // Feature name
-            .with(Modify::new(Columns::single(1)).with(Width::wrap(12))) // Status
-            .with(Modify::new(Columns::single(2)).with(Width::wrap(8))) // Errors
-            .with(Modify::new(Columns::single(3)).with(Width::wrap(12))) // Flow Types
-            .with(Modify::new(Columns::single(4)).with(Width::wrap(12))) // Data Types
-            .with(Modify::new(Columns::single(5)).with(Width::wrap(18))) // Runtime Functions
-            .to_string();
+        let table = Table::new(summary_rows).with(Style::rounded()).to_string();
 
         println!("{}", table.bright_blue());
     }
