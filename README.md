@@ -1,4 +1,5 @@
 # Definitions
+This repository contains all definitions for Code0. These definitions will be used to create a Flow. It also contains a CLI tool for managing definitions and a reader for reading all definitions.
 
 ## Definition CLI
 
@@ -7,13 +8,28 @@
 
 ### Usage
 (Stay inside the root directory when running the command)
-### General Report
+
+#### Download
+Will download the latest Definitions from the Code0 Definition Repository.
+
+If no feature is specified, all features will be downloaded. If a feature is specified, only that feature will be kept & can be loaded by one of the following languages: TypeScript, Rust.
+
+```bash
+./cargo run download
+./cargo run download -f feature_1 feature_2 feature_3
+```
+
+#### General Report
+Will create a report of all errors in the definitions.
+
 ```bash
 ./cargo run report
 ./cargo run report -p /path/to/definitions
 ```
 
-### Feature Report
+#### Feature Report
+Will create a report of all errors in the definitions for a specific feature. Will also report on all specified functions, data types, and flow types.
+
 ```bash
 ./cargo run feature
 ./cargo run feature -p /path/to/definitions
@@ -21,13 +37,17 @@
 ./cargo run feature -f feature_name -p /path/to/definitions
 ```
 
-### Watch for Changes
+#### Watch for Changes
+Will run the report each time a definition file changes.
+
 ```bash
 ./cargo run watch
 ./cargo run watch -p /path/to/definitions
 ```
 
-### Definition
+#### Definition
+Will search for a specific definition.
+
 ```bash
 ./cargo run definition -n definition_name
 ./cargo run definition -n definition_name -p /path/to/definitions
@@ -53,3 +73,24 @@ for (const feature in features) {
 }
 ```
 
+## Rust Definition Package
+
+### Install Package
+```bash
+cargo add code0-definition-reader
+```
+
+### Usage
+
+```rs
+use code0_definition_reader::Definition;
+
+let features = Definition::new("./path/to/definitions");
+
+for feature in features {
+    let name = feature.name(); //name of the feature (e.g. rest)
+    let data_types = feature.data_types(); //dataTypes of this feature
+    let flow_types = feature.flow_types(); //flowTypes of this feature
+    let functions = feature.runtime_functions(); //runtimeFunctions of this feature
+}
+```
