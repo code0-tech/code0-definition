@@ -1,7 +1,12 @@
 [package]
-name = "cli"
-version.workspace = true
-edition.workspace = true
+name = "code0-cli"
+version = "0.0.0"
+edition = "2024"
+description = "The cli for managing the Code0-Definitions"
+repository = "https://github.com/code0-tech/code0-definitions"
+homepage = "https://code0.tech"
+license = "Apache-2.0"
+readme = "../README.md"
 
 [dependencies]
 clap = { workspace = true, features = ["derive"] }
