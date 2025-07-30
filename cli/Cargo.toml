@@ -10,7 +10,7 @@ readme = "../README.md"
 
 [dependencies]
 clap = { workspace = true, features = ["derive"] }
-code0-definition-reader = { workspace = true }
+code0-definition-reader = { version = "0.0.8" }
 tucana = { workspace = true }
 colored = { workspace = true }
 tabled = { workspace = true }
