@@ -37,8 +37,14 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                 println!("\n{}", "FlowType".bright_cyan().bold());
                 match serde_json::to_string_pretty(flow_type) {
                     Ok(json) => {
+                        let mut index = 0;
                         for line in json.lines() {
-                            println!("{}", line.bright_green());
+                            index += 1;
+                            println!(
+                                "{} {}",
+                                format!("{index}:").bright_blue(),
+                                line.bright_green()
+                            );
                         }
                     }
                     Err(_) => println!("{}", "Error serializing FlowType".red()),
@@ -57,8 +63,14 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                 println!("\n{}", "DataType".bright_cyan().bold());
                 match serde_json::to_string_pretty(data_type) {
                     Ok(json) => {
+                        let mut index = 0;
                         for line in json.lines() {
-                            println!("{}", line.bright_green());
+                            index += 1;
+                            println!(
+                                "{} {}",
+                                format!("{index}:").bright_blue(),
+                                line.bright_green()
+                            );
                         }
                     }
                     Err(_) => println!("{}", "Error serializing DataType".red()),
