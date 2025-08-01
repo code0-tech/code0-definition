@@ -19,7 +19,7 @@ struct Asset {
     size: u64,
 }
 
-pub async fn handle_download(features: Option<Vec<String>>) {
+pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>) {
     println!(
         "{}",
         "╔══════════════════════════════════════════════════════════════════════════════╗"
@@ -69,7 +69,7 @@ pub async fn handle_download(features: Option<Vec<String>>) {
 
     // Download the definitions
     println!("\n{} Starting download process...", "📥".bright_blue());
-    let bytes = match download_definitions_as_bytes().await {
+    let bytes = match download_definitions_as_bytes(tag).await {
         Some(bytes) => {
             println!(
                 "{} {}",
@@ -119,9 +119,19 @@ pub async fn handle_download(features: Option<Vec<String>>) {
     println!("{}", "═".repeat(80).bright_cyan());
 }
 
-async fn download_definitions_as_bytes() -> Option<bytes::Bytes> {
+async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Bytes> {
     let client = reqwest::Client::new();
-    let url = "https://api.github.com/repos/code0-tech/code0-definition/releases/latest";
+
+    let url = match tag {
+        Some(t) => {
+            println!("Selected the version: {}", t.bright_blue());
+            format!("https://api.github.com/repos/code0-tech/code0-definition/releases/tags/{t}")
+        }
+        None => {
+            println!("No version specified, using latest version");
+            String::from("https://api.github.com/repos/code0-tech/code0-definition/releases/latest")
+        }
+    };
 
     println!(
         "{} Fetching latest release information...",
@@ -171,7 +181,7 @@ async fn download_definitions_as_bytes() -> Option<bytes::Bytes> {
             println!(
                 "{} {}",
                 "✅".green(),
-                format!("Found latest release: {}", release.tag_name).green()
+                format!("Selected release: {}", release.tag_name).green()
             );
             release
         }
