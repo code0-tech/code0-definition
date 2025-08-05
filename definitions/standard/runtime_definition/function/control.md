@@ -8,7 +8,7 @@ Will return the given value.
     {
       "data_type_identifier": {
         "type": {
-          "GenericKey": "T"
+          "GenericKey": "R"
         }
       },
       "runtime_name": "value",
@@ -34,7 +34,7 @@ Will return the given value.
   ],
   "return_type_identifier": {
     "type": {
-      "GenericKey": "T"
+      "GenericKey": "R"
     }
   },
   "name": [
