@@ -13,7 +13,7 @@ jobs:
         working-directory: "./reader/ts"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
@@ -33,7 +33,7 @@ jobs:
         working-directory: "./reader/rust"
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set version
         run: |
           VERSION=$(echo "${{ github.ref_name }}" | sed 's/^pkg-//')
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Archive definitions folder
         run: |
@@ -77,7 +77,7 @@ jobs:
         working-directory: "./cli"
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set version
         run: |
           VERSION=$(echo "${{ github.ref_name }}" | sed 's/^cli-//')
