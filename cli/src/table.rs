@@ -281,18 +281,7 @@ pub fn error_table(features: &Vec<Feature>) {
 pub fn summary_table(features: &[Feature]) {
     println!(
         "\n{}",
-        "╔══════════════════════════════════════════════════════════════════════════════╗"
-            .bright_cyan()
-    );
-    println!(
-        "{} {} {}",
-        "║".bright_cyan(),
-        "CONCLUSION".bright_white().bold().on_blue(),
-        "║".bright_cyan()
-    );
-    println!(
-        "{}",
-        "╚══════════════════════════════════════════════════════════════════════════════╝"
+        "╔═══════════════════════════════ CONCLUSION ═══════════════════════════════╗"
             .bright_cyan()
     );
 
@@ -302,9 +291,9 @@ pub fn summary_table(features: &[Feature]) {
         .map(|feature| {
             let is_successful = feature.errors.is_empty();
             let status = if is_successful {
-                "✅ SUCCESS".to_string()
+                "SUCCESS".to_string()
             } else {
-                "❌ FAILED".to_string()
+                "FAILED".to_string()
             };
 
             FeatureSummaryRow {
@@ -329,13 +318,11 @@ pub fn summary_table(features: &[Feature]) {
     let total_features = features.len();
     let successful_features = features.iter().filter(|f| f.errors.is_empty()).count();
 
-    println!("\n{}", "OVERALL SUMMARY".bright_blue().bold());
-
     if total_errors == 0 {
         println!(
             "{}",
             format!(
-                "PROCESS SUCCESSFUL! All {total_features} feature(s) processed without errors.",
+                "[SUCCESSFUL]! All {total_features} feature(s) processed without errors.",
             )
             .bright_green()
             .bold()
@@ -344,7 +331,7 @@ pub fn summary_table(features: &[Feature]) {
         println!(
             "{}",
             format!(
-                "PROCESS FAILED! {total_errors} error(s) found across {total_features} feature(s)."
+                "[FAILED]! {total_errors} error(s) found across {total_features} feature(s)."
             )
             .bright_red()
             .bold()
