@@ -9,7 +9,9 @@ Adds two numbers together.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -33,7 +35,9 @@ Adds two numbers together.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -57,7 +61,9 @@ Adds two numbers together.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -79,8 +85,7 @@ Adds two numbers together.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -97,7 +102,9 @@ Multiplies two numbers together.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -121,7 +128,9 @@ Multiplies two numbers together.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -145,7 +154,9 @@ Multiplies two numbers together.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -167,8 +178,7 @@ Multiplies two numbers together.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -185,7 +195,9 @@ Subtracts the second number from the first.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -209,7 +221,9 @@ Subtracts the second number from the first.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -233,7 +247,9 @@ Subtracts the second number from the first.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -255,8 +271,7 @@ Subtracts the second number from the first.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -273,7 +288,9 @@ Divides the first number by the second.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -297,7 +314,9 @@ Divides the first number by the second.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -321,7 +340,9 @@ Divides the first number by the second.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -343,8 +364,7 @@ Divides the first number by the second.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -361,7 +381,9 @@ Returns the remainder after division of the first number by the second.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -385,7 +407,9 @@ Returns the remainder after division of the first number by the second.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -409,7 +433,9 @@ Returns the remainder after division of the first number by the second.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -431,8 +457,7 @@ Returns the remainder after division of the first number by the second.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -449,7 +474,9 @@ Converts a number to its absolute value.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -473,7 +500,9 @@ Converts a number to its absolute value.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -495,8 +524,7 @@ Converts a number to its absolute value.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -513,7 +541,9 @@ Checks if a number is positive.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -537,7 +567,9 @@ Checks if a number is positive.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "throws_error": false,
   "name": [
@@ -559,8 +591,7 @@ Checks if a number is positive.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -578,7 +609,9 @@ Checks if the first number is greater than the second.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -602,7 +635,9 @@ Checks if the first number is greater than the second.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -626,7 +661,9 @@ Checks if the first number is greater than the second.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "throws_error": false,
   "name": [
@@ -648,8 +685,7 @@ Checks if the first number is greater than the second.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -659,7 +695,7 @@ Checks if the first number is greater than the second.
 2 > 4 --> false
 
 ## isLess
-Checks if the first number is less than the second.
+Checks if the first number is lower than the second.
 
 ```json
 {
@@ -667,7 +703,9 @@ Checks if the first number is less than the second.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -691,7 +729,9 @@ Checks if the first number is less than the second.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -715,7 +755,9 @@ Checks if the first number is less than the second.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "throws_error": false,
   "name": [
@@ -737,8 +779,7 @@ Checks if the first number is less than the second.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -756,7 +797,9 @@ Checks if a number is zero.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -780,7 +823,9 @@ Checks if a number is zero.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "throws_error": false,
   "name": [
@@ -802,8 +847,7 @@ Checks if a number is zero.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -821,7 +865,9 @@ Multiplies a number by itself.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -845,7 +891,9 @@ Multiplies a number by itself.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -867,8 +915,7 @@ Multiplies a number by itself.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -885,7 +932,9 @@ Raises a number to the specified power.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "base",
       "name": [
@@ -909,7 +958,9 @@ Raises a number to the specified power.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "exponent",
       "name": [
@@ -933,7 +984,9 @@ Raises a number to the specified power.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -955,8 +1008,7 @@ Raises a number to the specified power.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -972,7 +1024,9 @@ Returns the mathematical constant Pi.
   "runtime_name": "std::number::pi",
   "runtime_parameter_definitions": [],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -994,8 +1048,7 @@ Returns the mathematical constant Pi.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1011,7 +1064,9 @@ Returns the mathematical constant e (Euler's number).
   "runtime_name": "std::number::euler",
   "runtime_parameter_definitions": [],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1033,8 +1088,7 @@ Returns the mathematical constant e (Euler's number).
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1050,7 +1104,9 @@ Returns the representation of infinity.
   "runtime_name": "std::number::infinity",
   "runtime_parameter_definitions": [],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1072,8 +1128,7 @@ Returns the representation of infinity.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1090,7 +1145,9 @@ Rounds a number up to the nearest integer.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1114,7 +1171,9 @@ Rounds a number up to the nearest integer.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "decimals",
       "name": [
@@ -1138,7 +1197,9 @@ Rounds a number up to the nearest integer.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1160,8 +1221,7 @@ Rounds a number up to the nearest integer.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1181,7 +1241,9 @@ Rounds a number down to the nearest integer.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1205,7 +1267,9 @@ Rounds a number down to the nearest integer.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "decimals",
       "name": [
@@ -1229,7 +1293,9 @@ Rounds a number down to the nearest integer.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1251,8 +1317,7 @@ Rounds a number down to the nearest integer.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1273,7 +1338,9 @@ Rounds a number to the nearest integer.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1297,7 +1364,9 @@ Rounds a number to the nearest integer.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "decimals",
       "name": [
@@ -1321,7 +1390,9 @@ Rounds a number to the nearest integer.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1343,8 +1414,7 @@ Rounds a number to the nearest integer.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1365,7 +1435,9 @@ Calculates the square root of a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1389,7 +1461,9 @@ Calculates the square root of a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1411,8 +1485,7 @@ Calculates the square root of a number.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1429,7 +1502,9 @@ Calculates the nth root of a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1453,7 +1528,9 @@ Calculates the nth root of a number.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "root_exponent",
       "name": [
@@ -1477,7 +1554,9 @@ Calculates the nth root of a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1499,8 +1578,7 @@ Calculates the nth root of a number.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1517,7 +1595,9 @@ Calculates the logarithm of a number with the specified base.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1541,7 +1621,9 @@ Calculates the logarithm of a number with the specified base.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "base",
       "name": [
@@ -1565,7 +1647,9 @@ Calculates the logarithm of a number with the specified base.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1587,8 +1671,7 @@ Calculates the logarithm of a number with the specified base.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1605,7 +1688,9 @@ Calculates the natural logarithm (base e) of a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1629,7 +1714,9 @@ Calculates the natural logarithm (base e) of a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1651,8 +1738,7 @@ Calculates the natural logarithm (base e) of a number.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1669,7 +1755,9 @@ Converts a string to a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "text",
       "name": [
@@ -1693,7 +1781,9 @@ Converts a string to a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1715,8 +1805,7 @@ Converts a string to a number.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1734,7 +1823,9 @@ Converts a number to a text.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "number",
       "name": [
@@ -1758,7 +1849,9 @@ Converts a number to a text.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1780,8 +1873,7 @@ Converts a number to a text.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1800,7 +1892,9 @@ Returns the smaller of two numbers.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -1824,7 +1918,9 @@ Returns the smaller of two numbers.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -1848,7 +1944,9 @@ Returns the smaller of two numbers.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1870,8 +1968,7 @@ Returns the smaller of two numbers.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1889,7 +1986,9 @@ Returns the larger of two numbers.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -1913,7 +2012,9 @@ Returns the larger of two numbers.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+       "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -1937,7 +2038,9 @@ Returns the larger of two numbers.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -1959,8 +2062,7 @@ Returns the larger of two numbers.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1978,7 +2080,9 @@ Returns the additive inverse of a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2002,7 +2106,9 @@ Returns the additive inverse of a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2024,8 +2130,7 @@ Returns the additive inverse of a number.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2043,7 +2148,9 @@ Generates a random number between the specified minimum and maximum values.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "min",
       "name": [
@@ -2067,7 +2174,9 @@ Generates a random number between the specified minimum and maximum values.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "max",
       "name": [
@@ -2091,7 +2200,9 @@ Generates a random number between the specified minimum and maximum values.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -2113,8 +2224,7 @@ Generates a random number between the specified minimum and maximum values.
   ],
   "throws_error": false,
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2131,7 +2241,9 @@ Calculates the sine of an angle (in radians).
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "min",
       "name": [
@@ -2155,7 +2267,9 @@ Calculates the sine of an angle (in radians).
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "max",
       "name": [
@@ -2179,7 +2293,9 @@ Calculates the sine of an angle (in radians).
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2201,8 +2317,7 @@ Calculates the sine of an angle (in radians).
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2220,7 +2335,9 @@ Calculates the cosine of an angle (in radians).
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "radians",
       "name": [
@@ -2244,7 +2361,9 @@ Calculates the cosine of an angle (in radians).
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2266,8 +2385,7 @@ Calculates the cosine of an angle (in radians).
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2285,7 +2403,9 @@ Calculates the tangent of an angle (in radians).
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "radians",
       "name": [
@@ -2309,7 +2429,9 @@ Calculates the tangent of an angle (in radians).
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2331,8 +2453,7 @@ Calculates the tangent of an angle (in radians).
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2350,7 +2471,9 @@ Calculates the inverse sine (in radians).
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2374,7 +2497,9 @@ Calculates the inverse sine (in radians).
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+     "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2396,8 +2521,7 @@ Calculates the inverse sine (in radians).
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2415,7 +2539,9 @@ Calculates the inverse cosine (in radians).
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2439,7 +2565,9 @@ Calculates the inverse cosine (in radians).
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2461,8 +2589,7 @@ Calculates the inverse cosine (in radians).
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2480,7 +2607,9 @@ Calculates the inverse tangent (in radians).
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2504,7 +2633,9 @@ Calculates the inverse tangent (in radians).
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2526,8 +2657,7 @@ Calculates the inverse tangent (in radians).
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2545,7 +2675,9 @@ Calculates the hyperbolic sine of a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2569,7 +2701,9 @@ Calculates the hyperbolic sine of a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2591,8 +2725,7 @@ Calculates the hyperbolic sine of a number.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2610,7 +2743,9 @@ Calculates the hyperbolic cosine of a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2634,7 +2769,9 @@ Calculates the hyperbolic cosine of a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2656,8 +2793,7 @@ Calculates the hyperbolic cosine of a number.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2675,7 +2811,9 @@ Constrains a number to be within a specified range.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2699,7 +2837,9 @@ Constrains a number to be within a specified range.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "min",
       "name": [
@@ -2723,7 +2863,9 @@ Constrains a number to be within a specified range.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "max",
       "name": [
@@ -2747,7 +2889,9 @@ Constrains a number to be within a specified range.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2769,8 +2913,7 @@ Constrains a number to be within a specified range.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2785,11 +2928,13 @@ Will compare one boolean to another.
 
 ```json
 {
-  "runtime_name": "std::number::isEqual",
+  "runtime_name": "std::number::is_equal",
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -2813,7 +2958,9 @@ Will compare one boolean to another.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -2837,7 +2984,9 @@ Will compare one boolean to another.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "throws_error": false,
   "name": [
@@ -2859,8 +3008,7 @@ Will compare one boolean to another.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 

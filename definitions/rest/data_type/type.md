@@ -12,8 +12,17 @@
   ],
   "rules": [
     {
-      "item_of_collection": {
-        "items": [ "GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"]
+      "config": {
+        "ItemOfCollection": {
+          "items": [
+            {"kind":{"StringValue":"GET"}},
+            {"kind":{"StringValue":"POST"}},
+            {"kind":{"StringValue":"PUT"}},
+            {"kind":{"StringValue":"DELETE"}},
+            {"kind":{"StringValue":"PATCH"}},
+            {"kind":{"StringValue":"HEAD"}}
+          ]
+        }
       }
     }
   ],
@@ -35,8 +44,10 @@
   ],
   "rules": [
     {
-      "regex": {
-        "pattern": "/^\/\\w+(?:[.:~-]\\w+)*(?:\/\\w+(?:[.:~-]\\w+)*)*$/"
+      "config": {
+        "Regex": {
+          "pattern": "/^\/\\w+(?:[.:~-]\\w+)*(?:\/\\w+(?:[.:~-]\\w+)*)*$/"
+        }
       }
     }
   ],

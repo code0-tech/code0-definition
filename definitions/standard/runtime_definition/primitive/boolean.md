@@ -9,7 +9,9 @@ Will convert the boolean to a number.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "BOOLEAN"
+        "type": {
+          "DataTypeIdentifier": "BOOLEAN"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -33,7 +35,9 @@ Will convert the boolean to a number.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -55,8 +59,7 @@ Will convert the boolean to a number.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -75,7 +78,9 @@ Will convert the boolean to a string.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "BOOLEAN"
+        "type": {
+          "DataTypeIdentifier": "BOOLEAN"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -99,7 +104,9 @@ Will convert the boolean to a string.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -121,8 +128,7 @@ Will convert the boolean to a string.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -142,7 +148,9 @@ Will convert the number to a boolean.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -166,7 +174,9 @@ Will convert the number to a boolean.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -188,8 +198,7 @@ Will convert the number to a boolean.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -209,7 +218,9 @@ Will convert the string to a boolean.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -233,7 +244,9 @@ Will convert the string to a boolean.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -255,8 +268,7 @@ Will convert the string to a boolean.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -275,7 +287,9 @@ Will negate the boolean value.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "BOOLEAN"
+        "type": {
+          "DataTypeIdentifier": "BOOLEAN"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -299,7 +313,9 @@ Will negate the boolean value.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -321,8 +337,7 @@ Will negate the boolean value.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -335,7 +350,9 @@ Will compare one boolean to another.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "BOOLEAN"
+        "type": {
+          "DataTypeIdentifier": "BOOLEAN"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -359,7 +376,9 @@ Will compare one boolean to another.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "BOOLEAN"
+        "type": {
+          "DataTypeIdentifier": "BOOLEAN"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -383,7 +402,9 @@ Will compare one boolean to another.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -405,8 +426,7 @@ Will compare one boolean to another.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
