@@ -3,6 +3,7 @@ use clap::{Parser as ClapParser, Subcommand};
 mod command;
 mod table;
 mod analyser;
+mod formatter;
 
 /// Top-level CLI for 'definition'
 #[derive(ClapParser)]

@@ -12,57 +12,10 @@ pub fn report_errors(path: Option<String>) {
         }
     };
 
-    let mut index = 0;
-    let collected_data_types = parser
-        .features
-        .iter()
-        .map(|f| f.data_types.clone())
-        .flatten()
-        .map(|d| {
-            index = index + 1;
-            return AnalysableDataType {
-                definition_data_type: d.clone(),
-                id: index
-            }
-         })
-        .collect::<Vec<_>>();
+   let analyser = Analyser::new(dir_path.as_str());
 
-    let collected_functions = parser
-        .features
-        .iter()
-        .map(|f| f.runtime_functions.clone())
-        .flatten()
-        .map(|d| {
-            index = index + 1;
-            return AnalysableFunction {
-                function: d.clone(),
-                id: index
-            }
-        })
-        .collect::<Vec<_>>();
-
-    let collected_flow_types = parser
-        .features
-        .iter()
-        .map(|f| f.flow_types.clone())
-        .flatten()
-        .map(|d| {
-            index = index + 1;
-            return AnalysableFlowType {
-                flow_type: d.clone(),
-                id: index
-            }
-        })
-        .collect::<Vec<_>>();
-
-    let analyser = Analyser {
-        data_types: collected_data_types.clone(),
-        functions: collected_functions,
-        flow_types: collected_flow_types,
-    };
-
-    for data_type in collected_data_types {
-        analyser.analyse_data_type(data_type);
+    for data_type in &analyser.data_types {
+        analyser.analyse_data_type(data_type.clone());
     }
 
     error_table(&parser.features);
