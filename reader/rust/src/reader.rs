@@ -22,16 +22,21 @@ impl std::fmt::Display for MetaType {
     }
 }
 
-#[derive(Debug)]
 pub struct Reader {
     pub meta: Vec<Meta>,
 }
 
-#[derive(Debug)]
+#[derive(Clone)]
+pub struct ParsableDefinition {
+    pub path: Option<String>,
+    pub starting_line: i32,
+    pub definition_string: String,
+}
+
 pub struct Meta {
     pub name: String,
     pub r#type: MetaType,
-    pub data: Vec<String>,
+    pub data: Vec<ParsableDefinition>,
 }
 
 impl Meta {
@@ -39,11 +44,19 @@ impl Meta {
     where
         P: AsRef<Path>,
     {
+
+        let mut current_line = 0;
+        let mut current_starting_line = 0;
         let mut inside_code = false;
         let mut current_block = vec![];
-        let mut code_snippets = vec![];
+        let mut code_snippets: Vec<ParsableDefinition> = vec![];
 
-        let content = match fs::read_to_string(file_path) {
+        let path = match file_path.as_ref().to_str() {
+            Some(str) => Some(str.to_string()),
+            None => None,
+        };
+
+        let content = match fs::read_to_string(&file_path) {
             Ok(content) => content,
             Err(err) => {
                 println!("Error reading file: {err}");
@@ -52,18 +65,26 @@ impl Meta {
         };
 
         for line in content.lines() {
+            current_line += 1;
             if line.contains("```") {
                 inside_code = !inside_code;
 
                 if !inside_code {
                     let code_snippet = current_block.join(" ");
-                    code_snippets.push(code_snippet);
+                    code_snippets.push(
+                        ParsableDefinition {
+                            path: path.clone(),
+                            starting_line:  current_starting_line,
+                            definition_string: code_snippet,
+                        }
+                    );
                     current_block.clear();
                 }
             }
 
             if inside_code {
                 if line.starts_with("```") {
+                    current_starting_line = current_line;
                     continue;
                 }
 
@@ -81,7 +102,7 @@ impl Meta {
 
 /// Reader
 ///
-/// Expecting the file system too look like:
+/// Expecting the file system to look like:
 /// - <path>
 ///   - <feature>
 ///     - <flow_types>

@@ -60,7 +60,7 @@ impl Parser {
         Parser { features }
     }
 
-    fn extract_identifier(definition: &str, meta_type: MetaType) -> String {
+    pub fn extract_identifier(definition: &str, meta_type: MetaType) -> String {
         let field_name = match meta_type {
             MetaType::DataType | MetaType::FlowType => "identifier",
             MetaType::RuntimeFunction => "runtime_name",
@@ -89,6 +89,7 @@ impl Parser {
 
     fn append_meta(feature: &mut Feature, meta: &crate::reader::Meta) {
         for definition in &meta.data {
+            let definition = definition.definition_string.as_str();
             match meta.r#type {
                 MetaType::DataType => {
                     match serde_json::from_str::<DefinitionDataType>(definition) {
