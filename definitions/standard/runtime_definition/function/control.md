@@ -60,3 +60,34 @@ Will return the given value.
   "throws_error": false
 }
 ```
+
+## break
+Will break the current loop.
+
+```json
+{
+  "runtime_name": "std::control::break",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Break"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Breaks the current loop."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Breaks the current loop."
+    }
+  ],
+  "runtime_parameter_definitions": [],
+  "generic_keys": [],
+  "deprecation_message": [],
+  "throws_error": false
+}
+```

@@ -7,7 +7,24 @@ Will return the value at the index of the array.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -76,18 +93,6 @@ Will return the value at the index of the array.
     }
   ],
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "deprecation_message": [],
   "throws_error": false
 }
@@ -101,7 +106,24 @@ Will merge to arrays together and return a new one.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -125,7 +147,24 @@ Will merge to arrays together and return a new one.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -149,7 +188,24 @@ Will merge to arrays together and return a new one.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
   },
   "name": [
     {
@@ -170,37 +226,6 @@ Will merge to arrays together and return a new one.
     }
   ],
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "first",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "second",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "deprecation_message": [],
   "throws_error": false
 }
@@ -215,7 +240,24 @@ Will filter the array by the given node and return all values, the filter node r
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -239,7 +281,24 @@ Will filter the array by the given node and return all values, the filter node r
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "PREDICATE"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "PREDICATE",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "predicate",
       "name": [
@@ -263,7 +322,24 @@ Will filter the array by the given node and return all values, the filter node r
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
   },
   "name": [
     {
@@ -284,34 +360,6 @@ Will filter the array by the given node and return all values, the filter node r
     }
   ],
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "predicate",
-      "source": [{
-        "generic_key": "R"
-      }],
-      "target": "T",
-      "generic_combinations": []
-
-    },
-    {
-      "source": [{
-        "generic_key": "R"
-      }],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "deprecation_message": [],
   "throws_error": false
 }
@@ -326,7 +374,24 @@ Will return the first item of an array that match the predicate.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -350,7 +415,24 @@ Will return the first item of an array that match the predicate.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "PREDICATE"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "PREDICATE",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "predicate",
       "name": [
@@ -375,30 +457,10 @@ Will return the first item of an array that match the predicate.
   ],
   "generic_keys": ["R"],
   "return_type_identifier": {
-    "generic_key": "R"
-  },
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "predicate",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
+    "type": {
+      "GenericKey": "R"
     }
-  ],
+  },
   "name": [
     {
       "code": "en-US",
@@ -423,7 +485,7 @@ Will return the first item of an array that match the predicate.
 ```
 
 ## findLast
-Will return the last item of an array that match the predicate.
+Will return the last item of an array that matches the predicate.
 
 ```json
 {
@@ -431,7 +493,24 @@ Will return the last item of an array that match the predicate.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -455,7 +534,24 @@ Will return the last item of an array that match the predicate.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "PREDICATE"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "PREDICATE",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "predicate",
       "name": [
@@ -480,28 +576,10 @@ Will return the last item of an array that match the predicate.
   ],
   "generic_keys": ["R"],
   "return_type_identifier": {
-    "generic_key": "R"
-  },
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "predicate",
-      "source": [{
-        "generic_key": "R"
-      }],
-      "target": "T",
-      "generic_combinations": []
+    "type": {
+      "GenericKey": "R"
     }
-  ],
+  },
   "name": [
     {
       "code": "en-US",
@@ -534,7 +612,24 @@ Will return the index of the first item that matches the predicate.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -558,7 +653,24 @@ Will return the index of the first item that matches the predicate.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "PREDICATE"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "PREDICATE",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "predicate",
       "name": [
@@ -583,30 +695,10 @@ Will return the index of the first item that matches the predicate.
   ],
   "generic_keys": ["R"],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
-  },
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "predicate",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
     }
-  ],
+  },
   "name": [
     {
       "code": "en-US",
@@ -639,7 +731,24 @@ Will return the first item of the array.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -663,21 +772,11 @@ Will return the first item of the array.
     }
   ],
   "return_type_identifier": {
-    "generic_key": "R"
+    "type": {
+      "GenericKey": "R"
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -710,7 +809,24 @@ Will return the last item of the array.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -734,21 +850,11 @@ Will return the last item of the array.
     }
   ],
   "return_type_identifier": {
-    "generic_key": "R"
+    "type": {
+      "GenericKey": "R"
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -781,7 +887,24 @@ Will call a consumer on every item in the array. No return value.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -805,7 +928,24 @@ Will call a consumer on every item in the array. No return value.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "CONSUMER"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "CONSUMER",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "consumer",
       "name": [
@@ -829,28 +969,6 @@ Will call a consumer on every item in the array. No return value.
     }
   ],
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "consumer",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -883,7 +1001,24 @@ Will call a node on each value and expect a return value of the node, collect al
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "IN"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -907,7 +1042,35 @@ Will call a node on each value and expect a return value of the node, collect al
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TRANSFORM"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "TRANSFORM",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "IN"
+                    }
+                  }
+                ],
+                "target": "I",
+                "generic_combinations": []
+              },
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "OUT"
+                    }
+                  }
+                ],
+                "target": "R",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "transform",
       "name": [
@@ -932,49 +1095,25 @@ Will call a node on each value and expect a return value of the node, collect al
   ],
   "generic_keys": ["IN", "OUT"],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
-  },
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "IN"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "transform",
-      "source": [
-        {
-          "generic_key": "IN"
-        }
-      ],
-      "target": "I",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "transform",
-      "source": [
-        {
-          "generic_key": "OUT"
-        }
-      ],
-      "target": "R",
-      "generic_combinations": []
-    },
-    {
-      "source": [
-        {
-          "generic_key": "OUT"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "OUT"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
     }
-  ],
+  },
   "name": [
     {
       "code": "en-US",
@@ -1007,7 +1146,24 @@ Will add the given item to the array and returns the new length of the array.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "I"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1031,7 +1187,9 @@ Will add the given item to the array and returns the new length of the array.
     },
     {
       "data_type_identifier": {
-        "generic_key": "I"
+        "type": {
+          "GenericKey": "I"
+        }
       },
       "runtime_name": "item",
       "name": [
@@ -1055,21 +1213,11 @@ Will add the given item to the array and returns the new length of the array.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "generic_keys": ["I"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "T"
-        }
-      ],
-      "target": "I",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1104,7 +1252,24 @@ Will remove the last entry of the array and return the item.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1128,21 +1293,11 @@ Will remove the last entry of the array and return the item.
     }
   ],
   "return_type_identifier": {
-    "generic_key": "R"
+    "type": {
+      "GenericKey": "R"
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1177,7 +1332,24 @@ Will remove the given item of the array and return the array without it.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1201,7 +1373,9 @@ Will remove the given item of the array and return the array without it.
     },
     {
       "data_type_identifier": {
-        "generic_key": "R"
+        "type": {
+          "GenericKey": "R"
+        }
       },
       "runtime_name": "item",
       "name": [
@@ -1226,20 +1400,25 @@ Will remove the given item of the array and return the array without it.
   ],
   "generic_keys": ["R"],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
-  },
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
     }
-  ],
+  },
   "name": [
     {
       "code": "en-US",
@@ -1272,7 +1451,24 @@ Will check if the array is empty or not. Will return true if its empty.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1296,21 +1492,11 @@ Will check if the array is empty or not. Will return true if its empty.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1343,7 +1529,24 @@ Will return the amount of items inside the array.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1367,21 +1570,11 @@ Will return the amount of items inside the array.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1414,7 +1607,24 @@ Will return the index of the given item.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1463,7 +1673,9 @@ Will return the index of the given item.
   ],
   "generic_keys": ["R"],
   "return_type_identifier": {
-    "data_type_identifier":  "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "generic_mappers": [
     {
@@ -1509,7 +1721,24 @@ Will remove all duplicated items of the array.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1533,30 +1762,26 @@ Will remove all duplicated items of the array.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
-  },
-  "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
     }
-  ],
+  },
+  "generic_keys": ["R"], 
   "name": [
     {
       "code": "en-US",
@@ -1589,7 +1814,24 @@ Will sort the array by the given COMPARATOR.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1613,8 +1855,24 @@ Will sort the array by the given COMPARATOR.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "COMPARATOR"
-      },
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "COMPARATOR",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "I",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }      },
       "runtime_name": "comparator",
       "name": [
         {
@@ -1637,31 +1895,26 @@ Will sort the array by the given COMPARATOR.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "comparator",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "I",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1693,7 +1946,24 @@ Will sort the array by the given COMPARATOR.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1717,7 +1987,24 @@ Will sort the array by the given COMPARATOR.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "COMPARATOR"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "COMPARATOR",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "I",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "comparator",
       "name": [
@@ -1744,28 +2031,6 @@ Will sort the array by the given COMPARATOR.
     "data_type_identifier": "ARRAY"
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "comparator",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "I",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1797,7 +2062,24 @@ Will sort the array by the given COMPARATOR.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1821,21 +2103,26 @@ Will sort the array by the given COMPARATOR.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "generic_key": "R"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1874,7 +2161,39 @@ Result:
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericType": {
+                        "data_type_identifier": "ARRAY",
+                        "generic_mappers": [
+                          {
+                            "source": [
+                              {
+                                "type": {
+                                  "GenericKey": "R"
+                                }
+                              }
+                            ],
+                            "target": "T",
+                            "generic_combinations": []
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1898,31 +2217,26 @@ Result:
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
   },
   "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "parameter_id": "filter",
-      "target": "R",
-      "source": [
-        {
-          "generic_key": "T"
-        }
-      ],
-      "generic_combinations": []
-    },
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "data_type_identifier": "ARRAY"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
   "name": [
     {
       "code": "en-US",
@@ -1955,7 +2269,24 @@ Returns the smallest number in the array
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -1979,7 +2310,9 @@ Returns the smallest number in the array
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -2001,19 +2334,7 @@ Returns the smallest number in the array
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "data_type_identifier": "NUMBER"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ]
+  "generic_keys": []
 }
 ```
 
@@ -2026,7 +2347,24 @@ Returns the largest number in the array
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -2050,7 +2388,9 @@ Returns the largest number in the array
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -2071,19 +2411,7 @@ Returns the largest number in the array
     }
   ],
   "deprecation_message": [],
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "data_type_identifier": "NUMBER"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ],
-  "generic_keys": [],
+  "generic_keys": ["R"],
   "throws_error": false
 }
 ```
@@ -2098,7 +2426,24 @@ Returns the sum of all the numbers in the array
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier":  "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "DataTypeIdentifier": "NUMBER"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -2122,7 +2467,9 @@ Returns the sum of all the numbers in the array
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -2144,19 +2491,7 @@ Returns the sum of all the numbers in the array
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "throws_error": false,
-  "generic_mappers": [
-    {
-      "parameter_id": "array",
-      "source": [
-        {
-          "data_type_identifier": "NUMBER"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
-    }
-  ]
+  "throws_error": false
 }
 ```
 
@@ -2169,20 +2504,24 @@ Will join every item by a given text
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": {
-          "data_type_identifier": "ARRAY"
-        },
-        "generic_mappers": [
-          {
-             "source": [
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
               {
-                "data_type_identifier": "TEXT"
+                "source": [
+                  {
+                    "type": {
+                      "DataTypeIdentifier": "TEXT"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
               }
-            ],
-            "target": "T",
-            "generic_combinations": []
+            ]
           }
-        ]
+        }
       },
       "runtime_name": "array",
       "name": [
@@ -2206,7 +2545,9 @@ Will join every item by a given text
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+       "type": {
+         "DataTypeIdentifier": "TEXT"
+       }
       },
       "runtime_name": "join_text",
       "name": [
@@ -2230,7 +2571,9 @@ Will join every item by a given text
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -2252,7 +2595,6 @@ Will join every item by a given text
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "generic_mappers": [],
   "throws_error": false
 }
 ```

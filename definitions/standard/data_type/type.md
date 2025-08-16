@@ -14,11 +14,13 @@
   ],
   "rules": [
     {
-      "item_of_collection": {
-        "items": [
+      "config": {
+        "ItemOfCollection": {
+          "items": [
             {"kind":{"StringValue":"BASE64"}}
           ]
         }
+      }
     }
   ],
   "generic_keys": []

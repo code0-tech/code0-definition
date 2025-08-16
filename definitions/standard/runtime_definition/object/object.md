@@ -5,7 +5,9 @@
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "OBJECT"
+        "type": {
+          "DataTypeIdentifier": "OBJECT"
+        }
       },
       "runtime_name": "object",
       "name": [
@@ -29,7 +31,9 @@
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "key",
       "name": [
@@ -53,7 +57,9 @@
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -75,7 +81,6 @@
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "generic_mappers": [],
   "throws_error": false
 }
 ```
@@ -88,7 +93,9 @@
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "OBJECT"
+        "type": {
+          "DataTypeIdentifier": "OBJECT"
+        }
       },
       "runtime_name": "object",
       "name": [
@@ -112,20 +119,26 @@
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
-  },
-  "generic_keys": ["T"],
-  "generic_mappers": [
-    {
-      "source": [
-        {
-          "data_type_identifier": "TEXT"
-        }
-      ],
-      "target": "T",
-      "generic_combinations": []
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "DataTypeIdentifier": "TEXT"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
     }
-  ],
+  },
+  "generic_keys": [],
   "name": [
     {
       "code": "en-US",
@@ -156,7 +169,9 @@
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "OBJECT"
+        "type": {
+          "DataTypeIdentifier": "OBJECT"
+        }
       },
       "runtime_name": "object",
       "name": [
@@ -180,7 +195,9 @@
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -202,7 +219,6 @@
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "generic_mappers": [],
   "throws_error": false
 }
 ```
@@ -214,7 +230,9 @@
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "OBJECT"
+        "type": {
+          "DataTypeIdentifier": "OBJECT"
+        }
       },
       "runtime_name": "object",
       "name": [
@@ -238,7 +256,9 @@
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "key",
       "name": [
@@ -262,7 +282,9 @@
     },
     {
       "data_type_identifier": {
-        "generic_key": "I"
+        "type": {
+          "GenericKey": "I"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -286,7 +308,9 @@
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "OBJECT"
+    "type": {
+      "DataTypeIdentifier": "OBJECT"
+    }
   },
   "name": [
     {
@@ -307,18 +331,6 @@
     }
   ],
   "generic_keys": ["I"],
-  "generic_mappers": [
-    {
-      "parameter_id": "value",
-      "source": [
-        {
-          "generic_key": "I"
-        }
-      ],
-      "target": "I",
-      "generic_combinations": []
-    }
-  ],
   "deprecation_message": [],
   "throws_error": false
 }

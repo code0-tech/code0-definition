@@ -13,9 +13,13 @@
   ],
   "rules": [
     {
-      "contains_type": {
-        "data_type_identifier": {
-          "generic_key": "T"
+      "config": {
+        "ContainsType": {
+          "data_type_identifier": {
+            "type": {
+              "GenericKey": "T"
+            }
+          }
         }
       }
     }

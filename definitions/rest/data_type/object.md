@@ -10,19 +10,41 @@
   ],
   "rules": [
     {
-      "contains_key": {
-        "key": "key",
-        "type": "TEXT"
+      "config": {
+        "ContainsKey": {
+          "key": "key",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "TEXT"
+            }
+          }
+        }
       }
     },
     {
-      "contains_key": {
-        "key": "value",
-        "type": "TEXT"
+      "config": {
+        "ContainsKey": {
+          "key": "value",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "TEXT"
+            }
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "ParentType": {
+          "parent_type": {
+            "type": {
+              "DataTypeIdentifier": "OBJECT"
+            }
+          }
+        }
       }
     }
   ],
-  "parent_type_identifier": "OBJECT",
   "generic_keys": []
 }
 ```
@@ -39,31 +61,65 @@
   ],
   "rules": [
     {
-      "contains_key": {
-        "key": "method",
-        "type": "HTTP_METHOD"
+      "config": {
+        "ContainsKey": {
+          "key": "method",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "HTTP_METHOD"
+            }
+          }
+        }
       }
     },
     {
-      "contains_key": {
-        "key": "url",
-        "type": "HTTP_URL"
+      "config": {
+        "ContainsKey": {
+          "key": "url",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "HTTP_URL"
+            }
+          }
+        }
+      }
+    }, 
+    {
+      "config": {
+        "ContainsKey": {
+          "key": "body",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "OBJECT"
+            }
+          }
+        }
       }
     },
     {
-      "contains_key": {
-        "key": "body",
-        "type": "OBJECT"
+      "config": {
+        "ContainsKey": {
+          "key": "headers",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "HTTP_HEADER_MAP"
+            }
+          }
+        }
       }
     },
     {
-      "contains_key": {
-        "key": "headers",
-        "type": "HTTP_HEADER_MAP"
+      "config": {
+        "ParentType": {
+          "parent_type": {
+            "type": {
+              "DataTypeIdentifier": "OBJECT"
+            }
+          }
+        }
       }
     }
   ],
-  "parent_type_identifier": "OBJECT",
   "generic_keys": []
 }
 ```
@@ -80,19 +136,41 @@
   ],
   "rules": [
     {
-      "contains_key": {
-        "key": "headers",
-        "type": "HTTP_HEADER_MAP"
+      "config": {
+        "ContainsKey": {
+          "key": "headers",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "HTTP_HEADER_MAP"
+            }
+          }
+        }
       }
     },
     {
-      "contains_key": {
-        "key": "body",
-        "type": "OBJECT"
+      "config": {
+        "ContainsKey": {
+         "key": "body",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "OBJECT"
+            }
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "ParentType": {
+          "parent_type": {
+            "type": {
+              "DataTypeIdentifier": "OBJECT"
+            }
+          }
+        }
       }
     }
   ],
-  "parent_type_identifier": "OBJECT",
   "generic_keys": []
 }
 ```

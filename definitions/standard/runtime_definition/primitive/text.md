@@ -9,7 +9,9 @@ Converts the text to a number array.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -33,16 +35,25 @@ Converts the text to a number array.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
-  },
-  "generic_mappers": [
-    {
-      "source": {
-        "data_type_identifier": "NUMBER"
-      },
-      "target": "T"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "DataTypeIdentifier": "NUMBER"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
     }
-  ],
+  },
   "throws_error": false,
   "name": [
     {
@@ -80,7 +91,9 @@ Returns the size of the text in bytes.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -104,7 +117,9 @@ Returns the size of the text in bytes.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "throws_error": false,
   "name": [
@@ -126,8 +141,7 @@ Returns the size of the text in bytes.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -144,7 +158,9 @@ Capitalizes the first character of the text.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -168,7 +184,9 @@ Capitalizes the first character of the text.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "throws_error": false,
   "name": [
@@ -190,8 +208,7 @@ Capitalizes the first character of the text.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -210,7 +227,9 @@ Converts all characters in the text to uppercase.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -234,7 +253,9 @@ Converts all characters in the text to uppercase.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "throws_error": false,
   "name": [
@@ -256,8 +277,7 @@ Converts all characters in the text to uppercase.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -276,7 +296,9 @@ Converts all characters in the text to lowercase.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -300,7 +322,9 @@ Converts all characters in the text to lowercase.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "throws_error": false,
   "name": [
@@ -322,8 +346,7 @@ Converts all characters in the text to lowercase.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -342,7 +365,9 @@ Swaps the case of all characters in the text.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -366,7 +391,9 @@ Swaps the case of all characters in the text.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "throws_error": false,
   "name": [
@@ -388,8 +415,7 @@ Swaps the case of all characters in the text.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -408,7 +434,9 @@ Splits the text into an array of characters.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -432,17 +460,26 @@ Splits the text into an array of characters.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
-  },
-  "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "source": {
-        "data_type_identifier": "TEXT"
-      },
-      "target": "R"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "DataTypeIdentifier": "TEXT"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
     }
-  ],
+  },
+  "generic_keys": [],
   "name": [
     {
       "code": "en-US",
@@ -479,7 +516,9 @@ Returns the character at the specified index.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -503,7 +542,9 @@ Returns the character at the specified index.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "index",
       "name": [
@@ -527,7 +568,9 @@ Returns the character at the specified index.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "throws_error": false,
   "name": [
@@ -549,8 +592,7 @@ Returns the character at the specified index.
     }
   ],
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -569,7 +611,9 @@ Removes whitespace from both ends of the text.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -593,7 +637,9 @@ Removes whitespace from both ends of the text.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -615,8 +661,7 @@ Removes whitespace from both ends of the text.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -635,7 +680,9 @@ Concatenates two strings together.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -659,7 +706,9 @@ Concatenates two strings together.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "suffix",
       "name": [
@@ -683,7 +732,9 @@ Concatenates two strings together.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -705,8 +756,7 @@ Concatenates two strings together.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -725,7 +775,9 @@ Adds text to the beginning of the string.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -749,7 +801,9 @@ Adds text to the beginning of the string.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "prefix",
       "name": [
@@ -773,7 +827,9 @@ Adds text to the beginning of the string.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -795,8 +851,7 @@ Adds text to the beginning of the string.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -815,7 +870,9 @@ Inserts text at the specified position.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -839,7 +896,9 @@ Inserts text at the specified position.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "position",
       "name": [
@@ -863,7 +922,9 @@ Inserts text at the specified position.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "text",
       "name": [
@@ -887,7 +948,9 @@ Inserts text at the specified position.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -909,8 +972,7 @@ Inserts text at the specified position.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -929,7 +991,9 @@ Returns the length of the text.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -953,7 +1017,9 @@ Returns the length of the text.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -975,8 +1041,7 @@ Returns the length of the text.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -995,7 +1060,9 @@ Removes a portion of text from the specified start index to end index.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1019,7 +1086,9 @@ Removes a portion of text from the specified start index to end index.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "start",
       "name": [
@@ -1043,7 +1112,9 @@ Removes a portion of text from the specified start index to end index.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "NUMBER"
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "end",
       "name": [
@@ -1067,7 +1138,9 @@ Removes a portion of text from the specified start index to end index.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -1089,8 +1162,7 @@ Removes a portion of text from the specified start index to end index.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1109,7 +1181,9 @@ Replaces all occurrences of a substring with another string.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1133,7 +1207,9 @@ Replaces all occurrences of a substring with another string.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "old",
       "name": [
@@ -1157,7 +1233,9 @@ Replaces all occurrences of a substring with another string.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "new",
       "name": [
@@ -1181,7 +1259,9 @@ Replaces all occurrences of a substring with another string.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -1203,8 +1283,7 @@ Replaces all occurrences of a substring with another string.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1223,7 +1302,9 @@ Replaces the first occurrence of a substring with another string.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1247,7 +1328,9 @@ Replaces the first occurrence of a substring with another string.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "old",
       "name": [
@@ -1271,7 +1354,9 @@ Replaces the first occurrence of a substring with another string.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "new",
       "name": [
@@ -1295,7 +1380,9 @@ Replaces the first occurrence of a substring with another string.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -1317,8 +1404,7 @@ Replaces the first occurrence of a substring with another string.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1337,7 +1423,9 @@ Replaces the last occurrence of a substring with another string.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1361,7 +1449,9 @@ Replaces the last occurrence of a substring with another string.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "old",
       "name": [
@@ -1385,7 +1475,9 @@ Replaces the last occurrence of a substring with another string.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "new",
       "name": [
@@ -1409,7 +1501,9 @@ Replaces the last occurrence of a substring with another string.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -1431,8 +1525,7 @@ Replaces the last occurrence of a substring with another string.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1451,7 +1544,9 @@ Converts the text to a hexadecimal representation.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1475,7 +1570,9 @@ Converts the text to a hexadecimal representation.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -1497,8 +1594,7 @@ Converts the text to a hexadecimal representation.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1517,7 +1613,9 @@ Converts the text to an octal representation.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1541,7 +1639,9 @@ Converts the text to an octal representation.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -1563,8 +1663,7 @@ Converts the text to an octal representation.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1583,7 +1682,9 @@ Returns the index of the first occurrence of a substring, or -1 if not found.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1607,7 +1708,9 @@ Returns the index of the first occurrence of a substring, or -1 if not found.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "substring",
       "name": [
@@ -1631,7 +1734,9 @@ Returns the index of the first occurrence of a substring, or -1 if not found.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "NUMBER"
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
   },
   "name": [
     {
@@ -1653,8 +1758,7 @@ Returns the index of the first occurrence of a substring, or -1 if not found.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -1673,7 +1777,9 @@ Checks if the text contains a specified substring.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1697,7 +1803,9 @@ Checks if the text contains a specified substring.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "substring",
       "name": [
@@ -1721,7 +1829,9 @@ Checks if the text contains a specified substring.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -1743,8 +1853,7 @@ Checks if the text contains a specified substring.
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "throws_error": false,
-  "generic_mappers": []
+  "throws_error": false
 }
 ```
 
@@ -1763,7 +1872,9 @@ Splits the text into an array of strings based on a delimiter.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1787,7 +1898,9 @@ Splits the text into an array of strings based on a delimiter.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "delimiter",
       "name": [
@@ -1811,17 +1924,26 @@ Splits the text into an array of strings based on a delimiter.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
-  },
-  "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "source": {
-        "data_type_identifier": "TEXT"
-      },
-      "target": "R"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "DataTypeIdentifier": "TEXT"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
     }
-  ],
+  },
+  "generic_keys": [],
   "name": [
     {
       "code": "en-US",
@@ -1860,7 +1982,9 @@ Reverses the text.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1884,7 +2008,9 @@ Reverses the text.
     }
   ],
   "return_type_identifier": {
-      "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -1906,7 +2032,6 @@ Reverses the text.
   ],
   "deprecation_message": [],
   "generic_keys": [],
-  "generic_mappers": [],
   "throws_error": false
 }
 ```
@@ -1926,7 +2051,9 @@ Checks if the text starts with a specified prefix.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -1950,7 +2077,9 @@ Checks if the text starts with a specified prefix.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "prefix",
       "name": [
@@ -1974,7 +2103,9 @@ Checks if the text starts with a specified prefix.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -1996,8 +2127,7 @@ Checks if the text starts with a specified prefix.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2016,7 +2146,9 @@ Checks if the text ends with a specified suffix.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2040,7 +2172,9 @@ Checks if the text ends with a specified suffix.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "suffix",
       "name": [
@@ -2064,7 +2198,9 @@ Checks if the text ends with a specified suffix.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -2086,8 +2222,7 @@ Checks if the text ends with a specified suffix.
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
@@ -2106,7 +2241,9 @@ Converts each character to its ASCII code as an array of numbers.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2130,7 +2267,24 @@ Converts each character to its ASCII code as an array of numbers.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "ARRAY"
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "DataTypeIdentifier": "NUMBER"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
   },
   "name": [
     {
@@ -2150,15 +2304,7 @@ Converts each character to its ASCII code as an array of numbers.
       "content": "Returns an array of numbers where each number represents the ASCII code of the corresponding character in the input text."
     }
   ],
-  "generic_keys": ["R"],
-  "generic_mappers": [
-    {
-      "source": {
-        "data_type_identifier": "NUMBER"
-      },
-      "target": "R"
-    }
-  ],
+  "generic_keys": [],
   "deprecation_message": [],
   "throws_error": false
 }
@@ -2179,7 +2325,24 @@ Converts an array of ASCII codes to a text string.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "ARRAY"
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "DataTypeIdentifier": "NUMBER"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2203,7 +2366,9 @@ Converts an array of ASCII codes to a text string.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -2221,15 +2386,6 @@ Converts an array of ASCII codes to a text string.
     {
       "code": "en-US",
       "content": "Takes an array of numbers where each number is an ASCII code, and returns the string they represent."
-    }
-  ],
-  "generic_mappers": [
-    {
-      "parameter_id": "value",
-      "source": {
-        "data_type_identifier": "NUMBER"
-      },
-      "target": "T"
     }
   ],
   "generic_keys": [],
@@ -2253,7 +2409,9 @@ Encodes the text using a specified encoding.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2277,7 +2435,9 @@ Encodes the text using a specified encoding.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT_ENCODING"
+        "type": {
+          "DataTypeIdentifier": "TEXT_ENCODING"
+        }
       },
       "runtime_name": "encoding",
       "name": [
@@ -2301,7 +2461,9 @@ Encodes the text using a specified encoding.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -2322,7 +2484,6 @@ Encodes the text using a specified encoding.
     }
   ],
   "generic_keys": [],
-  "generic_mappers": [],
   "throws_error": false,
   "deprecation_message": []
 }
@@ -2341,7 +2502,9 @@ Decodes the text using a specified encoding.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "value",
       "name": [
@@ -2365,7 +2528,9 @@ Decodes the text using a specified encoding.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT_ENCODING"
+        "type": {
+          "DataTypeIdentifier": "TEXT_ENCODING"
+        }
       },
       "runtime_name": "encoding",
       "name": [
@@ -2389,7 +2554,9 @@ Decodes the text using a specified encoding.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "TEXT"
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
   },
   "name": [
     {
@@ -2410,7 +2577,6 @@ Decodes the text using a specified encoding.
     }
   ],
   "generic_keys": [],
-  "generic_mappers": [],
   "throws_error": false,
   "deprecation_message": []
 }
@@ -2428,7 +2594,9 @@ Decodes the text using a specified encoding.
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "first",
       "name": [
@@ -2452,7 +2620,9 @@ Decodes the text using a specified encoding.
     },
     {
       "data_type_identifier": {
-        "data_type_identifier": "TEXT"
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
       },
       "runtime_name": "second",
       "name": [
@@ -2476,7 +2646,9 @@ Decodes the text using a specified encoding.
     }
   ],
   "return_type_identifier": {
-    "data_type_identifier": "BOOLEAN"
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
   },
   "name": [
     {
@@ -2498,8 +2670,7 @@ Decodes the text using a specified encoding.
   ],
   "throws_error": false,
   "deprecation_message": [],
-  "generic_keys": [],
-  "generic_mappers": []
+  "generic_keys": []
 }
 ```
 
