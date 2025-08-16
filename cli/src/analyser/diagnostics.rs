@@ -86,7 +86,11 @@ pub enum DiagnosticKind {
     DeserializationError { description: String },
     DuplicateDataTypeIdentifier { identifier: String },
     DuplicateFlowTypeIdentifier { identifier: String },
+    DuplicateRuntimeFunctionIdentifier { identifier: String },
+    DuplicateRuntimeParameterIdentifier { identifier: String },
     UndefinedDataTypeIdentifier { identifier: String },
+    EmptyGenericMapper,
+    GenericKeyNotInMappingTarget {key: String, target: String },
     NullField { field_name: String },
     ForbiddenVariant,
     UnusedGenericKey { key: String },
@@ -101,6 +105,10 @@ impl DiagnosticKind {
             DeserializationError { .. }
             | DuplicateDataTypeIdentifier { .. }
             | DuplicateFlowTypeIdentifier { .. }
+            | DuplicateRuntimeFunctionIdentifier { .. }
+            | DuplicateRuntimeParameterIdentifier { .. }
+            | GenericKeyNotInMappingTarget { .. }
+            | EmptyGenericMapper { .. }
             | UndefinedDataTypeIdentifier { .. }
             | NullField { .. }
             | ForbiddenVariant { .. }
@@ -132,12 +140,20 @@ impl Diagnose {
 
         use DiagnosticKind::*;
         match &self.kind {
+            EmptyGenericMapper =>
+                error(format!("`{}` defined a generic_type but its mapper are empty!`", self.definition_name), &path),
             DeserializationError { description } =>
                 error(format!("A JSON paring error occurred: `{}`", description), &path),
+            GenericKeyNotInMappingTarget {key, target} =>
+                error(format!("`{}` is mapping the key: {} onto the target: {}. But the target did not define this generic_key!", self.definition_name, key, target), &path),
             DuplicateDataTypeIdentifier { identifier } =>
                 error(format!("The data_type `{}` is already defined resulting in a duplicate!", identifier), &path),
             DuplicateFlowTypeIdentifier { identifier } =>
                 error(format!("The flow_type `{}` is already defined resulting in a duplicate!", identifier), &path),
+            DuplicateRuntimeFunctionIdentifier { identifier } =>
+                error(format!("The runtime_function `{}` is already defined resulting in a duplicate!", identifier), &path),
+            DuplicateRuntimeParameterIdentifier { identifier } =>
+                error(format!("The runtime_parameter `{}` is already defined resulting in a duplicate!", identifier), &path),
             UndefinedDataTypeIdentifier {  identifier } =>
                 error(format!("`{}` uses an undefined data_type_identifier: `{}`!", self.definition_name, identifier), &path),
             NullField { field_name } =>

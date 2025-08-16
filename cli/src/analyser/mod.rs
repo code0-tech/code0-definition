@@ -1,12 +1,13 @@
 mod diagnostics;
 
+use clap::builder::Str;
 use tucana::shared::{DataTypeIdentifier, DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 use tucana::shared::data_type_identifier::Type;
 use tucana::shared::definition_data_type_rule::Config;
 use code0_definition_reader::parser::Parser;
 use code0_definition_reader::reader::{MetaType, ParsableDefinition, Reader};
 use crate::analyser::diagnostics::{Diagnose, DiagnosticKind, Reporter};
-use crate::analyser::diagnostics::DiagnosticKind::{DuplicateDataTypeIdentifier, DuplicateFlowTypeIdentifier, NullField, UndefinedDataTypeIdentifier, UndefinedGenericKey, UndefinedTranslation, UnusedGenericKey};
+use crate::analyser::diagnostics::DiagnosticKind::{DuplicateDataTypeIdentifier, DuplicateFlowTypeIdentifier, DuplicateRuntimeParameterIdentifier, EmptyGenericMapper, GenericKeyNotInMappingTarget, NullField, UndefinedDataTypeIdentifier, UndefinedGenericKey, UndefinedTranslation, UnusedGenericKey};
 
 #[derive(Clone)]
 pub struct AnalysableDataType {
@@ -22,6 +23,7 @@ pub struct AnalysableFlowType {
     pub id: i16
 }
 
+#[derive(Clone)]
 pub struct AnalysableFunction {
     pub original_definition: ParsableDefinition,
     pub function: RuntimeFunctionDefinition,
@@ -154,6 +156,14 @@ impl Analyser {
                             analysable_data_type.original_definition.clone(),
                             UndefinedDataTypeIdentifier {identifier: generic.data_type_identifier}
                         ));
+                    }
+
+                    if generic.generic_mappers.is_empty() {
+                        self.reporter.add_report(Diagnose::new(
+                            analysable_data_type.definition_data_type.clone().identifier,
+                            analysable_data_type.original_definition.clone(),
+                            EmptyGenericMapper
+                        ))
                     }
 
                     for mapper in generic.generic_mappers {
@@ -397,7 +407,194 @@ impl Analyser {
                 break;
             }
         }
+    }
 
+    pub fn analyse_runtime_function(&mut self, analysable_function: AnalysableFunction) {
+        let name = analysable_function.function.runtime_name.clone();
+        let function = analysable_function.function;
+        let original = analysable_function.original_definition;
+        let id = analysable_function.id;
+
+        // Check if at least one Translation is present
+        if function.name.is_empty() {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                UndefinedTranslation { translation_field: String::from("name") }
+            ));
+        }
+
+        if function.description.is_empty() {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                UndefinedTranslation { translation_field: String::from("description") }
+            ));
+        }
+
+        if function.documentation.is_empty() {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                UndefinedTranslation { translation_field: String::from("documentation") }
+            ));
+        }
+
+        // Check if runtime function  already exists
+        for func in &self.functions {
+            if func.id == id {
+                continue
+            }
+
+            if func.function.runtime_name.to_lowercase() == name.clone().to_lowercase() {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original.clone(),
+                    DuplicateFlowTypeIdentifier { identifier: name.clone() }
+                ));
+                break;
+            }
+        }
+
+        let mut detected_generic_keys: Vec<String> = vec![];
+        if let Some(identifier) = function.return_type_identifier {
+            detected_generic_keys.append(&mut self.handle_function_data_type_identifier(name.clone(), original.clone(), identifier));
+        }
+
+        let mut parameter_names: Vec<String> = vec![];
+        for parameter in function.runtime_parameter_definitions {
+
+            // Check if at least one Translation is present
+            if parameter.name.is_empty() {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original.clone(),
+                    UndefinedTranslation { translation_field: String::from("name") }
+                ));
+            }
+
+            if parameter.description.is_empty() {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original.clone(),
+                    UndefinedTranslation { translation_field: String::from("description") }
+                ));
+            }
+
+            if parameter.documentation.is_empty() {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original.clone(),
+                    UndefinedTranslation { translation_field: String::from("documentation") }
+                ));
+            }
+
+            // Check if data_type exists
+            if let Some(identifier) = parameter.data_type_identifier {
+                detected_generic_keys.append(&mut self.handle_function_data_type_identifier(name.clone(), original.clone(), identifier));
+            }  else {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original.clone(),
+                    NullField { field_name: String::from("data_type") }
+                ));
+            }
+
+            if parameter_names.contains(&parameter.runtime_name) {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original.clone(),
+                    DuplicateRuntimeParameterIdentifier { identifier: parameter.runtime_name.clone() }
+                ));
+            }
+
+            parameter_names.push(parameter.runtime_name);
+        }
+
+        let defined_but_unused = function.generic_keys.iter().filter(|key| !detected_generic_keys.contains(key)).collect::<Vec<&String>>();
+        let used_but_undefined = detected_generic_keys.iter().filter(|key| !function.generic_keys.contains(key)).collect::<Vec<&String>>();
+
+        for key in defined_but_unused {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                UnusedGenericKey { key: key.clone() }
+            ));
+        }
+
+        for key in used_but_undefined {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                UndefinedGenericKey { key: key.clone() }
+            ));
+        }
+    }
+
+    fn handle_function_data_type_identifier(&mut self, name: String, original: ParsableDefinition, identifier: DataTypeIdentifier) -> Vec<String> {
+        let mut result: Vec<String> = vec![];
+        if let Some(r#type) =  identifier.r#type {
+            match r#type {
+                Type::DataTypeIdentifier(data_type) => {
+                    if !self.data_type_identifier_exists(data_type.clone(), -1) {
+                        self.reporter.add_report(Diagnose::new(
+                            name.clone(),
+                            original.clone(),
+                            UndefinedDataTypeIdentifier { identifier: data_type.clone() }
+                        ))
+                    };
+                },
+                Type::GenericType(generic_type) => {
+                    if !self.data_type_identifier_exists(generic_type.data_type_identifier.clone(), -1) {
+                        self.reporter.add_report(Diagnose::new(
+                            name.clone(),
+                            original.clone(),
+                            UndefinedDataTypeIdentifier { identifier: generic_type.data_type_identifier.clone() }
+                        ))
+                    }
+
+                    if generic_type.generic_mappers.is_empty() {
+                        self.reporter.add_report(Diagnose::new(
+                            name.clone(),
+                            original.clone(),
+                            EmptyGenericMapper
+                        ))
+                    }
+
+                    for mapper in &generic_type.generic_mappers {
+                        for source in mapper.source.clone() {
+                            result.append(&mut self.handle_function_data_type_identifier(name.clone(), original.clone(), source))
+                        }
+
+                        if !self.generic_key_in_target(mapper.target.clone(), generic_type.data_type_identifier.clone()) {
+                            self.reporter.add_report(Diagnose::new(
+                                name.clone(),
+                                original.clone(),
+                                GenericKeyNotInMappingTarget { key: mapper.target.clone(), target: generic_type.data_type_identifier.clone() }
+                            ))
+                        }
+                    }
+                },
+                Type::GenericKey(key) => {
+                    result.push(key.clone())
+                },
+            }
+        }
+
+        result
+    }
+
+    fn generic_key_in_target(&mut self, key: String, target: String) -> bool {
+        let data_types: Vec<DefinitionDataType> = self.data_types.iter().map(|d| d.definition_data_type.clone()).collect();
+        for data_type in  data_types {
+            if target.to_lowercase() != data_type.identifier.to_lowercase() {
+                continue;
+            }
+
+            return data_type.generic_keys.contains(&key);
+        }
+
+        false
     }
 
     pub fn report(&self) {

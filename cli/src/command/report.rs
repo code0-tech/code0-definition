@@ -22,6 +22,10 @@ pub fn report_errors(path: Option<String>) {
         analyser.analyse_flow_type(flow_type.clone());
     }
 
+    for functions in analyser.functions.clone() {
+        analyser.analyse_runtime_function(functions.clone());
+    }
+
     analyser.report();
 
     error_table(&parser.features);
