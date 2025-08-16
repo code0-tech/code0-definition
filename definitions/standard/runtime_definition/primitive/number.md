@@ -2237,7 +2237,7 @@ Calculates the sine of an angle (in radians).
 
 ```json
 {
-  "runtime_name": "std::number::random_number",
+  "runtime_name": "std::number::sin",
   "runtime_parameter_definitions": [
     {
       "data_type_identifier": {
