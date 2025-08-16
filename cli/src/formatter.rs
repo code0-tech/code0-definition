@@ -30,8 +30,8 @@ pub fn success_table<I, T>(iter: I)
     println!("{}", print_table(iter).green());
 }
 
-pub fn error(string: String, path: String) {
-    println!("\n{}: {} {}", "error".red(), string, print_path(path));
+pub fn error(string: String, path: &String) -> String {
+    format!("\n{}: {} {}", "error".red(), string, print_path(path))
 }
 
 pub fn error_highlight(highlight: String,string: String) {
@@ -46,8 +46,8 @@ where
     println!("{}", print_table(iter).red());
 }
 
-pub fn warning(string: String, path: String) {
-    println!("\n{}: {} {}", "warning".yellow(), string, print_path(path));
+pub fn warning(string: String, path: &String) -> String {
+    format!("\n{}: {} {}", "warning".yellow(), string, print_path(&path))
 }
 
 pub fn warning_highlight(highlight: String,string: String) {
@@ -71,6 +71,6 @@ where
     Table::new(iter).with(Style::rounded()).to_string()
 }
 
-fn print_path(path: String) -> String {
-    format!("\n --> {}", path.underline()).blue().to_string()
+fn print_path(path: &String) -> String {
+    format!("\n --> {}", &path.underline()).blue().to_string()
 }
