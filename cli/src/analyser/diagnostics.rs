@@ -85,6 +85,7 @@ pub struct Diagnose {
 pub enum DiagnosticKind {
     DeserializationError { description: String },
     DuplicateDataTypeIdentifier { identifier: String },
+    DuplicateFlowTypeIdentifier { identifier: String },
     UndefinedDataTypeIdentifier { identifier: String },
     NullField { field_name: String },
     ForbiddenVariant,
@@ -99,6 +100,7 @@ impl DiagnosticKind {
         match self {
             DeserializationError { .. }
             | DuplicateDataTypeIdentifier { .. }
+            | DuplicateFlowTypeIdentifier { .. }
             | UndefinedDataTypeIdentifier { .. }
             | NullField { .. }
             | ForbiddenVariant { .. }
@@ -134,6 +136,8 @@ impl Diagnose {
                 error(format!("A JSON paring error occurred: `{}`", description), &path),
             DuplicateDataTypeIdentifier { identifier } =>
                 error(format!("The data_type `{}` is already defined resulting in a duplicate!", identifier), &path),
+            DuplicateFlowTypeIdentifier { identifier } =>
+                error(format!("The flow_type `{}` is already defined resulting in a duplicate!", identifier), &path),
             UndefinedDataTypeIdentifier {  identifier } =>
                 error(format!("`{}` uses an undefined data_type_identifier: `{}`!", self.definition_name, identifier), &path),
             NullField { field_name } =>

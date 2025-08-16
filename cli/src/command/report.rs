@@ -18,6 +18,10 @@ pub fn report_errors(path: Option<String>) {
        analyser.analyse_data_type(data_type.clone());
     }
 
+    for flow_type in analyser.flow_types.clone() {
+        analyser.analyse_flow_type(flow_type.clone());
+    }
+
     analyser.report();
 
     error_table(&parser.features);

@@ -6,7 +6,7 @@ use tucana::shared::definition_data_type_rule::Config;
 use code0_definition_reader::parser::Parser;
 use code0_definition_reader::reader::{MetaType, ParsableDefinition, Reader};
 use crate::analyser::diagnostics::{Diagnose, DiagnosticKind, Reporter};
-use crate::analyser::diagnostics::DiagnosticKind::{DuplicateDataTypeIdentifier, NullField, UndefinedDataTypeIdentifier, UndefinedGenericKey, UndefinedTranslation, UnusedGenericKey};
+use crate::analyser::diagnostics::DiagnosticKind::{DuplicateDataTypeIdentifier, DuplicateFlowTypeIdentifier, NullField, UndefinedDataTypeIdentifier, UndefinedGenericKey, UndefinedTranslation, UnusedGenericKey};
 
 #[derive(Clone)]
 pub struct AnalysableDataType {
@@ -15,6 +15,7 @@ pub struct AnalysableDataType {
     pub id: i16
 }
 
+#[derive(Clone)]
 pub struct AnalysableFlowType {
     pub original_definition: ParsableDefinition,
     pub flow_type: FlowType,
@@ -327,6 +328,76 @@ impl Analyser {
                 UndefinedTranslation { translation_field: String::from("name") }
             ));
         }
+    }
+
+    pub fn analyse_flow_type(&mut self, analysable_flow_type: AnalysableFlowType) {
+        let flow= analysable_flow_type.flow_type.clone();
+        let original_definition = analysable_flow_type.original_definition;
+        let name = flow.identifier;
+
+        // Check if at least one Translation is present
+        if flow.name.is_empty() {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original_definition.clone(),
+                UndefinedTranslation { translation_field: String::from("name") }
+            ));
+        }
+
+        if flow.description.is_empty() {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original_definition.clone(),
+                UndefinedTranslation { translation_field: String::from("description") }
+            ));
+        }
+
+        if flow.documentation.is_empty() {
+            self.reporter.add_report(Diagnose::new(
+                name.clone(),
+                original_definition.clone(),
+                UndefinedTranslation { translation_field: String::from("documentation") }
+            ));
+        }
+
+        // Check if input identifier exists
+        if let Some(identifier) = flow.input_type_identifier {
+            if !self.data_type_identifier_exists(identifier.clone(), -1) {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original_definition.clone(),
+                    UndefinedDataTypeIdentifier {identifier}
+                ));
+            }
+        }
+
+        // Check if return identifier exists
+        if let Some(identifier) = flow.return_type_identifier {
+            if !self.data_type_identifier_exists(identifier.clone(), -1) {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original_definition.clone(),
+                    UndefinedDataTypeIdentifier {identifier}
+                ));
+            }
+        }
+
+        // Check if flow type identifier already exists
+        for flow_type in &self.flow_types {
+            if analysable_flow_type.id == flow_type.id {
+                continue
+            }
+
+            if flow_type.flow_type.identifier.to_lowercase() == name.clone().to_lowercase() {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original_definition.clone(),
+                    DuplicateFlowTypeIdentifier { identifier: name }
+                ));
+                break;
+            }
+        }
+
     }
 
     pub fn report(&self) {
