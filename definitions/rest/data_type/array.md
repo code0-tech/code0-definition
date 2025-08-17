@@ -10,11 +10,29 @@
   ],
   "rules": [
     {
-      "contains_type": {
-        "type": "HTTP_HEADER_ENTRY"
-      },
-      "parent_type": {
-        "data_type_identifier": "ARRAY"
+      "config": {
+        "ParentType": {
+          "parent_type": {
+            "type": {
+              "GenericType": {
+                "data_type_identifier": "ARRAY",
+                "generic_mappers": [
+                  {
+                    "source": [
+                      {
+                        "type": {
+                          "DataTypeIdentifier": "HTTP_HEADER_ENTRY"
+                        }
+                      }
+                    ],
+                    "target": "T",
+                    "generic_combinations": []
+                  }
+                ]
+              }
+            }
+          }
+        }
       }
     }
   ],

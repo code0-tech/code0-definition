@@ -5,19 +5,31 @@
   "variant": 7,
   "rules": [
     {
-      "return_type": {
-        "data_type_identifier": "BOOLEAN"
+      "config": {
+        "ReturnType": {
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "BOOLEAN"
+            }
+          }
+        }
       }
     },
     {
-      "input_type": [
-        {
-          "data_type_identifier": {
-            "generic_key": "T"
-          },
-          "input_identifier": "predicate"
-        }
-      ]
+      "config": {
+          "InputTypes": {
+            "input_types": [
+              {
+                "data_type_identifier": {
+                  "type": {
+                    "GenericKey": "T"
+                  }
+                },
+                "input_identifier": "predicate"
+              }
+            ]
+          }
+      }
     }
   ],
   "generic_keys": ["T"],
@@ -37,14 +49,20 @@
   "variant": 7,
   "rules": [
     {
-      "input_type": [
-        {
-          "data_type_identifier": {
-            "generic_key": "T"
-          },
-          "input_identifier": "consumer"
+      "config": {
+        "InputTypes": {
+          "input_types": [
+            {
+              "data_type_identifier": {
+                "type": {
+                  "GenericKey": "T"
+                }
+              },
+              "input_identifier": "consumer"
+            }
+          ]
         }
-      ]
+      }
     }
   ],
   "generic_keys": ["T"],
@@ -65,21 +83,31 @@
   "variant": 7,
   "rules": [
     {
-      "return_type": {
-        "data_type_identifier": {
-          "generic_key": "R"
-        }
+      "config": {
+          "ReturnType": {
+            "data_type_identifier": {
+              "type": {
+                "GenericKey": "R"
+              }
+            }
+          }
       }
     },
     {
-      "input_type": [
-        {
-          "data_type_identifier": {
-            "generic_key": "I"
-          },
-          "input_identifier": "transform"
-        }
-      ]
+      "config": {
+          "InputTypes": {
+            "input_types": [
+              {
+                "data_type_identifier": {
+                  "type": {
+                    "GenericKey": "I"
+                  }
+                },
+                "input_identifier": "transform"
+              }
+            ]
+          }
+      }
     }
   ],
   "generic_keys": ["I", "R"],
@@ -95,38 +123,50 @@
 ## COMPARITOR
 ```json
 {
-  "identifier": "COMPARITOR",
+  "identifier": "COMPARATOR",
   "variant": 7,
   "rules": [
     {
-      "return_type": {
-        "data_type_identifier": {
-          "data_type_identifier": "NUMBER"
+      "config": {
+        "ReturnType": {
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "NUMBER"
+            }
+          }
         }
       }
     },
     {
-      "input_type": [
-        {
-          "data_type_identifier": {
-            "generic_key": "I"
-          },
-          "input_identifier": "left"
-        },
-        {
-          "data_type_identifier": {
-            "generic_key": "I"
-          },
-          "input_identifier": "right"
-        }
-      ]
+      "config": {
+       "InputTypes": {
+         "input_types": [
+           {
+             "data_type_identifier": {
+               "type": {
+                 "GenericKey": "I"
+               }
+             },
+             "input_identifier": "left"
+           },
+           {
+             "data_type_identifier": {
+               "type": {
+                 "GenericKey": "I"
+               }
+             },
+             "input_identifier": "right"
+           }
+         ]
+       }
+      }
     }
   ],
   "generic_keys": ["I"],
   "name": [
     {
       "code": "en-US",
-      "content": "Comparitor"
+      "content": "Comparator"
     }
   ]
 }

@@ -14,8 +14,10 @@
   ],
   "rules": [
     {
-      "regex": {
-        "pattern": "/^(?:-(?:[1-9](?:\\d{0,2}(?:,\\d{3})+|\\d*))|(?:0|(?:[1-9](?:\\d{0,2}(?:,\\d{3})+|\\d*))))(?:.\\d+|)$/"
+      "config": {
+        "Regex": {
+         "pattern": "^-?\\d+(?:[.,]\\d+)?$"
+        }
       }
     }
   ],
@@ -38,8 +40,10 @@
   ],
   "rules": [
     {
-      "regex": {
-        "pattern": "[\\s\\S]*"
+      "config": {
+        "Regex": {
+          "pattern": "[\\s\\S]*"
+        }
       }
     }
   ],
@@ -61,8 +65,10 @@
   ],
   "rules": [
     {
-      "regex": {
-        "pattern": "^(true|false)$"
+      "config": {
+        "Regex": {
+          "pattern": "^(true|false)$"
+        }
       }
     }
   ],
