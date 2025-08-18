@@ -2334,7 +2334,7 @@ Returns the smallest number in the array
   ],
   "deprecation_message": [],
   "throws_error": false,
-  "generic_keys": []
+  "generic_keys": ["R"]
 }
 ```
 
