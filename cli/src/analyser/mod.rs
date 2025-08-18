@@ -59,9 +59,7 @@ impl Analyser {
             match definition.r#type {
                 MetaType::FlowType => {
                     current_index += 1;
-                    match serde_json::from_str::<FlowType>(
-                        definition.definition_string.as_str(),
-                    ) {
+                    match serde_json::from_str::<FlowType>(definition.definition_string.as_str()) {
                         Ok(flow_type) => collected_flow_types.push(AnalysableFlowType {
                             original_definition: definition.clone(),
                             flow_type,
@@ -755,7 +753,6 @@ impl Analyser {
     }
 
     pub fn report(&mut self, will_exit: bool) {
-
         for data_type in self.data_types.clone() {
             self.analyse_data_type(data_type.clone());
         }

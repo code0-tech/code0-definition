@@ -1,6 +1,6 @@
+use crate::formatter::{info, success};
 use code0_definition_reader::parser::Parser;
 use colored::Colorize;
-use crate::formatter::{info, success};
 
 pub fn search_definition(name: String, path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
@@ -35,11 +35,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!(
-                                "{} {}",
-                                format!("{index}:"),
-                                line.bright_cyan()
-                            );
+                            println!("{} {}", format!("{index}:"), line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing FlowType".red()),
@@ -61,11 +57,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!(
-                                "{} {}",
-                                format!("{index}:"),
-                                line.bright_cyan()
-                            );
+                            println!("{} {}", format!("{index}:"), line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing DataType".red()),
@@ -87,11 +79,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!(
-                                "{} {}",
-                                format!("{index}:"),
-                                line.bright_cyan()
-                            );
+                            println!("{} {}", format!("{index}:"), line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing RuntimeFunction".red()),
@@ -101,7 +89,10 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     }
 
     if !found_any {
-        println!("{}", format!("\n{}: {}", "error".red(), "Found no matching definition(s)"));
+        println!(
+            "{}",
+            format!("\n{}: {}", "error".red(), "Found no matching definition(s)")
+        );
     } else {
         success(format!("Found {total_matches} matching definition(s)"))
     }

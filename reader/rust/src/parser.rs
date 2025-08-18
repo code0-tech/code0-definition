@@ -90,16 +90,14 @@ impl Parser {
     fn append_meta(feature: &mut Feature, meta: &crate::reader::Meta) {
         let definition = meta.definition_string.as_str();
         match meta.r#type {
-            MetaType::DataType => {
-                match serde_json::from_str::<DefinitionDataType>(definition) {
-                    Ok(data_type) => feature.data_types.push(data_type),
-                    Err(err) => feature.errors.push(DefinitionError {
-                        definition: Parser::extract_identifier(definition, MetaType::DataType),
-                        definition_type: MetaType::DataType,
-                        error: err.to_string(),
-                    }),
-                }
-            }
+            MetaType::DataType => match serde_json::from_str::<DefinitionDataType>(definition) {
+                Ok(data_type) => feature.data_types.push(data_type),
+                Err(err) => feature.errors.push(DefinitionError {
+                    definition: Parser::extract_identifier(definition, MetaType::DataType),
+                    definition_type: MetaType::DataType,
+                    error: err.to_string(),
+                }),
+            },
             MetaType::FlowType => match serde_json::from_str::<FlowType>(definition) {
                 Ok(flow_type) => feature.flow_types.push(flow_type),
                 Err(err) => feature.errors.push(DefinitionError {

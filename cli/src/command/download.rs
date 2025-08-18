@@ -1,12 +1,11 @@
+use crate::formatter::{error_without_trace, info, success};
 use bytes::Bytes;
-use colored::*;
 use reqwest::header::{ACCEPT, USER_AGENT};
 use serde::Deserialize;
 use std::fs;
 use std::fs::File;
 use std::path::Path;
 use zip::ZipArchive;
-use crate::formatter::{error_without_trace, info, success};
 
 #[derive(Deserialize, Debug)]
 struct Release {
@@ -28,9 +27,7 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
     // Download the definitions
     info("Starting download process...".to_string());
     let bytes = match download_definitions_as_bytes(tag).await {
-        Some(bytes) => {
-            bytes
-        }
+        Some(bytes) => bytes,
         None => {
             error_without_trace(String::from("Download failed."));
             return;
@@ -49,7 +46,10 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
     }
 
     let path = Path::new(out_folder_path);
-    success(format!("Download was successful. Definitions are now available: {}.", path.display()));
+    success(format!(
+        "Download was successful. Definitions are now available: {}.",
+        path.display()
+    ));
 }
 
 async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Bytes> {
@@ -100,11 +100,11 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
         .into_iter()
         .find(|a| a.name == "definitions.zip")
     {
-        Some(asset) => {
-            asset
-        }
+        Some(asset) => asset,
         None => {
-            panic!("Definition folder is not called `definitions.zip` and was not inside the asset folder of the GitHub release!");
+            panic!(
+                "Definition folder is not called `definitions.zip` and was not inside the asset folder of the GitHub release!"
+            );
         }
     };
 
@@ -127,7 +127,10 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
                     }
                 }
             } else {
-                error_without_trace(format!("Download failed with status: {}", response.status()));
+                error_without_trace(format!(
+                    "Download failed with status: {}",
+                    response.status()
+                ));
                 None
             }
         }
@@ -138,7 +141,6 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
 }
 
 async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
-
     if let Err(e) = fs::write(zip_path, &bytes) {
         panic!("Failed to write zip file: {e}")
     }
@@ -151,9 +153,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
     };
 
     let mut archive = match ZipArchive::new(zip_file) {
-        Ok(archive) => {
-            archive
-        }
+        Ok(archive) => archive,
         Err(e) => {
             panic!("Failed to read zip archive: {e}");
         }
@@ -177,11 +177,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
 
         if file.name().ends_with('/') {
             if let Err(e) = fs::create_dir_all(&out_path) {
-                panic!(
-                    "Failed to create directory {}: {}",
-                    out_path.display(),
-                    e
-                );
+                panic!("Failed to create directory {}: {}", out_path.display(), e);
             }
         } else {
             if let Some(p) = out_path.parent() {
@@ -203,11 +199,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
                     }
                 }
                 Err(e) => {
-                    panic!(
-                        "Failed to create file {}: {}",
-                        out_path.display(),
-                        e
-                    );
+                    panic!("Failed to create file {}: {}", out_path.display(), e);
                 }
             }
         }
@@ -218,7 +210,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
 
     match fs::remove_file(zip_path) {
         Ok(_) => info("Temporary zip file removed".to_string()),
-        Err(e) => error_without_trace(format!("Warning: Failed to remove temporary zip file: {e}"))
+        Err(e) => error_without_trace(format!("Warning: Failed to remove temporary zip file: {e}")),
     }
 }
 
@@ -227,12 +219,14 @@ async fn filter_features(selected_features: Vec<String>) {
 
     match fs::read_dir(definitions_path) {
         Ok(entries) => {
-
             for entry in entries {
                 let directory = match entry {
                     Ok(directory) => directory,
                     Err(e) => {
-                        panic!("{}", format!("Warning: Failed to read directory entry: {e}"));
+                        panic!(
+                            "{}",
+                            format!("Warning: Failed to read directory entry: {e}")
+                        );
                     }
                 };
 
@@ -249,9 +243,7 @@ async fn filter_features(selected_features: Vec<String>) {
             }
         }
         Err(e) => {
-            error_without_trace(
-                format!("Failed to read definitions directory: {e}")
-            );
+            error_without_trace(format!("Failed to read definitions directory: {e}"));
         }
     }
 }

@@ -1,7 +1,7 @@
 use crate::analyser::Analyser;
-use crate::table::{summary_table};
-use code0_definition_reader::parser::Parser;
 use crate::formatter::{success, success_table};
+use crate::table::summary_table;
+use code0_definition_reader::parser::Parser;
 
 pub fn report_errors(path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
@@ -19,11 +19,23 @@ pub fn report_errors(path: Option<String>) {
     let rows = summary_table(&parser.features);
     success_table(rows);
 
-    success(
-    format!("Defined a total of {} Features with {} FlowTypes {} DataTypes and {} Functions!",
+    success(format!(
+        "Defined a total of {} Features with {} FlowTypes {} DataTypes and {} Functions!",
         parser.features.iter().len(),
-        parser.features.iter().map(|f| f.flow_types.len()).sum::<usize>(),
-        parser.features.iter().map(|f| f.data_types.len()).sum::<usize>(),
-        parser.features.iter().map(|f| f.runtime_functions.len()).sum::<usize>()
+        parser
+            .features
+            .iter()
+            .map(|f| f.flow_types.len())
+            .sum::<usize>(),
+        parser
+            .features
+            .iter()
+            .map(|f| f.data_types.len())
+            .sum::<usize>(),
+        parser
+            .features
+            .iter()
+            .map(|f| f.runtime_functions.len())
+            .sum::<usize>()
     ))
 }

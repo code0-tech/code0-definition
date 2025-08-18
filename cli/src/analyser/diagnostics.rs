@@ -1,8 +1,8 @@
 use crate::formatter::{error, warning};
+use code0_definition_reader::reader::Meta;
 use std::cmp::PartialEq;
 use std::path::Path;
 use std::process::exit;
-use code0_definition_reader::reader::Meta;
 
 #[derive(Default)]
 pub struct Reporter {
@@ -125,11 +125,7 @@ impl DiagnosticKind {
 }
 
 impl Diagnose {
-    pub fn new(
-        definition_name: String,
-        definition: Meta,
-        kind: DiagnosticKind,
-    ) -> Self {
+    pub fn new(definition_name: String, definition: Meta, kind: DiagnosticKind) -> Self {
         Self {
             definition_name,
             definition,

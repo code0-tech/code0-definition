@@ -1,7 +1,5 @@
-use code0_definition_reader::parser::DefinitionError;
 use code0_definition_reader::parser::Feature;
-use colored::*;
-use tabled::{Table, Tabled, settings::Style};
+use tabled::{Tabled};
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
 #[derive(Tabled)]
@@ -66,8 +64,9 @@ pub struct GeneralErrorRow {
     error: String,
 }
 
-pub fn feature_table(feature: &Feature) -> (Vec<FlowTypeRow>, Vec<DataTypeRow>, Vec<RuntimeFunctionRow>) {
-
+pub fn feature_table(
+    feature: &Feature,
+) -> (Vec<FlowTypeRow>, Vec<DataTypeRow>, Vec<RuntimeFunctionRow>) {
     let flow_type_rows: Vec<FlowTypeRow> = feature
         .flow_types
         .iter()
@@ -100,19 +99,17 @@ pub fn feature_table(feature: &Feature) -> (Vec<FlowTypeRow>, Vec<DataTypeRow>, 
         )
         .collect();
 
-     (flow_type_rows,data_type_rows,runtime_function_rows)
+    (flow_type_rows, data_type_rows, runtime_function_rows)
 }
 
 pub fn summary_table(features: &Vec<Feature>) -> Vec<FeatureSummaryRow> {
-     features
+    features
         .iter()
-        .map(|feature| {
-            FeatureSummaryRow {
-                feature_name: feature.name.clone(),
-                flow_types: feature.flow_types.len(),
-                data_types: feature.data_types.len(),
-                runtime_functions: feature.runtime_functions.len(),
-            }
+        .map(|feature| FeatureSummaryRow {
+            feature_name: feature.name.clone(),
+            flow_types: feature.flow_types.len(),
+            data_types: feature.data_types.len(),
+            runtime_functions: feature.runtime_functions.len(),
         })
         .collect()
 }
