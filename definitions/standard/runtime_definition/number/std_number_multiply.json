@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::number::multiply",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "first",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first number to multiply."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the first operand in the multiplication operation."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "second",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second number to multiply."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the second operand in the multiplication operation."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Multiply"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Multiplies two numbers together."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Takes two numeric inputs and returns their product."
+    }
+  ],
+  "deprecation_message": []
+}

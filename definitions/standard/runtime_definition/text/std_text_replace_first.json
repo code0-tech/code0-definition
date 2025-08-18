@@ -1,0 +1,112 @@
+{
+  "runtime_name": "std::text::replace_first",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text where the first replacement will be made."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This text contains the substring that will be replaced only once—the first occurrence."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "old",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Old Substring"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The substring to be replaced."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Only the first occurrence of this substring will be replaced in the original text."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "new",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "New Substring"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The substring to replace with."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This substring will replace only the first occurrence of the old substring."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Replace First Substring"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Replaces the first occurrence of a specified substring with another substring in the input text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new string where only the first instance of the old substring is replaced by the new substring."
+    }
+  ],
+  "deprecation_message": []
+}

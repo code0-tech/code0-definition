@@ -1,4 +1,6 @@
-use crate::table::{error_table, summary_table};
+use crate::analyser::Analyser;
+use crate::formatter::{success, success_table};
+use crate::table::summary_table;
 use code0_definition_reader::parser::Parser;
 
 pub fn report_errors(path: Option<String>) {
@@ -10,6 +12,30 @@ pub fn report_errors(path: Option<String>) {
             panic!("Error reading definitions");
         }
     };
-    error_table(&parser.features);
-    summary_table(&parser.features);
+
+    let mut analyser = Analyser::new(dir_path.as_str());
+    analyser.report(true);
+
+    let rows = summary_table(&parser.features);
+    success_table(rows);
+
+    success(format!(
+        "Defined a total of {} Features with {} FlowTypes {} DataTypes and {} Functions!",
+        parser.features.iter().len(),
+        parser
+            .features
+            .iter()
+            .map(|f| f.flow_types.len())
+            .sum::<usize>(),
+        parser
+            .features
+            .iter()
+            .map(|f| f.data_types.len())
+            .sum::<usize>(),
+        parser
+            .features
+            .iter()
+            .map(|f| f.runtime_functions.len())
+            .sum::<usize>()
+    ))
 }

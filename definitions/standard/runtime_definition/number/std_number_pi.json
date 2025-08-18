@@ -1,0 +1,30 @@
+{
+  "runtime_name": "std::number::pi",
+  "runtime_parameter_definitions": [],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Pi"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the mathematical constant π (pi)."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Provides the constant value of pi, approximately 3.14159, used in many mathematical calculations."
+    }
+  ],
+  "deprecation_message": []
+}

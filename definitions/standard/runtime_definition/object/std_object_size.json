@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::object::size",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "OBJECT"
+        }
+      },
+      "runtime_name": "object",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The object whose size (number of keys) will be calculated."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Returns the number of enumerable keys (properties) present in the given object."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Get Object Size"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the number of keys in the provided object."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns an integer count of all enumerable property keys in the specified object."
+    }
+  ],
+  "deprecation_message": []
+}

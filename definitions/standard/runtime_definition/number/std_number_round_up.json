@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::number::round_up",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to be rounded up."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The numeric input that will be rounded upwards."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "decimals",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Decimal Places"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number of decimal places to round up to."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies how many decimal digits to keep after rounding up."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Round Up"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Rounds a number upward to the specified number of decimal places."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Performs rounding on the given value, always rounding up to the nearest value at the given decimal precision."
+    }
+  ],
+  "deprecation_message": []
+}

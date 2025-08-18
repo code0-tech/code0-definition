@@ -1,0 +1,30 @@
+{
+  "runtime_name": "std::number::euler",
+  "runtime_parameter_definitions": [],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Euler's Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the mathematical constant e (Euler's number)."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Provides the constant value of Euler's number, approximately 2.71828, which is the base of the natural logarithm."
+    }
+  ],
+  "deprecation_message": []
+}

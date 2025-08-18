@@ -3,3 +3,4 @@
 **/node_modules
 .idea
 reader/ts/src/*.js
+reader/ts/build

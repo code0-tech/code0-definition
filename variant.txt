@@ -1,0 +1,8 @@
+Unknown = 0,
+Primitive = 1
+Type = 2
+Object = 3
+Datatype = 4
+Array = 5
+Error = 6
+Node = 7

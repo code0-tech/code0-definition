@@ -1,4 +1,5 @@
 use serde::Serialize;
+use std::io::ErrorKind;
 use std::{
     fs::{self, DirEntry},
     io::Error,
@@ -22,16 +23,16 @@ impl std::fmt::Display for MetaType {
     }
 }
 
-#[derive(Debug)]
 pub struct Reader {
     pub meta: Vec<Meta>,
 }
 
-#[derive(Debug)]
+#[derive(Clone)]
 pub struct Meta {
     pub name: String,
     pub r#type: MetaType,
-    pub data: Vec<String>,
+    pub definition_string: String,
+    pub path: String,
 }
 
 impl Meta {
@@ -39,11 +40,22 @@ impl Meta {
     where
         P: AsRef<Path>,
     {
-        let mut inside_code = false;
-        let mut current_block = vec![];
-        let mut code_snippets = vec![];
+        let path = match file_path.as_ref().to_str() {
+            Some(path) => path,
+            None => return Err(Error::new(ErrorKind::InvalidInput, "Invalid path")),
+        };
 
-        let content = match fs::read_to_string(file_path) {
+        if !path.ends_with("json") {
+            return Err(Error::new(
+                ErrorKind::InvalidInput,
+                format!(
+                    "File {} does not end with .json",
+                    file_path.as_ref().display()
+                ),
+            ));
+        }
+
+        let content = match fs::read_to_string(&file_path) {
             Ok(content) => content,
             Err(err) => {
                 println!("Error reading file: {err}");
@@ -51,37 +63,18 @@ impl Meta {
             }
         };
 
-        for line in content.lines() {
-            if line.contains("```") {
-                inside_code = !inside_code;
-
-                if !inside_code {
-                    let code_snippet = current_block.join(" ");
-                    code_snippets.push(code_snippet);
-                    current_block.clear();
-                }
-            }
-
-            if inside_code {
-                if line.starts_with("```") {
-                    continue;
-                }
-
-                current_block.push(line.to_string());
-            }
-        }
-
         Ok(Meta {
             name,
             r#type,
-            data: code_snippets,
+            definition_string: content,
+            path: path.to_string(),
         })
     }
 }
 
 /// Reader
 ///
-/// Expecting the file system too look like:
+/// Expecting the file system to look like:
 /// - <path>
 ///   - <feature>
 ///     - <flow_types>
@@ -138,13 +131,8 @@ impl Reader {
                             definition_path_result.path(),
                         );
 
-                        match meta {
-                            Ok(meta_result) => {
-                                result.push(meta_result);
-                            }
-                            Err(err) => {
-                                println!("Error reading meta: {err:?}");
-                            }
+                        if let Ok(meta_result) = meta {
+                            result.push(meta_result);
                         }
                     } else {
                         for sub_definition_path in
@@ -161,13 +149,8 @@ impl Reader {
                                 sub_definition_path_result.path(),
                             );
 
-                            match meta {
-                                Ok(meta_result) => {
-                                    result.push(meta_result);
-                                }
-                                Err(err) => {
-                                    println!("Error reading meta: {err:?}");
-                                }
+                            if let Ok(meta_result) = meta {
+                                result.push(meta_result);
                             }
                         }
                     }

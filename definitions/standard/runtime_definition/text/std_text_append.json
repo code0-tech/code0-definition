@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::text::append",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The initial text to which the suffix will be appended."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The base text string that will have another string appended to its end."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "suffix",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Suffix"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text to append to the original value."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The text string that will be concatenated to the end of the original text."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Append Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Concatenates the suffix text to the end of the original text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text string consisting of the original text followed by the specified suffix."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::number::ln",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to compute the natural logarithm for."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The numeric input whose natural logarithm (log base e) will be calculated."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Natural Logarithm"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the natural logarithm (log base e) of a number."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the natural logarithm of the given value."
+    }
+  ],
+  "deprecation_message": []
+}

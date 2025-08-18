@@ -2,8 +2,14 @@
   "name": "@code0-tech/definition-reader",
   "version": "0.0.0",
   "description": "Reader for Code0-Definitions",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts"
+    }
+  },
   "type": "module",
   "scripts": {
     "build": "tsc"
@@ -20,10 +26,7 @@
     "url": "git+https://github.com/code0-tech/code0-definitions.git"
   },
   "files": [
-    "src",
-    "index.d.ts",
-    "index.js",
-    "package.json"
+    "build"
   ],
   "publishConfig": {
     "access": "public"

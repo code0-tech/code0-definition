@@ -1,29 +1,18 @@
-use crate::table::error_table;
-use code0_definition_reader::parser::Parser;
-use colored::Colorize;
-use notify::{Event, EventKind, RecursiveMode, Watcher, recommended_watcher};
+use crate::analyser::Analyser;
+use crate::formatter::{default, info};
+use notify::event::ModifyKind;
+use notify::{EventKind, RecursiveMode, Watcher, recommended_watcher};
 use std::sync::mpsc::channel;
+use std::time::{Duration, Instant};
 
 pub async fn watch_for_changes(path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
 
-    println!(
-        "{}",
-        format!("Watching directory: {dir_path}")
-            .bright_yellow()
-            .bold()
-    );
-    println!("{}", "Press Ctrl+C to stop watching...".dimmed());
+    info(format!("Watching directory: {dir_path}"));
+    info(String::from("Press Ctrl+C to stop watching..."));
 
     {
-        let parser = match Parser::from_path(dir_path.as_str()) {
-            Some(reader) => reader,
-            None => {
-                panic!("Error reading definitions");
-            }
-        };
-
-        error_table(&parser.features);
+        Analyser::new(dir_path.as_str()).report(false);
     }
 
     // Set up file watcher
@@ -33,38 +22,35 @@ pub async fn watch_for_changes(path: Option<String>) {
         .watch(std::path::Path::new(&dir_path), RecursiveMode::Recursive)
         .unwrap();
 
+    let mut last_run = Instant::now();
+
     loop {
-        match rx.recv() {
-            Ok(event) => match event {
-                Ok(Event {
-                    kind: EventKind::Create(_),
-                    ..
-                })
-                | Ok(Event {
-                    kind: EventKind::Modify(_),
-                    ..
-                })
-                | Ok(Event {
-                    kind: EventKind::Remove(_),
-                    ..
-                }) => {
-                    println!(
-                        "\n{}",
-                        "Change detected! Regenerating report...".bright_yellow()
-                    );
-
-                    let parser = match Parser::from_path(dir_path.as_str()) {
-                        Some(reader) => reader,
-                        None => {
-                            panic!("Error reading definitions");
-                        }
-                    };
-
-                    error_table(&parser.features);
+        if let Ok(Ok(event)) = rx.recv() {
+            match event.kind {
+                EventKind::Modify(modify) => {
+                    if let ModifyKind::Data(_) = modify
+                        && last_run.elapsed() > Duration::from_millis(500)
+                    {
+                        default(String::from(
+                            "\n\n\n--------------------------------------------------------------------------\n\n",
+                        ));
+                        info(String::from("Change detected! Regenerating report..."));
+                        Analyser::new(dir_path.as_str()).report(false);
+                        last_run = Instant::now();
+                    }
+                }
+                EventKind::Remove(_) => {
+                    if last_run.elapsed() > Duration::from_millis(500) {
+                        default(String::from(
+                            "\n\n\n--------------------------------------------------------------------------\n\n",
+                        ));
+                        info(String::from("Change detected! Regenerating report..."));
+                        Analyser::new(dir_path.as_str()).report(false);
+                        last_run = Instant::now();
+                    }
                 }
                 _ => {}
-            },
-            Err(e) => println!("Watch error: {e:?}"),
+            }
         }
     }
 }

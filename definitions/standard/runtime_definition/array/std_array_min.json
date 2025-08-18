@@ -1,0 +1,75 @@
+{
+  "runtime_name": "std::array::min",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
+      },
+      "runtime_name": "array",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "An array of numbers to find the minimum value from."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Returns the smallest number in the given array of numbers."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Minimum Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the minimum value in a numeric array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the smallest number contained in the provided array."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,48 @@
+{
+  "variant": 3,
+  "identifier": "HTTP_HEADER_ENTRY",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Header Entry"
+    }
+  ],
+  "rules": [
+    {
+      "config": {
+        "ContainsKey": {
+          "key": "key",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "TEXT"
+            }
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "ContainsKey": {
+          "key": "value",
+          "data_type_identifier": {
+            "type": {
+              "DataTypeIdentifier": "TEXT"
+            }
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "ParentType": {
+          "parent_type": {
+            "type": {
+              "DataTypeIdentifier": "OBJECT"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "generic_keys": []
+}

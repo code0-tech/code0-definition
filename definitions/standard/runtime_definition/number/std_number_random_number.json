@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::number::random_number",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "min",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minimum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The minimum value in the random number range."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Defines the lower bound (inclusive) for the random number generation."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "max",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Maximum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The maximum value in the random number range."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Defines the upper bound (inclusive) for the random number generation."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Random Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Generates a random number between the specified minimum and maximum values."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a randomly generated number within the given range, inclusive of both minimum and maximum."
+    }
+  ],
+  "deprecation_message": []
+}

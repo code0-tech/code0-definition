@@ -1,3 +1,4 @@
+use crate::formatter::{info, success};
 use code0_definition_reader::parser::Parser;
 use colored::Colorize;
 
@@ -17,13 +18,7 @@ pub fn search_definition(name: String, path: Option<String>) {
 fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     let mut found_any = false;
     let mut total_matches = 0;
-    println!(
-        "{}",
-        format!("Searching for definitions matching: '{search_name}'")
-            .bright_yellow()
-            .bold()
-    );
-    println!("{}", "─".repeat(60).dimmed());
+    info(format!("Searching for '{}'", search_name));
 
     for feature in &parser.features {
         // Search FlowTypes
@@ -34,17 +29,13 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                     found_any = true;
                 }
 
-                println!("\n{}", "FlowType".bright_cyan().bold());
+                info(String::from("Found flow_type:\n"));
                 match serde_json::to_string_pretty(flow_type) {
                     Ok(json) => {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!(
-                                "{} {}",
-                                format!("{index}:").bright_blue(),
-                                line.bright_green()
-                            );
+                            println!("{} {}", format!("{index}:"), line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing FlowType".red()),
@@ -60,17 +51,13 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                     found_any = true;
                 }
 
-                println!("\n{}", "DataType".bright_cyan().bold());
+                info(String::from("Found data_type:\n"));
                 match serde_json::to_string_pretty(data_type) {
                     Ok(json) => {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!(
-                                "{} {}",
-                                format!("{index}:").bright_blue(),
-                                line.bright_green()
-                            );
+                            println!("{} {}", format!("{index}:"), line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing DataType".red()),
@@ -86,17 +73,13 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                     found_any = true;
                 }
 
-                println!("\n{}", "RuntimeFunction".bright_cyan().bold());
+                info(String::from("Found runtime_function_definition:\n"));
                 match serde_json::to_string_pretty(runtime_func) {
                     Ok(json) => {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!(
-                                "{} {}",
-                                format!("{index}:").bright_blue(),
-                                line.bright_green()
-                            );
+                            println!("{} {}", format!("{index}:"), line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing RuntimeFunction".red()),
@@ -107,16 +90,10 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
 
     if !found_any {
         println!(
-            "\n{}",
-            format!("No definitions found matching '{search_name}'")
-                .red()
-                .bold()
+            "{}",
+            format!("\n{}: {}", "error".red(), "Found no matching definition(s)")
         );
     } else {
-        println!("\n{}", "─".repeat(60).dimmed());
-        println!(
-            "{}",
-            format!("Found {total_matches} matching definition(s)").bright_yellow()
-        );
+        success(format!("Found {total_matches} matching definition(s)"))
     }
 }

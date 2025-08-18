@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::text::at",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string from which to extract the character."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The input text from which a character will be retrieved by index."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "index",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The zero-based position of the character to extract."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies which character to return from the text."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Character at Index"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the character at the specified index in the text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Retrieves a single character from the input text based on the provided zero-based index."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::number::log",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to compute the logarithm for."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The numeric input whose logarithm is to be calculated."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "base",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Base"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The base of the logarithm."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the logarithmic base to use (e.g., 10 for common log, e for natural log)."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Logarithm"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the logarithm of a number with respect to a specified base."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the logarithm of the given value using the specified base."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,117 @@
+{
+  "runtime_name": "std::array::find_last",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
+      },
+      "runtime_name": "array",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array to search through."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The array in which an element satisfying the predicate will be searched."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "PREDICATE",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
+      },
+      "runtime_name": "predicate",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Search Predicate"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A predicate function used to test each element for a match."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "A function that takes an element of the array and returns a boolean indicating if the element matches the search criteria."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "GenericKey": "R"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Last Element in Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the last element in the array that satisfies the predicate."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the last element from the input array for which the predicate returns true. If no element matches, returns null or equivalent."
+    }
+  ],
+  "deprecation_message": []
+}

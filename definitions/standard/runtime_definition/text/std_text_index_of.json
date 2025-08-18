@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::text::index_of",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to search within."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The text string to search within."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "substring",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Substring"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The substring to find inside the text."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The substring to find inside the text."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Index Of"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the first occurrence index of the substring within the text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the zero-based index of the first occurrence of the substring in the text. Returns -1 if the substring is not found."
+    }
+  ],
+  "deprecation_message": []
+}

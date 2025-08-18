@@ -1,0 +1,112 @@
+{
+  "runtime_name": "std::text::remove",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The original text to remove a substring from."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The input text from which a substring will be removed."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "start",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Start Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The zero-based index where removal begins."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The starting position for removing characters from the text."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "end",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "End Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The zero-based index where removal ends (exclusive)."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The position just after the last character to be removed."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Remove Substring"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes the substring between the specified start and end indices from the input text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new string with characters removed from start up to but not including end."
+    }
+  ],
+  "deprecation_message": []
+}

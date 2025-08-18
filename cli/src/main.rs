@@ -1,6 +1,8 @@
 use clap::{Parser as ClapParser, Subcommand};
 
+mod analyser;
 mod command;
+mod formatter;
 mod table;
 
 /// Top-level CLI for 'definition'
