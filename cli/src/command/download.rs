@@ -180,17 +180,15 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
                 panic!("Failed to create directory {}: {}", out_path.display(), e);
             }
         } else {
-            if let Some(p) = out_path.parent() {
-                if !p.exists() {
-                    if let Err(e) = fs::create_dir_all(p) {
+            if let Some(p) = out_path.parent()
+                && !p.exists()
+                    && let Err(e) = fs::create_dir_all(p) {
                         panic!(
                             "Warning: Failed to create parent directory {}: {}",
                             p.display(),
                             e
                         );
                     }
-                }
-            }
 
             match File::create(&out_path) {
                 Ok(mut outfile) => {

@@ -471,26 +471,24 @@ impl Analyser {
         }
 
         // Check if input identifier exists
-        if let Some(identifier) = flow.input_type_identifier {
-            if !self.data_type_identifier_exists(identifier.clone(), -1) {
+        if let Some(identifier) = flow.input_type_identifier
+            && !self.data_type_identifier_exists(identifier.clone(), -1) {
                 self.reporter.add_report(Diagnose::new(
                     name.clone(),
                     original_definition.clone(),
                     UndefinedDataTypeIdentifier { identifier },
                 ));
             }
-        }
 
         // Check if return identifier exists
-        if let Some(identifier) = flow.return_type_identifier {
-            if !self.data_type_identifier_exists(identifier.clone(), -1) {
+        if let Some(identifier) = flow.return_type_identifier
+            && !self.data_type_identifier_exists(identifier.clone(), -1) {
                 self.reporter.add_report(Diagnose::new(
                     name.clone(),
                     original_definition.clone(),
                     UndefinedDataTypeIdentifier { identifier },
                 ));
             }
-        }
 
         // Check if flow type identifier already exists
         for flow_type in &self.flow_types {

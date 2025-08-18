@@ -113,10 +113,10 @@ impl DiagnosticKind {
             | DuplicateRuntimeFunctionIdentifier { .. }
             | DuplicateRuntimeParameterIdentifier { .. }
             | GenericKeyNotInMappingTarget { .. }
-            | EmptyGenericMapper { .. }
+            | EmptyGenericMapper
             | UndefinedDataTypeIdentifier { .. }
             | NullField { .. }
-            | ForbiddenVariant { .. }
+            | ForbiddenVariant
             | UnusedGenericKey { .. }
             | UndefinedGenericKey { .. } => Severity::Error,
             UndefinedTranslation { .. } => Severity::Warning,

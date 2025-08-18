@@ -55,7 +55,7 @@ where
 }
 
 pub fn warning(string: String, path: &String) -> String {
-    format!("\n{}: {} {}", "warning".yellow(), string, print_path(&path))
+    format!("\n{}: {} {}", "warning".yellow(), string, print_path(path))
 }
 
 pub fn warning_highlight(highlight: String, string: String) {

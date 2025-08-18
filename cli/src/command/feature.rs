@@ -21,8 +21,7 @@ pub fn search_feature(name: Option<String>, path: Option<String>) {
         Some(feature_name) => parser
             .features
             .iter()
-            .filter(|f| f.name.to_lowercase() == feature_name.to_lowercase())
-            .map(|f| f.clone())
+            .filter(|f| f.name.to_lowercase() == feature_name.to_lowercase()).cloned()
             .collect::<Vec<Feature>>(),
     };
     

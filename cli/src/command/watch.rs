@@ -1,7 +1,7 @@
 use crate::analyser::Analyser;
 use crate::formatter::{default, info};
 use notify::event::ModifyKind;
-use notify::{Event, EventKind, RecursiveMode, Watcher, recommended_watcher};
+use notify::{EventKind, RecursiveMode, Watcher, recommended_watcher};
 use std::sync::mpsc::channel;
 use std::time::{Duration, Instant};
 
@@ -27,16 +27,15 @@ pub async fn watch_for_changes(path: Option<String>) {
     loop {
         if let Ok(Ok(event)) = rx.recv() {
             match event.kind {
-                EventKind::Modify(modify) => if let  ModifyKind::Data(_) = modify {
-                    if last_run.elapsed() > Duration::from_millis(500) {
+                EventKind::Modify(modify) => if let  ModifyKind::Data(_) = modify
+                    && last_run.elapsed() > Duration::from_millis(500) {
                         default(String::from(
                             "\n\n\n--------------------------------------------------------------------------\n\n",
                         ));
                         info(String::from("Change detected! Regenerating report..."));
                         Analyser::new(dir_path.as_str()).report(false);
                         last_run = Instant::now();
-                    }
-                },
+                    },
                 EventKind::Remove(_) => {
                     if last_run.elapsed() > Duration::from_millis(500) {
                         default(String::from(
