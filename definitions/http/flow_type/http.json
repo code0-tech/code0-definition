@@ -1,5 +1,5 @@
 {
-  "identifier": "REST",
+  "identifier": "HTTP",
   "settings": [],
   "input_type_identifier": "HTTP_REQUEST_OBJECT",
   "return_type_identifier": "HTTP_RESPONSE_OBJECT",

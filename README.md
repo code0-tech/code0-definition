@@ -82,7 +82,7 @@ npm i @code0-tech/code0-definition-reader --save-dev
 const features = Definition("./path/to/definitions")
 
 for (const feature in features) {
-    const name = feature.name; //name of the feature (e.g. rest)
+    const name = feature.name; //name of the feature (e.g. http)
     const dataTypes = fearture.dataTypes; //dataTypes of this feature
     const flowTypes = fearture.flowTypes; //flowTypes of this feature
     const functions = fearture.runtimeFunctions; //runtimeFunctions of this feature
