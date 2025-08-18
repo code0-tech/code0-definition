@@ -4,6 +4,7 @@ use reqwest::header::{ACCEPT, USER_AGENT};
 use serde::Deserialize;
 use std::fs;
 use std::fs::File;
+use std::path::Path;
 use zip::ZipArchive;
 use crate::formatter::{error_without_trace, info, success};
 
@@ -28,7 +29,6 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
     info("Starting download process...".to_string());
     let bytes = match download_definitions_as_bytes(tag).await {
         Some(bytes) => {
-            success(format!("Successfully downloaded {} bytes", bytes.len()));
             bytes
         }
         None => {
@@ -38,7 +38,6 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
     };
 
     // Extract the zip file
-    info("Extracting definitions...".to_string());
     convert_bytes_to_folder(bytes, zip_path).await;
 
     // Handle feature filtering if specified
@@ -49,7 +48,8 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
         info("Extracted all features!".to_string());
     }
 
-    success(format!("Download was successful. Definitions are now available in {out_folder_path}."));
+    let path = Path::new(out_folder_path);
+    success(format!("Download was successful. Definitions are now available: {}.", path.display()));
 }
 
 async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Bytes> {
@@ -118,105 +118,55 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
             if response.status().is_success() {
                 match response.bytes().await {
                     Ok(bytes) => {
-                        println!(
-                            "{} {}",
-                            "✅".green(),
-                            "Download completed successfully".green()
-                        );
+                        info("Download completed successfully".to_string());
                         Some(bytes)
                     }
                     Err(e) => {
-                        println!(
-                            "{} {}",
-                            "❌".red(),
-                            format!("Failed to read download data: {e}").red()
-                        );
+                        error_without_trace(format!("Failed to read download data: {e}"));
                         None
                     }
                 }
             } else {
-                println!(
-                    "{} {}",
-                    "❌".red(),
-                    format!("Download failed with status: {}", response.status()).red()
-                );
+                error_without_trace(format!("Download failed with status: {}", response.status()));
                 None
             }
         }
         Err(e) => {
-            println!(
-                "{} {}",
-                "❌".red(),
-                format!("Download request failed: {e}").red()
-            );
-            None
+            panic!("Download request failed: {e}");
         }
     }
 }
 
 async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
-    println!("{} Writing zip file to disk...", "💾".bright_blue());
 
     if let Err(e) = fs::write(zip_path, &bytes) {
-        println!(
-            "{} {}",
-            "❌".red(),
-            format!("Failed to write zip file: {e}").red()
-        );
-        return;
+        panic!("Failed to write zip file: {e}")
     }
-    println!(
-        "{} {}",
-        "✅".green(),
-        "Zip file written successfully".green()
-    );
 
-    println!("{} Opening zip archive...", "📂".bright_blue());
     let zip_file = match File::open(zip_path) {
         Ok(file) => file,
         Err(e) => {
-            println!(
-                "{} {}",
-                "❌".red(),
-                format!("Failed to open zip file: {e}").red()
-            );
-            return;
+            panic!("Failed to open zip file: {e}");
         }
     };
 
     let mut archive = match ZipArchive::new(zip_file) {
         Ok(archive) => {
-            println!(
-                "{} {}",
-                "✅".green(),
-                format!("Successfully opened archive with {} files", archive.len()).green()
-            );
             archive
         }
         Err(e) => {
-            println!(
-                "{} {}",
-                "❌".red(),
-                format!("Failed to read zip archive: {e}").red()
-            );
-            return;
+            panic!("Failed to read zip archive: {e}");
         }
     };
 
-    println!("{} Extracting files...", "📤".bright_blue());
-    let mut extracted_count = 0;
+    info("Extracting files...".to_string());
     let total_files = archive.len();
 
     for i in 0..archive.len() {
         let mut file = match archive.by_index(i) {
             Ok(file) => file,
             Err(e) => {
-                println!(
-                    "{} {}",
-                    "⚠️".yellow(),
-                    format!("Warning: Failed to read file at index {i}: {e}").yellow()
-                );
-                continue;
+                panic!("Failed to read file at index {i}: {e}");
             }
         };
 
@@ -226,33 +176,22 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
         };
 
         if file.name().ends_with('/') {
-            if let Err(e) = std::fs::create_dir_all(&out_path) {
-                println!(
-                    "{} {}",
-                    "⚠️".yellow(),
-                    format!(
-                        "Warning: Failed to create directory {}: {}",
-                        out_path.display(),
-                        e
-                    )
-                    .yellow()
+            if let Err(e) = fs::create_dir_all(&out_path) {
+                panic!(
+                    "Failed to create directory {}: {}",
+                    out_path.display(),
+                    e
                 );
             }
         } else {
             if let Some(p) = out_path.parent() {
                 if !p.exists() {
-                    if let Err(e) = std::fs::create_dir_all(p) {
-                        println!(
-                            "{} {}",
-                            "⚠️".yellow(),
-                            format!(
-                                "Warning: Failed to create parent directory {}: {}",
-                                p.display(),
-                                e
-                            )
-                            .yellow()
+                    if let Err(e) = fs::create_dir_all(p) {
+                        panic!(
+                            "Warning: Failed to create parent directory {}: {}",
+                            p.display(),
+                            e
                         );
-                        continue;
                     }
                 }
             }
@@ -260,47 +199,26 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
             match File::create(&out_path) {
                 Ok(mut outfile) => {
                     if let Err(e) = std::io::copy(&mut file, &mut outfile) {
-                        println!(
-                            "{} {}",
-                            "⚠️".yellow(),
-                            format!("Warning: Failed to extract {}: {}", out_path.display(), e)
-                                .yellow()
-                        );
-                    } else {
-                        extracted_count += 1;
+                        panic!("Warning: Failed to extract {}: {}", out_path.display(), e);
                     }
                 }
                 Err(e) => {
-                    println!(
-                        "{} {}",
-                        "⚠️".yellow(),
-                        format!(
-                            "Warning: Failed to create file {}: {}",
-                            out_path.display(),
-                            e
-                        )
-                        .yellow()
+                    panic!(
+                        "Failed to create file {}: {}",
+                        out_path.display(),
+                        e
                     );
                 }
             }
         }
     }
 
-    println!(
-        "{} {}",
-        "✅".green(),
-        format!("Successfully extracted {extracted_count}/{total_files} files").green()
-    );
+    info(format!("Successfully extracted {total_files} files"));
+    info("Cleaning up temporary files...".to_string());
 
-    // Clean up zip file
-    println!("{} Cleaning up temporary files...", "🧹".bright_blue());
     match fs::remove_file(zip_path) {
-        Ok(_) => println!("{} {}", "✅".green(), "Temporary zip file removed".green()),
-        Err(e) => println!(
-            "{} {}",
-            "⚠️".yellow(),
-            format!("Warning: Failed to remove temporary zip file: {e}").yellow()
-        ),
+        Ok(_) => info("Temporary zip file removed".to_string()),
+        Err(e) => error_without_trace(format!("Warning: Failed to remove temporary zip file: {e}"))
     }
 }
 
@@ -309,62 +227,30 @@ async fn filter_features(selected_features: Vec<String>) {
 
     match fs::read_dir(definitions_path) {
         Ok(entries) => {
-            let mut removed_count = 0;
-            let mut kept_count = 0;
 
             for entry in entries {
                 let directory = match entry {
                     Ok(directory) => directory,
                     Err(e) => {
-                        println!(
-                            "{} {}",
-                            "⚠️".yellow(),
-                            format!("Warning: Failed to read directory entry: {e}").yellow()
-                        );
-                        continue;
+                        panic!("{}", format!("Warning: Failed to read directory entry: {e}"));
                     }
                 };
 
                 let name = directory.file_name().to_str().unwrap_or("").to_string();
 
                 if !selected_features.contains(&name) {
-                    println!("  {} Removing feature: {}", "🗑️".red(), name.red());
                     match fs::remove_dir_all(directory.path()) {
-                        Ok(_) => {
-                            println!("    {} Successfully removed", "✅".green());
-                            removed_count += 1;
-                        }
+                        Ok(_) => {}
                         Err(e) => {
-                            println!(
-                                "    {} Failed to remove: {}",
-                                "❌".red(),
-                                e.to_string().red()
-                            );
+                            error_without_trace(format!("Warning: Failed to remove directory: {e}"))
                         }
                     }
-                } else {
-                    println!("  {} Keeping feature: {}", "📁".green(), name.green());
-                    kept_count += 1;
                 }
             }
-
-            println!("\n{} Feature filtering completed:", "📊".bright_blue());
-            println!(
-                "  {} Features kept: {}",
-                "✅".green(),
-                kept_count.to_string().green().bold()
-            );
-            println!(
-                "  {} Features removed: {}",
-                "🗑️".red(),
-                removed_count.to_string().red().bold()
-            );
         }
         Err(e) => {
-            println!(
-                "{} {}",
-                "❌".red(),
-                format!("Failed to read definitions directory: {e}").red()
+            error_without_trace(
+                format!("Failed to read definitions directory: {e}")
             );
         }
     }

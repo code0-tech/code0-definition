@@ -38,8 +38,8 @@ pub fn error(string: String, path: &String) -> String {
     format!("\n{}: {} {}", "error".red(), string, print_path(path))
 }
 
-pub fn error_without_trace(string: String) -> String {
-    format!("\n{}: {}", "error".red(), string)
+pub fn error_without_trace(string: String)  {
+    println!("\n{}: {}", "error".red(), string)
 }
 
 pub fn error_highlight(highlight: String, string: String) {
