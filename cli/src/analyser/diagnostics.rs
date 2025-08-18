@@ -1,8 +1,8 @@
 use crate::formatter::{error, warning};
-use code0_definition_reader::reader::ParsableDefinition;
 use std::cmp::PartialEq;
 use std::path::Path;
 use std::process::exit;
+use code0_definition_reader::reader::Meta;
 
 #[derive(Default)]
 pub struct Reporter {
@@ -84,7 +84,7 @@ pub enum Severity {
 pub struct Diagnose {
     kind: DiagnosticKind,
     definition_name: String,
-    definition: ParsableDefinition,
+    definition: Meta,
 }
 
 pub enum DiagnosticKind {
@@ -127,7 +127,7 @@ impl DiagnosticKind {
 impl Diagnose {
     pub fn new(
         definition_name: String,
-        definition: ParsableDefinition,
+        definition: Meta,
         kind: DiagnosticKind,
     ) -> Self {
         Self {
@@ -140,8 +140,8 @@ impl Diagnose {
     pub fn print(&self) -> String {
         let path = format!(
             "{}:{}:{}",
-            Path::new(&self.definition.path.clone().unwrap_or_default()).display(),
-            &self.definition.starting_line,
+            Path::new(&self.definition.path.clone()).display(),
+            1,
             1
         );
 

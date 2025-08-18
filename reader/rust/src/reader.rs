@@ -4,6 +4,7 @@ use std::{
     io::Error,
     path::Path,
 };
+use std::io::ErrorKind;
 
 #[derive(Serialize, Debug, Clone, Copy)]
 pub enum MetaType {
@@ -27,16 +28,11 @@ pub struct Reader {
 }
 
 #[derive(Clone)]
-pub struct ParsableDefinition {
-    pub path: Option<String>,
-    pub starting_line: i32,
-    pub definition_string: String,
-}
-
 pub struct Meta {
     pub name: String,
     pub r#type: MetaType,
-    pub data: Vec<ParsableDefinition>,
+    pub definition_string: String,
+    pub path: String,
 }
 
 impl Meta {
@@ -44,16 +40,15 @@ impl Meta {
     where
         P: AsRef<Path>,
     {
-        let mut current_line = 0;
-        let mut current_starting_line = 0;
-        let mut inside_code = false;
-        let mut current_block = vec![];
-        let mut code_snippets: Vec<ParsableDefinition> = vec![];
 
-        let path = match file_path.as_ref().to_str() {
-            Some(str) => Some(str.to_string()),
-            None => None,
-        };
+       let path = match file_path.as_ref().to_str() {
+           Some(path) => path,
+           None => return Err(Error::new(ErrorKind::InvalidInput, "Invalid path")),
+       };
+
+        if !path.ends_with("json") {
+           return Err(Error::new(ErrorKind::InvalidInput, format!("File {} does not end with .json", file_path.as_ref().display())));
+        }
 
         let content = match fs::read_to_string(&file_path) {
             Ok(content) => content,
@@ -63,36 +58,11 @@ impl Meta {
             }
         };
 
-        for line in content.lines() {
-            current_line += 1;
-            if line.contains("```") {
-                inside_code = !inside_code;
-
-                if !inside_code {
-                    let code_snippet = current_block.join(" ");
-                    code_snippets.push(ParsableDefinition {
-                        path: path.clone(),
-                        starting_line: current_starting_line,
-                        definition_string: code_snippet,
-                    });
-                    current_block.clear();
-                }
-            }
-
-            if inside_code {
-                if line.starts_with("```") {
-                    current_starting_line = current_line;
-                    continue;
-                }
-
-                current_block.push(line.to_string());
-            }
-        }
-
-        Ok(Meta {
+        Ok(Meta{
             name,
             r#type,
-            data: code_snippets,
+            definition_string: content,
+            path: path.to_string(),
         })
     }
 }
@@ -160,9 +130,7 @@ impl Reader {
                             Ok(meta_result) => {
                                 result.push(meta_result);
                             }
-                            Err(err) => {
-                                println!("Error reading meta: {err:?}");
-                            }
+                           _ => {}
                         }
                     } else {
                         for sub_definition_path in
@@ -183,9 +151,7 @@ impl Reader {
                                 Ok(meta_result) => {
                                     result.push(meta_result);
                                 }
-                                Err(err) => {
-                                    println!("Error reading meta: {err:?}");
-                                }
+                                _ => {}
                             }
                         }
                     }

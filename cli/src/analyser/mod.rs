@@ -7,28 +7,28 @@ use crate::analyser::diagnostics::DiagnosticKind::{
 };
 use crate::analyser::diagnostics::{Diagnose, DiagnosticKind, Reporter};
 use code0_definition_reader::parser::Parser;
-use code0_definition_reader::reader::{MetaType, ParsableDefinition, Reader};
+use code0_definition_reader::reader::{Meta, MetaType, Reader};
 use tucana::shared::data_type_identifier::Type;
 use tucana::shared::definition_data_type_rule::Config;
 use tucana::shared::{DataTypeIdentifier, DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
 #[derive(Clone)]
 pub struct AnalysableDataType {
-    pub original_definition: ParsableDefinition,
+    pub original_definition: Meta,
     pub definition_data_type: DefinitionDataType,
     pub id: i16,
 }
 
 #[derive(Clone)]
 pub struct AnalysableFlowType {
-    pub original_definition: ParsableDefinition,
+    pub original_definition: Meta,
     pub flow_type: FlowType,
     pub id: i16,
 }
 
 #[derive(Clone)]
 pub struct AnalysableFunction {
-    pub original_definition: ParsableDefinition,
+    pub original_definition: Meta,
     pub function: RuntimeFunctionDefinition,
     pub id: i16,
 }
@@ -55,89 +55,83 @@ impl Analyser {
         let mut collected_flow_types: Vec<AnalysableFlowType> = vec![];
         let mut collected_functions: Vec<AnalysableFunction> = vec![];
 
-        for features in reader.meta {
-            match features.r#type {
+        for definition in reader.meta {
+            match definition.r#type {
                 MetaType::FlowType => {
-                    for p_flow_type in &features.data {
-                        current_index += 1;
-                        match serde_json::from_str::<FlowType>(
-                            p_flow_type.definition_string.as_str(),
-                        ) {
-                            Ok(flow_type) => collected_flow_types.push(AnalysableFlowType {
-                                original_definition: p_flow_type.clone(),
-                                flow_type,
-                                id: current_index,
-                            }),
-                            Err(err) => {
-                                let name = Parser::extract_identifier(
-                                    p_flow_type.definition_string.as_str(),
-                                    MetaType::FlowType,
-                                );
-                                let diagnose = Diagnose::new(
-                                    name,
-                                    p_flow_type.clone(),
-                                    DiagnosticKind::DeserializationError {
-                                        description: err.to_string(),
-                                    },
-                                );
-                                reporter.add_report(diagnose);
-                            }
+                    current_index += 1;
+                    match serde_json::from_str::<FlowType>(
+                        definition.definition_string.as_str(),
+                    ) {
+                        Ok(flow_type) => collected_flow_types.push(AnalysableFlowType {
+                            original_definition: definition.clone(),
+                            flow_type,
+                            id: current_index,
+                        }),
+                        Err(err) => {
+                            let name = Parser::extract_identifier(
+                                definition.definition_string.as_str(),
+                                MetaType::FlowType,
+                            );
+                            let diagnose = Diagnose::new(
+                                name,
+                                definition.clone(),
+                                DiagnosticKind::DeserializationError {
+                                    description: err.to_string(),
+                                },
+                            );
+                            reporter.add_report(diagnose);
                         }
                     }
                 }
                 MetaType::DataType => {
-                    for p_data_type in &features.data {
-                        current_index += 1;
-                        match serde_json::from_str::<DefinitionDataType>(
-                            p_data_type.definition_string.as_str(),
-                        ) {
-                            Ok(data_type) => collected_data_types.push(AnalysableDataType {
-                                original_definition: p_data_type.clone(),
-                                definition_data_type: data_type,
-                                id: current_index,
-                            }),
-                            Err(err) => {
-                                let name = Parser::extract_identifier(
-                                    p_data_type.definition_string.as_str(),
-                                    MetaType::DataType,
-                                );
-                                let diagnose = Diagnose::new(
-                                    name,
-                                    p_data_type.clone(),
-                                    DiagnosticKind::DeserializationError {
-                                        description: err.to_string(),
-                                    },
-                                );
-                                reporter.add_report(diagnose);
-                            }
+                    current_index += 1;
+                    match serde_json::from_str::<DefinitionDataType>(
+                        definition.definition_string.as_str(),
+                    ) {
+                        Ok(data_type) => collected_data_types.push(AnalysableDataType {
+                            original_definition: definition.clone(),
+                            definition_data_type: data_type,
+                            id: current_index,
+                        }),
+                        Err(err) => {
+                            let name = Parser::extract_identifier(
+                                definition.definition_string.as_str(),
+                                MetaType::DataType,
+                            );
+                            let diagnose = Diagnose::new(
+                                name,
+                                definition.clone(),
+                                DiagnosticKind::DeserializationError {
+                                    description: err.to_string(),
+                                },
+                            );
+                            reporter.add_report(diagnose);
                         }
                     }
                 }
                 MetaType::RuntimeFunction => {
-                    for p_function in &features.data {
-                        current_index += 1;
-                        match serde_json::from_str::<RuntimeFunctionDefinition>(
-                            p_function.definition_string.as_str(),
-                        ) {
-                            Ok(function) => collected_functions.push(AnalysableFunction {
-                                original_definition: p_function.clone(),
-                                function,
-                                id: current_index,
-                            }),
-                            Err(err) => {
-                                let name = Parser::extract_identifier(
-                                    p_function.definition_string.as_str(),
-                                    MetaType::RuntimeFunction,
-                                );
-                                let diagnose = Diagnose::new(
-                                    name,
-                                    p_function.clone(),
-                                    DiagnosticKind::DeserializationError {
-                                        description: err.to_string(),
-                                    },
-                                );
-                                reporter.add_report(diagnose);
-                            }
+                    current_index += 1;
+                    match serde_json::from_str::<RuntimeFunctionDefinition>(
+                        definition.definition_string.as_str(),
+                    ) {
+                        Ok(function) => collected_functions.push(AnalysableFunction {
+                            original_definition: definition.clone(),
+                            function,
+                            id: current_index,
+                        }),
+                        Err(err) => {
+                            let name = Parser::extract_identifier(
+                                definition.definition_string.as_str(),
+                                MetaType::RuntimeFunction,
+                            );
+                            let diagnose = Diagnose::new(
+                                name,
+                                definition.clone(),
+                                DiagnosticKind::DeserializationError {
+                                    description: err.to_string(),
+                                },
+                            );
+                            reporter.add_report(diagnose);
                         }
                     }
                 }
@@ -674,7 +668,7 @@ impl Analyser {
     fn handle_function_data_type_identifier(
         &mut self,
         name: String,
-        original: ParsableDefinition,
+        original: Meta,
         identifier: DataTypeIdentifier,
     ) -> Vec<String> {
         let mut result: Vec<String> = vec![];
