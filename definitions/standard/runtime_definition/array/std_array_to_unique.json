@@ -1,0 +1,90 @@
+{
+  "runtime_name": "std::array::to_unique",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
+      },
+      "runtime_name": "array",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input array from which duplicates will be removed."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array of elements that may contain duplicates. This function will remove any duplicate items and return a new array with unique values only."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "To Unique"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes duplicate elements from the input array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new array containing only the unique elements from the input array. The original order may or may not be preserved depending on the implementation."
+    }
+  ],
+  "deprecation_message": []
+}

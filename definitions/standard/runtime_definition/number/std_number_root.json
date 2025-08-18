@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::number::root",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number from which the root will be extracted."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The numeric input for which the root will be calculated."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "root_exponent",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Root Exponent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The degree of the root to extract."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies which root to calculate (e.g., 2 for square root, 3 for cube root)."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Root"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the root of a number given a root exponent."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Calculates the nth root of the input number, where n is specified by the root exponent."
+    }
+  ],
+  "deprecation_message": []
+}

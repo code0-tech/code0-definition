@@ -1,0 +1,26 @@
+{
+  "runtime_name": "std::control::break",
+  "runtime_parameter_definitions": [],
+  "return_type_identifier": null,
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Break"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Breaks the current loop."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Breaks the current loop."
+    }
+  ],
+  "deprecation_message": []
+}

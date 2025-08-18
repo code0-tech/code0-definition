@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::boolean::as_number",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "BOOLEAN"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The boolean value to convert."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Converts a boolean value to a number."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "As Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Will convert the boolean to a number."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Converts a boolean value to a number."
+    }
+  ],
+  "deprecation_message": []
+}

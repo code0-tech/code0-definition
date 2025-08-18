@@ -1,0 +1,20 @@
+{
+  "variant": 2,
+  "identifier": "HTTP_URL",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Route"
+    }
+  ],
+  "rules": [
+    {
+      "config": {
+        "Regex": {
+          "pattern": "/^/\\w+(?:[.:~-]\\w+)*(?:/\\w+(?:[.:~-]\\w+)*)*$/"
+        }
+      }
+    }
+  ],
+  "generic_keys": []
+}

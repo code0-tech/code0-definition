@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::number::arccos",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number representing the cosine value, must be between -1 and 1."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Calculates the arccosine (inverse cosine) of the input value."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Arccosine"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the arccosine of a number, in radians."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Computes the angle in radians whose cosine is the given number."
+    }
+  ],
+  "deprecation_message": []
+}

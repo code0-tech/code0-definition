@@ -1,0 +1,75 @@
+{
+  "runtime_name": "std::array::size",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
+      },
+      "runtime_name": "array",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array whose number of elements is to be returned."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the array for which the total number of elements will be calculated and returned."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Array Size"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the number of elements in the array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "This function returns the count of elements present in the given array."
+    }
+  ],
+  "deprecation_message": []
+}

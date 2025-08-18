@@ -1,0 +1,73 @@
+{
+  "runtime_name": "std::text::from_ascii",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "DataTypeIdentifier": "NUMBER"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "ASCII Codes"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Array of ASCII numeric codes representing characters."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Array of ASCII numeric codes representing characters."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "From ASCII"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts an array of ASCII codes back into the corresponding text string."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Takes an array of numbers where each number is an ASCII code, and returns the string they represent."
+    }
+  ],
+  "deprecation_message": []
+}

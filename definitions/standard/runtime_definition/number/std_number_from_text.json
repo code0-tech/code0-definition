@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::number::from_text",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "text",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to convert to a number."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Parses the input text and attempts to convert it to a numeric value."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Number from Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts a text string into a number if possible."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Attempts to parse the provided text input and return its numeric equivalent."
+    }
+  ],
+  "deprecation_message": []
+}

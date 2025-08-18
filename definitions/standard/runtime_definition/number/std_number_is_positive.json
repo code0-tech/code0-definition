@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::number::is_positive",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to check for positivity."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the numeric input that will be evaluated to determine whether it is greater than zero."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Positive"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks whether a number is greater than zero."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Evaluates the input number and returns true if it is positive (greater than zero), otherwise false."
+    }
+  ],
+  "deprecation_message": []
+}

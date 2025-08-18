@@ -1,0 +1,85 @@
+{
+  "runtime_name": "std::object::contains_key",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "OBJECT"
+        }
+      },
+      "runtime_name": "object",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The object to check for the presence of a key."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The object within which the existence of the specified key will be checked."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "key",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Key"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The key to check for existence in the object."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The property key whose presence in the object is being tested."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "BOOLEAN"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Contains Key"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks whether the specified key exists in the object."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the given key is a property of the object; otherwise, returns false."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::text::capitalize",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to capitalize."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Capitalizes the first letter of the input text string."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "TEXT"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Capitalize"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts the first character of the text to uppercase and leaves the rest unchanged."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text string with the first letter capitalized."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,117 @@
+{
+  "runtime_name": "std::array::remove",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericType": {
+            "data_type_identifier": "ARRAY",
+            "generic_mappers": [
+              {
+                "source": [
+                  {
+                    "type": {
+                      "GenericKey": "R"
+                    }
+                  }
+                ],
+                "target": "T",
+                "generic_combinations": []
+              }
+            ]
+          }
+        }
+      },
+      "runtime_name": "array",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array from which the item will be removed."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array to process by removing the first occurrence of the specified item."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericKey": "R"
+        }
+      },
+      "runtime_name": "item",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Item"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The item to remove from the array."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The value to search for and remove from the array. Only the first matching item is removed."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "GenericKey": "R"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Remove from Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes the first occurrence of the specified item from the array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Removes the first matching item from the given array and returns the resulting array."
+    }
+  ],
+  "deprecation_message": []
+}

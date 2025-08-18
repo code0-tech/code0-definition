@@ -1,0 +1,20 @@
+{
+  "variant": 1,
+  "identifier": "BOOLEAN",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "rules": [
+    {
+      "config": {
+        "Regex": {
+          "pattern": "^(true|false)$"
+        }
+      }
+    }
+  ],
+  "generic_keys": []
+}

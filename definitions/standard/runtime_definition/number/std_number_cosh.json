@@ -1,0 +1,58 @@
+{
+  "runtime_name": "std::number::cosh",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number for which to calculate the hyperbolic cosine."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Computes the hyperbolic cosine of the given number."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "NUMBER"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Hyperbolic Cosine"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the hyperbolic cosine of a number."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Calculates the hyperbolic cosine (cosh) of the input value."
+    }
+  ],
+  "deprecation_message": []
+}

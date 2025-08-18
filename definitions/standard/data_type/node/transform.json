@@ -1,0 +1,43 @@
+{
+  "variant": 7,
+  "identifier": "TRANSFORM",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Transform"
+    }
+  ],
+  "rules": [
+    {
+      "config": {
+        "ReturnType": {
+          "data_type_identifier": {
+            "type": {
+              "GenericKey": "R"
+            }
+          }
+        }
+      }
+    },
+    {
+      "config": {
+        "InputTypes": {
+          "input_types": [
+            {
+              "data_type_identifier": {
+                "type": {
+                  "GenericKey": "I"
+                }
+              },
+              "input_identifier": "transform"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "generic_keys": [
+    "I",
+    "R"
+  ]
+}

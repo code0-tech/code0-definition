@@ -1,0 +1,73 @@
+{
+  "runtime_name": "std::text::as_bytes",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "TEXT"
+        }
+      },
+      "runtime_name": "value",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text to convert into bytes."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Converts the input text string into an array of byte values."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "GenericType": {
+        "data_type_identifier": "ARRAY",
+        "generic_mappers": [
+          {
+            "source": [
+              {
+                "type": {
+                  "DataTypeIdentifier": "NUMBER"
+                }
+              }
+            ],
+            "target": "T",
+            "generic_combinations": []
+          }
+        ]
+      }
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "As Bytes"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts a text string into an array of byte values."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns an array of bytes representing the UTF-8 encoding of the given text."
+    }
+  ],
+  "deprecation_message": []
+}
