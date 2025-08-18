@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {Meta, MetaType} from "../index";
+import {Meta, MetaType} from "./types.js";
 
 export const Reader = (rootPath: string): Meta[] => {
     const result: Meta[] = [];
@@ -29,17 +29,30 @@ export const Reader = (rootPath: string): Meta[] => {
             const defPath = path.join(typePath, def.name);
 
             if (def.isFile()) {
-              const meta = MetaReader(featureName, metaType, defPath);
-              if (meta) result.push(meta);
+                if (!defPath.endsWith('.json')) continue;
+                try {
+                    const content = fs.readFileSync(defPath, 'utf-8');
+                    const meta: Meta = {name:  featureName, type: metaType, data: content};
+                    result.push(meta);
+                } catch (err) {
+                    console.error(`Error reading file: ${defPath}`, err);
+                }
             } else if (def.isDirectory()) {
-              const subDefinitions = fs.readdirSync(defPath, { withFileTypes: true });
+                const subDefinitions = fs.readdirSync(defPath, { withFileTypes: true });
 
               for (const subDef of subDefinitions) {
                 const subPath = path.join(defPath, subDef.name);
-                if (!subDef.isFile()) continue;
 
-                const meta = MetaReader(featureName, metaType, subPath);
-                if (meta) result.push(meta);
+                  if (!subPath.endsWith('.json')) continue;
+                  if (!subDef.isFile()) continue;
+
+                  try {
+                      const content = fs.readFileSync(subPath, 'utf-8');
+                      const meta: Meta = {name:  featureName, type: metaType, data: content};
+                      result.push(meta);
+                  } catch (err) {
+                      console.error(`Error reading file: ${subPath}`, err);
+                  }
               }
             }
           }
@@ -51,40 +64,6 @@ export const Reader = (rootPath: string): Meta[] => {
       console.error(`Error reading path ${rootPath}:`, err);
       return [];
     }
-}
-
-const MetaReader = (name: string, type: MetaType, filePath: string): Meta | null => {
-    let content: string;
-
-    try {
-      content = fs.readFileSync(filePath, 'utf-8');
-    } catch (err) {
-      console.error(`Error reading file: ${filePath}`, err);
-      return null;
-    }
-
-    const lines = content.split('\n');
-    let insideCode = false;
-    const currentBlock: string[] = [];
-    const codeSnippets: string[] = [];
-
-    for (const line of lines) {
-      if (line.includes('```')) {
-        insideCode = !insideCode;
-
-        if (!insideCode) {
-          codeSnippets.push(currentBlock.join(' '));
-          currentBlock.length = 0;
-        }
-        continue;
-      }
-
-      if (insideCode) {
-        currentBlock.push(line);
-      }
-    }
-
-    return { name, type, data: codeSnippets };
 }
 
 function matchMetaType(name: string): MetaType | null {

@@ -9,7 +9,7 @@ export enum MetaType {
 export interface Meta {
     name: string;
     type: MetaType;
-    data: string[];
+    data: string;
 }
 
 export interface Feature {

@@ -1,6 +1,6 @@
-import {Reader} from './reader';
+import {Reader} from './reader.js';
 import {DataType, FlowType, RuntimeFunctionDefinition} from "@code0-tech/sagittarius-graphql-types";
-import {Feature, Meta, MetaType} from "../index";
+import {Feature, Meta, MetaType} from "./types.js";
 
 export const Definition = (rootPath: string): Feature[] => {
     const meta = Reader(rootPath);
@@ -28,27 +28,26 @@ export const Definition = (rootPath: string): Feature[] => {
 }
 
 function appendMeta(feature: Feature, meta: Meta): void {
-    for (const definition of meta.data) {
-        try {
-            switch (meta.type) {
-                case MetaType.DataType: {
-                    const parsed = JSON.parse(definition) as DataType;
-                    feature.dataTypes.push(parsed);
-                    break;
-                }
-                case MetaType.FlowType: {
-                    const parsed = JSON.parse(definition) as FlowType;
-                    feature.flowTypes.push(parsed);
-                    break;
-                }
-                case MetaType.RuntimeFunction: {
-                    const parsed = JSON.parse(definition) as RuntimeFunctionDefinition;
-                    feature.runtimeFunctions.push(parsed);
-                    break;
-                }
+    const definition = meta.data;
+    try {
+        switch (meta.type) {
+            case MetaType.DataType: {
+                const parsed = JSON.parse(definition) as DataType;
+                feature.dataTypes.push(parsed);
+                break;
             }
-        } catch (err: any) {
-            console.error(`Error parsing ${meta.type} ${meta.name}:`, err);
+            case MetaType.FlowType: {
+                const parsed = JSON.parse(definition) as FlowType;
+                feature.flowTypes.push(parsed);
+                break;
+            }
+            case MetaType.RuntimeFunction: {
+                const parsed = JSON.parse(definition) as RuntimeFunctionDefinition;
+                feature.runtimeFunctions.push(parsed);
+                break;
+            }
         }
+    } catch (err: any) {
+        console.error(`Error parsing ${meta.type} ${meta.name} ${definition}:`, err);
     }
 }
