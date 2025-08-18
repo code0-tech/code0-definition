@@ -1,6 +1,6 @@
 {
   "variant": 3,
-  "identifier": "HTTP_REQUEST_OBJECT",
+  "identifier": "HTTP_REQUEST",
   "name": [
     {
       "code": "en-US",

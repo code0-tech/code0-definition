@@ -1,8 +1,8 @@
 {
   "identifier": "HTTP",
   "settings": [],
-  "input_type_identifier": "HTTP_REQUEST_OBJECT",
-  "return_type_identifier": "HTTP_RESPONSE_OBJECT",
+  "input_type_identifier": "HTTP_REQUEST",
+  "return_type_identifier": "HTTP_RESPONSE",
   "editable": false,
   "name": [
     {
