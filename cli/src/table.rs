@@ -1,5 +1,5 @@
 use code0_definition_reader::parser::Feature;
-use tabled::{Tabled};
+use tabled::Tabled;
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
 #[derive(Tabled)]

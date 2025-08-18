@@ -21,10 +21,11 @@ pub fn search_feature(name: Option<String>, path: Option<String>) {
         Some(feature_name) => parser
             .features
             .iter()
-            .filter(|f| f.name.to_lowercase() == feature_name.to_lowercase()).cloned()
+            .filter(|f| f.name.to_lowercase() == feature_name.to_lowercase())
+            .cloned()
             .collect::<Vec<Feature>>(),
     };
-    
+
     for feature in &features {
         let (flow_type_rows, data_type_rows, function_rows) = feature_table(feature);
 
