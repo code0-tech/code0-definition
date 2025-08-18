@@ -18,23 +18,31 @@ pub fn success(string: String) {
     println!("\n{}: {}", "success".green(), string);
 }
 
-pub fn success_highlight(highlight: String,string: String) {
+pub fn info(string: String) {
+    println!("\n{}: {}", "info".blue(), string);
+}
+
+pub fn success_highlight(highlight: String, string: String) {
     println!("{} {}", highlight.green(), string);
 }
 
 pub fn success_table<I, T>(iter: I)
-    where
+where
     I: IntoIterator<Item = T>,
     T: Tabled,
 {
-    println!("{}", print_table(iter).green());
+    println!("\n{}", print_table(iter).green());
 }
 
 pub fn error(string: String, path: &String) -> String {
     format!("\n{}: {} {}", "error".red(), string, print_path(path))
 }
 
-pub fn error_highlight(highlight: String,string: String) {
+pub fn error_without_trace(string: String) -> String {
+    format!("\n{}: {}", "error".red(), string)
+}
+
+pub fn error_highlight(highlight: String, string: String) {
     println!("{} {}", highlight.red(), string);
 }
 
@@ -50,10 +58,9 @@ pub fn warning(string: String, path: &String) -> String {
     format!("\n{}: {} {}", "warning".yellow(), string, print_path(&path))
 }
 
-pub fn warning_highlight(highlight: String,string: String) {
+pub fn warning_highlight(highlight: String, string: String) {
     println!("{} {}", highlight.yellow(), string);
 }
-
 
 pub fn warning_table<I, T>(iter: I)
 where

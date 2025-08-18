@@ -1,5 +1,6 @@
 use code0_definition_reader::parser::Parser;
 use colored::Colorize;
+use crate::formatter::{info, success};
 
 pub fn search_definition(name: String, path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
@@ -17,13 +18,7 @@ pub fn search_definition(name: String, path: Option<String>) {
 fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     let mut found_any = false;
     let mut total_matches = 0;
-    println!(
-        "{}",
-        format!("Searching for definitions matching: '{search_name}'")
-            .bright_yellow()
-            .bold()
-    );
-    println!("{}", "─".repeat(60).dimmed());
+    info(format!("Searching for '{}'", search_name));
 
     for feature in &parser.features {
         // Search FlowTypes
@@ -34,7 +29,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                     found_any = true;
                 }
 
-                println!("\n{}", "FlowType".bright_cyan().bold());
+                info(String::from("Found flow_type:\n"));
                 match serde_json::to_string_pretty(flow_type) {
                     Ok(json) => {
                         let mut index = 0;
@@ -42,8 +37,8 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                             index += 1;
                             println!(
                                 "{} {}",
-                                format!("{index}:").bright_blue(),
-                                line.bright_green()
+                                format!("{index}:"),
+                                line.bright_cyan()
                             );
                         }
                     }
@@ -60,7 +55,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                     found_any = true;
                 }
 
-                println!("\n{}", "DataType".bright_cyan().bold());
+                info(String::from("Found data_type:\n"));
                 match serde_json::to_string_pretty(data_type) {
                     Ok(json) => {
                         let mut index = 0;
@@ -68,8 +63,8 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                             index += 1;
                             println!(
                                 "{} {}",
-                                format!("{index}:").bright_blue(),
-                                line.bright_green()
+                                format!("{index}:"),
+                                line.bright_cyan()
                             );
                         }
                     }
@@ -86,7 +81,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                     found_any = true;
                 }
 
-                println!("\n{}", "RuntimeFunction".bright_cyan().bold());
+                info(String::from("Found runtime_function_definition:\n"));
                 match serde_json::to_string_pretty(runtime_func) {
                     Ok(json) => {
                         let mut index = 0;
@@ -94,8 +89,8 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                             index += 1;
                             println!(
                                 "{} {}",
-                                format!("{index}:").bright_blue(),
-                                line.bright_green()
+                                format!("{index}:"),
+                                line.bright_cyan()
                             );
                         }
                     }
@@ -106,17 +101,8 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     }
 
     if !found_any {
-        println!(
-            "\n{}",
-            format!("No definitions found matching '{search_name}'")
-                .red()
-                .bold()
-        );
+        println!("{}", format!("\n{}: {}", "error".red(), "Found no matching definition(s)"));
     } else {
-        println!("\n{}", "─".repeat(60).dimmed());
-        println!(
-            "{}",
-            format!("Found {total_matches} matching definition(s)").bright_yellow()
-        );
+        success(format!("Found {total_matches} matching definition(s)"))
     }
 }

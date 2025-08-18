@@ -1,5 +1,7 @@
 use crate::table::{feature_table, summary_table};
-use code0_definition_reader::parser::Parser;
+use code0_definition_reader::parser::{Feature, Parser};
+use crate::analyser::Analyser;
+use crate::formatter::{success, success_table};
 
 pub fn search_feature(name: Option<String>, path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
@@ -11,19 +13,46 @@ pub fn search_feature(name: Option<String>, path: Option<String>) {
         }
     };
 
-    if let Some(feature_name) = name {
-        let mut features_to_report = Vec::new();
-        for feature in &parser.features {
-            if feature.name == feature_name {
-                feature_table(feature);
-                features_to_report.push(feature.clone());
-            }
+    let mut analyser = Analyser::new(dir_path.as_str());
+    analyser.report(true);
+
+    let features = match name {
+        None => {
+            parser.features.clone()
         }
-        summary_table(&features_to_report);
-    } else {
-        for feature in &parser.features {
-            feature_table(feature);
+        Some(feature_name) => {
+            parser.features.iter().filter(|f| f.name.to_lowercase() == feature_name.to_lowercase()).map(|f| f.clone()).collect::<Vec<Feature>>()
         }
-        summary_table(&parser.features);
+    };
+
+
+    for feature in &features {
+        let (flow_type_rows, data_type_rows, function_rows) = feature_table(feature);
+
+        if !flow_type_rows.is_empty() {
+            success(format!("The feature (`{}`) detected {} flow_types.", feature.name, flow_type_rows.len()));
+            success_table(flow_type_rows)
+        }
+
+        if !data_type_rows.is_empty() {
+            success(format!("The feature (`{}`) detected {} data_types.", feature.name, data_type_rows.len()));
+            success_table(data_type_rows)
+        }
+
+        if !function_rows.is_empty() {
+            success(format!("The feature (`{}`) detected {} runtime_function_definition.", feature.name, function_rows.len()));
+            success_table(function_rows)
+        }
     }
+
+    let summary = summary_table(&features);
+    success_table(summary);
+
+    success(
+    format!("Defined a total of {} Features with {} FlowTypes {} DataTypes and {} Functions!",
+            parser.features.iter().len(),
+            parser.features.iter().map(|f| f.flow_types.len()).sum::<usize>(),
+            parser.features.iter().map(|f| f.data_types.len()).sum::<usize>(),
+            parser.features.iter().map(|f| f.runtime_functions.len()).sum::<usize>()
+    ))
 }

@@ -44,7 +44,6 @@ impl Meta {
     where
         P: AsRef<Path>,
     {
-
         let mut current_line = 0;
         let mut current_starting_line = 0;
         let mut inside_code = false;
@@ -71,13 +70,11 @@ impl Meta {
 
                 if !inside_code {
                     let code_snippet = current_block.join(" ");
-                    code_snippets.push(
-                        ParsableDefinition {
-                            path: path.clone(),
-                            starting_line:  current_starting_line,
-                            definition_string: code_snippet,
-                        }
-                    );
+                    code_snippets.push(ParsableDefinition {
+                        path: path.clone(),
+                        starting_line: current_starting_line,
+                        definition_string: code_snippet,
+                    });
                     current_block.clear();
                 }
             }

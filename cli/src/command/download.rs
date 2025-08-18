@@ -5,6 +5,7 @@ use serde::Deserialize;
 use std::fs;
 use std::fs::File;
 use zip::ZipArchive;
+use crate::formatter::{error_without_trace, info, success};
 
 #[derive(Deserialize, Debug)]
 struct Release {
@@ -20,103 +21,35 @@ struct Asset {
 }
 
 pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>) {
-    println!(
-        "{}",
-        "╔══════════════════════════════════════════════════════════════════════════════╗"
-            .bright_cyan()
-    );
-    println!(
-        "{} {} {}",
-        "║".bright_cyan(),
-        "DOWNLOADING DEFINITIONS".bright_white().bold().on_blue(),
-        "║".bright_cyan()
-    );
-    println!(
-        "{}",
-        "╚══════════════════════════════════════════════════════════════════════════════╝"
-            .bright_cyan()
-    );
-
     let out_folder_path = "./definitions";
     let zip_path = "./definitions.zip";
 
-    // Check if definitions folder already exists
-    println!(
-        "\n{} Checking for existing definitions folder...",
-        "🔍".bright_blue()
-    );
-    if let Ok(true) = fs::exists(out_folder_path) {
-        println!(
-            "{} {}",
-            "❌".red(),
-            format!("Definitions folder already exists at '{out_folder_path}'")
-                .red()
-                .bold()
-        );
-        println!(
-            "{}",
-            "   To prevent accidental deletion, please remove the existing folder manually."
-                .yellow()
-        );
-        println!("{}", "   Then run the download command again.".yellow());
-        return;
-    }
-    println!(
-        "{} {}",
-        "✅".green(),
-        "No existing definitions folder found".green()
-    );
-
     // Download the definitions
-    println!("\n{} Starting download process...", "📥".bright_blue());
+    info("Starting download process...".to_string());
     let bytes = match download_definitions_as_bytes(tag).await {
         Some(bytes) => {
-            println!(
-                "{} {}",
-                "✅".green(),
-                format!("Successfully downloaded {} bytes", bytes.len()).green()
-            );
+            success(format!("Successfully downloaded {} bytes", bytes.len()));
             bytes
         }
         None => {
-            println!("{} {}", "❌".red(), "Download failed".red().bold());
+            error_without_trace(String::from("Download failed."));
             return;
         }
     };
 
     // Extract the zip file
-    println!("\n{} Extracting definitions...", "📦".bright_blue());
+    info("Extracting definitions...".to_string());
     convert_bytes_to_folder(bytes, zip_path).await;
 
     // Handle feature filtering if specified
     if let Some(selected_features) = features {
-        println!("\n{} Filtering features...", "🔧".bright_blue());
-        println!(
-            "{}",
-            format!("Selected features: {}", selected_features.join(", ")).bright_cyan()
-        );
-
+        info(format!("Extracted features: {:?} ", selected_features));
         filter_features(selected_features).await;
     } else {
-        println!(
-            "\n{} {}",
-            "ℹ️".bright_blue(),
-            "No feature filtering specified - keeping all features".bright_cyan()
-        );
+        info("Extracted all features!".to_string());
     }
 
-    println!("\n{}", "═".repeat(80).bright_cyan());
-    println!(
-        "{} {}",
-        "🎉".bright_green(),
-        "Download completed successfully!".bright_green().bold()
-    );
-    println!(
-        "{} {}",
-        "📁".bright_blue(),
-        format!("Definitions are now available in: {out_folder_path}").bright_cyan()
-    );
-    println!("{}", "═".repeat(80).bright_cyan());
+    success(format!("Download was successful. Definitions are now available in {out_folder_path}."));
 }
 
 async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Bytes> {
@@ -124,19 +57,14 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
 
     let url = match tag {
         Some(t) => {
-            println!("Selected the version: {}", t.bright_blue());
+            info(format!("Selected the version: {}", t));
             format!("https://api.github.com/repos/code0-tech/code0-definition/releases/tags/{t}")
         }
         None => {
-            println!("No version specified, using latest version");
+            info("No version specified, using latest version".to_string());
             String::from("https://api.github.com/repos/code0-tech/code0-definition/releases/latest")
         }
     };
-
-    println!(
-        "{} Fetching latest release information...",
-        "🌐".bright_blue()
-    );
 
     let release_request = match client
         .get(url)
@@ -147,51 +75,23 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
     {
         Ok(response) => {
             if response.status().is_success() {
-                println!(
-                    "{} {}",
-                    "✅".green(),
-                    "Successfully connected to GitHub API".green()
-                );
                 response
             } else {
-                println!(
-                    "{} {}",
-                    "❌".red(),
-                    format!(
-                        "GitHub API request failed with status: {}",
-                        response.status()
-                    )
-                    .red()
-                );
                 return None;
             }
         }
         Err(e) => {
-            println!(
-                "{} {}",
-                "❌".red(),
-                format!("Failed to connect to GitHub API: {e}").red()
-            );
-            return None;
+            panic!("Request failed: {}", e);
         }
     };
 
     let release: Release = match release_request.json::<Release>().await {
         Ok(release) => {
-            println!(
-                "{} {}",
-                "✅".green(),
-                format!("Selected release: {}", release.tag_name).green()
-            );
+            info(format!("Selected release: {}", release.tag_name));
             release
         }
         Err(e) => {
-            println!(
-                "{} {}",
-                "❌".red(),
-                format!("Failed to parse release information: {e}").red()
-            );
-            return None;
+            panic!("Request failed: {}", e);
         }
     };
 
@@ -201,28 +101,12 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
         .find(|a| a.name == "definitions.zip")
     {
         Some(asset) => {
-            println!(
-                "{} {}",
-                "✅".green(),
-                format!(
-                    "Found definitions.zip ({:.2} MB)",
-                    asset.size as f64 / 1024.0 / 1024.0
-                )
-                .green()
-            );
             asset
         }
         None => {
-            println!(
-                "{} {}",
-                "❌".red(),
-                "definitions.zip not found in latest release".red()
-            );
-            return None;
+            panic!("Definition folder is not called `definitions.zip` and was not inside the asset folder of the GitHub release!");
         }
     };
-
-    println!("{} Downloading definitions.zip...", "⬇️".bright_blue());
 
     match client
         .get(&asset.browser_download_url)
