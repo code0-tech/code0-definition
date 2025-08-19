@@ -1,0 +1,141 @@
+{
+  "runtime_name": "http::request::create",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "HTTP_METHOD"
+        }
+      },
+      "runtime_name": "http_method",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Method"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the request method that determines the type of HTTP operation to perform."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "HTTP_HEADER_MAP"
+        }
+      },
+      "runtime_name": "headers",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A collection of key-value pairs containing additional request metadata."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Optional headers that can define content type, authorization, cookies, caching policies, and more."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "HTTP_URL"
+        }
+      },
+      "runtime_name": "url",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request URL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The target URL to which the HTTP request will be sent."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the endpoint address, including protocol, host, path, and query parameters, where the request is directed."
+        }
+      ]
+    },
+    {
+      "data_type_identifier": {
+        "type": {
+          "GenericKey": "P"
+        }
+      },
+      "runtime_name": "payload",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request Body"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The data to include in the body of the request, typically used with methods like POST or PUT."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Contains the request payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": {
+    "type": {
+      "DataTypeIdentifier": "HTTP_REQUEST"
+    }
+  },
+  "throws_error": false,
+  "generic_keys": [
+    "P"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Construct HTTP Request"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Constructs an HTTP request object using the specified method, headers, URL, and payload."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Generates an HTTP request object that can be sent to a server. The request includes an HTTP method, optional headers, a destination URL, and an optional request body."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,21 @@
+{
+  "variant": 2,
+  "identifier": "HTTP_STATUS_CODE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Status Code"
+    }
+  ],
+  "rules": [
+    {
+      "config": {
+        "NumberRange": {
+          "from": 100,
+          "to": 599
+        }
+      }
+    }
+  ],
+  "generic_keys": []
+}
