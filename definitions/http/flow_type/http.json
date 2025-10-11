@@ -1,6 +1,61 @@
 {
   "identifier": "HTTP",
-  "settings": [],
+  "settings": [
+    {
+      "identifier": "HTTP_URL",
+      "unique": false,
+      "data_type_identifier": "HTTP_URL",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "URL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the HTTP URL endpoint."
+        }
+      ]
+    },
+    {
+      "identifier": "HTTP_METHOD",
+      "unique": false,
+      "data_type_identifier": "HTTP_METHOD",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Method"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
+        }
+      ]
+    },
+    {
+      "identifier": "HTTP_HOST",
+      "unique": false,
+      "data_type_identifier": "HTTP_HOST",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Host"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the target host name or IP address."
+        }
+      ]
+    }
+  ],
   "input_type_identifier": "HTTP_REQUEST",
   "return_type_identifier": "HTTP_RESPONSE",
   "editable": false,
