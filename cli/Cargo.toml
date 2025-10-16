@@ -10,7 +10,7 @@ readme = "../README.md"
 
 [dependencies]
 clap = { workspace = true, features = ["derive"] }
-code0-definition-reader = { path = "../reader/rust" }
+code0-definition-reader = { workspace = true }
 tucana = { workspace = true }
 colored = { workspace = true }
 tabled = { workspace = true }
