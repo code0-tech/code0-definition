@@ -19,6 +19,4 @@ tokio = "1.47.0"
 futures = "0.3.31"
 zip = "6.0.0"
 bytes = "1.10.1"
-
-[workspace.dependencies.code0-definition-reader]
-path = "reader/rust"
+code0-definition-reader= "0.0.12"
