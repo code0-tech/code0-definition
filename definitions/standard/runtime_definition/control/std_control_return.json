@@ -18,13 +18,13 @@
       "description": [
         {
           "code": "en-US",
-          "content": "The value to be returned."
+          "content": "The value to be returned to the upper context."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "This value will be returned to the upper context."
+          "content": "Specifies the value that will be returned to the upper context. When this node executes, it immediately halts the iteration and passes the value upward."
         }
       ]
     }
@@ -47,13 +47,13 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Returns the specified value to the upper context."
+      "content": "Returns a value and terminates the current context."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns the specified value to the upper context."
+      "content": "Ends the current context and returns the specified value to the upper scope. This node behaves like a standard 'return' statement in programming languages, stopping further execution within the current flow."
     }
   ],
   "deprecation_message": []
