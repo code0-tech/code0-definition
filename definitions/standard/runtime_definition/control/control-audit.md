@@ -7,3 +7,8 @@
 
 ## Added
 - break
+
+16.10.2025
+
+## Renamed
+break -> stop
