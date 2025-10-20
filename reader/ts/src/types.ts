@@ -1,4 +1,4 @@
-import {DataType, FlowType, RuntimeFunctionDefinition} from "@code0-tech/sagittarius-graphql-types";
+import {DataType, FlowType, FunctionDefinition} from "@code0-tech/sagittarius-graphql-types";
 
 export enum MetaType {
     FlowType = 'FlowType',
@@ -16,5 +16,5 @@ export interface Feature {
     name: string;
     dataTypes: DataType[];
     flowTypes: FlowType[];
-    runtimeFunctions: RuntimeFunctionDefinition[];
+    runtimeFunctions: FunctionDefinition[];
 }
