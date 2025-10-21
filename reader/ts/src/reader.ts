@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {Meta, MetaType} from "./types.js";
+import {Meta, MetaType} from "./types.ts";
 
 export const Reader = (rootPath: string): Meta[] => {
     const result: Meta[] = [];
