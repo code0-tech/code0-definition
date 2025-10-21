@@ -17,7 +17,6 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "@code0-tech/sagittarius-graphql-types": "^0.0.0-967667e8c736081887d32d99a5e2ab0445718798",
     "@types/node": "^24.1.0",
     "typescript": "^5.8.3"
   },
@@ -32,6 +31,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@code0-tech/tucana": "^0.0.37"
+    "@code0-tech/sagittarius-graphql-types": "^0.0.0-967667e8c736081887d32d99a5e2ab0445718798",
+    "@code0-tech/tucana": "^0.0.37",
+    "@protobuf-ts/runtime": "^2.11.1"
   }
 }
