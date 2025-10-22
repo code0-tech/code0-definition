@@ -48,7 +48,6 @@ function resolveDataTypeIdentifier(dataTypeIdentifier: DataTypeIdentifier | unde
     if (dataTypeIdentifier == undefined) {
         return result
     }
-
     const dataType: any = dataTypeIdentifier!
 
     if (dataType.type.GenericType) {

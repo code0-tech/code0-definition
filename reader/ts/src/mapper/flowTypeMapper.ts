@@ -1,32 +1,26 @@
 import {FlowType as TucanaFlowType, FlowTypeSetting as TucanaFlowTypeSetting} from "@code0-tech/tucana/pb/shared.flow_definition_pb.ts"
 import {FlowType, FlowTypeSetting} from "@code0-tech/sagittarius-graphql-types";
 import {getDataType, getTranslationConnection} from "./helper.ts";
-import {Meta, MetaType} from "../types.ts";
+import {ConstructedDataTypes} from "../parser.ts";
 
-function mapFlowType(meta: Meta): FlowType | null {
-    if (meta.type != MetaType.FlowType) {
-        console.error(`Expected FlowType, got ${meta.type}`);
-        return null;
-    }
-
-    const parsed = JSON.parse(meta.data) as TucanaFlowType;
+function mapFlowType(flowType: TucanaFlowType, constructed: ConstructedDataTypes): FlowType | null {
     return  {
-        identifier: parsed.identifier,
-        inputType: getDataType(parsed.inputTypeIdentifier),
-        returnType: getDataType(parsed.returnTypeIdentifier),
-        flowTypeSettings: createFlowTypeSetting(parsed.settings),
-        names: getTranslationConnection(parsed.name),
-        descriptions: getTranslationConnection(parsed.description),
-        editable: parsed.editable
+        identifier: flowType.identifier,
+        inputType: getDataType(flowType.inputTypeIdentifier!!, constructed),
+        returnType: getDataType(flowType.returnTypeIdentifier!!, constructed),
+        flowTypeSettings: createFlowTypeSetting(flowType.settings, constructed),
+        names: getTranslationConnection(flowType.name),
+        descriptions: getTranslationConnection(flowType.description),
+        editable: flowType.editable
     }
 }
 
-function createFlowTypeSetting(settings: TucanaFlowTypeSetting[]): FlowTypeSetting[] {
+function createFlowTypeSetting(settings: TucanaFlowTypeSetting[], constructed: ConstructedDataTypes): FlowTypeSetting[] {
     return settings.map(setting => {
         return {
             names: getTranslationConnection(setting.name),
             descriptions: getTranslationConnection(setting.description),
-            dataType: getDataType(setting.dataTypeIdentifier),
+            dataType: getDataType(setting.dataTypeIdentifier, constructed),
             identifier: setting.identifier,
             unique: setting.unique
         }
