@@ -53,9 +53,27 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v5
 
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo registry
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-build-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Build project
+        run: cargo run bundle --path ../definitions --out ../bundles
+        working-directory: "./cli"
+
       - name: Archive definitions folder
         run: |
-          zip -r definitions.zip definitions
+          zip -r bundles.zip bundles
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -63,7 +81,7 @@ jobs:
           tag_name: ${{ github.ref_name }}
           name: Release ${{ github.ref_name }}
           files: |
-            definitions.zip
+            bundles.zip
           generate_release_notes: true
           make_latest: true
         env:
