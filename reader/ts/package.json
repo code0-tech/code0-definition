@@ -12,13 +12,14 @@
   },
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "npx vite build && node dist/definition-reader.js"
   },
   "author": "",
   "license": "",
   "devDependencies": {
     "@types/node": "^24.1.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^7.1.11"
   },
   "repository": {
     "type": "git",
