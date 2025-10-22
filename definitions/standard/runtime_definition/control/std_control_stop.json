@@ -1,0 +1,26 @@
+{
+  "runtime_name": "std::control::stop",
+  "runtime_parameter_definitions": [],
+  "return_type_identifier": null,
+  "throws_error": false,
+  "generic_keys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Stop"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Completely stops the current context and prevents any further iterations."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
+    }
+  ],
+  "deprecation_message": []
+}

@@ -1,0 +1,54 @@
+{
+  "runtime_name": "http::control::respond",
+  "runtime_parameter_definitions": [
+    {
+      "data_type_identifier": {
+        "type": {
+          "DataTypeIdentifier": "HTTP_RESPONSE"
+        }
+      },
+      "runtime_name": "http_response",
+      "default_value": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Http Response"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The response object that will be returned to the client."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Takes an HTTP response object and transmits it to the requesting client. This parameter represents the final output of the server, including headers, status code, and body content."
+        }
+      ]
+    }
+  ],
+  "return_type_identifier": null,
+  "deprecation_message": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Respond"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Handles an HTTP response object and returns it to the client."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Processes an HTTP response and returns it to the requesting client. This function typically completes the HTTP request–response cycle by delivering the server’s final output, such as headers, status codes, and body content, back to the client."
+    }
+  ],
+  "throws_error": false,
+  "generic_keys": []
+}
