@@ -45,7 +45,9 @@
     },
     {
       "data_type_identifier": {
-        "type": null
+        "type": {
+          "GenericKey": "R"
+        }
       },
       "runtime_name": "item",
       "default_value": null,
