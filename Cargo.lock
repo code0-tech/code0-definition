@@ -283,16 +283,17 @@ version = "0.0.0"
 dependencies = [
  "bytes",
  "clap",
- "code0-definition-reader 0.0.12",
+ "code0-definition-reader 0.0.13",
  "colored",
  "futures",
  "notify",
+ "prost",
  "reqwest",
  "serde",
  "serde_json",
  "tabled",
  "tokio",
- "tucana",
+ "tucana 0.0.38",
  "zip",
 ]
 
@@ -302,18 +303,18 @@ version = "0.0.0"
 dependencies = [
  "serde",
  "serde_json",
- "tucana",
+ "tucana 0.0.38",
 ]
 
 [[package]]
 name = "code0-definition-reader"
-version = "0.0.12"
+version = "0.0.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5c7b9d030a57501b5c6bcbd667c5241a69335421008b155b55145b4e66e9a325"
+checksum = "85d08bd4aad0f928b9f9731f174055e65b12f05ae49aa4c8e7f8e7d8e1b92211"
 dependencies = [
  "serde",
  "serde_json",
- "tucana",
+ "tucana 0.0.37",
 ]
 
 [[package]]
@@ -2158,9 +2159,22 @@ checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 
 [[package]]
 name = "tucana"
-version = "0.0.36"
+version = "0.0.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0addd0c58b8b458ba668404246c428d4c71382f5a83d29ac69649f5c575bdfc4"
+checksum = "bcbe6f5486fad0e31b4411c53b867d1c1b4748ce14561080417dec1ff8722f54"
+dependencies = [
+ "prost",
+ "prost-types",
+ "serde",
+ "serde_json",
+ "tonic",
+ "tonic-prost",
+ "tonic-prost-build",
+]
+
+[[package]]
+name = "tucana"
+version = "0.0.38"
 dependencies = [
  "prost",
  "prost-types",
