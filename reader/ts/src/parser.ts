@@ -6,85 +6,118 @@ import {RuntimeFunctionDefinition as TucanaFunction} from "@code0-tech/tucana/pb
 import path from "node:path";
 import {mapFlowType} from "./mapper/flowTypeMapper.ts";
 import {mapFunction} from "./mapper/functionMapper.ts";
-import {DataType, FlowType, FunctionDefinition} from "@code0-tech/sagittarius-graphql-types";
+import {DataType} from "@code0-tech/sagittarius-graphql-types";
 import {DefinitionDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.ts";
-import {getDataType} from "./mapper/helper.ts";
+import {getDataType} from "./mapper/dataTypeMapper.ts";
 
 export interface ConstructedDataTypes {
     scannedTucanaTypes: DefinitionDataType[]
     constructedDataTypes: DataType[]
 }
 
-export const Definition = (rootPath: string) => {
-    const dataTypes: TucanaDataType[] = []
-    const runtimeFunctions: TucanaFunction[] = [];
-    const flowTypes: TucanaFlowType[] = [];
-    console.log(rootPath)
-    path.join()
+export const Definition = (rootPath: string): Feature[] => {
+    const dataTypes: {feature: string, type: TucanaDataType}[] = []
+    const runtimeFunctions: {feature: string, func: TucanaFunction}[] = [];
+    const flowTypes: {feature: string, flow: TucanaFlowType}[] = [];
+
     readdirSync(rootPath, { withFileTypes: true }).forEach(file => {
-        console.log(file)
+        const featureName = file.name.split("_")[0]
+        if (featureName == null) {
+            throw new Error("Feature name is null")
+        }
+
         const filePath = path.join(file.parentPath, file.name)
-        console.log(filePath)
 
         const content = readFileSync(filePath);
         if (file.name.includes("data_type")) {
             const decoded = TucanaDataType.fromBinary(content);
-            dataTypes.push(decoded)
+            dataTypes.push(
+                {
+                    feature: featureName,
+                    type: decoded,
+                }
+            )
         }
 
         if (file.name.includes("function")) {
             const decoded = TucanaFunction.fromBinary(content);
-            runtimeFunctions.push(decoded)
+            runtimeFunctions.push(
+                {
+                    feature: featureName,
+                    func: decoded,
+                }
+            )
         }
 
         if (file.name.includes("flow_type")) {
             const decoded = TucanaFlowType.fromBinary(content);
-            flowTypes.push(decoded)
+            flowTypes.push(
+                {
+                    feature: featureName,
+                    flow: decoded,
+                }
+            )
         }
     })
+
+    const features: Feature[] = []
     const constructed: ConstructedDataTypes = {
-        scannedTucanaTypes: dataTypes,
+        scannedTucanaTypes: dataTypes.map(f => f.type),
         constructedDataTypes: []
     }
-    dataTypes.map(f => getDataType(f.identifier, constructed)).forEach((d: DataType | null) => console.dir(d, {depth: null}))
-    runtimeFunctions.map(f => mapFunction(f, constructed)).forEach((f: FunctionDefinition | null) => console.dir(f, {depth: null}))
-    flowTypes.map(f => mapFlowType(f, constructed)).forEach((f: FlowType | null) => console.dir(f, {depth: null}))
 
-    //throw new Error("Not implemented")
-    /*
-    const dt = meta.filter(m => m.type == MetaType.DataType).map(m => {
-     //   console.log(m.data)
-     //   return DefinitionDataType.fromJsonString(m.data)
-     //   console.dir(def, {depth: null})
-        return null;
-    });
-    for (const d of dt) {
-      //  console.dir(d, {depth: null})
-    }
-    const sortedDt = sortDataTypes(dt).map(d => mapDataType(d))
-
-    for (const dt of sortedDt) {
-        console.log(dt)
-    }
-
-    for (const m of meta) {
-        let feature = features.find((f) => f.name === m.name);
-
-        if (feature) {
-            appendMeta(feature, m);
-        } else {
-            feature = {
-                name: m.name,
-                dataTypes: [],
-                flowTypes: [],
-                runtimeFunctions: [],
-            };
-            appendMeta(feature, m);
-            features.push(feature);
+    function getFeature(name:string): Feature {
+        const feature = features.find((f) => f.name === name);
+        if (feature != undefined) {
+            return feature;
         }
+
+        const newFeature = {
+            name: name,
+            dataTypes: [],
+            flowTypes: [],
+            runtimeFunctions: [],
+        };
+
+        features.push(newFeature);
+        return newFeature;
     }
+
+    dataTypes.map(f => {
+        return {
+            name: f.feature,
+            type: getDataType(f.type.identifier, constructed)
+        }
+    }).forEach(dt => {
+        if (dt.type != null) {
+            const feature = getFeature(dt.name)
+            feature.dataTypes.push(dt.type)
+        }
+    })
+
+    runtimeFunctions.map(f => {
+        return {
+            name: f.feature,
+            type: mapFunction(f.func, constructed)
+        }
+    }).forEach(dt => {
+        if (dt.type != null) {
+            const feature = getFeature(dt.name)
+            feature.runtimeFunctions.push(dt.type)
+        }
+    })
+
+    flowTypes.map(f => {
+        return {
+            name: f.feature,
+            type: mapFlowType(f.flow, constructed)
+        }
+    }).forEach(dt => {
+        if (dt.type != null) {
+            const feature = getFeature(dt.name)
+            feature.flowTypes.push(dt.type)
+        }
+    })
 
     return features;
-
-     */
 }

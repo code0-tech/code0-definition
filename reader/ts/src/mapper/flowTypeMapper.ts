@@ -1,7 +1,8 @@
 import {FlowType as TucanaFlowType, FlowTypeSetting as TucanaFlowTypeSetting} from "@code0-tech/tucana/pb/shared.flow_definition_pb.ts"
 import {FlowType, FlowTypeSetting} from "@code0-tech/sagittarius-graphql-types";
-import {getDataType, getTranslationConnection} from "./helper.ts";
+import {getDataType} from "./dataTypeMapper.ts";
 import {ConstructedDataTypes} from "../parser.ts";
+import {getTranslationConnection} from "./translation.js";
 
 function mapFlowType(flowType: TucanaFlowType, constructed: ConstructedDataTypes): FlowType | null {
     return  {

@@ -15,6 +15,7 @@ import {
 } from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
 import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
 import {ConstructedDataTypes} from "../parser.js";
+import {getTranslationConnection} from "./translation.js";
 
 export enum GenericMapper_GenericCombinationStrategy {
     UNKNOWN = 0,
@@ -53,9 +54,7 @@ function getDataType(identifier: string, constructedDataTypes: ConstructedDataTy
     if (dataType == undefined) {
         const tucanaDataType = constructedDataTypes.scannedTucanaTypes.find(dt => dt.identifier === identifier)
         if (tucanaDataType == undefined) {
-            console.dir(constructedDataTypes, {depth: null})
-            console.log("just skipping identifier")
-            console.log(identifier)
+            console.error("Skipping Identifier because it can't be identified:" + identifier)
             return null
         }
         const constructed = {
@@ -252,11 +251,4 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
     return null;
 }
 
-function getTranslationConnection(translation: Translation[]): TranslationConnection {
-    return {
-        count: translation.length,
-        nodes: translation,
-    }
-}
-
-export {getDataType, getDataTypeIdentifier, getTranslationConnection}
+export {getDataType, getDataTypeIdentifier}
