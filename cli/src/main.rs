@@ -58,7 +58,7 @@ enum Commands {
         path: Option<String>,
         #[arg(short, long)]
         out: Option<String>,
-    }
+    },
 }
 
 #[tokio::main]
@@ -66,7 +66,7 @@ async fn main() {
     let cli = Cli::parse();
 
     match cli.command {
-        Commands::Bundle {path, out} => command::bundle::bundle(path, out),
+        Commands::Bundle { path, out } => command::bundle::bundle(path, out),
         Commands::Report { path } => command::report::report_errors(path),
         Commands::Feature { name, path } => command::feature::search_feature(name, path),
         Commands::Definition { name, path } => command::definition::search_definition(name, path),

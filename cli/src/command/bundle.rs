@@ -1,7 +1,7 @@
+use code0_definition_reader::parser::Parser;
+use prost::Message;
 use std::fs;
 use std::io::Write;
-use prost::Message;
-use code0_definition_reader::parser::Parser;
 
 pub fn bundle(path: Option<String>, out: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
@@ -24,24 +24,51 @@ pub fn bundle(path: Option<String>, out: Option<String>) {
         feature.data_types.iter().for_each(|data_type| {
             let mut buf = Vec::new();
             if let Ok(_) = data_type.encode(&mut buf) {
-                let path = format!("{}/{}_{}_{}.pb",&out_path,  feature.name, "data_type", data_type.identifier.to_lowercase());
-                fs::File::create(&path).expect("abc").write_all(&buf).expect("a");
+                let path = format!(
+                    "{}/{}_{}_{}.pb",
+                    &out_path,
+                    feature.name,
+                    "data_type",
+                    data_type.identifier.to_lowercase()
+                );
+                fs::File::create(&path)
+                    .expect("abc")
+                    .write_all(&buf)
+                    .expect("a");
             }
         });
 
         feature.flow_types.iter().for_each(|flow_type| {
             let mut buf = Vec::new();
             if let Ok(_) = flow_type.encode(&mut buf) {
-                let path = format!("{}/{}_{}_{}.pb",&out_path, feature.name, "flow_type", flow_type.identifier.to_lowercase());
-                fs::File::create(&path).expect("abc").write_all(&buf).expect("a");
+                let path = format!(
+                    "{}/{}_{}_{}.pb",
+                    &out_path,
+                    feature.name,
+                    "flow_type",
+                    flow_type.identifier.to_lowercase()
+                );
+                fs::File::create(&path)
+                    .expect("abc")
+                    .write_all(&buf)
+                    .expect("a");
             }
         });
 
         feature.runtime_functions.iter().for_each(|function| {
             let mut buf = Vec::new();
             if let Ok(_) = function.encode(&mut buf) {
-                let path = format!("{}/{}_{}_{}.pb",&out_path, feature.name, "function", function.runtime_name.to_lowercase());
-                fs::File::create(&path).expect("abc").write_all(&buf).expect("a");
+                let path = format!(
+                    "{}/{}_{}_{}.pb",
+                    &out_path,
+                    feature.name,
+                    "function",
+                    function.runtime_name.to_lowercase()
+                );
+                fs::File::create(&path)
+                    .expect("abc")
+                    .write_all(&buf)
+                    .expect("a");
             }
         });
     }
