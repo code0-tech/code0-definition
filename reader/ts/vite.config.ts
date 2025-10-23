@@ -1,14 +1,20 @@
 import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
+    plugins: [dts({
+        include: ["src"]
+    })],
     build: {
         lib: {
-            entry: './index.ts',  // your entry file
-            formats: ['es'],        // Node ESM
+            entry: './src/index.ts',
+            formats: ['es'],
         },
-        outDir: 'dist',           // output folder
         rollupOptions: {
-            external: [/^node:.*$/], // Node built-ins
+            external: [/^node:.*$/],
+            output: {
+                entryFileNames: '[name].js',
+            }
         },
     },
 });
