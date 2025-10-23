@@ -1,18 +1,27 @@
 {
-  "exclude": ["node_modules", "build"],
-  "include": ["index.ts", "src/**/*.ts", "node_modules/@code0-tech/tucana/pb/**/*.ts"],
+  "exclude": ["node_modules", "build", "dist"],
+  "include": ["node_modules/@code0-tech/tucana/pb/**/*.ts"],
+  "types": [
+    "typePatches"
+  ],
   "compilerOptions": {
     "lib": ["ESNext"],
     "module": "NodeNext",
     "target": "ESNext",
-    "moduleDetection": "force",
-    "outDir": "build",
     "skipLibCheck": true,
     "strict": true,
+    "paths": {
+      "src": [
+        "src/*"
+      ]
+    },
+    "baseUrl": "src/",
+    "sourceMap": true,
     "moduleResolution": "nodenext",
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
+    "moduleDetection": "force",
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true
   }
