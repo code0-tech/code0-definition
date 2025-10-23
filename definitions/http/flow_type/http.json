@@ -40,7 +40,7 @@
     {
       "identifier": "HTTP_HOST",
       "unique": false,
-      "data_type_identifier": "HTTP_HOST",
+      "data_type_identifier": "TEXT",
       "default_value": null,
       "name": [
         {

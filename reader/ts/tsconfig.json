@@ -1,5 +1,6 @@
 {
   "exclude": ["node_modules", "build"],
+  "include": ["index.ts", "src/**/*.ts", "node_modules/@code0-tech/tucana/pb/**/*.ts"],
   "compilerOptions": {
     "lib": ["ESNext"],
     "module": "NodeNext",
@@ -10,6 +11,9 @@
     "strict": true,
     "moduleResolution": "nodenext",
     "declaration": true,
-    "emitDeclarationOnly": false
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true
   }
 }

@@ -1,6 +1,8 @@
 use crate::formatter::{info, success};
 use code0_definition_reader::parser::Parser;
 use colored::Colorize;
+use prost::Message;
+use tucana::shared::DefinitionDataType;
 
 pub fn search_definition(name: String, path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());

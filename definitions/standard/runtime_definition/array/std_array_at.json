@@ -45,7 +45,9 @@
     },
     {
       "data_type_identifier": {
-        "type": null
+        "type": {
+          "DataTypeIdentifier": "NUMBER"
+        }
       },
       "runtime_name": "index",
       "default_value": null,
@@ -70,7 +72,9 @@
     }
   ],
   "return_type_identifier": {
-    "type": null
+    "type": {
+      "GenericKey": "R"
+    }
   },
   "throws_error": false,
   "generic_keys": [

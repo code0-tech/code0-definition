@@ -4,3 +4,5 @@
 .idea
 reader/ts/src/*.js
 reader/ts/build
+bundles
+reader/**/*.js

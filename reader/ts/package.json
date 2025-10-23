@@ -12,14 +12,14 @@
   },
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "npx vite build && node dist/definition-reader.js"
   },
   "author": "",
   "license": "",
   "devDependencies": {
-    "@code0-tech/sagittarius-graphql-types": "^0.0.0-00f33663039d78ad59e95306730878c687de5c48 ",
     "@types/node": "^24.1.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^7.1.11"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,10 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@code0-tech/sagittarius-graphql-types": "^0.0.0-00f33663039d78ad59e95306730878c687de5c48 ",
+    "@code0-tech/tucana": "^0.0.37",
+    "@protobuf-ts/runtime": "^2.11.1"
   }
 }
