@@ -2,14 +2,7 @@
   "name": "@code0-tech/definition-reader",
   "version": "0.0.0",
   "description": "Reader for Code0-Definitions",
-  "main": "./build/index.js",
-  "types": "./build/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./build/index.js",
-      "types": "./build/index.d.ts"
-    }
-  },
+  "main": "./dist/definition-reader.js",
   "type": "module",
   "scripts": {
     "build": "npx vite build && node dist/definition-reader.js"
@@ -26,7 +19,9 @@
     "url": "https://github.com/code0-tech/code0-definition"
   },
   "files": [
-    "build"
+    "dist",
+    "index.ts",
+    "src"
   ],
   "publishConfig": {
     "access": "public"
