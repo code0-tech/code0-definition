@@ -22,3 +22,4 @@ tokio = { workspace = true, features = ["rt", "rt-multi-thread", "macros"] }
 futures = { workspace = true }
 zip = { workspace = true }
 bytes = { workspace = true }
+prost = {workspace = true}

@@ -1,2 +1,2 @@
-export { Definition } from './src/parser.js';
-export type { Feature, MetaType, Meta } from './src/types.js';
+export { Definition } from './src/parser.ts';
+export type { Feature } from './src/types.ts';
