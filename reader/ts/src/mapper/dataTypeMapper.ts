@@ -5,16 +5,14 @@ import {
     DataTypeRulesInputTypeConfig,
     DataTypeRulesInputTypesConfig,
     DataTypeRulesItemOfCollectionConfig, DataTypeRulesNumberRangeConfig,
-    DataTypeRulesParentTypeConfig, DataTypeRulesRegexConfig, GenericCombinationStrategy,
-    TranslationConnection
+    DataTypeRulesParentTypeConfig, DataTypeRulesRegexConfig,
 } from "@code0-tech/sagittarius-graphql-types";
-import {Translation} from "@code0-tech/tucana/pb/shared.translation_pb.ts";
 import {
     DataTypeIdentifier as TucanaDataTypeIdentifier,
     DefinitionDataType_Variant, DefinitionDataTypeRule
 } from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
 import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
-import {ConstructedDataTypes} from "../parser.js";
+import {ConstructedDataTypes, getID} from "../parser.js";
 import {getTranslationConnection} from "./translation.js";
 
 export enum GenericMapper_GenericCombinationStrategy {
@@ -57,7 +55,8 @@ function getDataType(identifier: string, constructedDataTypes: ConstructedDataTy
             console.error("Skipping Identifier because it can't be identified:" + identifier)
             return null
         }
-        const constructed = {
+        const constructed: DataType = {
+            id: `gid://sagittarius/DataType/${getID(constructedDataTypes)}`,
             genericKeys: tucanaDataType.genericKeys,
             identifier: tucanaDataType.identifier,
             name: getTranslationConnection(tucanaDataType.name),
@@ -204,7 +203,9 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
     switch (identifier.type.oneofKind) {
         case "genericType": {
             return {
+                id: `gid://sagittarius/DataTypeIdentifier/${getID(constructedDataTypes)}`,
                 genericType: {
+                    id: `gid://sagittarius/GenericType/${getID(constructedDataTypes)}`,
                     dataType: getDataType(identifier.type.genericType.dataTypeIdentifier, constructedDataTypes),
                     genericMappers: identifier.type.genericType.genericMappers.map((mapper: TucanaGenericMapper) => {
                         return {
@@ -220,8 +221,8 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
                                     default:
                                         throw new Error("GenericCombinationStrategy was Unknown");
                                 }
-
                                 return {
+                                    id: `gid://sagittarius/GenericCombinationStrategy/${getID(constructedDataTypes)}`,
                                     type: type
                                 }
                             }),
@@ -229,6 +230,7 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
                                 getDataTypeIdentifier(id, constructedDataTypes)
                             ).filter(id => id != null),
                             target: mapper.target,
+                            id: `gid://sagittarius/GenericMapper/${getID(constructedDataTypes)}`,
                         }
                     }),
                 }
@@ -237,12 +239,14 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
 
         case "dataTypeIdentifier": {
             return {
+                id: `gid://sagittarius/DataTypeIdentifier/${getID(constructedDataTypes)}`,
                 dataType: getDataType(identifier.type.dataTypeIdentifier, constructedDataTypes)
             }
         }
 
         case "genericKey": {
             return {
+                id: `gid://sagittarius/DataTypeIdentifier/${getID(constructedDataTypes)}`,
                 genericKey: identifier.type.genericKey,
             }
         }

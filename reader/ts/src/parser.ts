@@ -13,6 +13,13 @@ import {getDataType} from "./mapper/dataTypeMapper.ts";
 export interface ConstructedDataTypes {
     scannedTucanaTypes: DefinitionDataType[]
     constructedDataTypes: DataType[]
+    id: number
+}
+
+export function getID(constructedDataTypes: ConstructedDataTypes) {
+    const last = constructedDataTypes.id
+    constructedDataTypes.id += 1
+    return last
 }
 
 export const Definition = (rootPath: string): Feature[] => {
@@ -63,7 +70,8 @@ export const Definition = (rootPath: string): Feature[] => {
     const features: Feature[] = []
     const constructed: ConstructedDataTypes = {
         scannedTucanaTypes: dataTypes.map(f => f.type),
-        constructedDataTypes: []
+        constructedDataTypes: [],
+        id: 0
     }
 
     function getFeature(name:string): Feature {

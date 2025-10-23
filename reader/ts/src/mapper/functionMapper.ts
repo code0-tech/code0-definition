@@ -4,11 +4,12 @@ import {
     RuntimeParameterDefinition
 } from "@code0-tech/tucana/pb/shared.runtime_function_pb.ts";
 import {getDataTypeIdentifier} from "./dataTypeMapper.ts";
-import {ConstructedDataTypes} from "../parser.ts";
+import {ConstructedDataTypes, getID} from "../parser.ts";
 import {getTranslationConnection} from "./translation.js";
 
 function mapFunction(func: TucanaFunction, constructed: ConstructedDataTypes): FunctionDefinition | null {
      return {
+        id: `gid://sagittarius/FunctionDefinition/${getID(constructed)}`,
         genericKeys: func.genericKeys,
         names: getTranslationConnection(func.name),
         descriptions: getTranslationConnection(func.description),
@@ -25,6 +26,7 @@ function getParameterDefinitionConnection(def: RuntimeParameterDefinition[], con
         count: def.length,
         nodes: def.map(node => {
             return {
+                id: `gid://sagittarius/ParameterDefinition/${getID(constructed)}`,
                 names: getTranslationConnection(node.name),
                 descriptions: getTranslationConnection(node.description),
                 documentations: getTranslationConnection(node.documentation),
