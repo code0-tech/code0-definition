@@ -9,7 +9,7 @@ env:
   RUST_BACKTRACE: 1
 
 jobs:
-  build_node:
+  node:
     name: [TS] Build
     runs-on: ubuntu-latest
 
