@@ -5,47 +5,16 @@ import {
     DataTypeRulesInputTypeConfig,
     DataTypeRulesInputTypesConfig,
     DataTypeRulesItemOfCollectionConfig, DataTypeRulesNumberRangeConfig,
-    DataTypeRulesParentTypeConfig, DataTypeRulesRegexConfig,
+    DataTypeRulesParentTypeConfig, DataTypeRulesRegexConfig, DataTypeRulesVariant, DataTypeVariant,
+    GenericCombinationStrategyType,
 } from "@code0-tech/sagittarius-graphql-types";
 import {
     DataTypeIdentifier as TucanaDataTypeIdentifier,
-    DefinitionDataType_Variant, DefinitionDataTypeRule
+    DefinitionDataType_Variant, DefinitionDataTypeRule, GenericMapper_GenericCombinationStrategy
 } from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
 import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
-import {ConstructedDataTypes, getID} from "../parser.js";
-import {getTranslationConnection} from "./translation.js";
-
-export enum GenericMapper_GenericCombinationStrategy {
-    UNKNOWN = 0,
-    AND = 1,
-    OR = 2
-}
-
-export enum GenericCombinationStrategyType {
-    And = 'AND',
-    Or = 'OR'
-}
-
-enum DataTypeVariant {
-    Array = 'ARRAY',
-    DataType = 'DATA_TYPE',
-    Error = 'ERROR',
-    Node = 'NODE',
-    Object = 'OBJECT',
-    Primitive = 'PRIMITIVE',
-    Type = 'TYPE'
-}
-
-enum DataTypeRulesVariant {
-    ContainsKey = 'CONTAINS_KEY',
-    ContainsType = 'CONTAINS_TYPE',
-    InputType = 'INPUT_TYPE',
-    ItemOfCollection = 'ITEM_OF_COLLECTION',
-    NumberRange = 'NUMBER_RANGE',
-    ParentType = 'PARENT_TYPE',
-    Regex = 'REGEX',
-    ReturnType = 'RETURN_TYPE'
-}
+import {ConstructedDataTypes, getID} from "../parser.ts";
+import {getTranslationConnection} from "./translation.ts";
 
 function getDataType(identifier: string, constructedDataTypes: ConstructedDataTypes): DataType | null {
     const dataType = constructedDataTypes.constructedDataTypes.find(dt => dt.identifier === identifier)
@@ -77,7 +46,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
                 switch (r.config.oneofKind) {
                     case "containsType": {
                         const ruleConfig: DataTypeRulesContainsTypeConfig = {
-                            dataTypeIdentifier: getDataTypeIdentifier(r.config.containsType.dataTypeIdentifier, constructedDataTypes), //TODO
+                            dataTypeIdentifier: getDataTypeIdentifier(r.config.containsType.dataTypeIdentifier, constructedDataTypes),
                         }
                         const rule: DataTypeRule = {
                             variant: DataTypeRulesVariant.ContainsType,
@@ -134,7 +103,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
                                 console.log("AF: " + i.inputIdentifier)
                                 const input: DataTypeRulesInputTypeConfig = {
                                     dataTypeIdentifier: getDataTypeIdentifier(i.dataTypeIdentifier, constructedDataTypes),
-                                    inputType: null, //TODO (Later): This field is wrong in GraphQL => should be a string
+                                    inputIdentifier: i.inputIdentifier,
                                 }
                                 return input;
                             }),
