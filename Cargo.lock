@@ -283,7 +283,7 @@ version = "0.0.0"
 dependencies = [
  "bytes",
  "clap",
- "code0-definition-reader 0.0.13",
+ "code0-definition-reader 0.0.17",
  "colored",
  "futures",
  "notify",
@@ -308,9 +308,9 @@ dependencies = [
 
 [[package]]
 name = "code0-definition-reader"
-version = "0.0.13"
+version = "0.0.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85d08bd4aad0f928b9f9731f174055e65b12f05ae49aa4c8e7f8e7d8e1b92211"
+checksum = "be0b4e63bf632cd429b7ea7e4da8e17fe30501e8209d366938280534415aaab3"
 dependencies = [
  "serde",
  "serde_json",
