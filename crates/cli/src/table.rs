@@ -27,18 +27,6 @@ pub struct RuntimeFunctionRow {
 }
 
 #[derive(Tabled)]
-pub struct ErrorRow {
-    #[tabled(rename = "#")]
-    index: usize,
-    #[tabled(rename = "Type")]
-    definition_type: String,
-    #[tabled(rename = "Definition")]
-    definition: String,
-    #[tabled(rename = "Error")]
-    error: String,
-}
-
-#[derive(Tabled)]
 pub struct FeatureSummaryRow {
     #[tabled(rename = "Feature")]
     feature_name: String,
@@ -48,20 +36,6 @@ pub struct FeatureSummaryRow {
     data_types: usize,
     #[tabled(rename = "Runtime Functions")]
     runtime_functions: usize,
-}
-
-#[derive(Tabled)]
-pub struct GeneralErrorRow {
-    #[tabled(rename = "#")]
-    index: usize,
-    #[tabled(rename = "Feature")]
-    feature_name: String,
-    #[tabled(rename = "Type")]
-    definition_type: String,
-    #[tabled(rename = "Definition")]
-    definition: String,
-    #[tabled(rename = "Error")]
-    error: String,
 }
 
 pub fn feature_table(
