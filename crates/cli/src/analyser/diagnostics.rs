@@ -1,5 +1,5 @@
 use crate::formatter::{error, warning};
-use code0_definition_reader::reader::Meta;
+use parser::reader::Meta;
 use std::cmp::PartialEq;
 use std::path::Path;
 use std::process::exit;

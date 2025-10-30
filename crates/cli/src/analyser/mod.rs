@@ -6,8 +6,8 @@ use crate::analyser::diagnostics::DiagnosticKind::{
     UndefinedGenericKey, UndefinedTranslation, UnusedGenericKey,
 };
 use crate::analyser::diagnostics::{Diagnose, DiagnosticKind, Reporter};
-use code0_definition_reader::parser::Parser;
-use code0_definition_reader::reader::{Meta, MetaType, Reader};
+use parser::parser::Parser;
+use parser::reader::{Meta, MetaType, Reader};
 use tucana::shared::data_type_identifier::Type;
 use tucana::shared::definition_data_type_rule::Config;
 use tucana::shared::{DataTypeIdentifier, DefinitionDataType, FlowType, RuntimeFunctionDefinition};

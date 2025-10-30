@@ -6,11 +6,11 @@ description = "The cli for managing the Code0-Definitions"
 repository = "https://github.com/code0-tech/code0-definitions"
 homepage = "https://code0.tech"
 license = "Apache-2.0"
-readme = "../README.md"
+readme = "../../README.md"
 
 [dependencies]
 clap = { workspace = true, features = ["derive"] }
-code0-definition-reader = { workspace = true }
+parser = { workspace = true }
 tucana = { workspace = true }
 colored = { workspace = true }
 tabled = { workspace = true }
@@ -22,4 +22,4 @@ tokio = { workspace = true, features = ["rt", "rt-multi-thread", "macros"] }
 futures = { workspace = true }
 zip = { workspace = true }
 bytes = { workspace = true }
-prost = {workspace = true}
+prost = { workspace = true }

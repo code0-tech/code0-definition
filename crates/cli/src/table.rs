@@ -1,4 +1,4 @@
-use code0_definition_reader::parser::Feature;
+use parser::parser::Feature;
 use tabled::Tabled;
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 

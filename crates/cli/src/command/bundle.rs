@@ -1,4 +1,4 @@
-use code0_definition_reader::parser::Parser;
+use parser::parser::Parser;
 use prost::Message;
 use std::fs;
 use std::io::Write;
