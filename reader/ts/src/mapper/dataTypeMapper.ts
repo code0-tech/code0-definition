@@ -11,10 +11,10 @@ import {
 import {
     DataTypeIdentifier as TucanaDataTypeIdentifier,
     DefinitionDataType_Variant, DefinitionDataTypeRule, GenericMapper_GenericCombinationStrategy
-} from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
-import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.ts"
-import {ConstructedDataTypes, getID} from "../parser.ts";
-import {getTranslationConnection} from "./translation.ts";
+} from "@code0-tech/tucana/pb/shared.data_type_pb.js"
+import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.js"
+import {ConstructedDataTypes, getID} from "../parser.js";
+import {getTranslationConnection} from "./translation.js";
 
 function getDataType(identifier: string, constructedDataTypes: ConstructedDataTypes): DataType | null {
     const dataType = constructedDataTypes.constructedDataTypes.find(dt => dt.identifier === identifier)

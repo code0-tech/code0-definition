@@ -1,14 +1,14 @@
-import {DefinitionDataType as TucanaDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.ts";
-import {Feature} from "./types.ts";
+import {DefinitionDataType as TucanaDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.js";
+import {Feature} from "./types.js";
 import {readdirSync, readFileSync} from "node:fs";
-import {FlowType as TucanaFlowType} from "@code0-tech/tucana/pb/shared.flow_definition_pb.ts";
-import {RuntimeFunctionDefinition as TucanaFunction} from "@code0-tech/tucana/pb/shared.runtime_function_pb.ts";
+import {FlowType as TucanaFlowType} from "@code0-tech/tucana/pb/shared.flow_definition_pb.js";
+import {RuntimeFunctionDefinition as TucanaFunction} from "@code0-tech/tucana/pb/shared.runtime_function_pb.js";
 import path from "node:path";
-import {mapFlowType} from "./mapper/flowTypeMapper.ts";
-import {mapFunction} from "./mapper/functionMapper.ts";
+import {mapFlowType} from "./mapper/flowTypeMapper.js";
+import {mapFunction} from "./mapper/functionMapper.js";
 import {DataType} from "@code0-tech/sagittarius-graphql-types";
-import {DefinitionDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.ts";
-import {getDataType} from "./mapper/dataTypeMapper.ts";
+import {DefinitionDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.js";
+import {getDataType} from "./mapper/dataTypeMapper.js";
 
 export interface ConstructedDataTypes {
     scannedTucanaTypes: DefinitionDataType[]

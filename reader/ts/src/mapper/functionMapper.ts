@@ -2,9 +2,9 @@ import {FunctionDefinition, ParameterDefinitionConnection} from "@code0-tech/sag
 import {
     RuntimeFunctionDefinition as TucanaFunction,
     RuntimeParameterDefinition
-} from "@code0-tech/tucana/pb/shared.runtime_function_pb.ts";
-import {getDataTypeIdentifier} from "./dataTypeMapper.ts";
-import {ConstructedDataTypes, getID} from "../parser.ts";
+} from "@code0-tech/tucana/pb/shared.runtime_function_pb.js";
+import {getDataTypeIdentifier} from "./dataTypeMapper.js";
+import {ConstructedDataTypes, getID} from "../parser.js";
 import {getTranslationConnection} from "./translation.js";
 
 function mapFunction(func: TucanaFunction, constructed: ConstructedDataTypes): FunctionDefinition | null {
