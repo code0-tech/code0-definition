@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::is_equal",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first number to compare."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The first operand in the equality check."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second number to compare."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The second operand in the equality check."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "BOOLEAN"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Equal"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks whether two numbers are equal."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the first number is equal to the second number, otherwise false."
+    }
+  ],
+  "deprecationMessage": []
+}

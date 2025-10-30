@@ -1,0 +1,82 @@
+{
+  "runtimeName": "std::array::to_unique",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input array from which duplicates will be removed."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array of elements that may contain duplicates. This function will remove any duplicate items and return a new array with unique values only."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericType": {
+      "dataTypeIdentifier": "ARRAY",
+      "genericMappers": [
+        {
+          "source": [
+            {
+              "genericKey": "R"
+            }
+          ],
+          "target": "T",
+          "genericCombinations": []
+        }
+      ]
+    }
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "To Unique"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes duplicate elements from the input array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new array containing only the unique elements from the input array. The original order may or may not be preserved depending on the implementation."
+    }
+  ],
+  "deprecationMessage": []
+}

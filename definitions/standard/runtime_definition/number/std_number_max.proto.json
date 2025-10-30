@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::max",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first number to compare."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "One of the two numbers for which the maximum value will be determined."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second number to compare."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The other number involved in the maximum value comparison."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Maximum"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the larger of two numbers."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Compares two numbers and returns the maximum value."
+    }
+  ],
+  "deprecationMessage": []
+}

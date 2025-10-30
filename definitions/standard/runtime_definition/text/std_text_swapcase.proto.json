@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::text::swapcase",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string whose case will be swapped."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Swaps the case of each letter in the input text: uppercase letters become lowercase, and vice versa."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "TEXT"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Swap Case"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts uppercase letters to lowercase and lowercase letters to uppercase in the given text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text string with the case of each character inverted."
+    }
+  ],
+  "deprecationMessage": []
+}

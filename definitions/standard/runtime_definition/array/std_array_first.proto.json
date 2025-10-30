@@ -1,0 +1,69 @@
+{
+  "runtimeName": "std::array::first",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array from which to retrieve the first element."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Returns the first element of the provided array. If the array is empty, behavior depends on the implementation."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericKey": "R"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "First Element of Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Retrieves the first element from the array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "This runtime returns the first element in the given array, if any."
+    }
+  ],
+  "deprecationMessage": []
+}

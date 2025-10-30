@@ -1,0 +1,120 @@
+{
+  "runtimeName": "std::array::concat",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first array to concatenate."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The first input array whose elements will appear at the beginning of the resulting array."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second array to concatenate."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The second input array whose elements will be appended after the elements of the first array."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericType": {
+      "dataTypeIdentifier": "ARRAY",
+      "genericMappers": [
+        {
+          "source": [
+            {
+              "genericKey": "R"
+            }
+          ],
+          "target": "T",
+          "genericCombinations": []
+        }
+      ]
+    }
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Concatenate Arrays"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Concatenates two arrays into a single array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new array containing all elements of the first array followed by all elements of the second array."
+    }
+  ],
+  "deprecationMessage": []
+}

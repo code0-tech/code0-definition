@@ -1,0 +1,22 @@
+{
+  "variant": "TYPE",
+  "identifier": "TEXT_ENCODING",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text Encoding"
+    }
+  ],
+  "rules": [
+    {
+      "itemOfCollection": {
+        "items": [
+          {
+            "stringValue": "BASE64"
+          }
+        ]
+      }
+    }
+  ],
+  "genericKeys": []
+}

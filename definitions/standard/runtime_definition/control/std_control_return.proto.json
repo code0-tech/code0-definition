@@ -1,0 +1,56 @@
+{
+  "runtimeName": "std::control::return",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericKey": "R"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Return Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The value to be returned to the upper context."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the value that will be returned to the upper context. When this node executes, it immediately halts the iteration and passes the value upward."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericKey": "R"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Return"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a value and terminates the current context."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Ends the current context and returns the specified value to the upper scope. This node behaves like a standard 'return' statement in programming languages, stopping further execution within the current flow."
+    }
+  ],
+  "deprecationMessage": []
+}

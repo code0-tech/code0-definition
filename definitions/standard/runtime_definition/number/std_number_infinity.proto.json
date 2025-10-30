@@ -1,0 +1,28 @@
+{
+  "runtimeName": "std::number::infinity",
+  "runtimeParameterDefinitions": [],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Infinity"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the mathematical concept of positive infinity."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Provides the representation of positive infinity, used to represent an unbounded value in computations."
+    }
+  ],
+  "deprecationMessage": []
+}

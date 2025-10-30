@@ -1,0 +1,36 @@
+{
+  "variant": "OBJECT",
+  "identifier": "HTTP_RESPONSE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Response"
+    }
+  ],
+  "rules": [
+    {
+      "containsKey": {
+        "key": "headers",
+        "dataTypeIdentifier": {
+          "dataTypeIdentifier": "HTTP_HEADER_MAP"
+        }
+      }
+    },
+    {
+      "containsKey": {
+        "key": "body",
+        "dataTypeIdentifier": {
+          "dataTypeIdentifier": "OBJECT"
+        }
+      }
+    },
+    {
+      "parentType": {
+        "parentType": {
+          "dataTypeIdentifier": "OBJECT"
+        }
+      }
+    }
+  ],
+  "genericKeys": []
+}

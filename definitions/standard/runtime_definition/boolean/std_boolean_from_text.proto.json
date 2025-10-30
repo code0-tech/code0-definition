@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::boolean::from_text",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to convert."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Converts a text string to a boolean value."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "BOOLEAN"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "From Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Will convert the string to a boolean."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Converts a text string to a boolean value. Recognizes 'true' and 'false' (case-insensitive)."
+    }
+  ],
+  "deprecationMessage": []
+}

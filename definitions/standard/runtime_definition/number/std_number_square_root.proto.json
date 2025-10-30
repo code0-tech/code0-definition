@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::number::square_root",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to find the square root of."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The numeric input for which the square root will be calculated."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Square Root"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the square root of the given number."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Calculates the positive square root of the input number."
+    }
+  ],
+  "deprecationMessage": []
+}

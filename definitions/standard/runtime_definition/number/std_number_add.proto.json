@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::add",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first number to add."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Adds two numbers together."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second number to add."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Adds two numbers together."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Adds two numbers together."
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Adds two numbers together."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Adds two numbers together."
+    }
+  ],
+  "deprecationMessage": []
+}

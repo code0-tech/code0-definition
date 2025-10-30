@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::text::ends_with",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text to check."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The input text to check."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "suffix",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Suffix"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The suffix to test against the input text."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The suffix to test against the input text."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "BOOLEAN"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Ends With"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks if the input text ends with the specified suffix."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the input text ends with the given suffix; otherwise, returns false."
+    }
+  ],
+  "deprecationMessage": []
+}

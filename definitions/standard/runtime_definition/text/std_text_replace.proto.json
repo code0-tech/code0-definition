@@ -1,0 +1,104 @@
+{
+  "runtimeName": "std::text::replace",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text where replacements will be made."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the text in which all occurrences of the old substring will be replaced."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "old",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Old Substring"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The substring to be replaced."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "All occurrences of this substring in the original text will be replaced."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "new",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "New Substring"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The substring to replace with."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This substring will replace each occurrence of the old substring."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "TEXT"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Replace Substring"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Replaces all occurrences of a specified substring with another substring in the input text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new string where every instance of the old substring is replaced by the new substring."
+    }
+  ],
+  "deprecationMessage": []
+}

@@ -1,0 +1,69 @@
+{
+  "runtimeName": "std::array::max",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "An array of numbers to find the maximum value from."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Returns the largest number in the given array of numbers."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Maximum Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the maximum value in a numeric array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the largest number contained in the provided array."
+    }
+  ],
+  "deprecationMessage": []
+}

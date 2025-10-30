@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::text::start_with",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text to check."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The input text to check."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "prefix",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Prefix"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The prefix to test against the input text."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The prefix to test against the input text."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "BOOLEAN"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Starts With"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks if the input text starts with the specified prefix."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the input text begins with the given prefix; otherwise, returns false."
+    }
+  ],
+  "deprecationMessage": []
+}

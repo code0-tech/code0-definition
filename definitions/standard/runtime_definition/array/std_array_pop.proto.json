@@ -1,0 +1,69 @@
+{
+  "runtimeName": "std::array::pop",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array to remove the last item from."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the array from which the last element will be removed and returned."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericKey": "R"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Pop from Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes and returns the last item from the array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Removes the last element from the specified array and returns it. The array is modified in place."
+    }
+  ],
+  "deprecationMessage": []
+}

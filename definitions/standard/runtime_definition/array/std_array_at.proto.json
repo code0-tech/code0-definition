@@ -1,0 +1,94 @@
+{
+  "runtimeName": "std::array::at",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array from which to retrieve an element."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array containing elements of any type. The element at the specified index will be returned."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "index",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The zero-based index of the element to retrieve."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the position of the element in the array to return. Must be within the bounds of the array."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericKey": "R"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Get Array Element"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Retrieves the element at a specified index from an array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the element located at the given zero-based index within the input array."
+    }
+  ],
+  "deprecationMessage": []
+}

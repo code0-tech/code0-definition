@@ -1,0 +1,105 @@
+{
+  "runtimeName": "std::array::for_each",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array of elements to iterate over."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Each element of this array will be passed to the provided consumer function for processing."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "CONSUMER",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "consumer",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Consumer Function"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A function that consumes each element of the array."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This function is invoked once for each element in the array. It is not expected to return a value."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": null,
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "For Each Element"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Executes a consumer function for each element in the array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "This runtime executes the given consumer function on each item in the array without returning a result."
+    }
+  ],
+  "deprecationMessage": []
+}

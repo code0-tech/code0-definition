@@ -1,0 +1,18 @@
+{
+  "variant": "PRIMITIVE",
+  "identifier": "BOOLEAN",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "rules": [
+    {
+      "regex": {
+        "pattern": "^(true|false)$"
+      }
+    }
+  ],
+  "genericKeys": []
+}
