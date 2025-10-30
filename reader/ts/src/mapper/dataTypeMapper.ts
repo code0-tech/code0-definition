@@ -15,6 +15,7 @@ import {
 import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.js"
 import {ConstructedDataTypes, getID} from "../parser.js";
 import {getTranslationConnection} from "./translation.js";
+import {Value} from "@code0-tech/tucana/pb/shared.struct_pb.js";
 
 function getDataType(identifier: string, constructedDataTypes: ConstructedDataTypes): DataType | null {
     const dataType = constructedDataTypes.constructedDataTypes.find(dt => dt.identifier === identifier)
@@ -67,7 +68,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
                     }
                     case "itemOfCollection": {
                         const ruleConfig: DataTypeRulesItemOfCollectionConfig = {
-                            items: r.config.itemOfCollection.items, //TODO: This needs to be checked
+                            items: r.config.itemOfCollection.items.map(valueToJSON),
                         }
                         const rule: DataTypeRule = {
                             variant: DataTypeRulesVariant.ItemOfCollection,
@@ -195,7 +196,7 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
                                     type: type
                                 }
                             }),
-                            sources: mapper.source.map(id =>
+                            sourceDataTypeIdentifiers: mapper.source.map(id =>
                                 getDataTypeIdentifier(id, constructedDataTypes)
                             ).filter(id => id != null),
                             target: mapper.target,
@@ -222,6 +223,29 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
     }
 
     return null;
+}
+
+// @ts-ignore
+function valueToJSON(value: Value) {
+    switch (value.kind.oneofKind) {
+        case "nullValue":
+            return null
+        case "numberValue":
+            return value.kind.numberValue
+        case "stringValue":
+            return value.kind.stringValue
+        case "boolValue":
+            return value.kind.boolValue
+        case "structValue":
+            return Object.fromEntries(
+                // @ts-ignore
+                Object.entries(value.kind.structValue.fields).map(([k, v]) => {
+                    return  [k, valueToJSON(v)]
+                })
+            )
+        case "listValue":
+            return value.kind.listValue.values.map(valueToJSON)
+    }
 }
 
 export {getDataType, getDataTypeIdentifier}
