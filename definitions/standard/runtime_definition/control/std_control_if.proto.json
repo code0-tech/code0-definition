@@ -28,7 +28,7 @@
     },
     {
       "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NODE"
+        "dataTypeIdentifier": "RUNNABLE"
       },
       "runtimeName": "thenNode",
       "defaultValue": null,

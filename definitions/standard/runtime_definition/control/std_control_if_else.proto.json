@@ -28,7 +28,7 @@
     },
     {
       "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NODE"
+        "dataTypeIdentifier": "RUNNABLE"
       },
       "runtimeName": "then_node",
       "defaultValue": null,
@@ -53,7 +53,7 @@
     },
     {
       "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NODE"
+        "dataTypeIdentifier": "RUNNABLE"
       },
       "runtimeName": "else_node",
       "defaultValue": null,
