@@ -1,0 +1,18 @@
+{
+  "variant": "PRIMITIVE",
+  "identifier": "TEXT",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text"
+    }
+  ],
+  "rules": [
+    {
+      "regex": {
+        "pattern": "[\\s\\S]*"
+      }
+    }
+  ],
+  "genericKeys": []
+}

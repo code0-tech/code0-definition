@@ -1,0 +1,104 @@
+{
+  "runtimeName": "std::text::insert",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The original text into which another text will be inserted."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the base string where the insertion happens."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "position",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Position"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The index at which the text will be inserted."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Zero-based index indicating where the new text should be inserted."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "text",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Insert"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text that will be inserted into the original text."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The substring to be inserted at the specified position."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "TEXT"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Insert Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Inserts a given text into the original text at the specified position."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new string where the provided text is inserted at the zero-based position index within the original text."
+    }
+  ],
+  "deprecationMessage": []
+}

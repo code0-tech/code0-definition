@@ -1,0 +1,67 @@
+{
+  "runtimeName": "std::text::chars",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to split into characters."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Splits the input text string into an array of its constituent characters."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericType": {
+      "dataTypeIdentifier": "ARRAY",
+      "genericMappers": [
+        {
+          "source": [
+            {
+              "dataTypeIdentifier": "TEXT"
+            }
+          ],
+          "target": "T",
+          "genericCombinations": []
+        }
+      ]
+    }
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Characters"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns an array containing each character from the given text string."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Creates an array where each element is a single character from the original text."
+    }
+  ],
+  "deprecationMessage": []
+}

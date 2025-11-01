@@ -1,0 +1,66 @@
+{
+  "runtimeName": "std::array::sum",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "dataTypeIdentifier": "NUMBER"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "An array of numbers to be summed."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Calculates the sum of all numbers in the given array."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Sum of Numbers"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the total sum of the elements in the numeric array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Adds up all numbers in the input array and returns their sum."
+    }
+  ],
+  "deprecationMessage": []
+}

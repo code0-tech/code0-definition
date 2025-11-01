@@ -1,0 +1,94 @@
+{
+  "runtimeName": "std::array::push",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "I"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array to which an item will be added."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The array that the new item will be appended to."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericKey": "I"
+      },
+      "runtimeName": "item",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Item"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The item to add to the array."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The value to be added at the end of the array."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "I"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Push to Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Appends an item to the end of an array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Adds a new element to the end of the array and returns the new length of the array."
+    }
+  ],
+  "deprecationMessage": []
+}

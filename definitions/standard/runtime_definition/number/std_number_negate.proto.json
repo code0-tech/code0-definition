@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::number::negate",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to negate."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The numeric input whose sign will be inverted."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Negate"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the negation of a number (multiplies by -1)."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Calculates the additive inverse of the given number."
+    }
+  ],
+  "deprecationMessage": []
+}

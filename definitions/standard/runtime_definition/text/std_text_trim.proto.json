@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::text::trim",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to trim whitespace from."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The input text from which leading and trailing whitespace characters will be removed."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "TEXT"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Trim Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes leading and trailing whitespace from the text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new string with all leading and trailing whitespace characters removed from the input text."
+    }
+  ],
+  "deprecationMessage": []
+}

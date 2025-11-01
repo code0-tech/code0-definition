@@ -1,0 +1,92 @@
+{
+  "runtimeName": "std::array::join",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "dataTypeIdentifier": "TEXT"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "An array of text elements to be filtered."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Input array containing text elements for filtering."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "join_text",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Join Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Text to join the filtered elements."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The delimiter or text that will be used to join the filtered array elements into a single string."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "TEXT"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Filter and Join Text Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Filters the input text array and joins the filtered elements into a single string separated by the specified join text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Applies a filter operation on the input text array and returns a single concatenated string of filtered elements joined by the provided join text."
+    }
+  ],
+  "deprecationMessage": []
+}

@@ -1,0 +1,27 @@
+{
+  "variant": "NODE",
+  "identifier": "CONSUMER",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Consumer"
+    }
+  ],
+  "rules": [
+    {
+      "inputTypes": {
+        "inputTypes": [
+          {
+            "dataTypeIdentifier": {
+              "genericKey": "T"
+            },
+            "inputIdentifier": "consumer"
+          }
+        ]
+      }
+    }
+  ],
+  "genericKeys": [
+    "T"
+  ]
+}

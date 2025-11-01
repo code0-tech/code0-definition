@@ -1,0 +1,107 @@
+{
+  "runtimeName": "std::array::find_index",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array to search through."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The array in which to find the index of an element that satisfies the predicate."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "PREDICATE",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "predicate",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Search Predicate"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A predicate function used to test each element for a match."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "A function that takes an element of the array and returns a boolean indicating if the element satisfies the search criteria."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Index in Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the index of the first element in the array that satisfies the predicate."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
+    }
+  ],
+  "deprecationMessage": []
+}

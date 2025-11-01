@@ -1,0 +1,67 @@
+{
+  "runtimeName": "std::object::keys",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "OBJECT"
+      },
+      "runtimeName": "object",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The object whose keys will be retrieved."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Returns an array of all the keys (property names) of the given object."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericType": {
+      "dataTypeIdentifier": "ARRAY",
+      "genericMappers": [
+        {
+          "source": [
+            {
+              "dataTypeIdentifier": "TEXT"
+            }
+          ],
+          "target": "T",
+          "genericCombinations": []
+        }
+      ]
+    }
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Get Object Keys"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Retrieves all the keys from the given object as an array of text values."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns an array containing all enumerable property names (keys) of the specified object."
+    }
+  ],
+  "deprecationMessage": []
+}

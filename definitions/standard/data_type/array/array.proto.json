@@ -1,0 +1,22 @@
+{
+  "variant": "ARRAY",
+  "identifier": "ARRAY",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Generic Array"
+    }
+  ],
+  "rules": [
+    {
+      "containsType": {
+        "dataTypeIdentifier": {
+          "genericKey": "T"
+        }
+      }
+    }
+  ],
+  "genericKeys": [
+    "T"
+  ]
+}

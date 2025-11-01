@@ -1,0 +1,106 @@
+{
+  "runtimeName": "http::response::create",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "HTTP_STATUS_CODE"
+      },
+      "runtimeName": "http_status_code",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Status Code"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Represents the numeric status code returned by the server in response to an HTTP request."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Indicates the outcome of an HTTP request. Common codes include 200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), 404 (Not Found), and 500 (Internal Server Error)."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "HTTP_HEADER_MAP"
+      },
+      "runtimeName": "headers",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A collection of key-value pairs containing additional request metadata."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Optional headers that can define content type, authorization, cookies, caching policies, and more."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericKey": "P"
+      },
+      "runtimeName": "payload",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request Body"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The data to include in the body of the request, typically used with methods like POST or PUT."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Contains the request payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "HTTP_RESPONSE"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "P"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Construct HTTP Response"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Builds an HTTP response object using the specified status code, headers, and optional response body."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Creates a complete HTTP response object to be returned from a server. The response includes a status code, headers, and an optional body containing the response content."
+    }
+  ],
+  "deprecationMessage": []
+}

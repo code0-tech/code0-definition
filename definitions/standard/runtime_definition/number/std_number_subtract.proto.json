@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::subtract",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minuend"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number from which another number (the subtrahend) is to be subtracted."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the number that will have the second value subtracted from it."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Subtrahend"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to subtract from the first number (the minuend)."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the value that will be subtracted from the first number."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Subtract"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Subtracts the second number from the first number."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the result of subtracting the second numeric input from the first."
+    }
+  ],
+  "deprecationMessage": []
+}

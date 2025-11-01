@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::sin",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "min",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minimum Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The lower bound of the random number range."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Defines the minimum value (inclusive) for the random number generation."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "max",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Maximum Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The upper bound of the random number range."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Defines the maximum value (inclusive) for the random number generation."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Random Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Generates a random number within the specified range."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a pseudo-random number between the given minimum and maximum values."
+    }
+  ],
+  "deprecationMessage": []
+}

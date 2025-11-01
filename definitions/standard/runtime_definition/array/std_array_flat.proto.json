@@ -1,0 +1,95 @@
+{
+  "runtimeName": "std::array::flat",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericType": {
+                    "dataTypeIdentifier": "ARRAY",
+                    "genericMappers": [
+                      {
+                        "source": [
+                          {
+                            "genericKey": "R"
+                          }
+                        ],
+                        "target": "T",
+                        "genericCombinations": []
+                      }
+                    ]
+                  }
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Nested Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The nested array to be flattened."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array containing sub-arrays that will be flattened into a single-level array."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericType": {
+      "dataTypeIdentifier": "ARRAY",
+      "genericMappers": [
+        {
+          "source": [
+            {
+              "genericKey": "R"
+            }
+          ],
+          "target": "T",
+          "genericCombinations": []
+        }
+      ]
+    }
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Flatten Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Flattens a nested array into a single-level array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new array by concatenating all sub-arrays of the input nested array into one flat array."
+    }
+  ],
+  "deprecationMessage": []
+}

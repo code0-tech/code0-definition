@@ -1,0 +1,69 @@
+{
+  "runtimeName": "std::array::is_empty",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array to check for emptiness."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The array whose length will be evaluated to determine if it contains any elements."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "BOOLEAN"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Array Empty"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks if the array has no elements."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the array contains no elements, otherwise returns false."
+    }
+  ],
+  "deprecationMessage": []
+}

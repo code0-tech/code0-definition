@@ -1,0 +1,107 @@
+{
+  "runtimeName": "std::array::remove",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array from which the item will be removed."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array to process by removing the first occurrence of the specified item."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericKey": "R"
+      },
+      "runtimeName": "item",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Item"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The item to remove from the array."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The value to search for and remove from the array. Only the first matching item is removed."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericType": {
+      "dataTypeIdentifier": "ARRAY",
+      "genericMappers": [
+        {
+          "source": [
+            {
+              "genericKey": "R"
+            }
+          ],
+          "target": "T",
+          "genericCombinations": []
+        }
+      ]
+    }
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Remove from Array"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes the first occurrence of the specified item from the array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Removes the first matching item from the given array and returns the resulting array."
+    }
+  ],
+  "deprecationMessage": []
+}

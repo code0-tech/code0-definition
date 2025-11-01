@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::exponential",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "base",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Base"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The base number to be raised to a power."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the numeric value that will be raised to the power of the exponent."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "exponent",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Exponent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The exponent to raise the base number by."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This numeric value indicates the power to which the base is raised."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Exponential"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Raises a base number to the power of an exponent."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Computes the result of raising the base to the power specified by the exponent."
+    }
+  ],
+  "deprecationMessage": []
+}
