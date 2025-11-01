@@ -1,5 +1,7 @@
 use clap::{Parser as ClapParser, Subcommand};
 
+pub mod parser;
+
 mod analyser;
 mod command;
 mod formatter;

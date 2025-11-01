@@ -1,5 +1,5 @@
 use crate::formatter::{error, warning};
-use code0_definition_reader::reader::Meta;
+use crate::parser::Meta;
 use std::cmp::PartialEq;
 use std::path::Path;
 use std::process::exit;
@@ -64,13 +64,6 @@ impl Reporter {
         self.diagnose
             .iter()
             .filter(|p| p.kind.severity() == Severity::Warning)
-            .collect()
-    }
-
-    pub fn get_debug(&self) -> Vec<&Diagnose> {
-        self.diagnose
-            .iter()
-            .filter(|p| p.kind.severity() == Severity::Debug)
             .collect()
     }
 }
