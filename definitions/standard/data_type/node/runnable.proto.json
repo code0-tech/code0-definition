@@ -1,0 +1,12 @@
+{
+  "variant": "NODE",
+  "identifier": "RUNNABLE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Node"
+    }
+  ],
+  "rules": [],
+  "genericKeys": []
+}
