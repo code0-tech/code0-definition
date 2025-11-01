@@ -6,11 +6,11 @@ use crate::analyser::diagnostics::DiagnosticKind::{
     UndefinedGenericKey, UndefinedTranslation, UnusedGenericKey,
 };
 use crate::analyser::diagnostics::{Diagnose, DiagnosticKind, Reporter};
-use parser::parser::Parser;
-use parser::reader::{Meta, MetaType, Reader};
 use tucana::shared::data_type_identifier::Type;
 use tucana::shared::definition_data_type_rule::Config;
 use tucana::shared::{DataTypeIdentifier, DefinitionDataType, FlowType, RuntimeFunctionDefinition};
+use crate::parser::Parser;
+use crate::parser::{Meta, MetaType, Reader};
 
 #[derive(Clone)]
 pub struct AnalysableDataType {

@@ -1,5 +1,8 @@
 use clap::{Parser as ClapParser, Subcommand};
 
+#[path = "../../parser/src/lib.rs"]
+pub mod parser;
+
 mod analyser;
 mod command;
 mod formatter;

@@ -301,7 +301,6 @@ dependencies = [
  "colored",
  "futures",
  "notify",
- "parser",
  "prost",
  "reqwest",
  "serde",
@@ -316,7 +315,6 @@ dependencies = [
 name = "code0-definition-reader"
 version = "0.0.0"
 dependencies = [
- "parser",
  "serde",
  "serde_json",
  "tucana",

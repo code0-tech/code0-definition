@@ -1,4 +1,6 @@
+#[path = "../../parser/src/lib.rs"]
+mod parser;
+
 pub mod package {
-    pub use parser::parser::*;
-    pub use parser::reader::*;
+    pub use super::parser::*;
 }

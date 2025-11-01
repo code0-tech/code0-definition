@@ -1,7 +1,7 @@
 use crate::analyser::Analyser;
 use crate::formatter::{success, success_table};
+use crate::parser::{Feature, Parser};
 use crate::table::{feature_table, summary_table};
-use parser::parser::{Feature, Parser};
 
 pub fn search_feature(name: Option<String>, path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
