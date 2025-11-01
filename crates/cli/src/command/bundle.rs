@@ -23,7 +23,7 @@ pub fn bundle(path: Option<String>, out: Option<String>) {
     for feature in parser.features {
         feature.data_types.iter().for_each(|data_type| {
             let mut buf = Vec::new();
-            if let Ok(_) = data_type.encode(&mut buf) {
+            if data_type.encode(&mut buf).is_ok() {
                 let path = format!(
                     "{}/{}_{}_{}.pb",
                     &out_path,
@@ -40,7 +40,7 @@ pub fn bundle(path: Option<String>, out: Option<String>) {
 
         feature.flow_types.iter().for_each(|flow_type| {
             let mut buf = Vec::new();
-            if let Ok(_) = flow_type.encode(&mut buf) {
+            if flow_type.encode(&mut buf).is_ok() {
                 let path = format!(
                     "{}/{}_{}_{}.pb",
                     &out_path,
@@ -57,7 +57,7 @@ pub fn bundle(path: Option<String>, out: Option<String>) {
 
         feature.runtime_functions.iter().for_each(|function| {
             let mut buf = Vec::new();
-            if let Ok(_) = function.encode(&mut buf) {
+            if function.encode(&mut buf).is_ok() {
                 let path = format!(
                     "{}/{}_{}_{}.pb",
                     &out_path,
