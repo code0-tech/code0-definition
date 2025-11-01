@@ -21,8 +21,5 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
-    "moduleDetection": "force",
-    "allowSyntheticDefaultImports": true,
-    "allowImportingTsExtensions": true
   }
 }

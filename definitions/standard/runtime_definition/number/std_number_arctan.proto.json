@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::number::arctan",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number representing the tangent value."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Calculates the arctangent (inverse tangent) of the input value."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Arctangent"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the arctangent of a number, in radians."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Computes the angle in radians whose tangent is the given number."
+    }
+  ],
+  "deprecationMessage": []
+}

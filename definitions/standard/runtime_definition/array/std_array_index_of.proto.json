@@ -1,0 +1,94 @@
+{
+  "runtimeName": "std::array::index_of",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The array to search within."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array of elements in which the specified item will be searched for to determine its index."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericKey": "R"
+      },
+      "runtimeName": "item",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Item"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The item whose index is to be found in the array."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The item for which the function searches in the array and returns the index of its first occurrence."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Index of Item"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the index of the first occurrence of the specified item in the array."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the zero-based index of the first occurrence of a given item in the specified array. If the item is not found, it typically returns -1."
+    }
+  ],
+  "deprecationMessage": []
+}

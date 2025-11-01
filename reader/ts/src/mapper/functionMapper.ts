@@ -2,9 +2,9 @@ import {FunctionDefinition, ParameterDefinitionConnection} from "@code0-tech/sag
 import {
     RuntimeFunctionDefinition as TucanaFunction,
     RuntimeParameterDefinition
-} from "@code0-tech/tucana/pb/shared.runtime_function_pb.ts";
-import {getDataTypeIdentifier} from "./dataTypeMapper.ts";
-import {ConstructedDataTypes, getID} from "../parser.ts";
+} from "@code0-tech/tucana/pb/shared.runtime_function_pb.js";
+import {getDataTypeIdentifier} from "./dataTypeMapper.js";
+import {ConstructedDataTypes, getID} from "../parser.js";
 import {getTranslationConnection} from "./translation.js";
 
 function mapFunction(func: TucanaFunction, constructed: ConstructedDataTypes): FunctionDefinition | null {
@@ -18,6 +18,10 @@ function mapFunction(func: TucanaFunction, constructed: ConstructedDataTypes): F
         throwsError: func.throwsError,
         returnType: getDataTypeIdentifier(func.returnTypeIdentifier, constructed),
         parameterDefinitions: getParameterDefinitionConnection(func.runtimeParameterDefinitions, constructed),
+         runtimeFunctionDefinition: {
+             id: `gid://sagittarius/RuntimeFunctionDefinition/${getID(constructed)}`,
+             identifier: func.runtimeName
+         }
     }
 }
 
@@ -28,9 +32,10 @@ function getParameterDefinitionConnection(def: RuntimeParameterDefinition[], con
             return {
                 id: `gid://sagittarius/ParameterDefinition/${getID(constructed)}`,
                 names: getTranslationConnection(node.name),
+                identifier: node.runtimeName,
                 descriptions: getTranslationConnection(node.description),
                 documentations: getTranslationConnection(node.documentation),
-                dataType: getDataTypeIdentifier(node.dataTypeIdentifier, constructed)
+                dataTypeIdentifier: getDataTypeIdentifier(node.dataTypeIdentifier, constructed)
             }
         })
     }

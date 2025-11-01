@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::boolean::as_text",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "BOOLEAN"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The boolean value to convert."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Converts a boolean value to a text string."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "TEXT"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "As Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Will convert the boolean to text."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Converts a boolean value to a text string."
+    }
+  ],
+  "deprecationMessage": []
+}

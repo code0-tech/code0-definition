@@ -6,7 +6,9 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "npx vite build"
+    "build": "vite build",
+    "start": "node ./dist/index.js",
+    "build:and:run": "vite build && node ./dist/index.js"
   },
   "author": "",
   "license": "",
@@ -28,9 +30,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@code0-tech/sagittarius-graphql-types": "^0.0.0-00f33663039d78ad59e95306730878c687de5c48",
-    "@code0-tech/tucana": "^0.0.37",
+    "@code0-tech/sagittarius-graphql-types": "^0.0.0-56198dce107a9c09cc5eca0773f239d9c3eba598",
+    "@code0-tech/tucana": "^0.0.39",
     "@protobuf-ts/runtime": "^2.11.1",
+    "@protobuf-ts/runtime-rpc": "^2.11.1",
     "vite-plugin-dts": "^4.5.4"
   }
 }

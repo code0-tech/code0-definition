@@ -1,0 +1,120 @@
+{
+  "runtimeName": "std::array::sort_reverse",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "ARRAY",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "T",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "array",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Array"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input array to be sorted in reverse order."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "An array of elements that will be sorted in descending order using the provided comparator."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "genericType": {
+          "dataTypeIdentifier": "COMPARATOR",
+          "genericMappers": [
+            {
+              "source": [
+                {
+                  "genericKey": "R"
+                }
+              ],
+              "target": "I",
+              "genericCombinations": []
+            }
+          ]
+        }
+      },
+      "runtimeName": "comparator",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Comparator"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A comparator function used to determine the sort order of elements."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "genericType": {
+      "dataTypeIdentifier": "ARRAY",
+      "genericMappers": [
+        {
+          "source": [
+            {
+              "genericKey": "R"
+            }
+          ],
+          "target": "T",
+          "genericCombinations": []
+        }
+      ]
+    }
+  },
+  "throwsError": false,
+  "genericKeys": [
+    "R"
+  ],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Sort Array in Reverse"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Sorts the elements of the array in reverse order using the specified comparator."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new array with the elements sorted in descending order according to the comparator function provided."
+    }
+  ],
+  "deprecationMessage": []
+}

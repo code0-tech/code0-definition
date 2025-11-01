@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::text::uppercase",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "TEXT"
+      },
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to convert to uppercase."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Converts all characters in the input text string to uppercase."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "TEXT"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Uppercase"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Transforms all letters in the text to their uppercase equivalents."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text string with all characters converted to uppercase."
+    }
+  ],
+  "deprecationMessage": []
+}

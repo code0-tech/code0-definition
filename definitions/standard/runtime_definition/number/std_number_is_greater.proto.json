@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::is_greater",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to compare against the second number."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the number that will be evaluated to determine if it is greater than the second number."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to compare with the first number."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the number that the first number will be compared to."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "BOOLEAN"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Greater"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks whether the first number is greater than the second number."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the first numeric input is greater than the second; otherwise, returns false."
+    }
+  ],
+  "deprecationMessage": []
+}

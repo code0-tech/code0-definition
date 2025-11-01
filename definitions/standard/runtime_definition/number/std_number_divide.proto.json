@@ -1,0 +1,79 @@
+{
+  "runtimeName": "std::number::divide",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Dividend"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to be divided."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the numerator or the number that will be divided by the second value."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NUMBER"
+      },
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Divisor"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number by which to divide the first number."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "This is the denominator or the value that divides the first number."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": {
+    "dataTypeIdentifier": "NUMBER"
+  },
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Divide"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Divides the first number by the second number."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Returns the result of dividing the first numeric input (dividend) by the second (divisor)."
+    }
+  ],
+  "deprecationMessage": []
+}
