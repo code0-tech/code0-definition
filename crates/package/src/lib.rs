@@ -1,12 +1,12 @@
 pub mod package {
     use serde::Serialize;
-    use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
     use std::io::ErrorKind;
     use std::{
         fs::{self, DirEntry},
         io::Error,
         path::Path,
     };
+    use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
     #[derive(Serialize, Clone, Debug)]
     pub struct DefinitionError {
@@ -96,14 +96,16 @@ pub mod package {
         fn append_meta(feature: &mut Feature, meta: &Meta) {
             let definition = meta.definition_string.as_str();
             match meta.r#type {
-                MetaType::DataType => match serde_json::from_str::<DefinitionDataType>(definition) {
-                    Ok(data_type) => feature.data_types.push(data_type),
-                    Err(err) => feature.errors.push(DefinitionError {
-                        definition: Parser::extract_identifier(definition, MetaType::DataType),
-                        definition_type: MetaType::DataType,
-                        error: err.to_string(),
-                    }),
-                },
+                MetaType::DataType => {
+                    match serde_json::from_str::<DefinitionDataType>(definition) {
+                        Ok(data_type) => feature.data_types.push(data_type),
+                        Err(err) => feature.errors.push(DefinitionError {
+                            definition: Parser::extract_identifier(definition, MetaType::DataType),
+                            definition_type: MetaType::DataType,
+                            error: err.to_string(),
+                        }),
+                    }
+                }
                 MetaType::FlowType => match serde_json::from_str::<FlowType>(definition) {
                     Ok(flow_type) => feature.flow_types.push(flow_type),
                     Err(err) => feature.errors.push(DefinitionError {
@@ -128,7 +130,6 @@ pub mod package {
             }
         }
     }
-
 
     #[derive(Serialize, Debug, Clone, Copy)]
     pub enum MetaType {
@@ -160,7 +161,11 @@ pub mod package {
     }
 
     impl Meta {
-        pub fn read_from_file<P>(name: String, r#type: MetaType, file_path: P) -> Result<Meta, Error>
+        pub fn read_from_file<P>(
+            name: String,
+            r#type: MetaType,
+            file_path: P,
+        ) -> Result<Meta, Error>
         where
             P: AsRef<Path>,
         {
@@ -292,6 +297,4 @@ pub mod package {
             .to_str()
             .map(|file_name| file_name.to_string())
     }
-
-
 }

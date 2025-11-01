@@ -1,11 +1,11 @@
 use serde::Serialize;
-use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 use std::io::ErrorKind;
 use std::{
     fs::{self, DirEntry},
     io::Error,
     path::Path,
 };
+use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
 #[derive(Serialize, Clone, Debug)]
 pub struct DefinitionError {
@@ -127,7 +127,6 @@ impl Parser {
         }
     }
 }
-
 
 #[derive(Serialize, Debug, Clone, Copy)]
 pub enum MetaType {
@@ -291,4 +290,3 @@ fn get_file_name(entry: &DirEntry) -> Option<String> {
         .to_str()
         .map(|file_name| file_name.to_string())
 }
-

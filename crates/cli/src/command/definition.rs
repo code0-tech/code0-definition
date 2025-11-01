@@ -1,6 +1,6 @@
 use crate::formatter::{info, success};
-use colored::Colorize;
 use crate::parser::Parser;
+use colored::Colorize;
 
 pub fn search_definition(name: String, path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());

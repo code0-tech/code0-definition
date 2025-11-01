@@ -1,7 +1,7 @@
+use crate::parser::Parser;
 use prost::Message;
 use std::fs;
 use std::io::Write;
-use crate::parser::Parser;
 
 pub fn bundle(path: Option<String>, out: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());

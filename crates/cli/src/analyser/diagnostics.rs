@@ -1,8 +1,8 @@
 use crate::formatter::{error, warning};
+use crate::parser::Meta;
 use std::cmp::PartialEq;
 use std::path::Path;
 use std::process::exit;
-use crate::parser::Meta;
 
 #[derive(Default)]
 pub struct Reporter {

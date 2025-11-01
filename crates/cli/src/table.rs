@@ -1,6 +1,6 @@
+use crate::parser::Feature;
 use tabled::Tabled;
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
-use crate::parser::Feature;
 
 #[derive(Tabled)]
 pub struct FlowTypeRow {
