@@ -1,9 +1,0 @@
-[package]
-name = "parser"
-version = "0.0.0"
-edition.workspace = true
-
-[dependencies]
-serde = {workspace = true}
-serde_json = { workspace = true }
-tucana = { workspace = true }
