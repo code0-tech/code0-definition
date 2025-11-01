@@ -1,7 +1,7 @@
 use crate::analyser::Analyser;
 use crate::formatter::{success, success_table};
+use crate::parser::Parser;
 use crate::table::summary_table;
-use code0_definition_reader::parser::Parser;
 
 pub fn report_errors(path: Option<String>) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
