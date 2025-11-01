@@ -22,57 +22,57 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "Determines which branch to execute. If true the Then Node runs otherwise the Else Node runs."
+          "content": "Determines which branch to execute. If true the Then Runnable runs otherwise the Else Runnable runs."
         }
       ]
     },
     {
       "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NODE"
+        "dataTypeIdentifier": "RUNNABLE"
       },
-      "runtimeName": "then_node",
+      "runtimeName": "then_runnable",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Then Node"
+          "content": "Then Runnable"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "Node to execute when the condition is true."
+          "content": "Runnable to execute when the condition is true."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Defines the node that runs if the condition evaluates to true."
+          "content": "Defines the runnable that runs if the condition evaluates to true."
         }
       ]
     },
     {
       "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NODE"
+        "dataTypeIdentifier": "RUNNABLE"
       },
-      "runtimeName": "else_node",
+      "runtimeName": "else_runnable",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Else Node"
+          "content": "Else Runnable"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "Node to execute when the condition is false."
+          "content": "Runnable to execute when the condition is false."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Defines the node that runs if the condition evaluates to false."
+          "content": "Defines the runnable that runs if the condition evaluates to false."
         }
       ]
     }
@@ -89,13 +89,13 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Evaluates a condition and executes either the Then Node or the Else Node."
+      "content": "Evaluates a condition and executes either the Then Runnable or the Else Runnable."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Evaluates a boolean condition. If true, executes the Then Node; otherwise, executes the Else Node. Mirrors a standard 'if/else' control structure in programming languages."
+      "content": "Evaluates a boolean condition. If true, executes the Then Runnable; otherwise, executes the Else Runnable. Mirrors a standard 'if/else' control structure in programming languages."
     }
   ],
   "deprecationMessage": []
