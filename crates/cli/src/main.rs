@@ -55,12 +55,6 @@ enum Commands {
         #[clap(short, long, value_parser, num_args = 1.., value_delimiter = ' ')]
         features: Option<Vec<String>>,
     },
-    Bundle {
-        #[arg(short, long)]
-        path: Option<String>,
-        #[arg(short, long)]
-        out: Option<String>,
-    },
 }
 
 #[tokio::main]
@@ -68,7 +62,6 @@ async fn main() {
     let cli = Cli::parse();
 
     match cli.command {
-        Commands::Bundle { path, out } => command::bundle::bundle(path, out),
         Commands::Report { path } => command::report::report_errors(path),
         Commands::Feature { name, path } => command::feature::search_feature(name, path),
         Commands::Definition { name, path } => command::definition::search_definition(name, path),
