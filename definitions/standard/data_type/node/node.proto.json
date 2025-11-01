@@ -1,0 +1,12 @@
+{
+  "variant": "NODE",
+  "identifier": "NODE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Node"
+    }
+  ],
+  "rules": [],
+  "genericKeys": []
+}

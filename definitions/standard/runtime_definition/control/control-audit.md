@@ -12,3 +12,9 @@
 
 ## Renamed
 break -> stop
+
+01.11.2025
+
+## Added 
+- if
+- if-else

@@ -1,0 +1,77 @@
+{
+  "runtimeName": "std::control::if",
+  "runtimeParameterDefinitions": [
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "BOOLEAN"
+      },
+      "runtimeName": "condition",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Condition"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Boolean condition to evaluate."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Specifies the condition that determines whether the provided node should be executed. If this condition evaluates to true, the execution proceeds with the node defined in the second parameter."
+        }
+      ]
+    },
+    {
+      "dataTypeIdentifier": {
+        "dataTypeIdentifier": "NODE"
+      },
+      "runtimeName": "thenNode",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Then Node"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Node that will be executed if the condition is true."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "Defines the node to be executed when the condition evaluates to true. If the condition is false, this node will be skipped and execution will continue with the next element in the flow."
+        }
+      ]
+    }
+  ],
+  "returnTypeIdentifier": null,
+  "throwsError": false,
+  "genericKeys": [],
+  "name": [
+    {
+      "code": "en-US",
+      "content": "If"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Executes the specified node if the condition evaluates to true."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "The 'If' node evaluates a boolean condition and, if it is true, executes the provided node. If the condition is false, execution continues without running the node. This behavior corresponds to a standard 'if' statement in programming languages."
+    }
+  ],
+  "deprecationMessage": []
+}
