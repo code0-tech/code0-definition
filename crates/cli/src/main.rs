@@ -54,7 +54,7 @@ enum Commands {
         tag: Option<String>,
         #[clap(short, long, value_parser, num_args = 1.., value_delimiter = ' ')]
         features: Option<Vec<String>>,
-    }
+    },
 }
 
 #[tokio::main]
