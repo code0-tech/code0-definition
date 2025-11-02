@@ -13,7 +13,7 @@ import {
     DefinitionDataType_Variant, DefinitionDataTypeRule, GenericMapper_GenericCombinationStrategy
 } from "@code0-tech/tucana/pb/shared.data_type_pb.js"
 import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.js"
-import {ConstructedDataTypes, getID} from "../parser.js";
+import {ConstructedDataTypes, getID} from "../definition/remote.js";
 import {getTranslationConnection} from "./translation.js";
 import {Value} from "@code0-tech/tucana/pb/shared.struct_pb.js";
 

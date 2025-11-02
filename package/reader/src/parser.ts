@@ -1,41 +1,26 @@
-import {DefinitionDataType as TucanaDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.js";
-import {Feature} from "./types.js";
 import {readdirSync, readFileSync} from "node:fs";
-import {FlowType as TucanaFlowType} from "@code0-tech/tucana/pb/shared.flow_definition_pb.js";
-import {RuntimeFunctionDefinition as TucanaFunction} from "@code0-tech/tucana/pb/shared.runtime_function_pb.js";
-import path from "node:path";
-import {mapFlowType} from "./mapper/flowTypeMapper.js";
-import {mapFunction} from "./mapper/functionMapper.js";
-import {DataType} from "@code0-tech/sagittarius-graphql-types";
+import {FlowType} from "@code0-tech/tucana/pb/shared.flow_definition_pb.js";
+import {RuntimeFunctionDefinition} from "@code0-tech/tucana/pb/shared.runtime_function_pb.js";
 import {DefinitionDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.js";
-import {getDataType} from "./mapper/dataTypeMapper.js";
+import { join } from "node:path";
 
-export interface ConstructedDataTypes {
-    scannedTucanaTypes: DefinitionDataType[]
-    constructedDataTypes: DataType[]
-    id: number
+export interface Feature {
+    dataTypes: DefinitionDataType[];
+    flowTypes: FlowType[];
+    runtimeFunctions: RuntimeFunctionDefinition[];
 }
 
-export function getID(constructedDataTypes: ConstructedDataTypes) {
-    const last = constructedDataTypes.id
-    constructedDataTypes.id += 1
-    return last
-}
+export const Definition = (path: string): Feature => {
 
-export const Definition = (rootPath: string): Feature[] => {
-    const dataTypes: {feature: string, type: TucanaDataType}[] = []
-    const runtimeFunctions: {feature: string, func: TucanaFunction}[] = [];
-    const flowTypes: {feature: string, flow: TucanaFlowType}[] = [];
-
-    readdirSync(rootPath, { withFileTypes: true }).forEach(file => {
+    readdirSync(path, { withFileTypes: true }).forEach(file => {
         const featureName = file.name.split("_")[0]
         if (featureName == null) {
             throw new Error("Feature name is null")
         }
 
-        const filePath = path.join(file.parentPath, file.name)
-
+        const filePath = join(file.parentPath, file.name)
         const content = readFileSync(filePath);
+
         if (file.name.includes("data_type")) {
             const decoded = TucanaDataType.fromBinary(content);
             dataTypes.push(

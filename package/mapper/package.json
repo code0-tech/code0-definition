@@ -1,7 +1,7 @@
 {
-  "name": "@code0-tech/definition-reader",
+  "name": "@code0-tech/definition-mapper",
   "version": "0.0.0",
-  "description": "Reader for Code0-Definitions",
+  "description": "Will map Code0-Definitions to its correspondent Sagittarius-Types",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
@@ -23,7 +23,6 @@
   },
   "files": [
     "dist",
-    "src/index.ts",
     "src"
   ],
   "publishConfig": {
@@ -34,6 +33,7 @@
     "@code0-tech/tucana": "^0.0.39",
     "@protobuf-ts/runtime": "^2.11.1",
     "@protobuf-ts/runtime-rpc": "^2.11.1",
+    "fflate": "^0.8.2",
     "vite-plugin-dts": "^4.5.4"
   }
 }

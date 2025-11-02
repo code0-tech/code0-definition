@@ -1,5 +1,5 @@
 {
-  "variant": "TYPE",
+  "variant": "OBJECT",
   "identifier": "OBJECT",
   "name": [
     {
@@ -9,4 +9,4 @@
   ],
   "rules": [],
   "genericKeys": []
-}
+}:q
