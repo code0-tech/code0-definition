@@ -4,7 +4,7 @@ import {
     RuntimeParameterDefinition
 } from "@code0-tech/tucana/pb/shared.runtime_function_pb.js";
 import {getDataTypeIdentifier} from "./dataTypeMapper.js";
-import {ConstructedDataTypes, getID} from "../definition/remote.js";
+import {ConstructedDataTypes, getID} from "../definition/mapper.js";
 import {getTranslationConnection} from "./translation.js";
 
 function mapFunction(func: TucanaFunction, constructed: ConstructedDataTypes): FunctionDefinition | null {
