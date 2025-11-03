@@ -22,15 +22,12 @@
     "url": "https://github.com/code0-tech/code0-definition"
   },
   "files": [
-    "dist",
-    "src/index.ts",
-    "src"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@code0-tech/sagittarius-graphql-types": "^0.0.0-56198dce107a9c09cc5eca0773f239d9c3eba598",
     "@code0-tech/tucana": "^0.0.39",
     "@protobuf-ts/runtime": "^2.11.1",
     "@protobuf-ts/runtime-rpc": "^2.11.1",

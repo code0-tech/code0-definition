@@ -5,17 +5,42 @@ import {
     DataTypeRulesInputTypeConfig,
     DataTypeRulesInputTypesConfig,
     DataTypeRulesItemOfCollectionConfig, DataTypeRulesNumberRangeConfig,
-    DataTypeRulesParentTypeConfig, DataTypeRulesRegexConfig, DataTypeRulesVariant, DataTypeVariant,
-    GenericCombinationStrategyType,
+    DataTypeRulesParentTypeConfig, DataTypeRulesRegexConfig,
 } from "@code0-tech/sagittarius-graphql-types";
 import {
     DataTypeIdentifier as TucanaDataTypeIdentifier,
     DefinitionDataType_Variant, DefinitionDataTypeRule, GenericMapper_GenericCombinationStrategy
 } from "@code0-tech/tucana/pb/shared.data_type_pb.js"
 import {GenericMapper as TucanaGenericMapper} from "@code0-tech/tucana/pb/shared.data_type_pb.js"
-import {ConstructedDataTypes, getID} from "../parser.js";
+import {ConstructedDataTypes, getID} from "../definition/mapper.js";
 import {getTranslationConnection} from "./translation.js";
 import {Value} from "@code0-tech/tucana/pb/shared.struct_pb.js";
+
+enum GenericCombinationStrategyType {
+    And = 'AND',
+    Or = 'OR'
+}
+
+enum DataTypeRulesVariant {
+    ContainsKey = 'CONTAINS_KEY',
+    ContainsType = 'CONTAINS_TYPE',
+    InputType = 'INPUT_TYPE',
+    ItemOfCollection = 'ITEM_OF_COLLECTION',
+    NumberRange = 'NUMBER_RANGE',
+    ParentType = 'PARENT_TYPE',
+    Regex = 'REGEX',
+    ReturnType = 'RETURN_TYPE'
+}
+
+enum DataTypeVariant {
+    Array = 'ARRAY',
+    DataType = 'DATA_TYPE',
+    Error = 'ERROR',
+    Node = 'NODE',
+    Object = 'OBJECT',
+    Primitive = 'PRIMITIVE',
+    Type = 'TYPE'
+}
 
 function getDataType(identifier: string, constructedDataTypes: ConstructedDataTypes): DataType | null {
     const dataType = constructedDataTypes.constructedDataTypes.find(dt => dt.identifier === identifier)
