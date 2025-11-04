@@ -11,6 +11,7 @@ use crate::parser::{Meta, MetaType, Reader};
 use tucana::shared::data_type_identifier::Type;
 use tucana::shared::definition_data_type_rule::Config;
 use tucana::shared::{DataTypeIdentifier, DefinitionDataType, FlowType, RuntimeFunctionDefinition};
+use crate::formatter;
 
 #[derive(Clone)]
 pub struct AnalysableDataType {
@@ -490,6 +491,38 @@ impl Analyser {
                 original_definition.clone(),
                 UndefinedDataTypeIdentifier { identifier },
             ));
+        }
+
+        for flow_setting in analysable_flow_type.flow_type.settings {
+            if flow_setting.name.is_empty() {
+                self.reporter.add_report(Diagnose::new(
+                    flow_setting.identifier.clone(),
+                    original_definition.clone(),
+                    UndefinedTranslation {
+                        translation_field: String::from("flow_setting.name"),
+                    },
+                ));
+            }
+
+            if flow_setting.description.is_empty() {
+                self.reporter.add_report(Diagnose::new(
+                    flow_setting.identifier.clone(),
+                    original_definition.clone(),
+                    UndefinedTranslation {
+                        translation_field: String::from("flow_setting.description"),
+                    },
+                ));
+            }
+
+            if self.data_type_identifier_exists(flow_setting.data_type_identifier.clone(), -1)
+            {
+                self.reporter.add_report(Diagnose::new(
+                    name.clone(),
+                    original_definition.clone(),
+                    UndefinedDataTypeIdentifier { identifier: flow_setting.data_type_identifier },
+                ));
+            }
+
         }
 
         // Check if flow type identifier already exists
