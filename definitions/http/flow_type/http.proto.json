@@ -76,6 +76,5 @@
       "code": "en-US",
       "content": "A REST API is a web service that lets clients interact with data on a server using standard HTTP methods like GET, POST, PUT, and DELETE usually returning results in JSON format."
     }
-  ],
-  "version": null
+  ]
 }
