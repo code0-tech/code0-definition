@@ -53,6 +53,15 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v5
 
+      - name: Set script permissions
+        run: chmod +x ./scripts/inject-version.sh
+
+      - name: Inject version
+        run: |
+          VERSION="${{ github.ref_name }}"
+          VERSION="${VERSION#*-}"   # removes everything up to the first dash
+          ./scripts/inject-version.sh "$VERSION"
+
       - name: Archive definitions folder
         run: |
           zip -r definitions.zip definitions
