@@ -1,10 +1,10 @@
+use crate::command::push::auth::get_authorization_metadata;
 use tonic::Extensions;
 use tonic::Request;
 use tonic::transport::Channel;
 use tucana::sagittarius::FlowTypeUpdateRequest as SagittariusFlowTypeUpdateRequest;
 use tucana::sagittarius::flow_type_service_client::FlowTypeServiceClient;
 use tucana::shared::FlowType;
-use crate::command::push::auth::get_authorization_metadata;
 
 pub struct SagittariusFlowTypeServiceClient {
     client: FlowTypeServiceClient<Channel>,
@@ -27,19 +27,14 @@ impl SagittariusFlowTypeServiceClient {
         Self { client, token }
     }
 
-    pub async fn update_flow_types(
-        &mut self,
-        flow_types: Vec<FlowType>,
-    ) {
+    pub async fn update_flow_types(&mut self, flow_types: Vec<FlowType>) {
         let request = Request::from_parts(
             get_authorization_metadata(&self.token),
             Extensions::new(),
-            SagittariusFlowTypeUpdateRequest {
-                flow_types,
-            },
+            SagittariusFlowTypeUpdateRequest { flow_types },
         );
 
-       match self.client.update(request).await {
+        match self.client.update(request).await {
             Ok(response) => {
                 log::info!(
                     "Successfully transferred FlowTypes. Did Sagittarius updated them? {:?}",

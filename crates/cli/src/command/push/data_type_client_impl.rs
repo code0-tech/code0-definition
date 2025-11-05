@@ -27,16 +27,11 @@ impl SagittariusDataTypeServiceClient {
         Self { client, token }
     }
 
-    pub async fn update_data_types(
-        &mut self,
-        data_types: Vec<DefinitionDataType>,
-    ) {
+    pub async fn update_data_types(&mut self, data_types: Vec<DefinitionDataType>) {
         let request = Request::from_parts(
             get_authorization_metadata(&self.token),
             Extensions::new(),
-            SagittariusDataTypeUpdateRequest {
-                data_types,
-            },
+            SagittariusDataTypeUpdateRequest { data_types },
         );
 
         match self.client.update(request).await {

@@ -1,10 +1,10 @@
+use crate::command::push::auth::get_authorization_metadata;
 use tonic::Extensions;
 use tonic::Request;
 use tonic::transport::Channel;
 use tucana::sagittarius::RuntimeFunctionDefinitionUpdateRequest as SagittariusRuntimeFunctionUpdateRequest;
 use tucana::sagittarius::runtime_function_definition_service_client::RuntimeFunctionDefinitionServiceClient;
 use tucana::shared::RuntimeFunctionDefinition;
-use crate::command::push::auth::get_authorization_metadata;
 
 pub struct SagittariusRuntimeFunctionServiceClient {
     client: RuntimeFunctionDefinitionServiceClient<Channel>,
@@ -30,13 +30,11 @@ impl SagittariusRuntimeFunctionServiceClient {
     pub async fn update_runtime_function_definitions(
         &mut self,
         runtime_functions: Vec<RuntimeFunctionDefinition>,
-    )  {
+    ) {
         let request = Request::from_parts(
             get_authorization_metadata(&self.token),
             Extensions::new(),
-            SagittariusRuntimeFunctionUpdateRequest {
-                runtime_functions,
-            },
+            SagittariusRuntimeFunctionUpdateRequest { runtime_functions },
         );
 
         match self.client.update(request).await {
