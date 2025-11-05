@@ -36,7 +36,7 @@ enum Commands {
         path: Option<String>,
     },
     /// Look up a specific definition.
-    Definition {
+    Search {
         /// Required name of the definition.
         #[arg(short, long)]
         name: String,
@@ -65,7 +65,7 @@ async fn main() {
     match cli.command {
         Commands::Report { path } => command::report::report_errors(path),
         Commands::Feature { name, path } => command::feature::search_feature(name, path),
-        Commands::Definition { name, path } => command::definition::search_definition(name, path),
+        Commands::Search { name, path } => command::search::search_definition(name, path),
         Commands::Download { tag, features } => {
             command::download::handle_download(tag, features).await
         }
