@@ -1,0 +1,36 @@
+{
+  "variant": "OBJECT",
+  "identifier": "HTTP_ADAPTER_INPUT",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Adapter Input"
+    }
+  ],
+  "rules": [
+    {
+      "containsKey": {
+        "key": "body",
+        "dataTypeIdentifier": {
+          "dataTypeIdentifier": "OBJECT"
+        }
+      }
+    },
+    {
+      "containsKey": {
+        "key": "headers",
+        "dataTypeIdentifier": {
+          "dataTypeIdentifier": "HTTP_HEADER_MAP"
+        }
+      }
+    },
+    {
+      "parentType": {
+        "parentType": {
+          "dataTypeIdentifier": "OBJECT"
+        }
+      }
+    }
+  ],
+  "genericKeys": []
+}

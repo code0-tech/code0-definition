@@ -56,7 +56,7 @@
       ]
     }
   ],
-  "inputTypeIdentifier": "HTTP_REQUEST",
+  "inputTypeIdentifier": "HTTP_ADAPTER_INPUT",
   "returnTypeIdentifier": "HTTP_RESPONSE",
   "editable": false,
   "name": [
