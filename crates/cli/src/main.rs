@@ -50,6 +50,17 @@ enum Commands {
         #[arg(short, long)]
         path: Option<String>,
     },
+    Push {
+        /// Runtime Token for Sagittarius.
+        #[arg(short, long)]
+        token: String,
+        /// URL to Sagittarius.
+        #[arg(short, long)]
+        url: String,
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+    },
     Download {
         #[arg(short, long)]
         tag: Option<String>,
@@ -70,5 +81,6 @@ async fn main() {
             command::download::handle_download(tag, features).await
         }
         Commands::Watch { path } => command::watch::watch_for_changes(path).await,
+        Commands::Push { token, url, path } => command::push::push(token, url, path).await,
     }
 }
