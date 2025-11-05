@@ -1,4 +1,4 @@
-use crate::analyser::Analyser;
+use crate::analyser::core::Analyser;
 use crate::formatter::{default, info};
 use notify::event::ModifyKind;
 use notify::{EventKind, RecursiveMode, Watcher, recommended_watcher};

@@ -1,120 +1,15 @@
+use crate::diagnostics::kinds::DiagnosticKind;
+use crate::diagnostics::kinds::DiagnosticKind::*;
+use crate::diagnostics::severity::Severity;
 use crate::formatter::{error, warning};
 use crate::parser::Meta;
-use std::cmp::PartialEq;
 use std::path::Path;
-use std::process::exit;
 
-#[derive(Default)]
-pub struct Reporter {
-    diagnose: Vec<Diagnose>,
-}
-
-impl PartialEq for Severity {
-    fn eq(&self, other: &Self) -> bool {
-        match self {
-            Severity::Error => {
-                if let Severity::Error = other {
-                    return true;
-                }
-                false
-            }
-            Severity::Warning => {
-                if let Severity::Warning = other {
-                    return true;
-                }
-                false
-            }
-            Severity::Debug => {
-                if let Severity::Debug = other {
-                    return true;
-                }
-                false
-            }
-        }
-    }
-}
-
-impl Reporter {
-    pub fn add_report(&mut self, diagnose: Diagnose) {
-        self.diagnose.push(diagnose);
-    }
-
-    pub fn run_report(&self, will_exit: bool) {
-        for error in &self.get_errors() {
-            println!("{}", error.print());
-        }
-
-        for warning in &self.get_warnings() {
-            println!("{}", warning.print());
-        }
-
-        if !self.get_errors().is_empty() && will_exit {
-            exit(1)
-        }
-    }
-
-    pub fn get_errors(&self) -> Vec<&Diagnose> {
-        self.diagnose
-            .iter()
-            .filter(|p| p.kind.severity() == Severity::Error)
-            .collect()
-    }
-
-    pub fn get_warnings(&self) -> Vec<&Diagnose> {
-        self.diagnose
-            .iter()
-            .filter(|p| p.kind.severity() == Severity::Warning)
-            .collect()
-    }
-}
-
-pub enum Severity {
-    Error,
-    Warning,
-    Debug,
-}
-
+#[derive(Debug, Clone)]
 pub struct Diagnose {
-    kind: DiagnosticKind,
-    definition_name: String,
-    definition: Meta,
-}
-
-pub enum DiagnosticKind {
-    DeserializationError { description: String },
-    DuplicateDataTypeIdentifier { identifier: String },
-    DuplicateFlowTypeIdentifier { identifier: String },
-    DuplicateRuntimeFunctionIdentifier { identifier: String },
-    DuplicateRuntimeParameterIdentifier { identifier: String },
-    UndefinedDataTypeIdentifier { identifier: String },
-    EmptyGenericMapper,
-    GenericKeyNotInMappingTarget { key: String, target: String },
-    NullField { field_name: String },
-    ForbiddenVariant,
-    UnusedGenericKey { key: String },
-    UndefinedGenericKey { key: String },
-    UndefinedTranslation { translation_field: String },
-}
-
-impl DiagnosticKind {
-    pub fn severity(&self) -> Severity {
-        use DiagnosticKind::*;
-        match self {
-            DeserializationError { .. }
-            | DuplicateDataTypeIdentifier { .. }
-            | DuplicateFlowTypeIdentifier { .. }
-            | DuplicateRuntimeFunctionIdentifier { .. }
-            | DuplicateRuntimeParameterIdentifier { .. }
-            | GenericKeyNotInMappingTarget { .. }
-            | EmptyGenericMapper
-            | UndefinedDataTypeIdentifier { .. }
-            | NullField { .. }
-            | ForbiddenVariant
-            | UnusedGenericKey { .. }
-            | UndefinedGenericKey { .. } => Severity::Error,
-            UndefinedTranslation { .. } => Severity::Warning,
-        }
-    }
+    pub kind: DiagnosticKind,
+    pub definition_name: String,
+    pub definition: Meta,
 }
 
 impl Diagnose {
@@ -125,16 +20,8 @@ impl Diagnose {
             kind,
         }
     }
-
     pub fn print(&self) -> String {
-        let path = format!(
-            "{}:{}:{}",
-            Path::new(&self.definition.path.clone()).display(),
-            1,
-            1
-        );
-
-        use DiagnosticKind::*;
+        let path = format!("{}:{}:{}", Path::new(&self.definition.path).display(), 1, 1);
         match &self.kind {
             EmptyGenericMapper => error(
                 format!(
@@ -219,11 +106,15 @@ impl Diagnose {
             ),
             UndefinedTranslation { translation_field } => warning(
                 format!(
-                    "`{}` has an empty field  (`{}`) of translations!",
+                    "`{}` has an empty field (`{}`) of translations!",
                     self.definition_name, translation_field
                 ),
                 &path,
             ),
         }
+    }
+
+    pub fn severity(&self) -> Severity {
+        self.kind.severity()
     }
 }
