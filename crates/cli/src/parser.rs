@@ -149,7 +149,7 @@ pub struct Reader {
     pub meta: Vec<Meta>,
 }
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct Meta {
     pub name: String,
     pub r#type: MetaType,

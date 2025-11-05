@@ -1,5 +1,6 @@
 use clap::{Parser as ClapParser, Subcommand};
 
+pub mod diagnostics;
 pub mod parser;
 
 mod analyser;

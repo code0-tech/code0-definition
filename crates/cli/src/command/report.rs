@@ -1,4 +1,4 @@
-use crate::analyser::Analyser;
+use crate::analyser::core::Analyser;
 use crate::formatter::{success, success_table};
 use crate::parser::Parser;
 use crate::table::summary_table;
