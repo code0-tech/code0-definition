@@ -36,8 +36,8 @@ impl Analyser {
             ));
         }
 
-        if let Some(identifier) = &flow.input_type_identifier {
-            if !self.data_type_identifier_exists(identifier, None) {
+        if let Some(identifier) = &flow.input_type_identifier
+            && !self.data_type_identifier_exists(identifier, None) {
                 self.reporter.add(Diagnose::new(
                     name.clone(),
                     original.clone(),
@@ -46,9 +46,8 @@ impl Analyser {
                     },
                 ));
             }
-        }
-        if let Some(identifier) = &flow.return_type_identifier {
-            if !self.data_type_identifier_exists(identifier, None) {
+        if let Some(identifier) = &flow.return_type_identifier
+            && !self.data_type_identifier_exists(identifier, None) {
                 self.reporter.add(Diagnose::new(
                     name.clone(),
                     original.clone(),
@@ -57,7 +56,6 @@ impl Analyser {
                     },
                 ));
             }
-        }
 
         for setting in &flow.settings {
             if setting.name.is_empty() {
