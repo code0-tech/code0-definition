@@ -300,6 +300,7 @@ dependencies = [
  "clap",
  "colored",
  "futures",
+ "log",
  "notify",
  "prost",
  "reqwest",
@@ -307,6 +308,7 @@ dependencies = [
  "serde_json",
  "tabled",
  "tokio",
+ "tonic",
  "tucana",
  "zip",
 ]
