@@ -76,7 +76,7 @@ pub fn feature_table(
     (flow_type_rows, data_type_rows, runtime_function_rows)
 }
 
-pub fn summary_table(features: &Vec<Feature>) -> Vec<FeatureSummaryRow> {
+pub fn summary_table(features: &[Feature]) -> Vec<FeatureSummaryRow> {
     features
         .iter()
         .map(|feature| FeatureSummaryRow {

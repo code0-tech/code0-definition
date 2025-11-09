@@ -46,6 +46,6 @@ where
     Table::new(iter).with(Style::rounded()).to_string()
 }
 
-fn print_path(path: &String) -> String {
+fn print_path(path: &str) -> String {
     format!("\n --> {}", &path.underline()).blue().to_string()
 }

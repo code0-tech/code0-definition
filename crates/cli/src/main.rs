@@ -36,7 +36,7 @@ enum Commands {
         path: Option<String>,
     },
     /// Look up a specific definition.
-    Definition {
+    Search {
         /// Required name of the definition.
         #[arg(short, long)]
         name: String,
@@ -46,6 +46,17 @@ enum Commands {
     },
     /// Watch for changes to and regenerate error reports.
     Watch {
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+    },
+    Push {
+        /// Runtime Token for Sagittarius.
+        #[arg(short, long)]
+        token: String,
+        /// URL to Sagittarius.
+        #[arg(short, long)]
+        url: String,
         /// Optional path to root directory of all definitions.
         #[arg(short, long)]
         path: Option<String>,
@@ -65,10 +76,11 @@ async fn main() {
     match cli.command {
         Commands::Report { path } => command::report::report_errors(path),
         Commands::Feature { name, path } => command::feature::search_feature(name, path),
-        Commands::Definition { name, path } => command::definition::search_definition(name, path),
+        Commands::Search { name, path } => command::search::search_definition(name, path),
         Commands::Download { tag, features } => {
             command::download::handle_download(tag, features).await
         }
         Commands::Watch { path } => command::watch::watch_for_changes(path).await,
+        Commands::Push { token, url, path } => command::push::push(token, url, path).await,
     }
 }

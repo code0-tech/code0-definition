@@ -22,3 +22,5 @@ futures = { workspace = true }
 zip = { workspace = true }
 bytes = { workspace = true }
 prost = { workspace = true }
+tonic = "0.14.2"
+log = "0.4.28"

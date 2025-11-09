@@ -36,27 +36,27 @@ impl Analyser {
             ));
         }
 
-        if let Some(identifier) = &flow.input_type_identifier {
-            if !self.data_type_identifier_exists(identifier, None) {
-                self.reporter.add(Diagnose::new(
-                    name.clone(),
-                    original.clone(),
-                    DiagnosticKind::UndefinedDataTypeIdentifier {
-                        identifier: identifier.clone(),
-                    },
-                ));
-            }
+        if let Some(identifier) = &flow.input_type_identifier
+            && !self.data_type_identifier_exists(identifier, None)
+        {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::UndefinedDataTypeIdentifier {
+                    identifier: identifier.clone(),
+                },
+            ));
         }
-        if let Some(identifier) = &flow.return_type_identifier {
-            if !self.data_type_identifier_exists(identifier, None) {
-                self.reporter.add(Diagnose::new(
-                    name.clone(),
-                    original.clone(),
-                    DiagnosticKind::UndefinedDataTypeIdentifier {
-                        identifier: identifier.clone(),
-                    },
-                ));
-            }
+        if let Some(identifier) = &flow.return_type_identifier
+            && !self.data_type_identifier_exists(identifier, None)
+        {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::UndefinedDataTypeIdentifier {
+                    identifier: identifier.clone(),
+                },
+            ));
         }
 
         for setting in &flow.settings {

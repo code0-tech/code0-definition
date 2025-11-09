@@ -35,7 +35,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!("{} {}", format!("{index}:"), line.bright_cyan());
+                            println!("{}: {}", index, line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing FlowType".red()),
@@ -57,7 +57,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!("{} {}", format!("{index}:"), line.bright_cyan());
+                            println!("{}: {}", index, line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing DataType".red()),
@@ -79,7 +79,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
                         let mut index = 0;
                         for line in json.lines() {
                             index += 1;
-                            println!("{} {}", format!("{index}:"), line.bright_cyan());
+                            println!("{}: {}", index, line.bright_cyan());
                         }
                     }
                     Err(_) => println!("{}", "Error serializing RuntimeFunction".red()),
@@ -89,10 +89,7 @@ fn search_and_display_definitions(search_name: &str, parser: &Parser) {
     }
 
     if !found_any {
-        println!(
-            "{}",
-            format!("\n{}: {}", "error".red(), "Found no matching definition(s)")
-        );
+        println!("\n{}: Found no matching definition(s)", "error".red(),);
     } else {
         success(format!("Found {total_matches} matching definition(s)"))
     }
