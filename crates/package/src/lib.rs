@@ -1,300 +1,117 @@
-pub mod package {
-    use serde::Serialize;
-    use std::io::ErrorKind;
-    use std::{
-        fs::{self, DirEntry},
-        io::Error,
-        path::Path,
+use std::{fs, io};
+use std::path::Path;
+use serde::de::DeserializeOwned;
+use serde::Deserialize;
+use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
+use walkdir::WalkDir;
+
+#[derive(Deserialize, Debug)]
+pub struct Feature {
+    pub name: String,
+    pub data_types: Vec<DefinitionDataType>,
+    pub flow_types: Vec<FlowType>,
+    pub functions: Vec<RuntimeFunctionDefinition>
+}
+
+pub fn read_features(path: &str) -> Result<Vec<Feature>, io::Error> {
+    let definitions = Path::new(path);
+
+    match read_feature_content(definitions) {
+        Ok(features) => {
+            log::info!("Loaded Successfully {} features", features.len());
+            Ok(features)
+        }
+        Err(err) => {
+            panic!("Cannot loaded content: {}", err)
+        }
+    }
+}
+
+fn read_feature_content(dir: &Path) -> Result<Vec<Feature>, io::Error> {
+    let mut features: Vec<Feature> = Vec::new();
+    let readdir = match fs::read_dir(dir) {
+        Ok(readdir) => readdir,
+        Err(err) => {
+            log::error!("Failed to read directory {}: {}", dir.display(), err);
+            return Err(err);
+        }
     };
-    use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
-    #[derive(Serialize, Clone, Debug)]
-    pub struct DefinitionError {
-        pub definition: String,
-        pub definition_type: MetaType,
-        pub error: String,
-    }
-
-    #[derive(Debug)]
-    pub struct Parser {
-        pub features: Vec<Feature>,
-    }
-
-    #[derive(Serialize, Clone, Debug)]
-    pub struct Feature {
-        pub name: String,
-        pub data_types: Vec<DefinitionDataType>,
-        pub flow_types: Vec<FlowType>,
-        pub runtime_functions: Vec<RuntimeFunctionDefinition>,
-        pub errors: Vec<DefinitionError>,
-    }
-
-    impl Feature {
-        fn new(name: String) -> Self {
-            Feature {
-                name,
-                data_types: Vec::new(),
-                flow_types: Vec::new(),
-                runtime_functions: Vec::new(),
-                errors: Vec::new(),
+    for entry_result in readdir {
+        let entry = match entry_result {
+            Ok(entry) => entry,
+            Err(err) => {
+                log::error!("Failed to read directory entry: {}", err);
+                continue;
             }
-        }
-    }
+        };
 
-    impl Parser {
-        pub fn from_path(path: &str) -> Option<Self> {
-            let reader = Reader::from_path(path)?;
+        let path = entry.path();
 
-            Some(Self::from_reader(reader))
-        }
+        if path.is_dir() {
+            let feature_name = path
+                .file_name()
+                .unwrap_or_default()
+                .to_string_lossy()
+                .to_string();
 
-        pub fn from_reader(reader: Reader) -> Self {
-            let mut features: Vec<Feature> = vec![];
+            let data_types_path = path.join("data_type");
+            let data_types: Vec<DefinitionDataType> = collect_definitions(&data_types_path)?;
 
-            for meta in &reader.meta {
-                let feature = features.iter_mut().find(|f| f.name == meta.name);
+            let flow_types_path = path.join("flow_type");
+            let flow_types: Vec<FlowType> = collect_definitions(&flow_types_path)?;
 
-                if let Some(existing) = feature {
-                    Parser::append_meta(existing, meta);
-                } else {
-                    let mut new_feature = Feature::new(meta.name.clone());
-                    Parser::append_meta(&mut new_feature, meta);
-                    features.push(new_feature);
-                }
-            }
+            let functions_path = path.join("runtime_definition");
+            let functions: Vec<RuntimeFunctionDefinition> = collect_definitions(&functions_path)?;
 
-            Parser { features }
-        }
-
-        pub fn extract_identifier(definition: &str, meta_type: MetaType) -> String {
-            let field_name = match meta_type {
-                MetaType::DataType | MetaType::FlowType => "identifier",
-                MetaType::RuntimeFunction => "runtime_name",
+            let feature = Feature {
+                name: feature_name,
+                data_types,
+                flow_types,
+                functions,
             };
 
-            // Look for the field pattern: "field_name": "value" or "field_name":"value"
-            if let Some(start) = definition.find(&format!("\"{field_name}\"")) {
-                // Find the colon after the field name
-                if let Some(colon_pos) = definition[start..].find(':') {
-                    let after_colon = &definition[start + colon_pos + 1..];
-
-                    // Skip whitespace and find the opening quote
-                    let trimmed = after_colon.trim_start();
-                    if let Some(stripped) = trimmed.strip_prefix('"') {
-                        // Find the closing quote
-                        if let Some(end_quote) = stripped.find('"') {
-                            return trimmed[1..end_quote + 1].to_string();
-                        }
-                    }
-                }
-            }
-
-            // Fallback: return the whole definition if identifier can't be extracted
-            definition.to_string()
-        }
-
-        fn append_meta(feature: &mut Feature, meta: &Meta) {
-            let definition = meta.definition_string.as_str();
-            match meta.r#type {
-                MetaType::DataType => {
-                    match serde_json::from_str::<DefinitionDataType>(definition) {
-                        Ok(data_type) => feature.data_types.push(data_type),
-                        Err(err) => feature.errors.push(DefinitionError {
-                            definition: Parser::extract_identifier(definition, MetaType::DataType),
-                            definition_type: MetaType::DataType,
-                            error: err.to_string(),
-                        }),
-                    }
-                }
-                MetaType::FlowType => match serde_json::from_str::<FlowType>(definition) {
-                    Ok(flow_type) => feature.flow_types.push(flow_type),
-                    Err(err) => feature.errors.push(DefinitionError {
-                        definition: Parser::extract_identifier(definition, MetaType::FlowType),
-                        definition_type: MetaType::FlowType,
-                        error: err.to_string(),
-                    }),
-                },
-                MetaType::RuntimeFunction => {
-                    match serde_json::from_str::<RuntimeFunctionDefinition>(definition) {
-                        Ok(func) => feature.runtime_functions.push(func),
-                        Err(err) => feature.errors.push(DefinitionError {
-                            definition: Parser::extract_identifier(
-                                definition,
-                                MetaType::RuntimeFunction,
-                            ),
-                            definition_type: MetaType::RuntimeFunction,
-                            error: err.to_string(),
-                        }),
-                    }
-                }
-            }
+            features.push(feature);
         }
     }
 
-    #[derive(Serialize, Debug, Clone, Copy)]
-    pub enum MetaType {
-        FlowType,
-        DataType,
-        RuntimeFunction,
+    Ok(features)
+}
+
+fn collect_definitions<T>(dir: &Path) -> Result<Vec<T>, io::Error>
+where
+    T: DeserializeOwned,
+{
+    let mut definitions = Vec::new();
+
+    if !dir.exists() {
+        return Ok(definitions);
     }
 
-    impl std::fmt::Display for MetaType {
-        fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-            match self {
-                MetaType::FlowType => write!(f, "FlowType"),
-                MetaType::DataType => write!(f, "DataType"),
-                MetaType::RuntimeFunction => write!(f, "RuntimeFunction"),
-            }
-        }
-    }
+    for entry in WalkDir::new(dir)
+        .into_iter()
+        .filter_map(Result::ok)
+    {
+        let path = entry.path();
 
-    pub struct Reader {
-        pub meta: Vec<Meta>,
-    }
+        if path.is_file() && path.extension().map_or(false, |ext| ext == "json") {
 
-    #[derive(Clone)]
-    pub struct Meta {
-        pub name: String,
-        pub r#type: MetaType,
-        pub definition_string: String,
-        pub path: String,
-    }
-
-    impl Meta {
-        pub fn read_from_file<P>(
-            name: String,
-            r#type: MetaType,
-            file_path: P,
-        ) -> Result<Meta, Error>
-        where
-            P: AsRef<Path>,
-        {
-            let path = match file_path.as_ref().to_str() {
-                Some(path) => path,
-                None => return Err(Error::new(ErrorKind::InvalidInput, "Invalid path")),
-            };
-
-            if !path.ends_with("json") {
-                return Err(Error::new(
-                    ErrorKind::InvalidInput,
-                    format!(
-                        "File {} does not end with .json",
-                        file_path.as_ref().display()
-                    ),
-                ));
-            }
-
-            let content = match fs::read_to_string(&file_path) {
+            let content = match fs::read_to_string(path) {
                 Ok(content) => content,
                 Err(err) => {
-                    println!("Error reading file: {err}");
-                    return Err(err);
+                    log::error!("Failed to read file {}: {}", path.display(), err);
+                    continue;
                 }
             };
 
-            Ok(Meta {
-                name,
-                r#type,
-                definition_string: content,
-                path: path.to_string(),
-            })
-        }
-    }
-
-    /// Reader
-    ///
-    /// Expecting the file system to look like:
-    /// - <path>
-    ///   - <feature>
-    ///     - <flow_types>
-    ///     - <data_types>
-    ///     - <runtime_functions>
-    ///    - <feature>
-    ///     - <flow_types>
-    ///     - <data_types>
-    ///     - <runtime_functions>
-    impl Reader {
-        pub fn from_path(path: &str) -> Option<Reader> {
-            let mut result: Vec<Meta> = vec![];
-
-            // Reading the path folder
-            for feature_path in fs::read_dir(path).unwrap() {
-                let feature_path_result = match feature_path {
-                    Ok(path) => path,
-                    Err(_) => continue,
-                };
-
-                let feature_name = match get_file_name(&feature_path_result) {
-                    Some(file_name) => file_name,
-                    None => continue,
-                };
-
-                // Reading the feature folder
-                for type_path in fs::read_dir(feature_path_result.path()).unwrap() {
-                    let type_path_result = match type_path {
-                        Ok(path) => path,
-                        Err(_) => continue,
-                    };
-
-                    let meta_type = match get_file_name(&type_path_result) {
-                        Some(name) => match name.as_str() {
-                            "flow_type" => MetaType::FlowType,
-                            "data_type" => MetaType::DataType,
-                            "runtime_definition" => MetaType::RuntimeFunction,
-                            _ => continue,
-                        },
-                        None => continue,
-                    };
-
-                    // Reading the type folder
-                    for definition_path in fs::read_dir(type_path_result.path()).unwrap() {
-                        let definition_path_result = match definition_path {
-                            Ok(path) => path,
-                            Err(_) => continue,
-                        };
-
-                        if definition_path_result.file_type().unwrap().is_file() {
-                            let meta = Meta::read_from_file(
-                                feature_name.clone(),
-                                meta_type,
-                                definition_path_result.path(),
-                            );
-
-                            if let Ok(meta_result) = meta {
-                                result.push(meta_result);
-                            }
-                        } else {
-                            for sub_definition_path in
-                                fs::read_dir(definition_path_result.path()).unwrap()
-                            {
-                                let sub_definition_path_result = match sub_definition_path {
-                                    Ok(path) => path,
-                                    Err(_) => continue,
-                                };
-
-                                let meta = Meta::read_from_file(
-                                    feature_name.clone(),
-                                    meta_type,
-                                    sub_definition_path_result.path(),
-                                );
-
-                                if let Ok(meta_result) = meta {
-                                    result.push(meta_result);
-                                }
-                            }
-                        }
-                    }
+            match serde_json::from_str::<T>(&content) {
+                Ok(def) => definitions.push(def),
+                Err(e) => {
+                    log::error!("Failed to parse JSON in file {}: {}", path.display(), e);
                 }
             }
-
-            Some(Reader { meta: result })
         }
     }
 
-    fn get_file_name(entry: &DirEntry) -> Option<String> {
-        entry
-            .file_name()
-            .to_str()
-            .map(|file_name| file_name.to_string())
-    }
+    Ok(definitions)
 }

@@ -9,6 +9,8 @@ license = "Apache-2.0"
 readme = "../../README.md"
 
 [dependencies]
-serde = { workspace = true }
-serde_json = { workspace = true }
-tucana = { workspace = true }
+walkdir = "2.5.0"
+serde_json = "1.0.145"
+serde = "1.0.228"
+tucana = {workspace = true}
+log = "0.4.28"
