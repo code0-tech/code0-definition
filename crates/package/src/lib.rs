@@ -1,7 +1,7 @@
-use std::{fs, io};
-use std::path::Path;
-use serde::de::DeserializeOwned;
 use serde::Deserialize;
+use serde::de::DeserializeOwned;
+use std::path::Path;
+use std::{fs, io};
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 use walkdir::WalkDir;
 
@@ -10,7 +10,7 @@ pub struct Feature {
     pub name: String,
     pub data_types: Vec<DefinitionDataType>,
     pub flow_types: Vec<FlowType>,
-    pub functions: Vec<RuntimeFunctionDefinition>
+    pub functions: Vec<RuntimeFunctionDefinition>,
 }
 
 pub fn read_features(path: &str) -> Result<Vec<Feature>, io::Error> {
@@ -88,14 +88,10 @@ where
         return Ok(definitions);
     }
 
-    for entry in WalkDir::new(dir)
-        .into_iter()
-        .filter_map(Result::ok)
-    {
+    for entry in WalkDir::new(dir).into_iter().filter_map(Result::ok) {
         let path = entry.path();
 
-        if path.is_file() && path.extension().map_or(false, |ext| ext == "json") {
-
+        if path.is_file() && path.extension().is_some_and(|ext| ext == "json") {
             let content = match fs::read_to_string(path) {
                 Ok(content) => content,
                 Err(err) => {
