@@ -21,10 +21,22 @@ pub struct Reader {
 }
 
 pub enum ReaderError {
-    JsonError { path: PathBuf, error: serde_json::Error },
-    ReadFeatureError { path: String, source: Box<ReaderError> },
-    ReadDirectoryError { path: PathBuf, error: io::Error },
-    ReadFileError { path: PathBuf, error: io::Error },
+    JsonError {
+        path: PathBuf,
+        error: serde_json::Error,
+    },
+    ReadFeatureError {
+        path: String,
+        source: Box<ReaderError>,
+    },
+    ReadDirectoryError {
+        path: PathBuf,
+        error: io::Error,
+    },
+    ReadFileError {
+        path: PathBuf,
+        error: io::Error,
+    },
     DirectoryEntryError(io::Error),
 }
 
@@ -79,13 +91,15 @@ impl Reader {
                     .to_string();
 
                 let data_types_path = path.join("data_type");
-                let data_types: Vec<DefinitionDataType> = self.collect_definitions(&data_types_path)?;
+                let data_types: Vec<DefinitionDataType> =
+                    self.collect_definitions(&data_types_path)?;
 
                 let flow_types_path = path.join("flow_type");
                 let flow_types: Vec<FlowType> = self.collect_definitions(&flow_types_path)?;
 
                 let functions_path = path.join("runtime_definition");
-                let functions: Vec<RuntimeFunctionDefinition> = self.collect_definitions(&functions_path)?;
+                let functions: Vec<RuntimeFunctionDefinition> =
+                    self.collect_definitions(&functions_path)?;
 
                 let feature = Feature {
                     name: feature_name,
@@ -122,7 +136,7 @@ impl Reader {
                         return Err(ReaderError::ReadFileError {
                             path: path.to_path_buf(),
                             error: err,
-                        })
+                        });
                     }
                 };
 
