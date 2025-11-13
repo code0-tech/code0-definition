@@ -1,6 +1,6 @@
-use std::path::PathBuf;
-use std::io;
 use serde_json;
+use std::io;
+use std::path::PathBuf;
 
 #[derive(Debug)]
 pub enum ReaderError {

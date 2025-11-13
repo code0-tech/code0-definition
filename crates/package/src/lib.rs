@@ -1,14 +1,13 @@
-mod r#struct;
 mod r#enum;
+mod r#struct;
 
-use serde::Deserialize;
-use serde::de::DeserializeOwned;
-use std::path::{Path, PathBuf};
-use std::{fs, io};
-use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition, Version};
-use walkdir::WalkDir;
 use crate::r#enum::reader_error::ReaderError;
 use crate::r#struct::feature::Feature;
+use serde::de::DeserializeOwned;
+use std::fs;
+use std::path::Path;
+use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition, Version};
+use walkdir::WalkDir;
 
 pub struct Reader {
     should_break: bool,
