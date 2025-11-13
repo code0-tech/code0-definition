@@ -1,17 +1,14 @@
+mod r#struct;
+mod r#enum;
+
 use serde::Deserialize;
 use serde::de::DeserializeOwned;
 use std::path::{Path, PathBuf};
 use std::{fs, io};
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition, Version};
 use walkdir::WalkDir;
-
-#[derive(Deserialize, Debug, Clone)]
-pub struct Feature {
-    pub name: String,
-    pub data_types: Vec<DefinitionDataType>,
-    pub flow_types: Vec<FlowType>,
-    pub functions: Vec<RuntimeFunctionDefinition>,
-}
+use crate::r#enum::reader_error::ReaderError;
+use crate::r#struct::feature::Feature;
 
 pub struct Reader {
     should_break: bool,
@@ -20,27 +17,21 @@ pub struct Reader {
     path: String,
 }
 
-pub enum ReaderError {
-    JsonError {
-        path: PathBuf,
-        error: serde_json::Error,
-    },
-    ReadFeatureError {
-        path: String,
-        source: Box<ReaderError>,
-    },
-    ReadDirectoryError {
-        path: PathBuf,
-        error: io::Error,
-    },
-    ReadFileError {
-        path: PathBuf,
-        error: io::Error,
-    },
-    DirectoryEntryError(io::Error),
-}
-
 impl Reader {
+    pub fn configure(
+        path: String,
+        should_break: bool,
+        accepted_features: Vec<String>,
+        accepted_versions: Option<Version>,
+    ) -> Self {
+        Self {
+            should_break,
+            accepted_features,
+            accepted_versions,
+            path,
+        }
+    }
+
     pub fn read_features(&self, path: &str) -> Result<Vec<Feature>, ReaderError> {
         let definitions = Path::new(path);
 
@@ -89,6 +80,13 @@ impl Reader {
                     .unwrap_or_default()
                     .to_string_lossy()
                     .to_string();
+
+                if !self.accepted_features.is_empty()
+                    && !self.accepted_features.contains(&feature_name)
+                {
+                    log::info!("Skipping feature: {}", feature_name);
+                    continue;
+                }
 
                 let data_types_path = path.join("data_type");
                 let data_types: Vec<DefinitionDataType> =
