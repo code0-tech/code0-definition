@@ -90,7 +90,10 @@ for (const feature in features) {
 ```
 
 ## Rust Definition Package
+This package is a Rust crate designed to read and parse Code0 definition files (JSON) from a directory structure. It loads all features, including their data types, flow types, and runtime functions, providing them as idiomatic Rust structs.
 
+### Package Resources
+Create: [code0-definition-reader](https://crates.io/crates/code0-definition-reader) on crates.io
 ### Install Package
 ```bash
 cargo add code0-definition-reader
@@ -99,14 +102,23 @@ cargo add code0-definition-reader
 ### Usage
 
 ```rs
-use code0_definition_reader::Definition;
+use code0_definition_reader::Reader;
 
-let features = Definition::new("./path/to/definitions");
+let reader = Reader::configure(
+    String::new(), // Path required for configure
+    false,         // should_break
+    Vec::new(),    // accepted_features
+    None           // accepted_versions
+);
+
+let features = reader.read_features("./path/to/definitions");
 
 for feature in features {
-    let name = feature.name(); //name of the feature (e.g. rest)
-    let data_types = feature.data_types(); //dataTypes of this feature
-    let flow_types = feature.flow_types(); //flowTypes of this feature
-    let functions = feature.runtime_functions(); //runtimeFunctions of this feature
+    let name = &feature.name; // name of the feature (e.g., http)
+    let data_types = &feature.data_types; // dataTypes of this feature
+    let flow_types = &feature.flow_types; // flowTypes of this feature
+    let functions = &feature.functions; // runtimeFunctions of this feature
+    
+    println!("Loaded feature: {}", name);
 }
 ```
