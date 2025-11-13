@@ -317,9 +317,11 @@ dependencies = [
 name = "code0-definition-reader"
 version = "0.0.0"
 dependencies = [
+ "log",
  "serde",
  "serde_json",
  "tucana",
+ "walkdir",
 ]
 
 [[package]]
