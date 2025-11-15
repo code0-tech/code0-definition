@@ -92,7 +92,7 @@ for (const feature in features) {
 ## Rust Definition Package
 This package is a Rust crate designed to read and parse CodeZero definition files (JSON) from a directory structure. It loads all features, including data-types, flow-types, and runtime-functions, providing them as idiomatic Rust structs.
 ### Package Resources
-Crete: [code0-definition-reader](https://crates.io/crates/code0-definition-reader) on crates.io
+Crate: [code0-definition-reader](https://crates.io/crates/code0-definition-reader) on crates.io
 ### Install Package
 ```bash
 cargo add code0-definition-reader
