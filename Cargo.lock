@@ -2212,9 +2212,9 @@ checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 
 [[package]]
 name = "tucana"
-version = "0.0.39"
+version = "0.0.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4e6300e0f85e9352904cace7b285366a10995dbf690c6ed8fa022cd57fa8607b"
+checksum = "565d382969ce8de8484d22516808cfef658710a6f3342a566ad1e247ccb852cf"
 dependencies = [
  "pbjson",
  "pbjson-build",
