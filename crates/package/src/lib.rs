@@ -95,23 +95,23 @@ impl Reader {
                 let flow_types: Vec<FlowType> = self.collect_definitions(&flow_types_path)?;
 
                 let functions_path = path.join("runtime_definition");
-                let functions = match self.collect_definitions::<RuntimeFunctionDefinition>(&functions_path) {
-                    Ok(func) => {
-                        func.into_iter()
+                let functions =
+                    match self.collect_definitions::<RuntimeFunctionDefinition>(&functions_path) {
+                        Ok(func) => func
+                            .into_iter()
                             .filter(|v| v.version == self.accepted_version)
-                            .collect()
-                    },
-                    Err(err) => {
-                        if self.should_break {
-                            return Err(ReaderError::ReadFeatureError {
-                                path: functions_path.to_string_lossy().to_string(),
-                                source: Box::new(err),
-                            })
-                        } else {
-                            continue;
+                            .collect(),
+                        Err(err) => {
+                            if self.should_break {
+                                return Err(ReaderError::ReadFeatureError {
+                                    path: functions_path.to_string_lossy().to_string(),
+                                    source: Box::new(err),
+                                });
+                            } else {
+                                continue;
+                            }
                         }
-                    }
-                };
+                    };
 
                 let feature = Feature {
                     name: feature_name,
@@ -162,11 +162,7 @@ impl Reader {
                                 error: e,
                             });
                         } else {
-                            log::warn!(
-                                "Skipping invalid JSON file {}: {}",
-                                path.display(),
-                                e
-                            );
+                            log::warn!("Skipping invalid JSON file {}: {}", path.display(), e);
                         }
                     }
                 }
