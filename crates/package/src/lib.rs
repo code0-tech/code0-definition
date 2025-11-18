@@ -12,7 +12,7 @@ use walkdir::WalkDir;
 pub struct Reader {
     should_break: bool,
     accepted_features: Vec<String>,
-    accepted_versions: Option<Version>,
+    accepted_version: Option<Version>,
     path: String,
 }
 
@@ -21,18 +21,18 @@ impl Reader {
         path: String,
         should_break: bool,
         accepted_features: Vec<String>,
-        accepted_versions: Option<Version>,
+        accepted_version: Option<Version>,
     ) -> Self {
         Self {
             should_break,
             accepted_features,
-            accepted_versions,
+            accepted_version,
             path,
         }
     }
 
-    pub fn read_features(&self, path: &str) -> Result<Vec<Feature>, ReaderError> {
-        let definitions = Path::new(path);
+    pub fn read_features(&self) -> Result<Vec<Feature>, ReaderError> {
+        let definitions = Path::new(&self.path);
 
         match self.read_feature_content(definitions) {
             Ok(features) => {
@@ -40,9 +40,9 @@ impl Reader {
                 Ok(features)
             }
             Err(err) => {
-                log::error!("Failed to read features from {}", path);
+                log::error!("Failed to read features from {}", &self.path);
                 Err(ReaderError::ReadFeatureError {
-                    path: path.to_string(),
+                    path: self.path.to_string(),
                     source: Box::new(err),
                 })
             }
@@ -95,8 +95,23 @@ impl Reader {
                 let flow_types: Vec<FlowType> = self.collect_definitions(&flow_types_path)?;
 
                 let functions_path = path.join("runtime_definition");
-                let functions: Vec<RuntimeFunctionDefinition> =
-                    self.collect_definitions(&functions_path)?;
+                let functions =
+                    match self.collect_definitions::<RuntimeFunctionDefinition>(&functions_path) {
+                        Ok(func) => func
+                            .into_iter()
+                            .filter(|v| v.version == self.accepted_version)
+                            .collect(),
+                        Err(err) => {
+                            if self.should_break {
+                                return Err(ReaderError::ReadFeatureError {
+                                    path: functions_path.to_string_lossy().to_string(),
+                                    source: Box::new(err),
+                                });
+                            } else {
+                                continue;
+                            }
+                        }
+                    };
 
                 let feature = Feature {
                     name: feature_name,
@@ -140,11 +155,15 @@ impl Reader {
                 match serde_json::from_str::<T>(&content) {
                     Ok(def) => definitions.push(def),
                     Err(e) => {
-                        log::error!("Failed to parse JSON in file {}: {}", path.display(), e);
-                        return Err(ReaderError::JsonError {
-                            path: path.to_path_buf(),
-                            error: e,
-                        });
+                        if self.should_break {
+                            log::error!("Failed to parse JSON in file {}: {}", path.display(), e);
+                            return Err(ReaderError::JsonError {
+                                path: path.to_path_buf(),
+                                error: e,
+                            });
+                        } else {
+                            log::warn!("Skipping invalid JSON file {}: {}", path.display(), e);
+                        }
                     }
                 }
             }
