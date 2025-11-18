@@ -1,0 +1,18 @@
+{
+  "variant": "TYPE",
+  "identifier": "CRON_DAY_OF_WEEK",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Cron Day of Week"
+    }
+  ],
+  "rules": [
+    {
+      "regex": {
+        "pattern": "^(\\*|([0-7])(-([0-7]))?)(\\/([0-7]))?(,(\\*|([0-7])(-([0-7]))?)(\\/([0-7]))?)*$"
+      }
+    }
+  ],
+  "genericKeys": []
+}
