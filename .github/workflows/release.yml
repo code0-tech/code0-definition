@@ -15,7 +15,7 @@ jobs:
         working-directory: "./package/reader"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
           node-version: '24.x'
@@ -33,7 +33,7 @@ jobs:
         working-directory: "./crates/package"
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Set version
         run: |
           VERSION=$(echo "${{ github.ref_name }}" | sed 's/^pkg-//')
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set script permissions
         run: chmod +x ./scripts/inject-version.sh
@@ -86,7 +86,7 @@ jobs:
         working-directory: "./crates/cli"
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Set version
         run: |
           VERSION=$(echo "${{ github.ref_name }}" | sed 's/^cli-//')
