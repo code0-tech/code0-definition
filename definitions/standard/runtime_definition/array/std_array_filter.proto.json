@@ -107,7 +107,7 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Filters elements of an list based on a predicate."
+      "content": "Filters elements of a list based on a predicate."
     }
   ],
   "documentation": [
