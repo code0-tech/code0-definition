@@ -7,6 +7,18 @@
       "content": "Object"
     }
   ],
-  "rules": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "object;struct;data"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Object"
+		}
+	],
+	  "rules": [],
   "genericKeys": []
 }

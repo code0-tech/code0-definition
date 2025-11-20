@@ -1,33 +1,45 @@
 {
-  "variant": "ARRAY",
-  "identifier": "HTTP_HEADER_MAP",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "HTTP Headers"
-    }
-  ],
-  "rules": [
-    {
-      "parentType": {
-        "parentType": {
-          "genericType": {
-            "dataTypeIdentifier": "ARRAY",
-            "genericMappers": [
-              {
-                "source": [
-                  {
-                    "dataTypeIdentifier": "HTTP_HEADER_ENTRY"
-                  }
-                ],
-                "target": "T",
-                "genericCombinations": []
-              }
-            ]
-          }
-        }
-      }
-    }
-  ],
-  "genericKeys": []
+	"variant": "ARRAY",
+	"identifier": "HTTP_HEADER_MAP",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "HTTP Headers"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;headers"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Headers"
+		}
+	],
+	"rules": [
+		{
+			"parentType": {
+				"parentType": {
+					"genericType": {
+						"dataTypeIdentifier": "ARRAY",
+						"genericMappers": [
+							{
+								"source": [
+									{
+										"dataTypeIdentifier": "HTTP_HEADER_ENTRY"
+									}
+								],
+								"target": "T",
+								"genericCombinations": []
+							}
+						]
+					}
+				}
+			}
+		}
+	],
+	"genericKeys": []
 }

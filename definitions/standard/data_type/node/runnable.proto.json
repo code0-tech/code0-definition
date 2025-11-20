@@ -7,6 +7,18 @@
       "content": "Node"
     }
   ],
-  "rules": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "node;function"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Node"
+		}
+	],
+	  "rules": [],
   "genericKeys": []
 }

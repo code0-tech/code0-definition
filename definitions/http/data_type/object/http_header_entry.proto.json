@@ -1,36 +1,48 @@
 {
-  "variant": "OBJECT",
-  "identifier": "HTTP_HEADER_ENTRY",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "HTTP Header Entry"
-    }
-  ],
-  "rules": [
-    {
-      "containsKey": {
-        "key": "key",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "TEXT"
-        }
-      }
-    },
-    {
-      "containsKey": {
-        "key": "value",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "TEXT"
-        }
-      }
-    },
-    {
-      "parentType": {
-        "parentType": {
-          "dataTypeIdentifier": "OBJECT"
-        }
-      }
-    }
-  ],
-  "genericKeys": []
+	"variant": "OBJECT",
+	"identifier": "HTTP_HEADER_ENTRY",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "HTTP Header Entry"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;header;entry"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Header Entry"
+		}
+	],
+	"rules": [
+		{
+			"containsKey": {
+				"key": "key",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "TEXT"
+				}
+			}
+		},
+		{
+			"containsKey": {
+				"key": "value",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "TEXT"
+				}
+			}
+		},
+		{
+			"parentType": {
+				"parentType": {
+					"dataTypeIdentifier": "OBJECT"
+				}
+			}
+		}
+	],
+	"genericKeys": []
 }

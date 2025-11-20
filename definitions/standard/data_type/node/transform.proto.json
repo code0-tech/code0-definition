@@ -1,35 +1,47 @@
 {
-  "variant": "NODE",
-  "identifier": "TRANSFORM",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Transform"
-    }
-  ],
-  "rules": [
-    {
-      "returnType": {
-        "dataTypeIdentifier": {
-          "genericKey": "R"
-        }
-      }
-    },
-    {
-      "inputTypes": {
-        "inputTypes": [
-          {
-            "dataTypeIdentifier": {
-              "genericKey": "I"
-            },
-            "inputIdentifier": "transform"
-          }
-        ]
-      }
-    }
-  ],
-  "genericKeys": [
-    "I",
-    "R"
-  ]
+	"variant": "NODE",
+	"identifier": "TRANSFORM",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Transform"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "transform"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Transform §{I} to ${R}"
+		}
+	],
+	"rules": [
+		{
+			"returnType": {
+				"dataTypeIdentifier": {
+					"genericKey": "R"
+				}
+			}
+		},
+		{
+			"inputTypes": {
+				"inputTypes": [
+					{
+						"dataTypeIdentifier": {
+							"genericKey": "I"
+						},
+						"inputIdentifier": "transform"
+					}
+				]
+			}
+		}
+	],
+	"genericKeys": [
+		"I",
+		"R"
+	]
 }

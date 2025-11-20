@@ -7,7 +7,19 @@
       "content": "Generic Array"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "list;array;collection"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "List of ${T}"
+		}
+	],
+	  "rules": [
     {
       "containsType": {
         "dataTypeIdentifier": {

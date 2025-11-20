@@ -7,7 +7,19 @@
       "content": "Text"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "text;char;literal;string"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Text"
+		}
+	],
+	  "rules": [
     {
       "regex": {
         "pattern": "[\\s\\S]*"

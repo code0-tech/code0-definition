@@ -7,7 +7,19 @@
       "content": "Comparator"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "compare;comparator"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Compare ${I}"
+		}
+	],
+	  "rules": [
     {
       "returnType": {
         "dataTypeIdentifier": {

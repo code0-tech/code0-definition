@@ -1,52 +1,64 @@
 {
-  "variant": "OBJECT",
-  "identifier": "HTTP_REQUEST",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "HTTP Request"
-    }
-  ],
-  "rules": [
-    {
-      "containsKey": {
-        "key": "method",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "HTTP_METHOD"
-        }
-      }
-    },
-    {
-      "containsKey": {
-        "key": "url",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "HTTP_URL"
-        }
-      }
-    },
-    {
-      "containsKey": {
-        "key": "body",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "OBJECT"
-        }
-      }
-    },
-    {
-      "containsKey": {
-        "key": "headers",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "HTTP_HEADER_MAP"
-        }
-      }
-    },
-    {
-      "parentType": {
-        "parentType": {
-          "dataTypeIdentifier": "OBJECT"
-        }
-      }
-    }
-  ],
-  "genericKeys": []
+	"variant": "OBJECT",
+	"identifier": "HTTP_REQUEST",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "HTTP Request"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;request"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Request"
+		}
+	],
+	"rules": [
+		{
+			"containsKey": {
+				"key": "method",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "HTTP_METHOD"
+				}
+			}
+		},
+		{
+			"containsKey": {
+				"key": "url",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "HTTP_URL"
+				}
+			}
+		},
+		{
+			"containsKey": {
+				"key": "body",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "OBJECT"
+				}
+			}
+		},
+		{
+			"containsKey": {
+				"key": "headers",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "HTTP_HEADER_MAP"
+				}
+			}
+		},
+		{
+			"parentType": {
+				"parentType": {
+					"dataTypeIdentifier": "OBJECT"
+				}
+			}
+		}
+	],
+	"genericKeys": []
 }

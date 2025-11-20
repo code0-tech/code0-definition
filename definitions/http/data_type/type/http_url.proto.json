@@ -7,7 +7,19 @@
       "content": "HTTP Route"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;route;url"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Route"
+		}
+	],
+	  "rules": [
     {
       "regex": {
         "pattern": "^/\\w+(?:[.:~-]\\w+)*(?:/\\w+(?:[.:~-]\\w+)*)*$"
