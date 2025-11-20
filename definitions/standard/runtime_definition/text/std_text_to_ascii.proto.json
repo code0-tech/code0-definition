@@ -60,7 +60,7 @@
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns an list of numbers where each number represents the ASCII code of the corresponding character in the input text."
+      "content": "Returns a list of numbers where each number represents the ASCII code of the corresponding character in the input text."
     }
   ],
   "alias": [
