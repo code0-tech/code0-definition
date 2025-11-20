@@ -60,7 +60,7 @@
   "documentation": [
     {
       "code": "en-US",
-      "content": "Takes a list of numbers where each number is an ASCII code, and returns the string they represent.",
+      "content": "Takes a list of numbers where each number is an ASCII code, and returns the string they represent."
     }
   ],
   "alias": [
