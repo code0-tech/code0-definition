@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::max",
+  "runtimeName": "std::list::max",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Number Array"
+          "content": "Number List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "An array of numbers to find the maximum value from."
+          "content": "An list of numbers to find the maximum value from."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Returns the largest number in the given array of numbers."
+          "content": "Returns the largest number in the given list of numbers."
         }
       ]
     }
@@ -56,13 +56,13 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Finds the maximum value in a numeric array."
+      "content": "Finds the maximum value in a numeric list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns the largest number contained in the provided array."
+      "content": "Returns the largest number contained in the provided list."
     }
   ],
   "alias": [
@@ -74,7 +74,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Maximum of ${array}"
+      "content": "Maximum of ${list}"
     }
   ],
   "deprecationMessage": []

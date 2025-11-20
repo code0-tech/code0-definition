@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::at",
+  "runtimeName": "std::list::at",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "List",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Input Array"
+          "content": "Input List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array from which to retrieve an element."
+          "content": "The list from which to retrieve an element."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "An array containing elements of any type. The element at the specified index will be returned."
+          "content": "An list containing elements of any type. The element at the specified index will be returned."
         }
       ]
     },
@@ -60,7 +60,7 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "Specifies the position of the element in the array to return. Must be within the bounds of the array."
+          "content": "Specifies the position of the element in the list to return. Must be within the bounds of the list."
         }
       ]
     }
@@ -75,19 +75,19 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Get Array Element"
+      "content": "Get List Element"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Retrieves the element at a specified index from an array."
+      "content": "Retrieves the element at a specified index from an list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns the element located at the given zero-based index within the input array."
+      "content": "Returns the element located at the given zero-based index within the input list."
     }
   ],
   "alias": [
@@ -99,7 +99,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Get element at ${index} of ${array}"
+      "content": "Get element at ${index} of ${list}"
     }
   ],
   "deprecationMessage": []

@@ -54,7 +54,7 @@
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -79,13 +79,13 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Splits the input text into an array of substrings based on the specified delimiter."
+      "content": "Splits the input text into an list of substrings based on the specified delimiter."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns an array of substrings obtained by splitting the input text at each occurrence of the delimiter."
+      "content": "Returns an list of substrings obtained by splitting the input text at each occurrence of the delimiter."
     }
   ],
   "alias": [

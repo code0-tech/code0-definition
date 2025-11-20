@@ -4,7 +4,7 @@
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -29,13 +29,13 @@
       "description": [
         {
           "code": "en-US",
-          "content": "Array of ASCII numeric codes representing characters."
+          "content": "List of ASCII numeric codes representing characters."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Array of ASCII numeric codes representing characters."
+          "content": "List of ASCII numeric codes representing characters."
         }
       ]
     }
@@ -54,13 +54,13 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Converts an array of ASCII codes back into the corresponding text string."
+      "content": "Converts an list of ASCII codes back into the corresponding text string."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Takes an array of numbers where each number is an ASCII code, and returns the string they represent."
+      "content": "Takes an list of numbers where each number is an ASCII code, and returns the string they represent."
     }
   ],
   "alias": [

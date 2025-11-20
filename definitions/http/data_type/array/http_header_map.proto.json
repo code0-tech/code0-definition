@@ -24,7 +24,7 @@
 			"parentType": {
 				"parentType": {
 					"genericType": {
-						"dataTypeIdentifier": "ARRAY",
+						"dataTypeIdentifier": "LIST",
 						"genericMappers": [
 							{
 								"source": [

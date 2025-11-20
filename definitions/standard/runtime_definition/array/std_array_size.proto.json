@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::size",
+  "runtimeName": "std::list::size",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array whose number of elements is to be returned."
+          "content": "The list whose number of elements is to be returned."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Specifies the array for which the total number of elements will be calculated and returned."
+          "content": "Specifies the list for which the total number of elements will be calculated and returned."
         }
       ]
     }
@@ -50,19 +50,19 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Array Size"
+      "content": "List Size"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Returns the number of elements in the array."
+      "content": "Returns the number of elements in the list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "This function returns the count of elements present in the given array."
+      "content": "This function returns the count of elements present in the given list."
     }
   ],
   "alias": [
@@ -74,7 +74,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Size of ${array}"
+      "content": "Size of ${list}"
     }
   ],
   "deprecationMessage": []

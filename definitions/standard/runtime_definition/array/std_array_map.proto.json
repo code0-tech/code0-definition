@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::map",
+  "runtimeName": "std::list::map",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LISt",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Input Array"
+          "content": "Input List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array to be transformed."
+          "content": "The list to be transformed."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Each element of this array will be passed through the transform function."
+          "content": "Each element of this list will be passed through the transform function."
         }
       ]
     },
@@ -76,20 +76,20 @@
       "description": [
         {
           "code": "en-US",
-          "content": "A function that transforms each item in the array."
+          "content": "A function that transforms each item in the list."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The transform function is applied to every element of the array to produce a new array."
+          "content": "The transform function is applied to every element of the list to produce a new list."
         }
       ]
     }
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -111,19 +111,19 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Map Array"
+      "content": "Map List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Transforms each element in the array using the provided function."
+      "content": "Transforms each element in the list using the provided function."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "This runtime applies the transform function to each element in the array, producing a new array of the results."
+      "content": "This runtime applies the transform function to each element in the list, producing a new list of the results."
     }
   ],
   "alias": [
@@ -135,7 +135,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Apply ${transform} for each in ${array}"
+      "content": "Apply ${transform} for each in ${list}"
     }
   ],
   "deprecationMessage": []

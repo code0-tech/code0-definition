@@ -1,10 +1,10 @@
 {
   "variant": "ARRAY",
-  "identifier": "ARRAY",
+  "identifier": "LIST",
   "name": [
     {
       "code": "en-US",
-      "content": "Generic Array"
+      "content": "Generic List"
     }
   ],
 	"alias": [

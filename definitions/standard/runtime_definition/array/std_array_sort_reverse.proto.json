@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::sort_reverse",
+  "runtimeName": "std::list::sort_reverse",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The input array to be sorted in reverse order."
+          "content": "The input list to be sorted in reverse order."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "An array of elements that will be sorted in descending order using the provided comparator."
+          "content": "An list of elements that will be sorted in descending order using the provided comparator."
         }
       ]
     },
@@ -80,7 +80,7 @@
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -101,19 +101,19 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Sort Array in Reverse"
+      "content": "Sort List in Reverse"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Sorts the elements of the array in reverse order using the specified comparator."
+      "content": "Sorts the elements of the list in reverse order using the specified comparator."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns a new array with the elements sorted in descending order according to the comparator function provided."
+      "content": "Returns a new list with the elements sorted in descending order according to the comparator function provided."
     }
   ],
   "alias": [
@@ -125,7 +125,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Sort ${array} in reverse order using ${comparator}"
+      "content": "Sort ${list} in reverse order using ${comparator}"
     }
   ],
   "deprecationMessage": []

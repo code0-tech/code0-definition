@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::remove",
+  "runtimeName": "std::list::remove",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array from which the item will be removed."
+          "content": "The list from which the item will be removed."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "An array to process by removing the first occurrence of the specified item."
+          "content": "An list to process by removing the first occurrence of the specified item."
         }
       ]
     },
@@ -54,20 +54,20 @@
       "description": [
         {
           "code": "en-US",
-          "content": "The item to remove from the array."
+          "content": "The item to remove from the list."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The value to search for and remove from the array. Only the first matching item is removed."
+          "content": "The value to search for and remove from the list. Only the first matching item is removed."
         }
       ]
     }
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -88,19 +88,19 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Remove from Array"
+      "content": "Remove from List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Removes the first occurrence of the specified item from the array."
+      "content": "Removes the first occurrence of the specified item from the list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Removes the first matching item from the given array and returns the resulting array."
+      "content": "Removes the first matching item from the given list and returns the resulting list."
     }
   ],
   "alias": [
@@ -112,7 +112,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Remove ${item} from ${array}"
+      "content": "Remove ${item} from ${list}"
     }
   ],
   "deprecationMessage": []
