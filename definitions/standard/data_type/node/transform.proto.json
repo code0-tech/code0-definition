@@ -16,7 +16,7 @@
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "Transform §{I} to ${R}"
+			"content": "Transform ${I} to ${R}"
 		}
 	],
 	"rules": [

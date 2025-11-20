@@ -5,49 +5,24 @@
       "dataTypeIdentifier": {
         "dataTypeIdentifier": "NUMBER"
       },
-      "runtimeName": "min",
+      "runtimeName": "value",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Minimum Value"
+          "content": "Value"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The lower bound of the random number range."
+          "content": "The number for which to calculate the sine."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Defines the minimum value (inclusive) for the random number generation."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "max",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Maximum Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The upper bound of the random number range."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Defines the maximum value (inclusive) for the random number generation."
+          "content": "Computes the sine of the given number."
         }
       ]
     }
@@ -66,13 +41,13 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Generates a random number within the specified range."
+      "content": "Returns the sine of a number."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns a pseudo-random number between the given minimum and maximum values."
+      "content": "Calculates the sine of the input value."
     }
   ],
   "alias": [
@@ -84,7 +59,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "sin(${min})"
+      "content": "sin(${value})"
     }
   ],
   "deprecationMessage": []

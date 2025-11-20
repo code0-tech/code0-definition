@@ -4,7 +4,7 @@
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "List",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [

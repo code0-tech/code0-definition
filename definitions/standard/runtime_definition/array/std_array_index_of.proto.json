@@ -99,7 +99,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Get index of ${item} in ${list }"
+      "content": "Get index of ${item} in ${list}"
     }
   ],
   "deprecationMessage": []

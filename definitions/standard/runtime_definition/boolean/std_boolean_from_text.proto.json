@@ -59,7 +59,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Convert ${value} to number"
+      "content": "Convert ${value} to boolean"
     }
   ],
   "deprecationMessage": []

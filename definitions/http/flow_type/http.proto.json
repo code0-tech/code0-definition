@@ -80,7 +80,7 @@
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "On ${method} request to §{route}"
+			"content": "On ${method} request to ${route}"
 		}
 	],
 	"alias": [
