@@ -100,5 +100,17 @@
       "content": "Returns a new string where every instance of the old substring is replaced by the new substring."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "replace;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "In ${value} replace ${old} with ${new}"
+    }
+  ],
   "deprecationMessage": []
 }

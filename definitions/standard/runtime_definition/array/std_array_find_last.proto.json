@@ -103,5 +103,17 @@
       "content": "Returns the last element from the input array for which the predicate returns true. If no element matches, returns null or equivalent."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "find last;last index;last position;array;list;collection;std;find;last"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Last element of ${array} matching ${predicate}"
+    }
+  ],
   "deprecationMessage": []
 }

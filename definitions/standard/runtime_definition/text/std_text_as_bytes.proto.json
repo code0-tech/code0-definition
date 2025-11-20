@@ -63,5 +63,17 @@
       "content": "Returns an array of bytes representing the UTF-8 encoding of the given text."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "as_bytes;text;string;std;as;bytes"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "As Bytes ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

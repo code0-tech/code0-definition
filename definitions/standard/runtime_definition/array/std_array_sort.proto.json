@@ -116,5 +116,17 @@
       "content": "Returns a new array with the elements sorted according to the comparator function provided."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sort;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sort ${array} using ${comparator}"
+    }
+  ],
   "deprecationMessage": []
 }

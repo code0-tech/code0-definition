@@ -62,5 +62,17 @@
       "content": "Adds up all numbers in the input array and returns their sum."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sum;total;add all;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sum of ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

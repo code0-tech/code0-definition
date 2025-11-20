@@ -50,5 +50,17 @@
       "content": "Calculates the tangent value of the input angle measured in radians."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "tan;tangent;trigonometry;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "tan(${radians})"
+    }
+  ],
   "deprecationMessage": []
 }

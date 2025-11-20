@@ -102,5 +102,17 @@
       "content": "Returns a new object with the specified key set to the given value."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "set;object;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Will set ${key} to ${value} inside of ${object}"
+    }
+  ],
   "deprecationMessage": []
 }

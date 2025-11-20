@@ -65,5 +65,17 @@
       "content": "Returns the largest number contained in the provided array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "max;maximum;largest;greatest;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Maximum of ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -103,5 +103,17 @@
       "content": "Returns the first element from the input array for which the predicate returns true. If no element matches, returns null or equivalent."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "find;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Find first element in ${array} matching ${predicate}"
+    }
+  ],
   "deprecationMessage": []
 }

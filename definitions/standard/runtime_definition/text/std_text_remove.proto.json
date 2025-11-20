@@ -100,5 +100,17 @@
       "content": "Returns a new string with characters removed from start up to but not including end."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "remove;delete;strip;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Remove ${value} from ${start}"
+    }
+  ],
   "deprecationMessage": []
 }

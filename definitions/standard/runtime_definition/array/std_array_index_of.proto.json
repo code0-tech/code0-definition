@@ -90,5 +90,17 @@
       "content": "Returns the zero-based index of the first occurrence of a given item in the specified array. If the item is not found, it typically returns -1."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "index_of;array;list;collection;std;index;of"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get index of ${item} in ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

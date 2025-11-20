@@ -100,5 +100,17 @@
       "content": "Returns a new string where only the first instance of the old substring is replaced by the new substring."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "replace_first;text;string;std;replace;first"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "In ${value} replace first ${old} with ${new}"
+    }
+  ],
   "deprecationMessage": []
 }

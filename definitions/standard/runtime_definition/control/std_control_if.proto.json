@@ -73,5 +73,17 @@
       "content": "The 'If' runnable evaluates a boolean condition and, if it is true, executes the provided runnable. If the condition is false, execution continues without running the runnable. This behavior corresponds to a standard 'if' statement in programming languages."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "if;control;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "If ${condition} then do ${then_runnable}"
+    }
+  ],
   "deprecationMessage": []
 }

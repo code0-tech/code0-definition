@@ -65,5 +65,17 @@
       "content": "This runtime returns the first element in the given array, if any."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "first;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get first element in ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

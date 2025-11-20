@@ -63,5 +63,17 @@
       "content": "Takes an array of numbers where each number is an ASCII code, and returns the string they represent."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from_ascii;text;string;std;from;ascii"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "From ${value} to Text"
+    }
+  ],
   "deprecationMessage": []
 }

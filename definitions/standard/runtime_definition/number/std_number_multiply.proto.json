@@ -75,5 +75,17 @@
       "content": "Takes two numeric inputs and returns their product."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "multiply;times;product;mul;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} * ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

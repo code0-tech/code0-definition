@@ -63,5 +63,17 @@
       "content": "Returns an array containing all enumerable property names (keys) of the specified object."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "keys;object;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get all keys of ${object}"
+    }
+  ],
   "deprecationMessage": []
 }

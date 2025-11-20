@@ -90,5 +90,17 @@
       "content": "Adds a new element to the end of the array and returns the new length of the array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "push;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Push ${item} into ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

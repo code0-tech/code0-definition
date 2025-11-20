@@ -91,5 +91,17 @@
       "content": "Returns a new array by concatenating all sub-arrays of the input nested array into one flat array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "flat;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Flatten ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

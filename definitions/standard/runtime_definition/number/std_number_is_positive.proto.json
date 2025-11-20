@@ -50,5 +50,17 @@
       "content": "Evaluates the input number and returns true if it is positive (greater than zero), otherwise false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "positive;greater than zero;number;math;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} > 0"
+    }
+  ],
   "deprecationMessage": []
 }

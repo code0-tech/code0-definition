@@ -75,5 +75,17 @@
       "content": "Performs standard rounding on the given value, rounding up or down depending on the fractional component."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "round;nearest;approximate;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Round ${value} with ${decimals} decimal places"
+    }
+  ],
   "deprecationMessage": []
 }

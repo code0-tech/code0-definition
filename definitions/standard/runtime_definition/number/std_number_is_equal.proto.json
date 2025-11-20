@@ -75,5 +75,17 @@
       "content": "Returns true if the first number is equal to the second number, otherwise false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "equal;equals;same;number;math;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} == ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

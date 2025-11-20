@@ -103,5 +103,17 @@
       "content": "Removes the first matching item from the given array and returns the resulting array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "remove;delete;strip;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Remove ${item} from ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

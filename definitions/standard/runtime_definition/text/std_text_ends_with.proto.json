@@ -75,5 +75,17 @@
       "content": "Returns true if the input text ends with the given suffix; otherwise, returns false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "ends_with;text;string;std;ends;with"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Check if ${value} ends with ${suffix}"
+    }
+  ],
   "deprecationMessage": []
 }

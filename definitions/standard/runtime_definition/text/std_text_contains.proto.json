@@ -75,5 +75,17 @@
       "content": "Returns true if the substring is found anywhere in the main text; otherwise, returns false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "contains;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Check if ${value} contains ${substring}"
+    }
+  ],
   "deprecationMessage": []
 }

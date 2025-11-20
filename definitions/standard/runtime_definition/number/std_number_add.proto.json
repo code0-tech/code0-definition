@@ -75,5 +75,17 @@
       "content": "Adds two numbers together."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "add;plus;sum;total;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} + ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

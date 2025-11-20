@@ -75,5 +75,17 @@
       "content": "Compares two numbers and returns the minimum value."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "min;minimum;smallest;least;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Minimum of ${first} and ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

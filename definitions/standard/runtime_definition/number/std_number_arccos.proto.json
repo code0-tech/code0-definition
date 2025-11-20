@@ -50,5 +50,17 @@
       "content": "Computes the angle in radians whose cosine is the given number."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "arccos;acos;inverse cosine;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "arccos(${value})"
+    }
+  ],
   "deprecationMessage": []
 }

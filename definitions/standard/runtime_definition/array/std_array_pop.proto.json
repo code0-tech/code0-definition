@@ -65,5 +65,17 @@
       "content": "Removes the last element from the specified array and returns it. The array is modified in place."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "pop;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Removes the last item of ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

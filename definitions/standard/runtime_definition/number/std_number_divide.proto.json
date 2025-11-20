@@ -75,5 +75,17 @@
       "content": "Returns the result of dividing the first numeric input (dividend) by the second (divisor)."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "divide;division;quotient;div;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} / ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

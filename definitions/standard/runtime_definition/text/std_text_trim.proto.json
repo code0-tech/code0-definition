@@ -50,5 +50,17 @@
       "content": "Returns a new string with all leading and trailing whitespace characters removed from the input text."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "trim;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Trim ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

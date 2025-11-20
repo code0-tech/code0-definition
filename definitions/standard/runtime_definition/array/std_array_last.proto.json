@@ -65,5 +65,17 @@
       "content": "This runtime returns the last element in the given array, if any."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "last;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get last element of ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

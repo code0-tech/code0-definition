@@ -88,5 +88,17 @@
       "content": "Returns an array of substrings obtained by splitting the input text at each occurrence of the delimiter."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "split;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Splits ${value} on '${delimiter}'"
+    }
+  ],
   "deprecationMessage": []
 }

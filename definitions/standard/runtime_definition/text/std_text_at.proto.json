@@ -75,5 +75,17 @@
       "content": "Retrieves a single character from the input text based on the provided zero-based index."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "at;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get character of ${value} at ${index}"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -75,5 +75,17 @@
       "content": "Returns true if the given key is a property of the object; otherwise, returns false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "contains_key;object;std;contains;key"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Checks if ${object} contains ${key}"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -50,5 +50,17 @@
       "content": "Returns a new text string with all characters converted to lowercase."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "lowercase;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} to Lowercase"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -78,5 +78,17 @@
       "content": "Returns a new array with the elements of the input array in reverse order."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "reverse;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Reverse ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

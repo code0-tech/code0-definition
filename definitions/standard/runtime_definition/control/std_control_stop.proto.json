@@ -22,5 +22,17 @@
       "content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "stop;control;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Stop"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -75,5 +75,17 @@
       "content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "equal;equals;same;text;string;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} equals ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

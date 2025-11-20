@@ -75,5 +75,17 @@
       "content": "Returns a pseudo-random number between the given minimum and maximum values."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sin;sine;trigonometry;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "sin(${min})"
+    }
+  ],
   "deprecationMessage": []
 }

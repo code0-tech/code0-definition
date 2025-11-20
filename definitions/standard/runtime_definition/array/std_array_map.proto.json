@@ -126,5 +126,17 @@
       "content": "This runtime applies the transform function to each element in the array, producing a new array of the results."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "map;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Apply ${transform} for each in ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

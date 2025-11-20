@@ -103,5 +103,17 @@
       "content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "find index;index of;position;array;list;collection;std;find;index"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Index of ${array} matching ${predicate}"
+    }
+  ],
   "deprecationMessage": []
 }

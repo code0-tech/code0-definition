@@ -78,5 +78,17 @@
       "content": "Returns a new array containing only the unique elements from the input array. The original order may or may not be preserved depending on the implementation."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to_unique;array;list;collection;std;to;unique"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Remove duplicates in ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

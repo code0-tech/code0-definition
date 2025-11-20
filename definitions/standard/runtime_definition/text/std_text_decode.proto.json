@@ -75,5 +75,17 @@
       "content": "Decodes the input text from the specified encoding format."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "decode;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Decode ${value} using ${encoding}"
+    }
+  ],
   "deprecationMessage": []
 }

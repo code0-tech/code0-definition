@@ -116,5 +116,17 @@
       "content": "Returns a new array containing only the elements from the input array for which the predicate returns true."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "filter;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Filter out elements in ${array} not matching ${predicate}"
+    }
+  ],
   "deprecationMessage": []
 }

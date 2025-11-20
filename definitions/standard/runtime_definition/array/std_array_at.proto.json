@@ -90,5 +90,17 @@
       "content": "Returns the element located at the given zero-based index within the input array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "at;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get element at ${index} of ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

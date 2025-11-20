@@ -47,6 +47,18 @@
       "content": "Processes an HTTP response and returns it to the requesting client. This function typically completes the HTTP request–response cycle by delivering the server’s final output, such as headers, status codes, and body content, back to the client."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "respond;control;http"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Apply respond to ${http_response}"
+    }
+  ],
   "throwsError": false,
   "genericKeys": []
 }

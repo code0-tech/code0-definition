@@ -65,5 +65,17 @@
       "content": "This function returns the count of elements present in the given array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "size;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Size of ${array}"
+    }
+  ],
   "deprecationMessage": []
 }

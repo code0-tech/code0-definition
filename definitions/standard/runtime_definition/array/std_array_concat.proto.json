@@ -116,5 +116,17 @@
       "content": "Returns a new array containing all elements of the first array followed by all elements of the second array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "concat;combine;join;append;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Combine ${first} with ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

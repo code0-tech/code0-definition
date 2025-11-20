@@ -50,5 +50,17 @@
       "content": "Converts a boolean value to a number."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to number;numeric;boolean;logic;std;as;number"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${value} to number"
+    }
+  ],
   "deprecationMessage": []
 }

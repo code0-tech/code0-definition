@@ -101,5 +101,17 @@
       "content": "This runtime executes the given consumer function on each item in the array without returning a result."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "for_each;array;list;collection;std;for;each"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "For each in ${array} do ${consumer}"
+    }
+  ],
   "deprecationMessage": []
 }

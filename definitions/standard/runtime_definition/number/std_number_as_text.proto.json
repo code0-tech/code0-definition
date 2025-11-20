@@ -50,5 +50,17 @@
       "content": "Transforms the given numeric value into a string format."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to text;string;format number;number;math;std;as;text"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${number} to text"
+    }
+  ],
   "deprecationMessage": []
 }

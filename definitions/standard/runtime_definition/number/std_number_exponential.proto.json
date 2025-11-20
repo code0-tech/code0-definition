@@ -75,5 +75,17 @@
       "content": "Computes the result of raising the base to the power specified by the exponent."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "exponential;exp;e power;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "e ^ ${base}"
+    }
+  ],
   "deprecationMessage": []
 }

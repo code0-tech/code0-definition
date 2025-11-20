@@ -116,5 +116,17 @@
       "content": "Returns a new array with the elements sorted in descending order according to the comparator function provided."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sort_reverse;array;list;collection;std;sort;reverse"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sort ${array} in reverse order using ${comparator}"
+    }
+  ],
   "deprecationMessage": []
 }

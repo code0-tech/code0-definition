@@ -50,5 +50,17 @@
       "content": "Returns true if the input number is zero; otherwise, returns false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "zero;equals zero;number;math;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} == 0"
+    }
+  ],
   "deprecationMessage": []
 }

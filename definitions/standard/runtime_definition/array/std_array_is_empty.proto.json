@@ -65,5 +65,17 @@
       "content": "Returns true if the array contains no elements, otherwise returns false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "is_empty;array;list;collection;std;is;empty"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Check if ${array} is empty"
+    }
+  ],
   "deprecationMessage": []
 }

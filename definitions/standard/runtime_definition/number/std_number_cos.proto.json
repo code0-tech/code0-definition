@@ -50,5 +50,17 @@
       "content": "Calculates the cosine value of the input angle measured in radians."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "cos;cosine;trigonometry;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "cos(${radians})"
+    }
+  ],
   "deprecationMessage": []
 }

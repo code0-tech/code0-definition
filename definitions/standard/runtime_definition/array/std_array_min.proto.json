@@ -65,5 +65,17 @@
       "content": "Returns the smallest number contained in the provided array."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "min;minimum;smallest;least;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Minimum of ${array}"
+    }
+  ],
   "deprecationMessage": []
 }
