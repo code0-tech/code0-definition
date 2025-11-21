@@ -35,7 +35,7 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "An list of elements that will be sorted in descending order using the provided comparator."
+          "content": "A list of elements that will be sorted in descending order using the provided comparator."
         }
       ]
     },

@@ -35,7 +35,7 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "An list containing elements of any type. The element at the specified index will be returned."
+          "content": "A list containing elements of any type. The element at the specified index will be returned."
         }
       ]
     },

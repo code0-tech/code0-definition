@@ -48,7 +48,7 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "An list containing sub-lists that will be flattened into a single-level list."
+          "content": "A list containing sub-lists that will be flattened into a single-level list."
         }
       ]
     }
