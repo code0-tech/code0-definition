@@ -142,24 +142,29 @@ fn main() {
         None
     );
 
-    let features = reader.read_features().expect("Failed to read features");
-    
-    for feature in features {
-        println!("Feature: {}", feature.name);
-        
-        // Access data types
-        for data_type in &feature.data_types {
-            println!("  DataType: {}", data_type.identifier);
+    match reader.read_features() {
+        Ok(features) => {
+            for feature in features {
+                println!("Feature: {}", feature.name);
+                
+                // Access data types
+                for data_type in &feature.data_types {
+                    println!("  DataType: {}", data_type.identifier);
+                }
+                
+                // Access flow types
+                for flow_type in &feature.flow_types {
+                    println!("  FlowType: {}", flow_type.identifier);
+                }
+                
+                // Access runtime functions
+                for function in &feature.functions {
+                    println!("  Function: {}", function.runtime_name);
+                }
+            }
         }
-        
-        // Access flow types
-        for flow_type in &feature.flow_types {
-            println!("  FlowType: {}", flow_type.identifier);
-        }
-        
-        // Access runtime functions
-        for function in &feature.functions {
-            println!("  Function: {}", function.runtime_name);
+        Err(err) => {
+            eprintln!("Failed to read features: {:?}", err);
         }
     }
 }
