@@ -50,5 +50,17 @@
       "content": "Converts a text string to a boolean value. Recognizes 'true' and 'false' (case-insensitive)."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from text;parse;convert;boolean;logic;std;from;text"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${value} to boolean"
+    }
+  ],
   "deprecationMessage": []
 }

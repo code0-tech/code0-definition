@@ -75,5 +75,17 @@
       "content": "Compares two numbers and returns the maximum value."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "max;maximum;largest;greatest;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Maximum of ${first} and ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

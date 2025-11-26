@@ -75,5 +75,17 @@
       "content": "Returns the zero-based index of the first occurrence of the substring in the text. Returns -1 if the substring is not found."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "index_of;text;string;std;index;of"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get position of ${substring} inside ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

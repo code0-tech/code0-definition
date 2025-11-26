@@ -50,5 +50,17 @@
       "content": "Removes the sign from the input number, returning its non-negative value."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "absolute;abs;magnitude;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Absolute value of ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

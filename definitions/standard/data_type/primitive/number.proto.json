@@ -7,7 +7,19 @@
       "content": "Number"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "number;integer;float;double;long"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Number"
+		}
+	],
+	  "rules": [
     {
       "regex": {
         "pattern": "^(?:-(?:[1-9](?:\\d{0,2}(?:,\\d{3})+|\\d*))|(?:0|(?:[1-9](?:\\d{0,2}(?:,\\d{3})+|\\d*))))(?:.\\d+|)$"

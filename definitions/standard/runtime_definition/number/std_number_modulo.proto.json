@@ -75,5 +75,17 @@
       "content": "Computes the modulus (remainder) of dividing the first numeric input by the second."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "modulo;mod;remainder;modulus;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} % ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -75,5 +75,17 @@
       "content": "Returns the logarithm of the given value using the specified base."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "log;logarithm;log base;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "log base ${base} of ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

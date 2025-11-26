@@ -50,5 +50,17 @@
       "content": "Attempts to parse the provided text input and return its numeric equivalent."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from text;parse;convert;number;math;std;from;text"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${text} to number"
+    }
+  ],
   "deprecationMessage": []
 }

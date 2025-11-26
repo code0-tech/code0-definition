@@ -50,5 +50,17 @@
       "content": "Returns the natural logarithm of the given value."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "natural log;ln;log e;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "ln(${value})"
+    }
+  ],
   "deprecationMessage": []
 }

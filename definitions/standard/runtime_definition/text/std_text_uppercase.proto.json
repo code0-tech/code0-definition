@@ -50,5 +50,17 @@
       "content": "Returns a new text string with all characters converted to uppercase."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "uppercase;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Uppercase ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

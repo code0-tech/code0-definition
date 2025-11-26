@@ -50,5 +50,17 @@
       "content": "Negates a boolean value."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "negate;negative;invert;opposite;boolean;logic;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Negate ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

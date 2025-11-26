@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::sort",
+  "runtimeName": "std::list::sort",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The input array to be sorted."
+          "content": "The input list to be sorted."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "An array of elements that will be sorted using the provided comparator function."
+          "content": "A list of elements that will be sorted using the provided comparator function."
         }
       ]
     },
@@ -80,7 +80,7 @@
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -101,19 +101,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Sort Array"
+      "content": "Sort List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Sorts the elements of the array using the specified comparator."
+      "content": "Sorts the elements of the list using the specified comparator."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns a new array with the elements sorted according to the comparator function provided."
+      "content": "Returns a new list with the elements sorted according to the comparator function provided."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sort;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sort ${list} using ${comparator}"
     }
   ],
   "deprecationMessage": []

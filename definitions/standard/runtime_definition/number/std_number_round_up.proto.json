@@ -75,5 +75,17 @@
       "content": "Performs rounding on the given value, always rounding up to the nearest value at the given decimal precision."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "round up;ceil;ceiling;number;math;std;round;up"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Round up ${value} with ${decimals} decimal places"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::push",
+  "runtimeName": "std::list::push",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array to which an item will be added."
+          "content": "The list to which an item will be added."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The array that the new item will be appended to."
+          "content": "The list that the new item will be appended to."
         }
       ]
     },
@@ -54,13 +54,13 @@
       "description": [
         {
           "code": "en-US",
-          "content": "The item to add to the array."
+          "content": "The item to add to the list."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The value to be added at the end of the array."
+          "content": "The value to be added at the end of the list."
         }
       ]
     }
@@ -75,19 +75,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Push to Array"
+      "content": "Push to List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Appends an item to the end of an array."
+      "content": "Appends an item to the end of a list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Adds a new element to the end of the array and returns the new length of the array."
+      "content": "Adds a new element to the end of the list and returns the new length of the list."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "push;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Push ${item} into ${list}"
     }
   ],
   "deprecationMessage": []

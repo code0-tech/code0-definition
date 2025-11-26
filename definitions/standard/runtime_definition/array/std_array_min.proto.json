@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::min",
+  "runtimeName": "std::list::min",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Number Array"
+          "content": "Number List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "An array of numbers to find the minimum value from."
+          "content": "A list of numbers to find the minimum value from."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Returns the smallest number in the given array of numbers."
+          "content": "Returns the smallest number in the given list of numbers."
         }
       ]
     }
@@ -56,13 +56,25 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Finds the minimum value in a numeric array."
+      "content": "Finds the minimum value in a numeric list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns the smallest number contained in the provided array."
+      "content": "Returns the smallest number contained in the provided list."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "min;minimum;smallest;least;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Minimum of ${list}"
     }
   ],
   "deprecationMessage": []

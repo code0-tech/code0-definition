@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::filter",
+  "runtimeName": "std::list::filter",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Input Array"
+          "content": "Input List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array to be filtered."
+          "content": "The list to be filtered."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The original array from which elements will be selected based on the predicate."
+          "content": "The original list from which elements will be selected based on the predicate."
         }
       ]
     },
@@ -73,14 +73,14 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "A function that takes an element of the array and returns a boolean indicating whether the element should be included in the output array."
+          "content": "A function that takes an element of the list and returns a boolean indicating whether the element should be included in the output list."
         }
       ]
     }
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -101,19 +101,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Filter Array"
+      "content": "Filter List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Filters elements of an array based on a predicate."
+      "content": "Filters elements of a list based on a predicate."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns a new array containing only the elements from the input array for which the predicate returns true."
+      "content": "Returns a new list containing only the elements from the input list for which the predicate returns true."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "filter;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Filter out elements in ${list} not matching ${predicate}"
     }
   ],
   "deprecationMessage": []

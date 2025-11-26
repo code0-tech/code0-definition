@@ -22,14 +22,14 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "Returns an array of all the keys (property names) of the given object."
+          "content": "Returns a list of all the keys (property names) of the given object."
         }
       ]
     }
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -54,13 +54,25 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Retrieves all the keys from the given object as an array of text values."
+      "content": "Retrieves all the keys from the given object as a list of text values."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns an array containing all enumerable property names (keys) of the specified object."
+      "content": "Returns a list containing all enumerable property names (keys) of the specified object."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "keys;object;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get all keys of ${object}"
     }
   ],
   "deprecationMessage": []

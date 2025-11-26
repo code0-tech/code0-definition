@@ -7,7 +7,19 @@
       "content": "HTTP Status Code"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;status;code"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Status Code"
+		}
+	],
+	  "rules": [
     {
       "numberRange": {
         "from": 100,

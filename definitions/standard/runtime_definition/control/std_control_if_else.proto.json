@@ -98,5 +98,17 @@
       "content": "Evaluates a boolean condition. If true, executes the Then Runnable; otherwise, executes the Else Runnable. Mirrors a standard 'if/else' control structure in programming languages."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "if_else;control;std;if;else"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "If ${condition} do ${then_runnable} else ${else_runnable}"
+    }
+  ],
   "deprecationMessage": []
 }

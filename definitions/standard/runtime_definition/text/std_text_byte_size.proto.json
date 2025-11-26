@@ -50,5 +50,17 @@
       "content": "Computes the size in bytes of the provided text string, typically by counting UTF-8 encoded bytes."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "byte_size;text;string;std;byte;size"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Byte-Size of ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

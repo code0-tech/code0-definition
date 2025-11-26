@@ -50,5 +50,17 @@
       "content": "Returns a string containing the hexadecimal values corresponding to each character of the input text."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "hex;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} to Hexadecimal"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -75,5 +75,17 @@
       "content": "Calculates the nth root of the input number, where n is specified by the root exponent."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "root;nth root;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${root_exponent} root of ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

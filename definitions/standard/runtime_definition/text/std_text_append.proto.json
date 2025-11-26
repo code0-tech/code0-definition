@@ -75,5 +75,17 @@
       "content": "Returns a new text string consisting of the original text followed by the specified suffix."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "append;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Append ${value} with ${suffix}"
+    }
+  ],
   "deprecationMessage": []
 }

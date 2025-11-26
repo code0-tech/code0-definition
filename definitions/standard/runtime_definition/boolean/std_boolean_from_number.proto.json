@@ -50,5 +50,17 @@
       "content": "Converts a number to a boolean value. Typically, 0 maps to false and non-zero maps to true."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from number;to boolean;convert;boolean;logic;std;from;number"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${value} to boolean"
+    }
+  ],
   "deprecationMessage": []
 }

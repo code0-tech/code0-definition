@@ -75,5 +75,17 @@
       "content": "Returns the result of subtracting the second numeric input from the first."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "subtract;minus;difference;sub;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} - ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

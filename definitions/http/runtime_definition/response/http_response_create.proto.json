@@ -102,5 +102,17 @@
       "content": "Creates a complete HTTP response object to be returned from a server. The response includes a status code, headers, and an optional body containing the response content."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "create;response;http"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Apply create to ${http_status_code}, ${headers}, ${payload}"
+    }
+  ],
   "deprecationMessage": []
 }

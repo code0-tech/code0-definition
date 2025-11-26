@@ -75,5 +75,17 @@
       "content": "Transforms the given text string into a representation encoded by the specified encoding scheme."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "encode;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Encode ${value} to ${encoding}"
+    }
+  ],
   "deprecationMessage": []
 }

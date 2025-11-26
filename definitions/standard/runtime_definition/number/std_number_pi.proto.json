@@ -24,5 +24,17 @@
       "content": "Provides the constant value of pi, approximately 3.14159, used in many mathematical calculations."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "pi;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get pi"
+    }
+  ],
   "deprecationMessage": []
 }

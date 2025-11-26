@@ -50,5 +50,17 @@
       "content": "Calculates the positive square root of the input number."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "square root;sqrt;root;number;math;std;square"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Square root of ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

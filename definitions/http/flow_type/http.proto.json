@@ -1,80 +1,92 @@
 {
-  "identifier": "HTTP",
-  "settings": [
-    {
-      "identifier": "HTTP_URL",
-      "unique": false,
-      "dataTypeIdentifier": "HTTP_URL",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "URL"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Specifies the HTTP URL endpoint."
-        }
-      ]
-    },
-    {
-      "identifier": "HTTP_METHOD",
-      "unique": false,
-      "dataTypeIdentifier": "HTTP_METHOD",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Method"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
-        }
-      ]
-    },
-    {
-      "identifier": "HTTP_HOST",
-      "unique": false,
-      "dataTypeIdentifier": "TEXT",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Host"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Specifies the target host name or IP address."
-        }
-      ]
-    }
-  ],
-  "inputTypeIdentifier": "HTTP_ADAPTER_INPUT",
-  "returnTypeIdentifier": "HTTP_RESPONSE",
-  "editable": false,
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Rest Endpoint"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "A REST API is a web service that lets clients interact with data on a server using standard HTTP methods like GET, POST, PUT, and DELETE usually returning results in JSON format."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "A REST API is a web service that lets clients interact with data on a server using standard HTTP methods like GET, POST, PUT, and DELETE usually returning results in JSON format."
-    }
-  ]
+	"identifier": "HTTP",
+	"settings": [
+		{
+			"identifier": "HTTP_URL",
+			"unique": false,
+			"dataTypeIdentifier": "HTTP_URL",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "URL"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Specifies the HTTP URL endpoint."
+				}
+			]
+		},
+		{
+			"identifier": "HTTP_METHOD",
+			"unique": false,
+			"dataTypeIdentifier": "HTTP_METHOD",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Method"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
+				}
+			]
+		},
+		{
+			"identifier": "HTTP_HOST",
+			"unique": false,
+			"dataTypeIdentifier": "TEXT",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Host"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Specifies the target host name or IP address."
+				}
+			]
+		}
+	],
+	"inputTypeIdentifier": "HTTP_ADAPTER_INPUT",
+	"returnTypeIdentifier": "HTTP_RESPONSE",
+	"editable": false,
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Rest Endpoint"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "A REST API is a web service that lets clients interact with data on a server using standard HTTP methods like GET, POST, PUT, and DELETE usually returning results in JSON format."
+		}
+	],
+	"documentation": [
+		{
+			"code": "en-US",
+			"content": "A REST API is a web service that lets clients interact with data on a server using standard HTTP methods like GET, POST, PUT, and DELETE usually returning results in JSON format."
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "On ${method} request to ${route}"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;rest;route;web;webhook"
+		}
+	]
 }

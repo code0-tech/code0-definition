@@ -50,5 +50,17 @@
       "content": "Computes the angle in radians whose tangent is the given number."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "arctan;atan;inverse tangent;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "arctan(${value})"
+    }
+  ],
   "deprecationMessage": []
 }

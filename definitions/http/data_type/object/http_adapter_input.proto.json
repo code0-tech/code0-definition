@@ -7,6 +7,18 @@
       "content": "HTTP Adapter Input"
     }
   ],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;adapter;input"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Adapter Input"
+		}
+	],
   "rules": [
     {
       "containsKey": {

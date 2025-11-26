@@ -75,5 +75,17 @@
       "content": "Returns a randomly generated number within the given range, inclusive of both minimum and maximum."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "random;rand;random number;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Random number between ${min} and ${max}"
+    }
+  ],
   "deprecationMessage": []
 }

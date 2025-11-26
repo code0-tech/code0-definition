@@ -52,5 +52,17 @@
       "content": "Ends the current context and returns the specified value to the upper scope. This node behaves like a standard 'return' statement in programming languages, stopping further execution within the current flow."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "return;control;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Return ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

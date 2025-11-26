@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::index_of",
+  "runtimeName": "std::list::index_of",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array to search within."
+          "content": "The list to search within."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "An array of elements in which the specified item will be searched for to determine its index."
+          "content": "A list of elements in which the specified item will be searched for to determine its index."
         }
       ]
     },
@@ -54,13 +54,13 @@
       "description": [
         {
           "code": "en-US",
-          "content": "The item whose index is to be found in the array."
+          "content": "The item whose index is to be found in the list."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The item for which the function searches in the array and returns the index of its first occurrence."
+          "content": "The item for which the function searches in the list and returns the index of its first occurrence."
         }
       ]
     }
@@ -81,13 +81,25 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Finds the index of the first occurrence of the specified item in the array."
+      "content": "Finds the index of the first occurrence of the specified item in the list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns the zero-based index of the first occurrence of a given item in the specified array. If the item is not found, it typically returns -1."
+      "content": "Returns the zero-based index of the first occurrence of a given item in the specified list. If the item is not found, it typically returns -1."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "index_of;array;list;collection;std;index;of"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get index of ${item} in ${list}"
     }
   ],
   "deprecationMessage": []

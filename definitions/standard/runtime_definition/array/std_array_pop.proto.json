@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::pop",
+  "runtimeName": "std::list::pop",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array to remove the last item from."
+          "content": "The list to remove the last item from."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "This is the array from which the last element will be removed and returned."
+          "content": "This is the list from which the last element will be removed and returned."
         }
       ]
     }
@@ -50,19 +50,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Pop from Array"
+      "content": "Pop from List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Removes and returns the last item from the array."
+      "content": "Removes and returns the last item from the list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Removes the last element from the specified array and returns it. The array is modified in place."
+      "content": "Removes the last element from the specified list and returns it. The list is modified in place."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "pop;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Removes the last item of ${list}"
     }
   ],
   "deprecationMessage": []

@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::find_index",
+  "runtimeName": "std::list::find_index",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Input Array"
+          "content": "Input List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array to search through."
+          "content": "The list to search through."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The array in which to find the index of an element that satisfies the predicate."
+          "content": "The list in which to find the index of an element that satisfies the predicate."
         }
       ]
     },
@@ -73,7 +73,7 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "A function that takes an element of the array and returns a boolean indicating if the element satisfies the search criteria."
+          "content": "A function that takes an element of the list and returns a boolean indicating if the element satisfies the search criteria."
         }
       ]
     }
@@ -88,19 +88,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Find Index in Array"
+      "content": "Find Index in List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Finds the index of the first element in the array that satisfies the predicate."
+      "content": "Finds the index of the first element in the list that satisfies the predicate."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
       "content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "find index;index of;position;array;list;collection;std;find;index"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Index of ${list} matching ${predicate}"
     }
   ],
   "deprecationMessage": []

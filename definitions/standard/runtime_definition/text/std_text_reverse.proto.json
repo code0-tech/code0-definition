@@ -50,5 +50,17 @@
       "content": "Returns a new string with the characters of the input text in reverse order."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "reverse;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Reverse ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

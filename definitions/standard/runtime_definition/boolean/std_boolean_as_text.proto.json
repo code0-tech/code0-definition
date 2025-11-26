@@ -50,5 +50,17 @@
       "content": "Converts a boolean value to a text string."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to text;string;format number;boolean;logic;std;as;text"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${value} to text"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -7,6 +7,18 @@
       "content": "Text Encoding"
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "text;encoding;base64"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Text Encoding"
+    }
+  ],
   "rules": [
     {
       "itemOfCollection": {

@@ -29,7 +29,7 @@
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -60,7 +60,19 @@
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns an array of numbers where each number represents the ASCII code of the corresponding character in the input text."
+      "content": "Returns a list of numbers where each number represents the ASCII code of the corresponding character in the input text."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to_ascii;text;string;std;to;ascii"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} To Ascii"
     }
   ],
   "deprecationMessage": []

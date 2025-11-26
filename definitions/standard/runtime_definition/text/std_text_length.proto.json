@@ -50,5 +50,17 @@
       "content": "Computes the length of the input string in terms of characters."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "length;size;characters;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Length of ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

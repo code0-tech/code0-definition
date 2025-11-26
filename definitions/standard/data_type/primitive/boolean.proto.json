@@ -7,7 +7,19 @@
       "content": "Boolean"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "bool;boolean;bit"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Boolean"
+		}
+	],
+	  "rules": [
     {
       "regex": {
         "pattern": "^(true|false)$"

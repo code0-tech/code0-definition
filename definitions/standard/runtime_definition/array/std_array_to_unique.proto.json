@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::to_unique",
+  "runtimeName": "std::list::to_unique",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,31 +18,31 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The input array from which duplicates will be removed."
+          "content": "The input list from which duplicates will be removed."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "An array of elements that may contain duplicates. This function will remove any duplicate items and return a new array with unique values only."
+          "content": "A list of elements that may contain duplicates. This function will remove any duplicate items and return a new list with unique values only."
         }
       ]
     }
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -69,13 +69,25 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Removes duplicate elements from the input array."
+      "content": "Removes duplicate elements from the input list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns a new array containing only the unique elements from the input array. The original order may or may not be preserved depending on the implementation."
+      "content": "Returns a new list containing only the unique elements from the input list. The original order may or may not be preserved depending on the implementation."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to_unique;array;list;collection;std;to;unique"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Remove duplicates in ${list}"
     }
   ],
   "deprecationMessage": []

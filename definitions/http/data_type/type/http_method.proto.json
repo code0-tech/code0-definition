@@ -7,7 +7,19 @@
       "content": "HTTP Method"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;method;get;post;put;delete;path;head"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Method"
+		}
+	],
+	  "rules": [
     {
       "itemOfCollection": {
         "items": [

@@ -7,7 +7,19 @@
       "content": "Consumer"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "use;consumer;consume;lambda"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Use ${T}"
+		}
+	],
+	  "rules": [
     {
       "inputTypes": {
         "inputTypes": [

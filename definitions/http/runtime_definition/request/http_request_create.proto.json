@@ -127,5 +127,17 @@
       "content": "Generates an HTTP request object that can be sent to a server. The request includes an HTTP method, optional headers, a destination URL, and an optional request body."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "create;request;http"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Apply create to ${http_method}, ${headers}, ${url}, ${payload}"
+    }
+  ],
   "deprecationMessage": []
 }

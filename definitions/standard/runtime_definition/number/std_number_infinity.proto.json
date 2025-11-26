@@ -24,5 +24,17 @@
       "content": "Provides the representation of positive infinity, used to represent an unbounded value in computations."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "infinity;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Infinity"
+    }
+  ],
   "deprecationMessage": []
 }

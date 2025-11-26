@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::is_empty",
+  "runtimeName": "std::list::is_empty",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Array"
+          "content": "List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The array to check for emptiness."
+          "content": "The list to check for emptiness."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "The array whose length will be evaluated to determine if it contains any elements."
+          "content": "The list whose length will be evaluated to determine if it contains any elements."
         }
       ]
     }
@@ -50,19 +50,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Is Array Empty"
+      "content": "Is List Empty"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Checks if the array has no elements."
+      "content": "Checks if the list has no elements."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns true if the array contains no elements, otherwise returns false."
+      "content": "Returns true if the list contains no elements, otherwise returns false."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "is_empty;array;list;collection;std;is;empty"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Check if ${list} is empty"
     }
   ],
   "deprecationMessage": []

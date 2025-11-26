@@ -50,5 +50,17 @@
       "content": "Returns an integer count of all enumerable property keys in the specified object."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "size;object;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get size of ${object}"
+    }
+  ],
   "deprecationMessage": []
 }

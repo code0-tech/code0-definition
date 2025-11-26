@@ -75,5 +75,17 @@
       "content": "Returns a new text string consisting of the specified prefix followed by the original text."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "prepend;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Prepend ${value} with ${prefix}"
+    }
+  ],
   "deprecationMessage": []
 }

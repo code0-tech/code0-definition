@@ -50,5 +50,17 @@
       "content": "Computes the angle in radians whose sine is the given number."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "arcsin;asin;inverse sine;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "arcsin(${value})"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -100,5 +100,17 @@
       "content": "Returns a new string where the provided text is inserted at the zero-based position index within the original text."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "insert;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Insert ${value} at ${position} into ${text}"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -1,16 +1,16 @@
 {
-  "runtimeName": "std::array::flat",
+  "runtimeName": "std::list::flat",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
                 {
                   "genericType": {
-                    "dataTypeIdentifier": "ARRAY",
+                    "dataTypeIdentifier": "LIST",
                     "genericMappers": [
                       {
                         "source": [
@@ -31,31 +31,31 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Nested Array"
+          "content": "Nested List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "The nested array to be flattened."
+          "content": "The nested list to be flattened."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "An array containing sub-arrays that will be flattened into a single-level array."
+          "content": "A list containing sub-lists that will be flattened into a single-level list."
         }
       ]
     }
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -76,19 +76,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Flatten Array"
+      "content": "Flatten List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Flattens a nested array into a single-level array."
+      "content": "Flattens a nested list into a single-level list."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns a new array by concatenating all sub-arrays of the input nested array into one flat array."
+      "content": "Returns a new list by concatenating all sub-lists of the input nested list into one flat list."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "flat;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Flatten ${list}"
     }
   ],
   "deprecationMessage": []

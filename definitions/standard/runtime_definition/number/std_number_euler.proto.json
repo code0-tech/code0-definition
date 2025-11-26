@@ -24,5 +24,17 @@
       "content": "Provides the constant value of Euler's number, approximately 2.71828, which is the base of the natural logarithm."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "euler;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Euler"
+    }
+  ],
   "deprecationMessage": []
 }

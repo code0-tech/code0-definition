@@ -75,5 +75,17 @@
       "content": "Returns true if the first numeric input is less than the second; otherwise, returns false."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "less;smaller;fewer;number;math;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} < ${second}"
+    }
+  ],
   "deprecationMessage": []
 }

@@ -50,5 +50,17 @@
       "content": "Returns a new text string with the case of each character inverted."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "swapcase;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Swapcase of ${value}"
+    }
+  ],
   "deprecationMessage": []
 }

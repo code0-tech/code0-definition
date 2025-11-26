@@ -100,5 +100,17 @@
       "content": "Returns the given number clamped between the minimum and maximum bounds."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "clamp;limit;bound;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Clamp ${value} between ${min} and ${max}"
+    }
+  ],
   "deprecationMessage": []
 }

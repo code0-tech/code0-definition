@@ -1,10 +1,10 @@
 {
-  "runtimeName": "std::array::join",
+  "runtimeName": "std::list::join",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {
         "genericType": {
-          "dataTypeIdentifier": "ARRAY",
+          "dataTypeIdentifier": "LIST",
           "genericMappers": [
             {
               "source": [
@@ -18,24 +18,24 @@
           ]
         }
       },
-      "runtimeName": "array",
+      "runtimeName": "list",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Text Array"
+          "content": "Text List"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "An array of text elements to be filtered."
+          "content": "A list of text elements to be filtered."
         }
       ],
       "documentation": [
         {
           "code": "en-US",
-          "content": "Input array containing text elements for filtering."
+          "content": "Input list containing text elements for filtering."
         }
       ]
     },
@@ -60,7 +60,7 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "The delimiter or text that will be used to join the filtered array elements into a single string."
+          "content": "The delimiter or text that will be used to join the filtered list elements into a single string."
         }
       ]
     }
@@ -73,19 +73,31 @@
   "name": [
     {
       "code": "en-US",
-      "content": "Filter and Join Text Array"
+      "content": "Join Text List"
     }
   ],
   "description": [
     {
       "code": "en-US",
-      "content": "Filters the input text array and joins the filtered elements into a single string separated by the specified join text."
+      "content": "Filters the input text list and joins the filtered elements into a single string separated by the specified join text."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Applies a filter operation on the input text array and returns a single concatenated string of filtered elements joined by the provided join text."
+      "content": "Applies a filter operation on the input text list and returns a single concatenated string of filtered elements joined by the provided join text."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "join;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Joins ${list} using '${join_text}'"
     }
   ],
   "deprecationMessage": []

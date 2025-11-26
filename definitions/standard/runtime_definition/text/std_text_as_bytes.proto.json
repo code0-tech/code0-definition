@@ -22,14 +22,14 @@
       "documentation": [
         {
           "code": "en-US",
-          "content": "Converts the input text string into an array of byte values."
+          "content": "Converts the input text string into a list of byte values."
         }
       ]
     }
   ],
   "returnTypeIdentifier": {
     "genericType": {
-      "dataTypeIdentifier": "ARRAY",
+      "dataTypeIdentifier": "LIST",
       "genericMappers": [
         {
           "source": [
@@ -54,13 +54,25 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Converts a text string into an array of byte values."
+      "content": "Converts a text string into a list of byte values."
     }
   ],
   "documentation": [
     {
       "code": "en-US",
-      "content": "Returns an array of bytes representing the UTF-8 encoding of the given text."
+      "content": "Returns a list of bytes representing the UTF-8 encoding of the given text."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "as_bytes;text;string;std;as;bytes"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "As Bytes ${value}"
     }
   ],
   "deprecationMessage": []

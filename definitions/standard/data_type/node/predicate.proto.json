@@ -7,7 +7,19 @@
       "content": "Predicate"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "predicate"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Predicate of ${T}"
+		}
+	],
+	  "rules": [
     {
       "returnType": {
         "dataTypeIdentifier": {

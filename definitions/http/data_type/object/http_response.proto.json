@@ -7,7 +7,19 @@
       "content": "HTTP Response"
     }
   ],
-  "rules": [
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;response;object"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Response"
+		}
+	],
+	  "rules": [
     {
       "containsKey": {
         "key": "headers",

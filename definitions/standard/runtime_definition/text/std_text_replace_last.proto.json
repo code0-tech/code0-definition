@@ -100,5 +100,17 @@
       "content": "Returns a new string where only the last instance of the old substring is replaced by the new substring."
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "replace_last;text;string;std;replace;last"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "In ${value} replace the last ${old} with ${new}"
+    }
+  ],
   "deprecationMessage": []
 }
