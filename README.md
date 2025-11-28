@@ -98,26 +98,74 @@ Crate: [code0-definition-reader](https://crates.io/crates/code0-definition-reade
 cargo add code0-definition-reader
 ```
 
-### Usage
+### Basic Usage
 
 ```rs
 use code0_definition_reader::Reader;
 
-let reader = Reader::configure(
-    String::new(), // Path required for configure
-    false,         // should_break
-    Vec::new(),    // accepted_features
-    None           // accepted_versions
-);
+fn main() {
+    // Create a reader with default configuration
+    let reader = Reader::configure(
+        "./path/to/definitions".to_string(), // Path to definitions directory
+        false,                                // should_break: continue on errors
+        Vec::new(),                           // accepted_features: empty = all features
+        None                                  // accepted_version: None = all versions
+    );
 
-let features = reader.read_features("./path/to/definitions");
+    // Read all features
+    match reader.read_features() {
+        Ok(features) => {
+            for feature in features {
+                println!("Loaded feature: {}", feature.name);
+                println!("  - Data Types: {}", feature.data_types.len());
+                println!("  - Flow Types: {}", feature.flow_types.len());
+                println!("  - Functions: {}", feature.functions.len());
+            }
+        }
+        Err(err) => {
+            eprintln!("Failed to read features: {:?}", err);
+        }
+    }
+}
+```
 
-for feature in features {
-    let name = &feature.name; // name of the feature (e.g., http)
-    let data_types = &feature.data_types; // dataTypes of this feature
-    let flow_types = &feature.flow_types; // flowTypes of this feature
-    let functions = &feature.functions; // runtimeFunctions of this feature
-    
-    println!("Loaded feature: {}", name);
+### Advanced Usage - Filter Specific Features
+
+```rs
+use code0_definition_reader::Reader;
+
+fn main() {
+    let reader = Reader::configure(
+        "./definitions".to_string(),
+        false,
+        vec!["http".to_string(), "database".to_string()], // Only load http and database features
+        None
+    );
+
+    match reader.read_features() {
+        Ok(features) => {
+            for feature in features {
+                println!("Feature: {}", feature.name);
+                
+                // Access data types
+                for data_type in &feature.data_types {
+                    println!("  DataType: {}", data_type.identifier);
+                }
+                
+                // Access flow types
+                for flow_type in &feature.flow_types {
+                    println!("  FlowType: {}", flow_type.identifier);
+                }
+                
+                // Access runtime functions
+                for function in &feature.functions {
+                    println!("  Function: {}", function.runtime_name);
+                }
+            }
+        }
+        Err(err) => {
+            eprintln!("Failed to read features: {:?}", err);
+        }
+    }
 }
 ```
