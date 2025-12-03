@@ -6,13 +6,16 @@ import {ConstructedDataTypes, getID} from "../definition/mapper.js";
 
 function mapFlowType(flowType: TucanaFlowType, constructed: ConstructedDataTypes): FlowType | null {
     return  {
-        id: `gid://sagittarius/TypesFlowType/${getID(constructed)}`,
+        __typename: "FlowType",
+        id: `gid://sagittarius/FlowType/${getID(constructed)}`,
         identifier: flowType.identifier,
         inputType: getDataType(flowType.inputTypeIdentifier!!, constructed),
         returnType: getDataType(flowType.returnTypeIdentifier!!, constructed),
         flowTypeSettings: createFlowTypeSetting(flowType.settings, constructed),
         names: getTranslationConnection(flowType.name),
         descriptions: getTranslationConnection(flowType.description),
+        aliases: getTranslationConnection(flowType.alias),
+        displayMessages: getTranslationConnection(flowType.displayMessage),
         editable: flowType.editable
     }
 }
@@ -20,12 +23,13 @@ function mapFlowType(flowType: TucanaFlowType, constructed: ConstructedDataTypes
 function createFlowTypeSetting(settings: TucanaFlowTypeSetting[], constructed: ConstructedDataTypes): FlowTypeSetting[] {
     return settings.map(setting => {
         const flowSetting: FlowTypeSetting = {
+            __typename: "FlowTypeSetting",
             id: `gid://sagittarius/FlowTypeSetting/${getID(constructed)}`,
             names: getTranslationConnection(setting.name),
             descriptions: getTranslationConnection(setting.description),
             dataType: getDataType(setting.dataTypeIdentifier, constructed),
             identifier: setting.identifier,
-            unique: setting.unique
+            unique: setting.unique,
         }
 
         return flowSetting;
