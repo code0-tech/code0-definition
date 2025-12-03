@@ -8,20 +8,24 @@ import {ConstructedDataTypes, getID} from "../definition/mapper.js";
 import {getTranslationConnection} from "./translation.js";
 
 function mapFunction(func: TucanaFunction, constructed: ConstructedDataTypes): FunctionDefinition | null {
-     return {
+    return {
+        __typename: "FunctionDefinition",
         id: `gid://sagittarius/FunctionDefinition/${getID(constructed)}`,
         genericKeys: func.genericKeys,
         names: getTranslationConnection(func.name),
         descriptions: getTranslationConnection(func.description),
         documentations: getTranslationConnection(func.documentation),
         deprecationMessages: getTranslationConnection(func.deprecationMessage),
+        identifier: func.runtimeName,
+        displayMessages: getTranslationConnection(func.displayMessage),
+        aliases: getTranslationConnection(func.alias),
         throwsError: func.throwsError,
         returnType: getDataTypeIdentifier(func.returnTypeIdentifier, constructed),
         parameterDefinitions: getParameterDefinitionConnection(func.runtimeParameterDefinitions, constructed),
-         runtimeFunctionDefinition: {
-             id: `gid://sagittarius/RuntimeFunctionDefinition/${getID(constructed)}`,
-             identifier: func.runtimeName
-         }
+        runtimeFunctionDefinition: {
+            id: `gid://sagittarius/RuntimeFunctionDefinition/${getID(constructed)}`,
+            identifier: func.runtimeName
+        }
     }
 }
 
@@ -30,6 +34,7 @@ function getParameterDefinitionConnection(def: RuntimeParameterDefinition[], con
         count: def.length,
         nodes: def.map(node => {
             return {
+                __typename: "ParameterDefinition",
                 id: `gid://sagittarius/ParameterDefinition/${getID(constructed)}`,
                 names: getTranslationConnection(node.name),
                 identifier: node.runtimeName,

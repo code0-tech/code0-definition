@@ -17,28 +17,45 @@ import {getTranslationConnection} from "./translation.js";
 import {Value} from "@code0-tech/tucana/pb/shared.struct_pb.js";
 
 enum GenericCombinationStrategyType {
+    /** Represents a logical AND combination. */
     And = 'AND',
+    /** Represents a logical OR combination. */
     Or = 'OR'
 }
 
 enum DataTypeRulesVariant {
+    /** The rule checks if a key is present in the data type. */
     ContainsKey = 'CONTAINS_KEY',
+    /** The rule checks if a specific type is present in the data type. */
     ContainsType = 'CONTAINS_TYPE',
-    InputType = 'INPUT_TYPE',
+    /** The rule checks if the data type matches a specific input type. */
+    InputTypes = 'INPUT_TYPES',
+    /** The rule checks if an item is part of a collection in the data type. */
     ItemOfCollection = 'ITEM_OF_COLLECTION',
+    /** The rule checks if a number falls within a specified range. */
     NumberRange = 'NUMBER_RANGE',
+    /** The rule checks if the data type is a child of a specific parent type. */
     ParentType = 'PARENT_TYPE',
+    /** The rule checks if a string matches a specified regular expression. */
     Regex = 'REGEX',
+    /** The rule checks if the data type matches a specific return type. */
     ReturnType = 'RETURN_TYPE'
 }
 
 enum DataTypeVariant {
+    /** Represents an array */
     Array = 'ARRAY',
+    /** Represents an data type containing a data type */
     DataType = 'DATA_TYPE',
+    /** Represents a error */
     Error = 'ERROR',
+    /** Represents a node */
     Node = 'NODE',
+    /** Represents an object */
     Object = 'OBJECT',
+    /** Represents a primitive datatype */
     Primitive = 'PRIMITIVE',
+    /** Represents a type */
     Type = 'TYPE'
 }
 
@@ -51,9 +68,12 @@ function getDataType(identifier: string, constructedDataTypes: ConstructedDataTy
             return null
         }
         const constructed: DataType = {
+            __typename: "DataType",
             id: `gid://sagittarius/DataType/${getID(constructedDataTypes)}`,
             genericKeys: tucanaDataType.genericKeys,
             identifier: tucanaDataType.identifier,
+            aliases: getTranslationConnection(tucanaDataType.alias),
+            displayMessages: getTranslationConnection(tucanaDataType.displayMessage),
             name: getTranslationConnection(tucanaDataType.name),
             rules: createRules(tucanaDataType.rules, constructedDataTypes),
             variant: getDataTypeVariant(tucanaDataType.variant),
@@ -135,7 +155,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
                             }),
                         }
                         const rule : DataTypeRule = {
-                            variant: DataTypeRulesVariant.InputType,
+                            variant: DataTypeRulesVariant.InputTypes,
                             config: ruleConfig
                         }
                         return rule;
