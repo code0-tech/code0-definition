@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@code0-tech/sagittarius-graphql-types": "^0.0.0-c63274fdd34593b8aa24f9f977659fd3d6270150",
-    "@code0-tech/tucana": "^0.0.44",
+    "@code0-tech/tucana": "^0.0.47",
     "@protobuf-ts/runtime": "^2.11.1",
     "@protobuf-ts/runtime-rpc": "^2.11.1",
     "vite-plugin-dts": "^4.5.4"
