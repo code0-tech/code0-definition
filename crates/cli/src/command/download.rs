@@ -79,7 +79,7 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
     let mut result = None;
     let mut succeeded = false;
 
-    while succeeded {
+    while !succeeded {
         let release_request = download_release(&client, url.clone()).await;
         if release_request.status().is_success() {
             succeeded = true;
@@ -131,7 +131,7 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
     let mut asset_result = None;
     let mut asset_success = false;
 
-    while asset_success {
+    while !asset_success {
         let response = match client
             .get(&asset.browser_download_url)
             .header(USER_AGENT, "code0-definition-cli")
