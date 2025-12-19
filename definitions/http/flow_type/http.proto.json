@@ -36,24 +36,6 @@
 					"content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
 				}
 			]
-		},
-		{
-			"identifier": "HTTP_HOST",
-			"unique": false,
-			"dataTypeIdentifier": "TEXT",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Host"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Specifies the target host name or IP address."
-				}
-			]
 		}
 	],
 	"inputTypeIdentifier": "HTTP_ADAPTER_INPUT",
