@@ -48,6 +48,7 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
 }
 
 async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
+    let max_retries = 3;
     let client = reqwest::Client::new();
 
     let url = match tag {
@@ -74,7 +75,6 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
         }
     }
 
-    let max_retires = 3;
     let mut retries = 0;
     let mut result = None;
     let mut succeeded = false;
@@ -85,15 +85,15 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
             succeeded = true;
             result = Some(release_request);
         } else {
-            if retries >= max_retires {
-                panic!("Reached max retires while downloading release.")
+            if retries >= max_retries {
+                panic!("Reached max retries while downloading release.")
             }
 
             retries += 1;
             error!(
                 "Retrying ({}/{}) download. Failed with status code: {:?}",
                 retries,
-                max_retires,
+                max_retries,
                 release_request.status()
             );
         }
@@ -127,7 +127,7 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
         }
     };
 
-    let mut asset_retires = 0;
+    let mut asset_retries = 0;
     let mut asset_result = None;
     let mut asset_success = false;
 
@@ -148,15 +148,15 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
             asset_success = true;
             asset_result = Some(response);
         } else {
-            if asset_retires >= max_retires {
-                panic!("Reached max retires while downloading asset!");
+            if asset_retries >= max_retries {
+                panic!("Reached max retries while downloading asset!");
             }
 
-            asset_retires += 1;
+            asset_retries += 1;
             error!(
                 "Retrying ({}/{}) asset download. Failed with status code: {:?}",
-                asset_retires,
-                max_retires,
+                asset_retries,
+                max_retries,
                 response.status()
             );
         }
