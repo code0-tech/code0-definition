@@ -1,6 +1,8 @@
 use crate::formatter::{error_without_trace, info, success};
 use bytes::Bytes;
+use log::error;
 use reqwest::header::{ACCEPT, USER_AGENT};
+use reqwest::{Client, Response};
 use serde::Deserialize;
 use std::fs;
 use std::fs::File;
@@ -17,7 +19,6 @@ struct Release {
 struct Asset {
     name: String,
     browser_download_url: String,
-    size: u64,
 }
 
 pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>) {
@@ -26,13 +27,7 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
 
     // Download the definitions
     info("Starting download process...".to_string());
-    let bytes = match download_definitions_as_bytes(tag).await {
-        Some(bytes) => bytes,
-        None => {
-            error_without_trace(String::from("Download failed."));
-            return;
-        }
-    };
+    let bytes = download_definitions_as_bytes(tag).await;
 
     // Extract the zip file
     convert_bytes_to_folder(bytes, zip_path).await;
@@ -52,7 +47,7 @@ pub async fn handle_download(tag: Option<String>, features: Option<Vec<String>>)
     ));
 }
 
-async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Bytes> {
+async fn download_definitions_as_bytes(tag: Option<String>) -> Bytes {
     let client = reqwest::Client::new();
 
     let url = match tag {
@@ -66,23 +61,47 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
         }
     };
 
-    let release_request = match client
-        .get(url)
-        .header(USER_AGENT, "code0-definition-cli")
-        .header(ACCEPT, "application/vnd.github+json")
-        .send()
-        .await
-    {
-        Ok(response) => {
-            if response.status().is_success() {
-                response
-            } else {
-                return None;
+    async fn download_release(client: &Client, url: String) -> Response {
+        match client
+            .get(url)
+            .header(USER_AGENT, "code0-definition-cli")
+            .header(ACCEPT, "application/vnd.github+json")
+            .send()
+            .await
+        {
+            Ok(r) => r,
+            Err(e) => panic!("Request failed: {:?}", e),
+        }
+    }
+
+    let max_retires = 3;
+    let mut retries = 0;
+    let mut result = None;
+    let mut succeeded = false;
+
+    while succeeded {
+        let release_request = download_release(&client, url.clone()).await;
+        if release_request.status().is_success() {
+            succeeded = true;
+            result = Some(release_request);
+        } else {
+            if retries >= max_retires {
+                panic!("Reached max retires while downloading release.")
             }
+
+            retries += 1;
+            error!(
+                "Retrying ({}/{}) download. Failed with status code: {:?}",
+                retries,
+                max_retires,
+                release_request.status()
+            );
         }
-        Err(e) => {
-            panic!("Request failed: {}", e);
-        }
+    }
+
+    let release_request = match result {
+        Some(r) => r,
+        None => panic!("Failed to download release"),
     };
 
     let release: Release = match release_request.json::<Release>().await {
@@ -91,7 +110,7 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
             release
         }
         Err(e) => {
-            panic!("Request failed: {}", e);
+            panic!("Request failed: {:?}", e);
         }
     };
 
@@ -108,34 +127,53 @@ async fn download_definitions_as_bytes(tag: Option<String>) -> Option<bytes::Byt
         }
     };
 
-    match client
-        .get(&asset.browser_download_url)
-        .header(USER_AGENT, "code0-definition-cli")
-        .send()
-        .await
-    {
-        Ok(response) => {
-            if response.status().is_success() {
-                match response.bytes().await {
-                    Ok(bytes) => {
-                        info("Download completed successfully".to_string());
-                        Some(bytes)
-                    }
-                    Err(e) => {
-                        error_without_trace(format!("Failed to read download data: {e}"));
-                        None
-                    }
-                }
-            } else {
-                error_without_trace(format!(
-                    "Download failed with status: {}",
-                    response.status()
-                ));
-                None
+    let mut asset_retires = 0;
+    let mut asset_result = None;
+    let mut asset_success = false;
+
+    while asset_success {
+        let response = match client
+            .get(&asset.browser_download_url)
+            .header(USER_AGENT, "code0-definition-cli")
+            .send()
+            .await
+        {
+            Ok(response) => response,
+            Err(e) => {
+                panic!("Download request failed: {:?}", e);
             }
+        };
+
+        if response.status().is_success() {
+            asset_success = true;
+            asset_result = Some(response);
+        } else {
+            if asset_retires >= max_retires {
+                panic!("Reached max retires while downloading asset!");
+            }
+
+            asset_retires += 1;
+            error!(
+                "Retrying ({}/{}) asset download. Failed with status code: {:?}",
+                asset_retires,
+                max_retires,
+                response.status()
+            );
+        }
+    }
+
+    let response = match asset_result {
+        Some(r) => r,
+        None => panic!("Failed to download asset!"),
+    };
+
+    match response.bytes().await {
+        Ok(bytes) => {
+            info("Download completed successfully".to_string());
+            bytes
         }
         Err(e) => {
-            panic!("Download request failed: {e}");
+            panic!("Failed to read downloaded data: {:?}", e);
         }
     }
 }
@@ -148,14 +186,14 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
     let zip_file = match File::open(zip_path) {
         Ok(file) => file,
         Err(e) => {
-            panic!("Failed to open zip file: {e}");
+            panic!("Failed to open zip file: {:?}", e);
         }
     };
 
     let mut archive = match ZipArchive::new(zip_file) {
         Ok(archive) => archive,
         Err(e) => {
-            panic!("Failed to read zip archive: {e}");
+            panic!("Failed to read zip archive: {:?}", e);
         }
     };
 
@@ -166,7 +204,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
         let mut file = match archive.by_index(i) {
             Ok(file) => file,
             Err(e) => {
-                panic!("Failed to read file at index {i}: {e}");
+                panic!("Failed to read file at index {i}: {:?}", e);
             }
         };
 
@@ -177,7 +215,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
 
         if file.name().ends_with('/') {
             if let Err(e) = fs::create_dir_all(&out_path) {
-                panic!("Failed to create directory {}: {}", out_path.display(), e);
+                panic!("Failed to create directory {}: {:?}", out_path.display(), e);
             }
         } else {
             if let Some(p) = out_path.parent()
@@ -185,7 +223,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
                 && let Err(e) = fs::create_dir_all(p)
             {
                 panic!(
-                    "Warning: Failed to create parent directory {}: {}",
+                    "Warning: Failed to create parent directory {}: {:?}",
                     p.display(),
                     e
                 );
@@ -194,11 +232,11 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
             match File::create(&out_path) {
                 Ok(mut outfile) => {
                     if let Err(e) = std::io::copy(&mut file, &mut outfile) {
-                        panic!("Warning: Failed to extract {}: {}", out_path.display(), e);
+                        panic!("Warning: Failed to extract {}: {:?}", out_path.display(), e);
                     }
                 }
                 Err(e) => {
-                    panic!("Failed to create file {}: {}", out_path.display(), e);
+                    panic!("Failed to create file {}: {:?}", out_path.display(), e);
                 }
             }
         }
@@ -209,40 +247,41 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
 
     match fs::remove_file(zip_path) {
         Ok(_) => info("Temporary zip file removed".to_string()),
-        Err(e) => error_without_trace(format!("Warning: Failed to remove temporary zip file: {e}")),
+        Err(e) => error_without_trace(format!(
+            "Warning: Failed to remove temporary zip file: {:?}",
+            e
+        )),
     }
 }
 
 async fn filter_features(selected_features: Vec<String>) {
     let definitions_path = "./definitions";
 
-    match fs::read_dir(definitions_path) {
-        Ok(entries) => {
-            for entry in entries {
-                let directory = match entry {
-                    Ok(directory) => directory,
-                    Err(e) => {
-                        panic!(
-                            "{}",
-                            format!("Warning: Failed to read directory entry: {e}")
-                        );
-                    }
-                };
+    let entries = match fs::read_dir(definitions_path) {
+        Ok(entries) => entries,
+        Err(e) => {
+            error_without_trace(format!("Failed to read definitions directory: {:?}", e));
+            return;
+        }
+    };
 
-                let name = directory.file_name().to_str().unwrap_or("").to_string();
+    for entry in entries {
+        let directory = match entry {
+            Ok(directory) => directory,
+            Err(e) => {
+                panic!("Warning: Failed to read directory entry {:?}", e);
+            }
+        };
 
-                if !selected_features.contains(&name) {
-                    match fs::remove_dir_all(directory.path()) {
-                        Ok(_) => {}
-                        Err(e) => {
-                            error_without_trace(format!("Warning: Failed to remove directory: {e}"))
-                        }
-                    }
+        let name = directory.file_name().to_str().unwrap_or("").to_string();
+
+        if !selected_features.contains(&name) {
+            match fs::remove_dir_all(directory.path()) {
+                Ok(_) => {}
+                Err(e) => {
+                    error_without_trace(format!("Warning: Failed to remove directory: {:?}", e))
                 }
             }
-        }
-        Err(e) => {
-            error_without_trace(format!("Failed to read definitions directory: {e}"));
         }
     }
 }
