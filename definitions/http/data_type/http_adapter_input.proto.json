@@ -7,18 +7,18 @@
       "content": "HTTP Adapter Input"
     }
   ],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "http;adapter;input"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "HTTP Adapter Input"
-		}
-	],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;adapter;input"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP Adapter Input"
+    }
+  ],
   "rules": [
     {
       "containsKey": {
@@ -32,7 +32,7 @@
       "containsKey": {
         "key": "headers",
         "dataTypeIdentifier": {
-          "dataTypeIdentifier": "HTTP_HEADER_MAP"
+          "dataTypeIdentifier": "HTTP_HEADER_INPUT"
         }
       }
     },
