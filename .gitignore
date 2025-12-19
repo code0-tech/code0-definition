@@ -7,3 +7,4 @@ reader/ts/build
 bundles
 reader/**/*.js
 *.d.ts
+**/dist
