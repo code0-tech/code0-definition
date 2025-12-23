@@ -1,5 +1,5 @@
 {
-  "runtimeName": "http::control::respond",
+  "runtimeName": "rest::control::respond",
   "runtimeParameterDefinitions": [
     {
       "dataTypeIdentifier": {

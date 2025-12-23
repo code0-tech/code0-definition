@@ -1,22 +1,22 @@
 {
   "variant": "OBJECT",
-  "identifier": "HTTP_ADAPTER_INPUT",
+  "identifier": "REST_ADAPTER_INPUT",
   "name": [
     {
       "code": "en-US",
-      "content": "HTTP Adapter Input"
+      "content": "Rest Adapter Input"
     }
   ],
   "alias": [
     {
       "code": "en-US",
-      "content": "http;adapter;input"
+      "content": "http;rest;adapter;input"
     }
   ],
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "HTTP Adapter Input"
+      "content": "Rest Adapter Input"
     }
   ],
   "rules": [
@@ -32,7 +32,7 @@
       "containsKey": {
         "key": "headers",
         "dataTypeIdentifier": {
-          "dataTypeIdentifier": "HTTP_HEADER_INPUT"
+          "dataTypeIdentifier": "REST_HEADER_INPUT"
         }
       }
     },

@@ -1,5 +1,5 @@
 {
-	"identifier": "HTTP",
+	"identifier": "REST",
 	"settings": [
 		{
 			"identifier": "HTTP_URL",
@@ -38,7 +38,7 @@
 			]
 		}
 	],
-	"inputTypeIdentifier": "HTTP_ADAPTER_INPUT",
+	"inputTypeIdentifier": "REST_ADAPTER_INPUT",
 	"returnTypeIdentifier": "HTTP_RESPONSE",
 	"editable": false,
 	"name": [
