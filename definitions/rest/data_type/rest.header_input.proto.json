@@ -1,22 +1,22 @@
 {
   "variant": "OBJECT",
-  "identifier": "HTTP_HEADER_INPUT",
+  "identifier": "REST_HEADER_INPUT",
   "name": [
     {
       "code": "en-US",
-      "content": "HTTP Headers"
+      "content": "Headers"
     }
   ],
   "alias": [
     {
       "code": "en-US",
-      "content": "http;header;entry;input"
+      "content": "http;rest;header;entry;input"
     }
   ],
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "HTTP Headers"
+      "content": "Headers"
     }
   ],
   "rules": [],
