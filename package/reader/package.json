@@ -28,7 +28,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@code0-tech/tucana": "^0.0.49",
+    "@code0-tech/tucana": "^0.0.50",
     "@protobuf-ts/runtime": "^2.11.1",
     "@protobuf-ts/runtime-rpc": "^2.11.1",
     "vite-plugin-dts": "^4.5.4"
