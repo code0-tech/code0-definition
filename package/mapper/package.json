@@ -1,0 +1,38 @@
+{
+  "name": "@code0-tech/definition-mapper",
+  "version": "0.0.0",
+  "description": "Will map Code0-Definitions to its correspondent Sagittarius-Types",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "start": "node ./dist/index.js",
+    "build:and:run": "vite build && node ./dist/index.js"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code0-tech/code0-definition"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@code0-tech/sagittarius-graphql-types": "0.0.0-a395eea54741fc1bb9649341ff6f082cc1c3e67e",
+    "@code0-tech/tucana": "0.0.50",
+    "@protobuf-ts/runtime": "^2.11.1",
+    "@protobuf-ts/runtime-rpc": "^2.11.1",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
