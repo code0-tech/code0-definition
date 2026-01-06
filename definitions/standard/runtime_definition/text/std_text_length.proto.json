@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::text::length",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text whose length will be calculated."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Input string to determine the number of characters it contains."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Length"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the number of characters in the given text."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Computes the length of the input string in terms of characters."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "length;size;characters;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Length of ${value}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::length",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Input text to determine the number of characters it contains."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Length"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns the number of characters in the given text."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "length;size;characters;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Length of ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

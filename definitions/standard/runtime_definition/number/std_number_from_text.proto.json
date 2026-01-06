@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::from_text",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "text",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to convert to a number."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Parses the input text and attempts to convert it to a numeric value."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Number from Text"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Converts a text string into a number if possible."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Attempts to parse the provided text input and return its numeric equivalent."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "from text;parse;convert;number;math;std;from;text"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Convert ${text} to number"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::from_text",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "text",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The text string to convert to a number."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Number from Text"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Attempts to parse the provided text input and return its numeric equivalent."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "from text;parse;convert;number;math;std;from;text"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Convert ${text} to Number"
+		}
+	],
+	"deprecationMessage": []
 }

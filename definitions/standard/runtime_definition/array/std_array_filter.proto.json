@@ -1,132 +1,117 @@
 {
-  "runtimeName": "std::list::filter",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list to be filtered."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The original list from which elements will be selected based on the predicate."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "PREDICATE",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "predicate",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Filter Predicate"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A predicate function to test each element for inclusion in the result."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A function that takes an element of the list and returns a boolean indicating whether the element should be included in the output list."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "genericKey": "R"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Filter List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Filters elements of a list based on a predicate."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a new list containing only the elements from the input list for which the predicate returns true."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "filter;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Filter out elements in ${list} not matching ${predicate}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::filter",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list to be filtered."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "PREDICATE",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "predicate",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Filter Predicate"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A function that takes an element of the list and returns a boolean indicating whether the element should be included in the output list."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"genericKey": "R"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Filter List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a new list containing only the elements from the input list for which the predicate returns true."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "filter;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Filter elements in ${list} matching ${predicate}"
+		}
+	],
+	"deprecationMessage": []
 }

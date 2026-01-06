@@ -1,118 +1,98 @@
 {
-  "runtimeName": "std::object::set",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "OBJECT"
-      },
-      "runtimeName": "object",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Object"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The object in which the key-value pair will be set."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The original object that will be modified with the specified key-value pair."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "key",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Key"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The key to set or update in the object."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The property name under which the value will be stored in the object."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericKey": "I"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The value to set for the specified key."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The value to assign to the object property identified by the key."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "OBJECT"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "I"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Set Object Key"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Sets or updates a key-value pair in the given object."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a new object with the specified key set to the given value."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "set;object;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Will set ${key} to ${value} inside of ${object}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::object::set",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "OBJECT"
+			},
+			"runtimeName": "object",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Object"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The original object that will be modified with the specified key-value pair."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "key",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Key"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The property name under which the value will be stored in the object."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericKey": "I"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The value to assign to the object property identified by the key."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "OBJECT"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"I"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Set Object Key"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a new object with the specified key set to the given value."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "set;object;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Set ${key} to ${value} of ${object}"
+		}
+	],
+	"deprecationMessage": []
 }

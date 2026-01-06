@@ -1,104 +1,89 @@
 {
-  "runtimeName": "std::list::join",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "dataTypeIdentifier": "TEXT"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A list of text elements to be filtered."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Input list containing text elements for filtering."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "join_text",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Join Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Text to join the filtered elements."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The delimiter or text that will be used to join the filtered list elements into a single string."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "TEXT"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Join Text List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Filters the input text list and joins the filtered elements into a single string separated by the specified join text."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Applies a filter operation on the input text list and returns a single concatenated string of filtered elements joined by the provided join text."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "join;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Joins ${list} using '${join_text}'"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::join",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"dataTypeIdentifier": "TEXT"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "List of Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A list of text elements to combined into a single word."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "join_text",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Join Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The text that will be used to join the list elements into a single string."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "TEXT"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Join Text List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a single concatenated string of text joined by the provided join text."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "join;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Joins ${list} using '${join_text}'"
+		}
+	],
+	"deprecationMessage": []
 }

@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::text::capitalize",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to capitalize."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Capitalizes the first letter of the input text string."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "TEXT"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Capitalize"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Converts the first character of the text to uppercase and leaves the rest unchanged."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a new text string with the first letter capitalized."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "capitalize;title case;upper first;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Capitalize ${value}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::capitalize",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Capitalizes the first letter of the input text."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "TEXT"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Capitalize"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Converts the first character of the text to uppercase and leaves the rest unchanged."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "capitalize;title case;upper first;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Capitalize ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

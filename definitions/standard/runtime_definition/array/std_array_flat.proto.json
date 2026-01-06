@@ -1,107 +1,97 @@
 {
-  "runtimeName": "std::list::flat",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericType": {
-                    "dataTypeIdentifier": "LIST",
-                    "genericMappers": [
-                      {
-                        "source": [
-                          {
-                            "genericKey": "R"
-                          }
-                        ],
-                        "target": "T",
-                        "genericCombinations": []
-                      }
-                    ]
-                  }
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Nested List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The nested list to be flattened."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A list containing sub-lists that will be flattened into a single-level list."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "genericKey": "R"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Flatten List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Flattens a nested list into a single-level list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a new list by concatenating all sub-lists of the input nested list into one flat list."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "flat;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Flatten ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::flat",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericType": {
+										"dataTypeIdentifier": "LIST",
+										"genericMappers": [
+											{
+												"source": [
+													{
+														"genericKey": "R"
+													}
+												],
+												"target": "T",
+												"genericCombinations": []
+											}
+										]
+									}
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Nested List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A list containing sub-lists that will be flattened into a single-level list."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"genericKey": "R"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Flatten List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Flattens a nested list into a single-level list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "flat;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Flatten ${list}"
+		}
+	],
+	"deprecationMessage": []
 }

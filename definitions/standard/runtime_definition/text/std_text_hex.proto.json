@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::text::hex",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to be converted to its hexadecimal representation."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This function converts each character of the input text into its corresponding hexadecimal code, returning the concatenated hex string."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "TEXT"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Text to Hexadecimal"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Converts a text string into a hexadecimal representation."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a string containing the hexadecimal values corresponding to each character of the input text."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "hex;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${value} to Hexadecimal"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::hex",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The text to be converted to its hexadecimal representation."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "TEXT"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Text to Hexadecimal"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a text containing the hexadecimal values corresponding to each character of the input text."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "hex;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${value} to Hexadecimal"
+		}
+	],
+	"deprecationMessage": []
 }

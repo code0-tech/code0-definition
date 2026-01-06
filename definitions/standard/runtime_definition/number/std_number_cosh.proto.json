@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::cosh",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number for which to calculate the hyperbolic cosine."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Computes the hyperbolic cosine of the given number."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Hyperbolic Cosine"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the hyperbolic cosine of a number."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Calculates the hyperbolic cosine (cosh) of the input value."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "cosh;hyperbolic cosine;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "cosh(${value})"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::cosh",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Number Input"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The number for which to calculate the hyperbolic cosine."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Hyperbolic Cosine"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Calculates the hyperbolic cosine (cosh) of the input value."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "cosh;hyperbolic cosine;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "hyperbolic Cosine of ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

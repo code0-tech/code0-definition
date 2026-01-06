@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::number::is_less",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "first",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "First Number"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number to compare with the second number."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This is the number that will be evaluated to determine if it is less than the second number."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "second",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Second Number"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number to compare against the first number."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This is the number that the first number will be compared to."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Is Less"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Checks whether the first number is less than the second number."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns true if the first numeric input is less than the second; otherwise, returns false."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "less;smaller;fewer;number;math;std;is"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${first} < ${second}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::is_less",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "first",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "First Number"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "This is the number that will be evaluated to determine if it is less than the second number."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "second",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Second Number"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "This is the number that the first number will be compared to."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Is Less"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns true if the first numeric input is less than the second; otherwise, returns false."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "less;smaller;fewer;number;math;std;is"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${first} Less then ${second}"
+		}
+	],
+	"deprecationMessage": []
 }

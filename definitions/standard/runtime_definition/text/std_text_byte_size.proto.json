@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::text::byte_size",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text whose byte size is to be calculated."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Calculates the size in bytes of the given text, typically its UTF-8 encoding length."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Byte Size"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the number of bytes required to encode the given text."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Computes the size in bytes of the provided text string, typically by counting UTF-8 encoded bytes."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "byte_size;text;string;std;byte;size"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Byte-Size of ${value}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::byte_size",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The text whose byte size is to be calculated."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Byte Size"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Computes the size in bytes of the provided text."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "byte_size;text;string;std;byte;size"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Byte-Size of ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

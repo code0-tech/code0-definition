@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::boolean::as_number",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "BOOLEAN"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The boolean value to convert."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Converts a boolean value to a number."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "As Number"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Will convert the boolean to a number."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Converts a boolean value to a number."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "to number;numeric;boolean;logic;std;as;number"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Convert ${value} to number"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::boolean::as_number",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "BOOLEAN"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Converts a boolean to a number."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Boolean as Number"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Will convert the boolean to a number."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "to number;numeric;boolean;logic;std;as;number"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Convert ${value} to number"
+		}
+	],
+	"deprecationMessage": []
 }

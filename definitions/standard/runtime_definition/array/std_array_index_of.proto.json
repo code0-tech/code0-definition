@@ -1,106 +1,91 @@
 {
-  "runtimeName": "std::list::index_of",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list to search within."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A list of elements in which the specified item will be searched for to determine its index."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericKey": "R"
-      },
-      "runtimeName": "item",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Item"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The item whose index is to be found in the list."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The item for which the function searches in the list and returns the index of its first occurrence."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Index of Item"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Finds the index of the first occurrence of the specified item in the list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns the zero-based index of the first occurrence of a given item in the specified list. If the item is not found, it typically returns -1."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "index_of;array;list;collection;std;index;of"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Get index of ${item} in ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::index_of",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A list of elements in which the specified item will be searched for to determine its index."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericKey": "R"
+			},
+			"runtimeName": "item",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Item"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The item for which the function searches in the list and returns the index of its first occurrence."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Index of Item"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns the zero-based index of the first occurrence of a given item in the specified list. If the item is not found, it typically returns -1."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "index_of;array;list;collection;std;index;of"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Get Index of ${item} in ${list}"
+		}
+	],
+	"deprecationMessage": []
 }

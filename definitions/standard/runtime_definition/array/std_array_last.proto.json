@@ -1,81 +1,71 @@
 {
-  "runtimeName": "std::list::last",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list from which to retrieve the last element."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Returns the last element of the provided list. If the list is empty, behavior depends on the implementation."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericKey": "R"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Last Element of List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Retrieves the last element from the list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "This runtime returns the last element in the given list, if any."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "last;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Get last element of ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::last",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list from which to retrieve the last element."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericKey": "R"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Last Element of List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Retrieves the last element from the list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "last;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Get Last Element of ${list}"
+		}
+	],
+	"deprecationMessage": []
 }

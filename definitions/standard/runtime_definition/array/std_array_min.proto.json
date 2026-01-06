@@ -1,81 +1,71 @@
 {
-  "runtimeName": "std::list::min",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Number List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A list of numbers to find the minimum value from."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Returns the smallest number in the given list of numbers."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Find Minimum Number"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Finds the minimum value in a numeric list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns the smallest number contained in the provided list."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "min;minimum;smallest;least;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Minimum of ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::min",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Number List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A list of numbers to find the minimum value from."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Find Minimum Number"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Finds the minimum value in a numeric list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "min;minimum;smallest;least;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Minimum of ${list}"
+		}
+	],
+	"deprecationMessage": []
 }
