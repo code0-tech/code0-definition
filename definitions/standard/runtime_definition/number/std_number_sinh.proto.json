@@ -49,7 +49,7 @@
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "Hyperbloic Sine of${value}"
+			"content": "Hyperbolic Sine of${value}"
 		}
 	],
 	"deprecationMessage": []

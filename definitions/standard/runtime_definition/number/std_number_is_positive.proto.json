@@ -49,7 +49,7 @@
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "${value} Is Greater then 0"
+			"content": "${value} Is Greater than 0"
 		}
 	],
 	"deprecationMessage": []

@@ -62,7 +62,7 @@
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "Turns ${value} into a rist of Characters"
+			"content": "Turns ${value} into a List of Characters"
 		}
 	],
 	"deprecationMessage": []

@@ -69,7 +69,7 @@
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "${first} Less then ${second}"
+			"content": "${first} Less than ${second}"
 		}
 	],
 	"deprecationMessage": []

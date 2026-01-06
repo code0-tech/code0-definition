@@ -16,7 +16,7 @@
 			"description": [
 				{
 					"code": "en-US",
-					"content": "The base text stthat will have another text appended to its end."
+					"content": "The base text that will have another text appended to its end."
 				}
 			],
 			"documentation": []
