@@ -1,12 +1,12 @@
 {
-  "variant": "NODE",
-  "identifier": "CONSUMER",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Consumer"
-    }
-  ],
+	"variant": "NODE",
+	"identifier": "CONSUMER",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Consumer"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,21 +19,21 @@
 			"content": "Use ${T}"
 		}
 	],
-	  "rules": [
-    {
-      "inputTypes": {
-        "inputTypes": [
-          {
-            "dataTypeIdentifier": {
-              "genericKey": "T"
-            },
-            "inputIdentifier": "consumer"
-          }
-        ]
-      }
-    }
-  ],
-  "genericKeys": [
-    "T"
-  ]
+	"rules": [
+		{
+			"inputTypes": {
+				"inputTypes": [
+					{
+						"dataTypeIdentifier": {
+							"genericKey": "T"
+						},
+						"inputIdentifier": "consumer"
+					}
+				]
+			}
+		}
+	],
+	"genericKeys": [
+		"T"
+	]
 }

@@ -1,12 +1,12 @@
 {
-  "variant": "NODE",
-  "identifier": "PREDICATE",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Predicate"
-    }
-  ],
+	"variant": "NODE",
+	"identifier": "PREDICATE",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Predicate"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,28 +19,28 @@
 			"content": "Predicate of ${T}"
 		}
 	],
-	  "rules": [
-    {
-      "returnType": {
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "BOOLEAN"
-        }
-      }
-    },
-    {
-      "inputTypes": {
-        "inputTypes": [
-          {
-            "dataTypeIdentifier": {
-              "genericKey": "T"
-            },
-            "inputIdentifier": "predicate"
-          }
-        ]
-      }
-    }
-  ],
-  "genericKeys": [
-    "T"
-  ]
+	"rules": [
+		{
+			"returnType": {
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "BOOLEAN"
+				}
+			}
+		},
+		{
+			"inputTypes": {
+				"inputTypes": [
+					{
+						"dataTypeIdentifier": {
+							"genericKey": "T"
+						},
+						"inputIdentifier": "predicate"
+					}
+				]
+			}
+		}
+	],
+	"genericKeys": [
+		"T"
+	]
 }

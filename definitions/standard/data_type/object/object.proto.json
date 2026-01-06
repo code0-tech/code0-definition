@@ -1,12 +1,12 @@
 {
-  "variant": "OBJECT",
-  "identifier": "OBJECT",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Object"
-    }
-  ],
+	"variant": "OBJECT",
+	"identifier": "OBJECT",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Object"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,6 +19,6 @@
 			"content": "Object"
 		}
 	],
-	  "rules": [],
-  "genericKeys": []
+	"rules": [],
+	"genericKeys": []
 }
