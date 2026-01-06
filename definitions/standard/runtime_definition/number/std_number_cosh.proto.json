@@ -49,7 +49,7 @@
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "hyperbolic Cosine of ${value}"
+			"content": "Hyperbolic Cosine of ${value}"
 		}
 	],
 	"deprecationMessage": []
