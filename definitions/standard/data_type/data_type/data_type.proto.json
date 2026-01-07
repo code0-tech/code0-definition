@@ -1,0 +1,32 @@
+{
+	"variant": "DATATYPE",
+	"identifier": "DATA_TYPE",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "DataType"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "type;struct;data;data_type;datatype"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "DataType"
+		}
+	],
+	"rules": [
+		{
+			"parentType": {
+				"parentType": {
+					"genericKey": "T"
+				}
+			}
+		}
+	],
+	"genericKeys": ["T"]
+}
