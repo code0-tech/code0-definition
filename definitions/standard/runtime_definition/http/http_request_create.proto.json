@@ -114,5 +114,6 @@
 			"content": "Create Http-Request with Method: ${http_method}, Headers: ${headers}, Url: ${url} and Payload: ${payload}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:world-www"
 }

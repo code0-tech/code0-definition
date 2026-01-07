@@ -52,5 +52,6 @@
 			"content": "Hyperbolic Cosine of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

@@ -52,5 +52,6 @@
 			"content": "Negate ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:toggle-left"
 }

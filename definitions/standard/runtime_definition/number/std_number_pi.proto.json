@@ -31,5 +31,6 @@
 			"content": "Pi"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

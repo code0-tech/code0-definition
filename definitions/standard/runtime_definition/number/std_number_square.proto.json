@@ -52,5 +52,6 @@
 			"content": "${value} Squared"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

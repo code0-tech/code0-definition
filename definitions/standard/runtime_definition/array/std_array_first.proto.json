@@ -67,5 +67,6 @@
 			"content": "Get First Element in ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

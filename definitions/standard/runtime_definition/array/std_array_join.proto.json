@@ -85,5 +85,6 @@
 			"content": "Joins ${list} using '${join_text}'"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

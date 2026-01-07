@@ -72,5 +72,6 @@
 			"content": "${first} Minus ${second}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

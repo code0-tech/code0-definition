@@ -72,5 +72,6 @@
 			"content": "Get Character of ${value} at ${index}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

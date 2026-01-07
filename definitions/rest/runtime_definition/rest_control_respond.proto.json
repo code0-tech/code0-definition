@@ -50,5 +50,6 @@
 		}
 	],
 	"throwsError": false,
-	"genericKeys": []
+	"genericKeys": [],
+	"displayIcon": "tabler:cube-sent"
 }

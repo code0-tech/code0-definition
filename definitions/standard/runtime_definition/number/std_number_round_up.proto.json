@@ -72,5 +72,6 @@
 			"content": "Round Upwards ${value} with ${decimals} Decimal Places"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

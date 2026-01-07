@@ -65,5 +65,6 @@
 			"content": "${value} to Text"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

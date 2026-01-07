@@ -72,5 +72,6 @@
 			"content": "Encode ${value} to ${encoding}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

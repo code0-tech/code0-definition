@@ -113,5 +113,6 @@
 			"content": "Filter elements in ${list} matching ${predicate}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:arrow-iteration"
 }

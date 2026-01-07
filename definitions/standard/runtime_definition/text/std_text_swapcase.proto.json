@@ -52,5 +52,6 @@
 			"content": "Swapcase of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

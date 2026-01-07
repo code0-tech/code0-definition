@@ -72,5 +72,6 @@
 			"content": "Random Number Between ${min} and ${max}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

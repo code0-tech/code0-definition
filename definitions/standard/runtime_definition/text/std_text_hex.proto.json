@@ -52,5 +52,6 @@
 			"content": "${value} to Hexadecimal"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

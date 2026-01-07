@@ -72,5 +72,6 @@
 			"content": "Logarithm with Base ${base} of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

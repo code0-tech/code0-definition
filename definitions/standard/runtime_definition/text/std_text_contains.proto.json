@@ -72,5 +72,6 @@
 			"content": "Check if ${value} contains ${substring}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

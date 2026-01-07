@@ -52,5 +52,6 @@
 			"content": "Convert ${value} to text"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:toggle-left"
 }

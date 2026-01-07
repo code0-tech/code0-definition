@@ -52,5 +52,6 @@
 			"content": "Size of ${object}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:cube"
 }

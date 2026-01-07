@@ -70,5 +70,6 @@
 			"content": "If ${condition} is True do ${runnable}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:arrow-ramp-right-2"
 }

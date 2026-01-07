@@ -87,5 +87,6 @@
 			"content": "Get element at ${index} of ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

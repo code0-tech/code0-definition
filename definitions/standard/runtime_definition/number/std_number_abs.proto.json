@@ -52,5 +52,6 @@
 			"content": "Absolute Value of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

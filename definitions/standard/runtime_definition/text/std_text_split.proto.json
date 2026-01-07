@@ -85,5 +85,6 @@
 			"content": "Splits ${value} on '${delimiter}'"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

@@ -100,5 +100,6 @@
 			"content": "Last Element of ${list} matching ${predicate}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:arrow-iteration"
 }

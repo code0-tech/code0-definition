@@ -97,5 +97,6 @@
 			"content": "Insert ${value} at ${position} into ${text}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

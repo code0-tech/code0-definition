@@ -52,5 +52,6 @@
 			"content": "Convert ${text} to Number"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

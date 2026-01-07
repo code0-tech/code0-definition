@@ -31,5 +31,6 @@
 			"content": "Euler's Number"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

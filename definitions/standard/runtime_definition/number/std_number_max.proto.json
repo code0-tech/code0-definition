@@ -72,5 +72,6 @@
 			"content": "Maximum of ${first} and ${second}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

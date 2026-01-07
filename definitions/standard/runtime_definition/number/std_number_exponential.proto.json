@@ -72,5 +72,6 @@
 			"content": "${base} to the Exponent of ${exponent}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

@@ -113,5 +113,6 @@
 			"content": "Sort ${list} using ${comparator}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:arrow-iteration"
 }

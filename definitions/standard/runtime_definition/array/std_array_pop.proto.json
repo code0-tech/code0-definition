@@ -67,5 +67,6 @@
 			"content": "Remove Last Item of ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

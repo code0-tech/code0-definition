@@ -92,5 +92,6 @@
 			"content": "Replace ${old} with ${new} Inside ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

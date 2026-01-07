@@ -52,5 +52,6 @@
 			"content": "${value} Is Greater than 0"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

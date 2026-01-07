@@ -52,5 +52,6 @@
 			"content": "Uppercase ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

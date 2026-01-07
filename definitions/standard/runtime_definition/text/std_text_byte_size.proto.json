@@ -52,5 +52,6 @@
 			"content": "Byte-Size of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

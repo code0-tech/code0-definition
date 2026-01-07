@@ -29,5 +29,6 @@
 			"content": "Stop"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:xbox-x"
 }

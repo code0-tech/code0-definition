@@ -95,5 +95,6 @@
 			"content": "If ${condition} is True do ${then_runnable} else ${else_runnable}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:arrow-ramp-right"
 }

@@ -100,5 +100,6 @@
 			"content": "Remove ${item} from ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

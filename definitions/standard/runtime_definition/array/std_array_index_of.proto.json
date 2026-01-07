@@ -87,5 +87,6 @@
 			"content": "Get Index of ${item} in ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

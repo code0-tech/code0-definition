@@ -92,5 +92,6 @@
 			"content": "Clamp ${value} between ${min} and ${max}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }
