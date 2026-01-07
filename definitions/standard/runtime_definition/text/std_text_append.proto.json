@@ -72,5 +72,6 @@
 			"content": "Append ${suffix} at the End of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

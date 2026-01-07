@@ -31,5 +31,6 @@
 			"content": "Infinity"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

@@ -52,5 +52,6 @@
 			"content": "Trim ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

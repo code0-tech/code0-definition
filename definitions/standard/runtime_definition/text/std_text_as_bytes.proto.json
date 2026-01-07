@@ -65,5 +65,6 @@
 			"content": "${value} As Bytes"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

@@ -65,5 +65,6 @@
 			"content": "Keys of ${object}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:cube"
 }

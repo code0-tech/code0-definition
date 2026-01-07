@@ -72,5 +72,6 @@
 			"content": "${root_exponent} Root of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

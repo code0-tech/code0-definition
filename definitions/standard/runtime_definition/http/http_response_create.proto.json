@@ -94,5 +94,6 @@
 			"content": "Create Http-Response with Method: ${http_method}, Headers: ${headers} and Payload: ${payload}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:world-www"
 }

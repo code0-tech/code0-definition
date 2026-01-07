@@ -52,5 +52,6 @@
 			"content": "${value} Equals 0"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

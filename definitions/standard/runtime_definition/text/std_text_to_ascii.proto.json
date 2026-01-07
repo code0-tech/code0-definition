@@ -65,5 +65,6 @@
 			"content": "${value} To Ascii"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

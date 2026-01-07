@@ -52,5 +52,6 @@
 			"content": "Arccosine of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

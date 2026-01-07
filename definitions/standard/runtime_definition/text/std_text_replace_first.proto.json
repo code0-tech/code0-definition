@@ -97,5 +97,6 @@
 			"content": "In ${value} replace first ${old} with ${new}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

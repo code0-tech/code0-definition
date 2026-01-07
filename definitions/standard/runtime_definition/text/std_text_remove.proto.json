@@ -97,5 +97,6 @@
 			"content": "Remove ${value} from ${start}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

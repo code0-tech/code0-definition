@@ -72,5 +72,6 @@
 			"content": "Prepend ${value} with ${prefix}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

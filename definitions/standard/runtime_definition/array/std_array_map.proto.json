@@ -123,5 +123,6 @@
 			"content": "Apply ${transform} for each in ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

@@ -72,5 +72,6 @@
 			"content": "${first} Modulus ${second}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

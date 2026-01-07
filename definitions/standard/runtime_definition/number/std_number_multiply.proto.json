@@ -72,5 +72,6 @@
 			"content": "${first} Multiply by ${second}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

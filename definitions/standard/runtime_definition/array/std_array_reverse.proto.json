@@ -80,5 +80,6 @@
 			"content": "Reverse ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

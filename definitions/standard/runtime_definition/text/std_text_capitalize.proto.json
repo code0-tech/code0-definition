@@ -52,5 +52,6 @@
 			"content": "Capitalize ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

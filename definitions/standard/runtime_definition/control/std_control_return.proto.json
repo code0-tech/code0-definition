@@ -54,5 +54,6 @@
 			"content": "Return ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:arrow-iteration"
 }

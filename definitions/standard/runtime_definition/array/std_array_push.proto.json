@@ -87,5 +87,6 @@
 			"content": "Push ${item} into ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

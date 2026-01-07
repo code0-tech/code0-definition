@@ -65,5 +65,6 @@
 			"code": "en-US",
 			"content": "http;rest;route;web;webhook"
 		}
-	]
+	],
+	"displayIcon": "tabler:world-www"
 }

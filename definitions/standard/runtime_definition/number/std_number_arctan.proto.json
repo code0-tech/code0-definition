@@ -52,5 +52,6 @@
 			"content": "Arctangent of ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

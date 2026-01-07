@@ -93,5 +93,6 @@
 			"content": "Flatten ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

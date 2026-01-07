@@ -64,5 +64,6 @@
 			"content": "Sum of ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

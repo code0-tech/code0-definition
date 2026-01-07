@@ -72,5 +72,6 @@
 			"content": "Get Position of ${substring} Inside ${value}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

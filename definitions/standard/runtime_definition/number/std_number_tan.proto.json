@@ -52,5 +52,6 @@
 			"content": "Tangent of ${radians}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

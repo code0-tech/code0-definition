@@ -72,5 +72,6 @@
 			"content": "${first} Plus ${second}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function"
 }

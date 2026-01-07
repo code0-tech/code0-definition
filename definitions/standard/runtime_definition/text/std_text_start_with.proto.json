@@ -72,5 +72,6 @@
 			"content": "Check if ${value} starts with ${prefix}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:abc"
 }

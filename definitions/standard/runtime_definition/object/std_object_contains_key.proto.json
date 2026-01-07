@@ -72,5 +72,6 @@
 			"content": "Checks if ${object} Contains ${key}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:cube"
 }

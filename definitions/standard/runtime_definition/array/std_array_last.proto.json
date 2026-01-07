@@ -67,5 +67,6 @@
 			"content": "Get Last Element of ${list}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

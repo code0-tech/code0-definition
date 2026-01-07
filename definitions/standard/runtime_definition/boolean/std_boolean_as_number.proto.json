@@ -52,5 +52,6 @@
 			"content": "Convert ${value} to number"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:file-digit"
 }

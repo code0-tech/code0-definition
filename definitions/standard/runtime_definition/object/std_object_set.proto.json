@@ -94,5 +94,6 @@
 			"content": "Set ${key} to ${value} of ${object}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:cube"
 }

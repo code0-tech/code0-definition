@@ -67,5 +67,6 @@
 			"content": "Check if ${list} is empty"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

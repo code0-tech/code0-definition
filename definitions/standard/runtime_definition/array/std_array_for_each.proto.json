@@ -98,5 +98,6 @@
 			"content": "For each in ${list} do ${consumer}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

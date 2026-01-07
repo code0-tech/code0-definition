@@ -100,5 +100,6 @@
 			"content": "Find first element in ${list} matching ${predicate}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }

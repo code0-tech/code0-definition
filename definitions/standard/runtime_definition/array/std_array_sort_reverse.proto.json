@@ -113,5 +113,6 @@
 			"content": "Reversed-Sort ${list} using ${comparator}"
 		}
 	],
-	"deprecationMessage": []
+	"deprecationMessage": [],
+	"displayIcon": "tabler:list"
 }
