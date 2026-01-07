@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::boolean::negate",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "BOOLEAN"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The boolean value to negate."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Negates a boolean value."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Negate"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Negates a boolean value."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Negates a boolean value."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "negate;negative;invert;opposite;boolean;logic;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Negate ${value}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::boolean::negate",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "BOOLEAN"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The boolean value to negate."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Negate Boolean"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Negates a boolean value."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "negate;negative;invert;opposite;boolean;logic;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Negate ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

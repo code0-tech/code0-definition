@@ -1,132 +1,117 @@
 {
-  "runtimeName": "std::list::concat",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "first",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "First List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The first list to concatenate."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The first input list whose elements will appear at the beginning of the resulting list."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "second",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Second List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The second list to concatenate."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The second input list whose elements will be appended after the elements of the first list."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "genericKey": "R"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Concatenate Lists"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Concatenates two lists into a single list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a new list containing all elements of the first list followed by all elements of the second list."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "concat;combine;join;append;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Combine ${first} with ${second}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::concat",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "first",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "First List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The first list to concatenate."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "second",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Second List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The second list to concatenate."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"genericKey": "R"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": true,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Combine Lists"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Concatenates/combine two lists into a single list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "concat;combine;join;append;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Combine ${first} with ${second}"
+		}
+	],
+	"deprecationMessage": []
 }

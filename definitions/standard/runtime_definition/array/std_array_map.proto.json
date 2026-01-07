@@ -1,142 +1,127 @@
 {
-  "runtimeName": "std::list::map",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "IN"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list to be transformed."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Each element of this list will be passed through the transform function."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "TRANSFORM",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "IN"
-                }
-              ],
-              "target": "I",
-              "genericCombinations": []
-            },
-            {
-              "source": [
-                {
-                  "genericKey": "OUT"
-                }
-              ],
-              "target": "R",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "transform",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Transform Function"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A function that transforms each item in the list."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The transform function is applied to every element of the list to produce a new list."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "genericKey": "OUT"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "IN",
-    "OUT"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Map List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Transforms each element in the list using the provided function."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "This runtime applies the transform function to each element in the list, producing a new list of the results."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "map;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Apply ${transform} for each in ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::map",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "IN"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Each element of this list will be passed through the transform function."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "TRANSFORM",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "IN"
+								}
+							],
+							"target": "I",
+							"genericCombinations": []
+						},
+						{
+							"source": [
+								{
+									"genericKey": "OUT"
+								}
+							],
+							"target": "R",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "transform",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Transform Function"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The transform function is applied to every element of the list to produce a new list."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"genericKey": "OUT"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"IN",
+		"OUT"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Map List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Transforms each element in the list using the provided function. This will create a new list of new elements which will be returned."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "map;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Apply ${transform} for each in ${list}"
+		}
+	],
+	"deprecationMessage": []
 }

@@ -1,81 +1,71 @@
 {
-  "runtimeName": "std::list::size",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list whose number of elements is to be returned."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Specifies the list for which the total number of elements will be calculated and returned."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "List Size"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the number of elements in the list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "This function returns the count of elements present in the given list."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "size;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Size of ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::size",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list whose number of elements is to be returned."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "List Size"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "This function returns the count of elements present in the given list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "size;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Size of ${list}"
+		}
+	],
+	"deprecationMessage": []
 }

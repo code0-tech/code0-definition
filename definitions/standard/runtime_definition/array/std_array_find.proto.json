@@ -1,119 +1,104 @@
 {
-  "runtimeName": "std::list::find",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list to search through."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The list in which an element satisfying the predicate will be searched."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "PREDICATE",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "predicate",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Search Predicate"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A predicate function used to test each element for a match."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericKey": "R"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Find Element in List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Finds the first element in the list that satisfies the predicate."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns the first element from the input list for which the predicate returns true. If no element matches, returns null or equivalent."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "find;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Find first element in ${list} matching ${predicate}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::find",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list in which an element satisfying the predicate will be searched."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "PREDICATE",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "predicate",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Search Predicate"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericKey": "R"
+	},
+	"throwsError": true,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Find Element in List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns the first element from the input list for which the predicate returns true. If no element matches, returns null."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "find;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Find first element in ${list} matching ${predicate}"
+		}
+	],
+	"deprecationMessage": []
 }

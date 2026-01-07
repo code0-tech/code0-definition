@@ -1,12 +1,12 @@
 {
-  "variant": "NODE",
-  "identifier": "COMPARATOR",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Comparator"
-    }
-  ],
+	"variant": "NODE",
+	"identifier": "COMPARATOR",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Comparator"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,34 +19,34 @@
 			"content": "Compare ${I}"
 		}
 	],
-	  "rules": [
-    {
-      "returnType": {
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "NUMBER"
-        }
-      }
-    },
-    {
-      "inputTypes": {
-        "inputTypes": [
-          {
-            "dataTypeIdentifier": {
-              "genericKey": "I"
-            },
-            "inputIdentifier": "left"
-          },
-          {
-            "dataTypeIdentifier": {
-              "genericKey": "I"
-            },
-            "inputIdentifier": "right"
-          }
-        ]
-      }
-    }
-  ],
-  "genericKeys": [
-    "I"
-  ]
+	"rules": [
+		{
+			"returnType": {
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "NUMBER"
+				}
+			}
+		},
+		{
+			"inputTypes": {
+				"inputTypes": [
+					{
+						"dataTypeIdentifier": {
+							"genericKey": "I"
+						},
+						"inputIdentifier": "left"
+					},
+					{
+						"dataTypeIdentifier": {
+							"genericKey": "I"
+						},
+						"inputIdentifier": "right"
+					}
+				]
+			}
+		}
+	],
+	"genericKeys": [
+		"I"
+	]
 }

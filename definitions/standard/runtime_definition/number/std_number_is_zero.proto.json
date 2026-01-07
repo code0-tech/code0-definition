@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::is_zero",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number to check if it is zero."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This is the numeric input evaluated to determine whether it equals zero."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Is Zero"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Checks whether the given number is exactly zero."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns true if the input number is zero; otherwise, returns false."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "zero;equals zero;number;math;std;is"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${value} == 0"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::is_zero",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "This is the numeric input evaluated to determine whether it equals zero."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Number Is Zero"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns true if the input number is zero. Otherwise returns false."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "zero;equals zero;number;math;std;is"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${value} Equals 0"
+		}
+	],
+	"deprecationMessage": []
 }

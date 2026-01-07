@@ -1,12 +1,12 @@
 {
-  "variant": "TYPE",
-  "identifier": "HTTP_METHOD",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "HTTP Method"
-    }
-  ],
+	"variant": "TYPE",
+	"identifier": "HTTP_METHOD",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "HTTP Method"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,31 +19,31 @@
 			"content": "HTTP Method"
 		}
 	],
-	  "rules": [
-    {
-      "itemOfCollection": {
-        "items": [
-          {
-            "stringValue": "GET"
-          },
-          {
-            "stringValue": "POST"
-          },
-          {
-            "stringValue": "PUT"
-          },
-          {
-            "stringValue": "DELETE"
-          },
-          {
-            "stringValue": "PATCH"
-          },
-          {
-            "stringValue": "HEAD"
-          }
-        ]
-      }
-    }
-  ],
-  "genericKeys": []
+	"rules": [
+		{
+			"itemOfCollection": {
+				"items": [
+					{
+						"stringValue": "GET"
+					},
+					{
+						"stringValue": "POST"
+					},
+					{
+						"stringValue": "PUT"
+					},
+					{
+						"stringValue": "DELETE"
+					},
+					{
+						"stringValue": "PATCH"
+					},
+					{
+						"stringValue": "HEAD"
+					}
+				]
+			}
+		}
+	],
+	"genericKeys": []
 }

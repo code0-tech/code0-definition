@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::square",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number to be squared."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This is the numeric input that will be multiplied by itself."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Square"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the square of the given number."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Calculates the value multiplied by itself, effectively raising it to the power of 2."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "square;squared;power two;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${value} squared"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::square",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The number to be squared."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Square"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns the square of the given number."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "square;squared;power two;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${value} Squared"
+		}
+	],
+	"deprecationMessage": []
 }

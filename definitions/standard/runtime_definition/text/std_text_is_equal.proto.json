@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::text::is_equal",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "first",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "First Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The first text string to compare."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The first input text for equality comparison."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "second",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Second Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The second text string to compare."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The second input text for equality comparison."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Is Equal"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Checks whether the two input text strings are equal."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "equal;equals;same;text;string;std;is"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${first} equals ${second}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::is_equal",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "first",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "First Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The first text to compare."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "second",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Second Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The second text to compare."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Is Equal"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "equal;equals;same;text;string;std;is"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${first} Equals ${second}"
+		}
+	],
+	"deprecationMessage": []
 }

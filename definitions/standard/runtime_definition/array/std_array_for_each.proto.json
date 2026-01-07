@@ -1,117 +1,102 @@
 {
-  "runtimeName": "std::list::for_each",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list of elements to iterate over."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Each element of this list will be passed to the provided consumer function for processing."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "CONSUMER",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "consumer",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Consumer Function"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A function that consumes each element of the list."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This function is invoked once for each element in the list. It is not expected to return a value."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": null,
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "For Each Element"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Executes a consumer function for each element in the list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "This runtime executes the given consumer function on each item in the list without returning a result."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "for_each;array;list;collection;std;for;each"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "For each in ${list} do ${consumer}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::for_each",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Each element of this list will be passed to the provided consumer function for processing."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "CONSUMER",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "consumer",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Consumer Function"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "This function is invoked once for each element in the list. It is not expected to return a value."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": null,
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "For Each Element"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Executes a consumer function for each element in the list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "for_each;array;list;collection;std;for;each"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "For each in ${list} do ${consumer}"
+		}
+	],
+	"deprecationMessage": []
 }

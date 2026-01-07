@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::boolean::is_equal",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "BOOLEAN"
-      },
-      "runtimeName": "first",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "First"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The first boolean value to compare."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The first input to compare."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "BOOLEAN"
-      },
-      "runtimeName": "second",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Second"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The second boolean value to compare."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The second input to compare."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Is Equal"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Will check if the two booleans are equal."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Compares two boolean values for equality. Returns true if they are the same, false otherwise."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "equal;equals;same;boolean;logic;std;is"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${first} equals ${second}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::boolean::is_equal",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "BOOLEAN"
+			},
+			"runtimeName": "first",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "First"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The first boolean value to compare."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "BOOLEAN"
+			},
+			"runtimeName": "second",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Second"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The second boolean value to compare."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Is Equal"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Compares two boolean values for equality. Returns true if they are the same, false otherwise."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "equal;equals;same;boolean;logic;std;is"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${first} Equals ${second}"
+		}
+	],
+	"deprecationMessage": []
 }

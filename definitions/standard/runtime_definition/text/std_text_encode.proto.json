@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::text::encode",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to encode."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The text string to encode."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT_ENCODING"
-      },
-      "runtimeName": "encoding",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Encoding Type"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The encoding scheme to apply (e.g., UTF-8, Base64)."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The encoding scheme to apply (e.g., UTF-8, Base64)."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "TEXT"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Encode Text"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Encodes the input text into the specified encoding format."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Transforms the given text string into a representation encoded by the specified encoding scheme."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "encode;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Encode ${value} to ${encoding}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::encode",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The text to encode."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT_ENCODING"
+			},
+			"runtimeName": "encoding",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Encoding Type"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The encoding scheme to apply (e.g., UTF-8, Base64)."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "TEXT"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Encode Text"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Transforms the given text into a representation encoded by the specified encoding scheme."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "encode;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Encode ${value} to ${encoding}"
+		}
+	],
+	"deprecationMessage": []
 }

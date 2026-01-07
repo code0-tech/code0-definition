@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::text::contains",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The main text to search within."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The main text to search within."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "substring",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Substring"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text to search for inside the main text."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The text to search for inside the main text."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Contains"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Checks if the main text contains the specified substring."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns true if the substring is found anywhere in the main text; otherwise, returns false."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "contains;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Check if ${value} contains ${substring}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::contains",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The main text to search within."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "substring",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Subtext"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The text to search for inside the main text."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Contains Text"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns true if the subtext is found anywhere in the main text. Otherwise, returns false."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "contains;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Check if ${value} contains ${substring}"
+		}
+	],
+	"deprecationMessage": []
 }

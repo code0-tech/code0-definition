@@ -1,104 +1,89 @@
 {
-  "runtimeName": "std::text::split",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The input text to be split."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The input text to be split."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "delimiter",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Delimiter"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The delimiter string to split the text by."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The delimiter string to split the text by."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "dataTypeIdentifier": "TEXT"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Split"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Splits the input text into a list of substrings based on the specified delimiter."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a list of substrings obtained by splitting the input text at each occurrence of the delimiter."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "split;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Splits ${value} on '${delimiter}'"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::split",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The input text to be split."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "delimiter",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Delimiter"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The delimiter text to split the text by."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"dataTypeIdentifier": "TEXT"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Split"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a list of subtext obtained by splitting the input text at each occurrence of the delimiter."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "split;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Splits ${value} on '${delimiter}'"
+		}
+	],
+	"deprecationMessage": []
 }

@@ -1,12 +1,12 @@
 {
-  "variant": "PRIMITIVE",
-  "identifier": "TEXT",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Text"
-    }
-  ],
+	"variant": "PRIMITIVE",
+	"identifier": "TEXT",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Text"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,12 +19,12 @@
 			"content": "Text"
 		}
 	],
-	  "rules": [
-    {
-      "regex": {
-        "pattern": "[\\s\\S]*"
-      }
-    }
-  ],
-  "genericKeys": []
+	"rules": [
+		{
+			"regex": {
+				"pattern": "[\\s\\S]*"
+			}
+		}
+	],
+	"genericKeys": []
 }

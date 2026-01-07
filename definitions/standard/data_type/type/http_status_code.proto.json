@@ -1,12 +1,12 @@
 {
-  "variant": "TYPE",
-  "identifier": "HTTP_STATUS_CODE",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "HTTP Status Code"
-    }
-  ],
+	"variant": "TYPE",
+	"identifier": "HTTP_STATUS_CODE",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "HTTP Status Code"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,13 +19,13 @@
 			"content": "HTTP Status Code"
 		}
 	],
-	  "rules": [
-    {
-      "numberRange": {
-        "from": 100,
-        "to": 599
-      }
-    }
-  ],
-  "genericKeys": []
+	"rules": [
+		{
+			"numberRange": {
+				"from": 100,
+				"to": 599
+			}
+		}
+	],
+	"genericKeys": []
 }

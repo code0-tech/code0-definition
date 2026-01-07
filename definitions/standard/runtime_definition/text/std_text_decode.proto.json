@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::text::decode",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to decode."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The text string to decode."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT_ENCODING"
-      },
-      "runtimeName": "encoding",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Encoding Type"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The decoding scheme to apply (e.g. Base64)."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The decoding scheme to apply (e.g. Base64)."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "TEXT"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Decode Text"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Decodes the input text from the specified encoding format."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Decodes the input text from the specified encoding format."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "decode;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Decode ${value} using ${encoding}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::decode",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The text to decode."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT_ENCODING"
+			},
+			"runtimeName": "encoding",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Encoding Type"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The decoding scheme to apply (e.g. Base64)."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "TEXT"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Decode Text"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Decodes the input text from the specified encoding format."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "decode;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Decode ${value} using ${encoding}"
+		}
+	],
+	"deprecationMessage": []
 }

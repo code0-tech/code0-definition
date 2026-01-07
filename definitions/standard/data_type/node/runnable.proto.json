@@ -1,12 +1,12 @@
 {
-  "variant": "NODE",
-  "identifier": "RUNNABLE",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Node"
-    }
-  ],
+	"variant": "NODE",
+	"identifier": "RUNNABLE",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Node"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,6 +19,6 @@
 			"content": "Node"
 		}
 	],
-	  "rules": [],
-  "genericKeys": []
+	"rules": [],
+	"genericKeys": []
 }

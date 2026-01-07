@@ -1,89 +1,74 @@
 {
-  "runtimeName": "std::control::if",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "BOOLEAN"
-      },
-      "runtimeName": "condition",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Condition"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Boolean condition to evaluate."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Specifies the condition that determines whether the provided runnable should be executed. If this condition evaluates to true, the execution proceeds with the runnable defined in the second parameter."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "RUNNABLE"
-      },
-      "runtimeName": "then_runnable",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Then Runnable"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Runnable to execute when the condition is true."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Defines the runnable that runs if the condition evaluates to true."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": null,
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "If"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Executes the specified runnable if the condition evaluates to true."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "The 'If' runnable evaluates a boolean condition and, if it is true, executes the provided runnable. If the condition is false, execution continues without running the runnable. This behavior corresponds to a standard 'if' statement in programming languages."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "if;control;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "If ${condition} then do ${then_runnable}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::control::if",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "BOOLEAN"
+			},
+			"runtimeName": "condition",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Condition"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Specifies the condition that determines whether the provided runnable should be executed. If this condition evaluates to true, the execution proceeds with the runnable defined in the second parameter."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "RUNNABLE"
+			},
+			"runtimeName": "runnable",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Runnable"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Defines the runnable that runs if the condition evaluates to true."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": null,
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "If"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "The 'If' runnable evaluates a boolean condition and, if it is true, executes the provided runnable. If the condition is false, execution continues without running the runnable."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "if;control;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "If ${condition} is True do ${runnable}"
+		}
+	],
+	"deprecationMessage": []
 }

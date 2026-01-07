@@ -1,12 +1,12 @@
 {
-  "variant": "TYPE",
-  "identifier": "HTTP_URL",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "HTTP Route"
-    }
-  ],
+	"variant": "TYPE",
+	"identifier": "HTTP_URL",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "HTTP Route"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,12 +19,12 @@
 			"content": "HTTP Route"
 		}
 	],
-	  "rules": [
-    {
-      "regex": {
-        "pattern": "^/\\w+(?:[.:~-]\\w+)*(?:/\\w+(?:[.:~-]\\w+)*)*$"
-      }
-    }
-  ],
-  "genericKeys": []
+	"rules": [
+		{
+			"regex": {
+				"pattern": "^/\\w+(?:[.:~-]\\w+)*(?:/\\w+(?:[.:~-]\\w+)*)*$"
+			}
+		}
+	],
+	"genericKeys": []
 }

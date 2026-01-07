@@ -1,12 +1,12 @@
 {
-  "variant": "PRIMITIVE",
-  "identifier": "BOOLEAN",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Boolean"
-    }
-  ],
+	"variant": "PRIMITIVE",
+	"identifier": "BOOLEAN",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Boolean"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,12 +19,12 @@
 			"content": "Boolean"
 		}
 	],
-	  "rules": [
-    {
-      "regex": {
-        "pattern": "^(true|false)$"
-      }
-    }
-  ],
-  "genericKeys": []
+	"rules": [
+		{
+			"regex": {
+				"pattern": "^(true|false)$"
+			}
+		}
+	],
+	"genericKeys": []
 }

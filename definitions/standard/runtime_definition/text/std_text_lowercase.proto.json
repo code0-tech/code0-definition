@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::text::lowercase",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to convert to lowercase."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Converts all characters in the input text string to lowercase."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "TEXT"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Lowercase"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Transforms all letters in the text to their lowercase equivalents."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a new text string with all characters converted to lowercase."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "lowercase;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${value} to Lowercase"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::lowercase",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Converts all characters in the input text to lowercase."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "TEXT"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Text to Lowercase"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a new text with all characters converted to lowercase."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "lowercase;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${value} to Lowercase"
+		}
+	],
+	"deprecationMessage": []
 }

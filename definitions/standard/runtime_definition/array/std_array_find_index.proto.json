@@ -1,119 +1,104 @@
 {
-  "runtimeName": "std::list::find_index",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list to search through."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The list in which to find the index of an element that satisfies the predicate."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "PREDICATE",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "predicate",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Search Predicate"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A predicate function used to test each element for a match."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A function that takes an element of the list and returns a boolean indicating if the element satisfies the search criteria."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Find Index in List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Finds the index of the first element in the list that satisfies the predicate."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "find index;index of;position;array;list;collection;std;find;index"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Index of ${list} matching ${predicate}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::find_index",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list in which to find the index of an element that satisfies the predicate."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "PREDICATE",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "predicate",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Search Predicate"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A function that takes an element of the list and returns a boolean indicating if the element satisfies the search criteria."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Find Index of Element in List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "find index;index of;position;array;list;collection;std;find;index"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Index of Element in ${list} matching ${predicate}"
+		}
+	],
+	"deprecationMessage": []
 }

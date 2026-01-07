@@ -1,119 +1,104 @@
 {
-  "runtimeName": "std::list::remove",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list from which the item will be removed."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A list to process by removing the first occurrence of the specified item."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericKey": "R"
-      },
-      "runtimeName": "item",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Item"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The item to remove from the list."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The value to search for and remove from the list. Only the first matching item is removed."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "genericKey": "R"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Remove from List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Removes the first occurrence of the specified item from the list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Removes the first matching item from the given list and returns the resulting list."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "remove;delete;strip;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Remove ${item} from ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::remove",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list from which the item will be removed."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericKey": "R"
+			},
+			"runtimeName": "item",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Item"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The item to remove from the list."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"genericKey": "R"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Remove from List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Removes the first matching item from the given list and returns the resulting list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "remove;delete;strip;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Remove ${item} from ${list}"
+		}
+	],
+	"deprecationMessage": []
 }

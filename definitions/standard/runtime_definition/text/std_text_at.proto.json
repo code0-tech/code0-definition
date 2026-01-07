@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::text::at",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string from which to extract the character."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The input text from which a character will be retrieved by index."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "index",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Index"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The zero-based position of the character to extract."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Specifies which character to return from the text."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "TEXT"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Character at Index"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the character at the specified index in the text."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Retrieves a single character from the input text based on the provided zero-based index."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "at;text;string;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Get character of ${value} at ${index}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::at",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The input text from which a character will be retrieved by index."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "index",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Index"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The zero-based position of the character to extract."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "TEXT"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Character at Index"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Retrieves a single character from the input text based on the provided zero-based index."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "at;text;string;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Get Character of ${value} at ${index}"
+		}
+	],
+	"deprecationMessage": []
 }

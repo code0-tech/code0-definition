@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::tan",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "radians",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Radians"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The angle in radians to compute the tangent of."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Computes the tangent of the given angle in radians."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Tangent"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the tangent of the specified angle in radians."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Calculates the tangent value of the input angle measured in radians."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "tan;tangent;trigonometry;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "tan(${radians})"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::tan",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "radians",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Radians"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Computes the tangent of the given angle in radians."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Tangent"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Calculates the tangent value of the input angle measured in radians."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "tan;tangent;trigonometry;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Tangent of ${radians}"
+		}
+	],
+	"deprecationMessage": []
 }

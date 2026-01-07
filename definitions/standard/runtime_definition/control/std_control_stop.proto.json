@@ -1,38 +1,33 @@
 {
-  "runtimeName": "std::control::stop",
-  "runtimeParameterDefinitions": [],
-  "returnTypeIdentifier": null,
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Stop"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Completely stops the current context and prevents any further iterations."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "stop;control;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Stop"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::control::stop",
+	"runtimeParameterDefinitions": [],
+	"returnTypeIdentifier": null,
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Stop"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "stop;control;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Stop"
+		}
+	],
+	"deprecationMessage": []
 }

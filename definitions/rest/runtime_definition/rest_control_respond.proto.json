@@ -1,64 +1,54 @@
 {
-  "runtimeName": "rest::control::respond",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "HTTP_RESPONSE"
-      },
-      "runtimeName": "http_response",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Http Response"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The response object that will be returned to the client."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Takes an HTTP response object and transmits it to the requesting client. This parameter represents the final output of the server, including headers, status code, and body content."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": null,
-  "deprecationMessage": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Respond"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Handles an HTTP response object and returns it to the client."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Processes an HTTP response and returns it to the requesting client. This function typically completes the HTTP request–response cycle by delivering the server’s final output, such as headers, status codes, and body content, back to the client."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "respond;control;http"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Apply respond to ${http_response}"
-    }
-  ],
-  "throwsError": false,
-  "genericKeys": []
+	"runtimeName": "rest::control::respond",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "HTTP_RESPONSE"
+			},
+			"runtimeName": "http_response",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Http Response"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Takes an HTTP response object and transmits it to the requesting client. This parameter represents the final output of the server, including headers, status code, and body content."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": null,
+	"deprecationMessage": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Respond"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Processes an HTTP response and returns it to the requesting client. This function typically completes the HTTP request–response cycle by delivering the server’s final output, such as headers, status codes, and body content, back to the client."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "respond;control;http"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Sends ${http_response} as a Response"
+		}
+	],
+	"throwsError": false,
+	"genericKeys": []
 }

@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::boolean::from_text",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to convert."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Converts a text string to a boolean value."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "From Text"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Will convert the string to a boolean."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Converts a text string to a boolean value. Recognizes 'true' and 'false' (case-insensitive)."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "from text;parse;convert;boolean;logic;std;from;text"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Convert ${value} to boolean"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::boolean::from_text",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Converts a text to a boolean."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Boolean from Text"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Will convert the string to a boolean."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "from text;parse;convert;boolean;logic;std;from;text"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Convert ${value} to boolean"
+		}
+	],
+	"deprecationMessage": []
 }

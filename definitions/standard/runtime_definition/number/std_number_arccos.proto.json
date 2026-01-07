@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::arccos",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number representing the cosine value, must be between -1 and 1."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Calculates the arccosine (inverse cosine) of the input value."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Arccosine"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the arccosine of a number, in radians."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Computes the angle in radians whose cosine is the given number."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "arccos;acos;inverse cosine;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "arccos(${value})"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::arccos",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input Number"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Calculates the arccosine (inverse cosine) of the input value."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Arccosine"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Computes the angle in radians whose cosine is the given number."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "arccos;acos;inverse cosine;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Arccosine of ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

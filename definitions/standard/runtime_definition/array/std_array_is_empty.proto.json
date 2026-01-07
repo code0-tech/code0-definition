@@ -1,81 +1,71 @@
 {
-  "runtimeName": "std::list::is_empty",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list to check for emptiness."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The list whose length will be evaluated to determine if it contains any elements."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "BOOLEAN"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Is List Empty"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Checks if the list has no elements."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns true if the list contains no elements, otherwise returns false."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "is_empty;array;list;collection;std;is;empty"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Check if ${list} is empty"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::is_empty",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list to check for emptiness."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "BOOLEAN"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Is List Empty"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns true if the list contains no elements, otherwise returns false."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "is_empty;array;list;collection;std;is;empty"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Check if ${list} is empty"
+		}
+	],
+	"deprecationMessage": []
 }

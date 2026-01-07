@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::number::multiply",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "first",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "First Number"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The first number to multiply."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Specifies the first operand in the multiplication operation."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "second",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Second Number"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The second number to multiply."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Specifies the second operand in the multiplication operation."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Multiply"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Multiplies two numbers together."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Takes two numeric inputs and returns their product."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "multiply;times;product;mul;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${first} * ${second}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::multiply",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "first",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "First Number"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The first number to multiply."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "second",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Second Number"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The second number to multiply."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Multiply"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Takes two numeric inputs and returns their product."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "multiply;times;product;mul;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${first} Multiply by ${second}"
+		}
+	],
+	"deprecationMessage": []
 }

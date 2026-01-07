@@ -1,12 +1,12 @@
 {
-  "variant": "ARRAY",
-  "identifier": "LIST",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Generic List"
-    }
-  ],
+	"variant": "ARRAY",
+	"identifier": "LIST",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Generic List"
+		}
+	],
 	"alias": [
 		{
 			"code": "en-US",
@@ -19,16 +19,16 @@
 			"content": "List of ${T}"
 		}
 	],
-	  "rules": [
-    {
-      "containsType": {
-        "dataTypeIdentifier": {
-          "genericKey": "T"
-        }
-      }
-    }
-  ],
-  "genericKeys": [
-    "T"
-  ]
+	"rules": [
+		{
+			"containsType": {
+				"dataTypeIdentifier": {
+					"genericKey": "T"
+				}
+			}
+		}
+	],
+	"genericKeys": [
+		"T"
+	]
 }

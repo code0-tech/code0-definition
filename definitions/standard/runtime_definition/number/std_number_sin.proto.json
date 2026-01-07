@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::sin",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number for which to calculate the sine."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Computes the sine of the given number."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Sine"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the sine of a number."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Calculates the sine of the input value."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "sin;sine;trigonometry;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "sin(${value})"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::sin",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Number Input"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The number for which to calculate the sine."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Sine"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Calculates the sine of the input value."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "sin;sine;trigonometry;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Sine of ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

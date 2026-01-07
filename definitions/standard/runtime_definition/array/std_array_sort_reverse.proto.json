@@ -1,132 +1,117 @@
 {
-  "runtimeName": "std::list::sort_reverse",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The input list to be sorted in reverse order."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A list of elements that will be sorted in descending order using the provided comparator."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "COMPARATOR",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "R"
-                }
-              ],
-              "target": "I",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "comparator",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Comparator"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A comparator function used to determine the sort order of elements."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "genericKey": "R"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "R"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Sort List in Reverse"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Sorts the elements of the list in reverse order using the specified comparator."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Returns a new list with the elements sorted in descending order according to the comparator function provided."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "sort_reverse;array;list;collection;std;sort;reverse"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Sort ${list} in reverse order using ${comparator}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::sort_reverse",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The input list to be sorted in reverse order."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "COMPARATOR",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "R"
+								}
+							],
+							"target": "I",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "comparator",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Comparator"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"genericKey": "R"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Sort List in Reverse"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a new list with the elements sorted in descending order according to the comparator function provided."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "sort_reverse;array;list;collection;std;sort;reverse"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Reversed-Sort ${list} using ${comparator}"
+		}
+	],
+	"deprecationMessage": []
 }

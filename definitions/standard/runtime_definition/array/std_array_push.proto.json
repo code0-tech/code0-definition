@@ -1,106 +1,91 @@
 {
-  "runtimeName": "std::list::push",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "genericType": {
-          "dataTypeIdentifier": "LIST",
-          "genericMappers": [
-            {
-              "source": [
-                {
-                  "genericKey": "I"
-                }
-              ],
-              "target": "T",
-              "genericCombinations": []
-            }
-          ]
-        }
-      },
-      "runtimeName": "list",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "List"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The list to which an item will be added."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The list that the new item will be appended to."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "genericKey": "I"
-      },
-      "runtimeName": "item",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Item"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The item to add to the list."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "The value to be added at the end of the list."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [
-    "I"
-  ],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Push to List"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Appends an item to the end of a list."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Adds a new element to the end of the list and returns the new length of the list."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "push;array;list;collection;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Push ${item} into ${list}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::list::push",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "LIST",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "I"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "list",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "List"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The list to which an item will be added."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"genericKey": "I"
+			},
+			"runtimeName": "item",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Item"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The value to be added at the end of the list."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"I"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Push to List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Adds a new element to the end of the list and returns the new length of the list."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "push;array;list;collection;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Push ${item} into ${list}"
+		}
+	],
+	"deprecationMessage": []
 }

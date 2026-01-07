@@ -1,66 +1,56 @@
 {
-  "runtimeName": "std::number::abs",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number for which to compute the absolute value."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This is the numeric input. The result will be its absolute (non-negative) value."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Absolute Value"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the absolute value of a number."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Removes the sign from the input number, returning its non-negative value."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "absolute;abs;magnitude;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Absolute value of ${value}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::abs",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Number Input"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "This is the numeric input. The result will be its absolute (non-negative) value."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Absolute Value"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Removes the sign from the input number, returning its non-negative value."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "absolute;abs;magnitude;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Absolute Value of ${value}"
+		}
+	],
+	"deprecationMessage": []
 }

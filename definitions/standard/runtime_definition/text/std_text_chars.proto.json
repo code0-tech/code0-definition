@@ -1,79 +1,69 @@
 {
-  "runtimeName": "std::text::chars",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "TEXT"
-      },
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Text Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The text string to split into characters."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "Splits the input text string into a list of its constituent characters."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "genericType": {
-      "dataTypeIdentifier": "LIST",
-      "genericMappers": [
-        {
-          "source": [
-            {
-              "dataTypeIdentifier": "TEXT"
-            }
-          ],
-          "target": "T",
-          "genericCombinations": []
-        }
-      ]
-    }
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Characters"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns a list containing each character from the given text string."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Creates a list where each element is a single character from the original text."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "characters;letters;split;text;string;std;chars"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Turns ${value} into a list of characters"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::text::chars",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Splits the input text into a list of its constituent characters."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericType": {
+			"dataTypeIdentifier": "LIST",
+			"genericMappers": [
+				{
+					"source": [
+						{
+							"dataTypeIdentifier": "TEXT"
+						}
+					],
+					"target": "T",
+					"genericCombinations": []
+				}
+			]
+		}
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Characters"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Creates a list where each element is a single character from the original text."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "characters;letters;split;text;string;std;chars"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Turns ${value} into a List of Characters"
+		}
+	],
+	"deprecationMessage": []
 }

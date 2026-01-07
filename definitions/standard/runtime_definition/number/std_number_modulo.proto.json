@@ -1,91 +1,76 @@
 {
-  "runtimeName": "std::number::modulo",
-  "runtimeParameterDefinitions": [
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "first",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Dividend"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number to be divided to find the remainder."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This is the number that will be divided by the second value to calculate the remainder."
-        }
-      ]
-    },
-    {
-      "dataTypeIdentifier": {
-        "dataTypeIdentifier": "NUMBER"
-      },
-      "runtimeName": "second",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Divisor"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The number by which the first number is divided to get the remainder."
-        }
-      ],
-      "documentation": [
-        {
-          "code": "en-US",
-          "content": "This is the number used to divide the dividend and obtain the remainder."
-        }
-      ]
-    }
-  ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "NUMBER"
-  },
-  "throwsError": false,
-  "genericKeys": [],
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Modulo"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns the remainder after dividing the first number by the second."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "Computes the modulus (remainder) of dividing the first numeric input by the second."
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "modulo;mod;remainder;modulus;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "${first} % ${second}"
-    }
-  ],
-  "deprecationMessage": []
+	"runtimeName": "std::number::modulo",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "first",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Number"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The number to apply the modulo operator onto."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "NUMBER"
+			},
+			"runtimeName": "second",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Modulo"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The modulo operator."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"dataTypeIdentifier": "NUMBER"
+	},
+	"throwsError": false,
+	"genericKeys": [],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Modulo"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Computes the modulus (remainder) of dividing the first numeric input by the second."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "modulo;mod;remainder;modulus;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "${first} Modulus ${second}"
+		}
+	],
+	"deprecationMessage": []
 }
