@@ -3,7 +3,20 @@
 	"runtimeParameterDefinitions": [
 		{
 			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "OBJECT"
+				"genericType": {
+					"dataTypeIdentifier": "OBJECT",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "O"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
 			},
 			"runtimeName": "object",
 			"defaultValue": null,
@@ -67,7 +80,8 @@
 	},
 	"throwsError": false,
 	"genericKeys": [
-		"I"
+		"I",
+		"O"
 	],
 	"name": [
 		{
