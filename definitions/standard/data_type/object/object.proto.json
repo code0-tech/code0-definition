@@ -19,6 +19,16 @@
 			"content": "Object"
 		}
 	],
-	"rules": [],
-	"genericKeys": []
+	"rules": [
+		{
+			"parentType": {
+				"parentType": {
+					"genericKey": "T"
+				}
+			}
+		}
+	],
+	"genericKeys": [
+		"T"
+	]
 }
