@@ -118,7 +118,7 @@ impl Diagnose {
                 ),
                 &path,
             ),
-         }
+        }
     }
 
     pub fn severity(&self) -> Severity {

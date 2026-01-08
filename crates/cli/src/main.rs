@@ -83,7 +83,10 @@ async fn main() {
         Commands::Download { tag, features } => {
             command::download::handle_download(tag, features).await
         }
-        Commands::Watch { path, ignore_warnings } => command::watch::watch_for_changes(path, !ignore_warnings).await,
+        Commands::Watch {
+            path,
+            ignore_warnings,
+        } => command::watch::watch_for_changes(path, !ignore_warnings).await,
         Commands::Push { token, url, path } => command::push::push(token, url, path).await,
     }
 }
