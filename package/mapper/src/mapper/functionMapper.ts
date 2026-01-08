@@ -1,4 +1,8 @@
-import {FunctionDefinition, ParameterDefinitionConnection} from "@code0-tech/sagittarius-graphql-types";
+import {
+    DataTypeIdentifier,
+    FunctionDefinition,
+    ParameterDefinitionConnection
+} from "@code0-tech/sagittarius-graphql-types";
 import {
     RuntimeFunctionDefinition as TucanaFunction,
     RuntimeParameterDefinition
@@ -8,6 +12,7 @@ import {ConstructedDataTypes, getID} from "../definition/mapper.js";
 import {getTranslationConnection} from "./translation.js";
 
 export function mapFunction(func: TucanaFunction, constructed: ConstructedDataTypes): FunctionDefinition | null {
+    const dataTypeIdentifiers: DataTypeIdentifier[] = [];
     return {
         __typename: "FunctionDefinition",
         id: `gid://sagittarius/FunctionDefinition/${getID(constructed)}`,
@@ -20,8 +25,12 @@ export function mapFunction(func: TucanaFunction, constructed: ConstructedDataTy
         displayMessages: getTranslationConnection(func.displayMessage),
         aliases: getTranslationConnection(func.alias),
         throwsError: func.throwsError,
-        returnType: getDataTypeIdentifier(func.returnTypeIdentifier, constructed),
-        parameterDefinitions: getParameterDefinitionConnection(func.runtimeParameterDefinitions, constructed),
+        returnType: getDataTypeIdentifier(func.returnTypeIdentifier, constructed, dataTypeIdentifiers),
+        parameterDefinitions: getParameterDefinitionConnection(func.runtimeParameterDefinitions, constructed, dataTypeIdentifiers),
+        dataTypeIdentifiers: {
+            count: dataTypeIdentifiers.length,
+            nodes: dataTypeIdentifiers
+        },
         runtimeFunctionDefinition: {
             id: `gid://sagittarius/RuntimeFunctionDefinition/${getID(constructed)}`,
             identifier: func.runtimeName
@@ -29,7 +38,7 @@ export function mapFunction(func: TucanaFunction, constructed: ConstructedDataTy
     }
 }
 
-function getParameterDefinitionConnection(def: RuntimeParameterDefinition[], constructed: ConstructedDataTypes): ParameterDefinitionConnection {
+function getParameterDefinitionConnection(def: RuntimeParameterDefinition[], constructed: ConstructedDataTypes, dataTypeIdentifiers: DataTypeIdentifier[]): ParameterDefinitionConnection {
     return {
         count: def.length,
         nodes: def.map(node => {
@@ -40,7 +49,7 @@ function getParameterDefinitionConnection(def: RuntimeParameterDefinition[], con
                 identifier: node.runtimeName,
                 descriptions: getTranslationConnection(node.description),
                 documentations: getTranslationConnection(node.documentation),
-                dataTypeIdentifier: getDataTypeIdentifier(node.dataTypeIdentifier, constructed)
+                dataTypeIdentifier: getDataTypeIdentifier(node.dataTypeIdentifier, constructed, dataTypeIdentifiers)
             }
         })
     }

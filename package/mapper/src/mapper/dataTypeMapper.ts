@@ -66,6 +66,7 @@ function getDataType(identifier: string, constructedDataTypes: ConstructedDataTy
             console.error("Skipping Identifier because it can't be identified:" + identifier)
             return null
         }
+        const dataTypeIdentifiers: DataTypeIdentifier[] = []
         const constructed: DataType = {
             __typename: "DataType",
             id: `gid://sagittarius/DataType/${getID(constructedDataTypes)}`,
@@ -74,7 +75,11 @@ function getDataType(identifier: string, constructedDataTypes: ConstructedDataTy
             aliases: getTranslationConnection(tucanaDataType.alias),
             displayMessages: getTranslationConnection(tucanaDataType.displayMessage),
             name: getTranslationConnection(tucanaDataType.name),
-            rules: createRules(tucanaDataType.rules, constructedDataTypes),
+            rules: createRules(tucanaDataType.rules, constructedDataTypes, dataTypeIdentifiers),
+            dataTypeIdentifiers: {
+                count: dataTypeIdentifiers.length,
+                nodes: dataTypeIdentifiers,
+            },
             variant: getDataTypeVariant(tucanaDataType.variant),
         }
 
@@ -84,14 +89,14 @@ function getDataType(identifier: string, constructedDataTypes: ConstructedDataTy
     return dataType;
 }
 
-function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: ConstructedDataTypes) : DataTypeRuleConnection {
+function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: ConstructedDataTypes, dataTypeIdentifiers: DataTypeIdentifier[]) : DataTypeRuleConnection {
     return {
         count: rule.length,
         nodes: rule.map(r => {
                 switch (r.config.oneofKind) {
                     case "containsType": {
                         const ruleConfig: DataTypeRulesContainsTypeConfig = {
-                            dataTypeIdentifier: getDataTypeIdentifier(r.config.containsType.dataTypeIdentifier, constructedDataTypes),
+                            dataTypeIdentifierId: registerDataTypeIdentifier(r.config.containsType.dataTypeIdentifier, constructedDataTypes, dataTypeIdentifiers),
                         }
                         const rule: DataTypeRule = {
                             variant: DataTypeRulesVariant.ContainsType,
@@ -101,7 +106,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
                     }
                     case "containsKey": {
                         const ruleConfig: DataTypeRulesContainsKeyConfig = {
-                            dataTypeIdentifier: getDataTypeIdentifier(r.config.containsKey.dataTypeIdentifier, constructedDataTypes),
+                            dataTypeIdentifierId: registerDataTypeIdentifier(r.config.containsKey.dataTypeIdentifier, constructedDataTypes, dataTypeIdentifiers),
                             key: r.config.containsKey.key,
                         }
                         const rule: DataTypeRule = {
@@ -147,7 +152,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
                             inputTypes: r.config.inputTypes.inputTypes.map(i => {
                                 console.log("AF: " + i.inputIdentifier)
                                 const input: DataTypeRulesInputTypeConfig = {
-                                    dataTypeIdentifier: getDataTypeIdentifier(i.dataTypeIdentifier, constructedDataTypes),
+                                    dataTypeIdentifierId: registerDataTypeIdentifier(i.dataTypeIdentifier, constructedDataTypes, dataTypeIdentifiers),
                                     inputIdentifier: i.inputIdentifier,
                                 }
                                 return input;
@@ -162,7 +167,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
 
                     case "returnType": {
                         const ruleConfig: DataTypeRulesParentTypeConfig = {
-                            dataTypeIdentifier: getDataTypeIdentifier(r.config.returnType.dataTypeIdentifier, constructedDataTypes),
+                            dataTypeIdentifierId: registerDataTypeIdentifier(r.config.returnType.dataTypeIdentifier, constructedDataTypes, dataTypeIdentifiers),
                         }
                         const rule : DataTypeRule = {
                             variant: DataTypeRulesVariant.ReturnType,
@@ -173,7 +178,7 @@ function createRules(rule: DefinitionDataTypeRule[], constructedDataTypes: Const
 
                     case "parentType": {
                         const ruleConfig: DataTypeRulesParentTypeConfig = {
-                            dataTypeIdentifier: getDataTypeIdentifier(r.config.parentType.parentType, constructedDataTypes),
+                            dataTypeIdentifierId: registerDataTypeIdentifier(r.config.parentType.parentType, constructedDataTypes, dataTypeIdentifiers),
                         }
                         const rule : DataTypeRule = {
                             variant: DataTypeRulesVariant.ParentType,
@@ -209,7 +214,7 @@ function getDataTypeVariant(variant: DefinitionDataType_Variant): DataTypeVarian
     }
 }
 
-function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined, constructedDataTypes: ConstructedDataTypes): DataTypeIdentifier | null {
+function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined, constructedDataTypes: ConstructedDataTypes, dataTypeIdentifiers: DataTypeIdentifier[]): DataTypeIdentifier | null {
     if (identifier == undefined) {
         return null
     }
@@ -240,8 +245,8 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
                                     type: type
                                 }
                             }),
-                            sourceDataTypeIdentifiers: mapper.source.map(id =>
-                                getDataTypeIdentifier(id, constructedDataTypes)
+                            sourceDataTypeIdentifierIds: mapper.source.map(id =>
+                                registerDataTypeIdentifier(id, constructedDataTypes, dataTypeIdentifiers)
                             ).filter(id => id != null),
                             target: mapper.target,
                             id: `gid://sagittarius/GenericMapper/${getID(constructedDataTypes)}`,
@@ -267,6 +272,15 @@ function getDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined,
     }
 
     return null;
+}
+
+function registerDataTypeIdentifier(identifier: TucanaDataTypeIdentifier | undefined, constructedDataTypes: ConstructedDataTypes, dataTypeIdentifiers: DataTypeIdentifier[]): string | null {
+    const mappedIdentifier = getDataTypeIdentifier(identifier, constructedDataTypes, dataTypeIdentifiers);
+    if (mappedIdentifier == null) {
+        return null;
+    }
+    dataTypeIdentifiers.push(mappedIdentifier);
+    return mappedIdentifier.id;
 }
 
 // @ts-ignore
