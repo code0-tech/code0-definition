@@ -1,42 +1,37 @@
 {
-  "identifier": "CRON",
-  "settings": [
-    {
-      "identifier": "CRON_CODE",
-      "unique": false,
-      "dataTypeIdentifier": "CRON_CODE",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Cron Code"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Specifies the Cron Code for this flow to be called."
-        }
-      ]
-    }
-  ],
-  "editable": false,
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Cron Job"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "A Cron Job is a scheduled task that runs automatically at specified intervals, typically defined using cron expressions. It is commonly used to automate repetitive operations such as data processing, system maintenance, and periodic updates without requiring manual execution."
-    }
-  ],
-  "documentation": [
-    {
-      "code": "en-US",
-      "content": "A Cron Job is a time-based task scheduler that executes commands or scripts at predefined intervals, specified using cron expressions. These expressions control the exact timing of execution—for example, running a task every minute, daily at midnight, or on specific days of the week. Cron Jobs are widely used to automate routine processes such as backups, log rotation, data synchronization, and other recurring system or application tasks."
-    }
-  ]
+	"identifier": "CRON",
+	"settings": [
+		{
+			"identifier": "CRON_CODE",
+			"unique": "NONE",
+			"dataTypeIdentifier": "CRON_CODE",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Cron Code"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Specifies the Cron Code for this flow to be called."
+				}
+			]
+		}
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Cron Job"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "A Cron Job is a scheduled task that runs automatically at specified intervals, typically defined using cron expressions. It is commonly used to automate repetitive operations such as data processing, system maintenance, and periodic updates without requiring manual execution."
+		}
+	],
+	"documentation": [],
+	"displayIcon": "tabler:file-time"
 }

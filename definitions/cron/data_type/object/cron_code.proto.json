@@ -47,13 +47,6 @@
           "dataTypeIdentifier": "CRON_DAY_OF_WEEK"
         }
       }
-    },
-    {
-      "parentType": {
-        "parentType": {
-          "dataTypeIdentifier": "OBJECT"
-        }
-      }
     }
   ],
   "genericKeys": []
