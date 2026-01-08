@@ -7,6 +7,18 @@
       "content": "Cron Code"
     }
   ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "cron;code;schedule"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Cron Code"
+    }
+  ],
   "rules": [
     {
       "containsKey": {
