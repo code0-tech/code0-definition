@@ -10,6 +10,36 @@ impl Analyser {
         let function = &af.function;
         let original = af.original_definition.clone();
 
+        if function.display_icon.is_empty() {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::NullField {
+                    field_name: "displayIcon".into(),
+                },
+            ))
+        }
+
+        if function.alias.is_empty() {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::MissingTranslation {
+                    translation_field: "alias".into(),
+                },
+            ));
+        }
+
+        if function.display_message.is_empty() {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::MissingTranslation {
+                    translation_field: "displayMessage".into(),
+                },
+            ));
+        }
+
         if function.name.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),

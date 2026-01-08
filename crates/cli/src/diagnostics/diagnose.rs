@@ -111,7 +111,14 @@ impl Diagnose {
                 ),
                 &path,
             ),
-        }
+            MissingTranslation { translation_field } => error(
+                format!(
+                    "`{}` has an required empty field (`{}`) of translations!",
+                    self.definition_name, translation_field
+                ),
+                &path,
+            ),
+         }
     }
 
     pub fn severity(&self) -> Severity {
