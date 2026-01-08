@@ -15,6 +15,7 @@ pub enum DiagnosticKind {
     UnusedGenericKey { key: String },
     UndefinedGenericKey { key: String },
     UndefinedTranslation { translation_field: String },
+    MissingTranslation { translation_field: String },
 }
 
 impl DiagnosticKind {
@@ -32,7 +33,8 @@ impl DiagnosticKind {
             | NullField { .. }
             | ForbiddenVariant
             | UnusedGenericKey { .. }
-            | UndefinedGenericKey { .. } => Severity::Error,
+            | UndefinedGenericKey { .. }
+            | MissingTranslation { .. } => Severity::Error,
             UndefinedTranslation { .. } => Severity::Warning,
         }
     }

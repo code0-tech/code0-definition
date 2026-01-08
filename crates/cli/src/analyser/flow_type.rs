@@ -8,6 +8,35 @@ impl Analyser {
         let name = flow.identifier.clone();
         let original = aft.original_definition.clone();
 
+        if flow.display_icon.is_empty() {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::NullField {
+                    field_name: "displayIcon".into(),
+                },
+            ))
+        }
+        if flow.alias.is_empty() {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::MissingTranslation {
+                    translation_field: "alias".into(),
+                },
+            ));
+        }
+
+        if flow.display_message.is_empty() {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::MissingTranslation {
+                    translation_field: "displayMessage".into(),
+                },
+            ));
+        }
+
         if flow.name.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),

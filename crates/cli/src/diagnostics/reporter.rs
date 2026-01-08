@@ -28,13 +28,19 @@ impl Reporter {
         self.diagnostics.is_empty()
     }
 
-    pub fn print(&self, will_exit: bool) {
-        for d in self.errors() {
-            println!("{}", d.print());
+    pub fn print(&self, will_exit: bool, print_errors: bool, print_warning: bool) {
+        if print_warning {
+            for d in self.warnings() {
+                println!("{}", d.print());
+            }
         }
-        for d in self.warnings() {
-            println!("{}", d.print());
+
+        if print_errors {
+            for d in self.errors() {
+                println!("{}", d.print());
+            }
         }
+
         if self
             .diagnostics
             .iter()

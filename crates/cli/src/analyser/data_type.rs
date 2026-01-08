@@ -26,6 +26,25 @@ impl Analyser {
             ));
         }
 
+        if dt.alias.is_empty() {
+            self.reporter.add(Diagnose::new(
+                dt.identifier.clone(),
+                adt.original_definition.clone(),
+                DiagnosticKind::MissingTranslation {
+                    translation_field: "alias".into(),
+                },
+            ));
+        }
+
+        if dt.display_message.is_empty() {
+            self.reporter.add(Diagnose::new(
+                dt.identifier.clone(),
+                adt.original_definition.clone(),
+                DiagnosticKind::MissingTranslation {
+                    translation_field: "displayMessage".into(),
+                },
+            ));
+        }
         let mut detected: Vec<String> = vec![];
         for optional_rule in &dt.rules {
             if let Some(config) = &optional_rule.config {

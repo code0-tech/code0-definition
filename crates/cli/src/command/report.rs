@@ -14,7 +14,7 @@ pub fn report_errors(path: Option<String>) {
     };
 
     let mut analyser = Analyser::new(dir_path.as_str());
-    analyser.report(true);
+    analyser.report(true, true);
 
     let rows = summary_table(&parser.features);
     success_table(rows);

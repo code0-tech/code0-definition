@@ -5,14 +5,14 @@ use notify::{EventKind, RecursiveMode, Watcher, recommended_watcher};
 use std::sync::mpsc::channel;
 use std::time::{Duration, Instant};
 
-pub async fn watch_for_changes(path: Option<String>) {
+pub async fn watch_for_changes(path: Option<String>, with_warning: bool) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
 
     info(format!("Watching directory: {dir_path}"));
     info(String::from("Press Ctrl+C to stop watching..."));
 
     {
-        Analyser::new(dir_path.as_str()).report(false);
+        Analyser::new(dir_path.as_str()).report(false, with_warning);
     }
 
     // Set up file watcher
@@ -35,7 +35,7 @@ pub async fn watch_for_changes(path: Option<String>) {
                             "\n\n\n--------------------------------------------------------------------------\n\n",
                         ));
                         info(String::from("Change detected! Regenerating report..."));
-                        Analyser::new(dir_path.as_str()).report(false);
+                        Analyser::new(dir_path.as_str()).report(false, with_warning);
                         last_run = Instant::now();
                     }
                 }
@@ -45,7 +45,7 @@ pub async fn watch_for_changes(path: Option<String>) {
                             "\n\n\n--------------------------------------------------------------------------\n\n",
                         ));
                         info(String::from("Change detected! Regenerating report..."));
-                        Analyser::new(dir_path.as_str()).report(false);
+                        Analyser::new(dir_path.as_str()).report(false, with_warning);
                         last_run = Instant::now();
                     }
                 }
