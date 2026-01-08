@@ -24,7 +24,20 @@
 			"containsKey": {
 				"key": "body",
 				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "OBJECT"
+					"genericType": {
+						"dataTypeIdentifier": "OBJECT",
+						"genericMappers": [
+							{
+								"source": [
+									{
+										"genericKey": "O"
+									}
+								],
+								"target": "T",
+								"genericCombinations": []
+							}
+						]
+					}
 				}
 			}
 		},
@@ -37,5 +50,7 @@
 			}
 		}
 	],
-	"genericKeys": []
+	"genericKeys": [
+		"O"
+	]
 }
