@@ -33,5 +33,17 @@
 		}
 	],
 	"documentation": [],
-	"displayIcon": "tabler:file-time"
+	"displayIcon": "tabler:file-time",
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "cron;code;schedule;timer;clock;flow"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Schedule Job ${cron_code}"
+		}
+	]
 }

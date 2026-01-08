@@ -14,5 +14,17 @@
       }
     }
   ],
-  "genericKeys": []
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "cron;code;schedule;timer;clock;hour"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Cron Hour"
+    }
+  ],
+   "genericKeys": []
 }

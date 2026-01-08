@@ -10,13 +10,13 @@
   "alias": [
     {
       "code": "en-US",
-      "content": "cron;code;schedule"
+      "content": "cron;code;schedule;timer;clock"
     }
   ],
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Cron Code"
+      "content": "Cron Code ${minute} ${hour} ${day_of_month} ${month} ${day_of_week}"
     }
   ],
   "rules": [
