@@ -3,7 +3,20 @@
 	"runtimeParameterDefinitions": [
 		{
 			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "OBJECT"
+				"genericType": {
+					"dataTypeIdentifier": "OBJECT",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "O"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
 			},
 			"runtimeName": "object",
 			"defaultValue": null,
@@ -46,7 +59,9 @@
 		"dataTypeIdentifier": "BOOLEAN"
 	},
 	"throwsError": false,
-	"genericKeys": [],
+	"genericKeys": [
+		"O"
+	],
 	"name": [
 		{
 			"code": "en-US",
