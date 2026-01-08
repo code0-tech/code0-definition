@@ -39,7 +39,7 @@ impl Analyser {
         super::loader::load_from_path(path)
     }
 
-    pub fn report(&mut self, will_exit: bool) {
+    pub fn report(&mut self, will_exit: bool, with_warning: bool) {
         // Run analysis passes
         for dt in self.data_types.clone() {
             self.analyse_data_type(&dt);
@@ -50,7 +50,7 @@ impl Analyser {
         for f in self.functions.clone() {
             self.analyse_runtime_function(&f);
         }
-        self.reporter.print(will_exit);
+        self.reporter.print(will_exit, true, with_warning);
     }
 
     pub fn data_type_identifier_exists(&self, identifier: &str, except_id: Option<i16>) -> bool {

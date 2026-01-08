@@ -14,7 +14,7 @@ pub fn search_feature(name: Option<String>, path: Option<String>) {
     };
 
     let mut analyser = Analyser::new(dir_path.as_str());
-    analyser.report(true);
+    analyser.report(true, true);
 
     let features = match name {
         None => parser.features.clone(),

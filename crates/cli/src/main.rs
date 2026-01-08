@@ -49,6 +49,9 @@ enum Commands {
         /// Optional path to root directory of all definitions.
         #[arg(short, long)]
         path: Option<String>,
+        /// Should ignore warnings, true on default
+        #[arg(short, long, default_value_t = false)]
+        ignore_warnings: bool,
     },
     Push {
         /// Runtime Token for Sagittarius.
@@ -80,7 +83,7 @@ async fn main() {
         Commands::Download { tag, features } => {
             command::download::handle_download(tag, features).await
         }
-        Commands::Watch { path } => command::watch::watch_for_changes(path).await,
+        Commands::Watch { path, ignore_warnings } => command::watch::watch_for_changes(path, !ignore_warnings).await,
         Commands::Push { token, url, path } => command::push::push(token, url, path).await,
     }
 }

@@ -20,7 +20,7 @@ pub async fn push(token: String, url: String, path: Option<String>) {
     info(String::from("Press Ctrl+C to stop watching..."));
 
     {
-        Analyser::new(dir_path.as_str()).report(false);
+        Analyser::new(dir_path.as_str()).report(false, true);
     }
 
     // Set up file watcher
@@ -82,7 +82,7 @@ pub async fn push(token: String, url: String, path: Option<String>) {
                                 .await;
                         }
 
-                        analyzer.report(false);
+                        analyzer.report(false, true);
 
                         last_run = Instant::now();
                     }
@@ -126,7 +126,7 @@ pub async fn push(token: String, url: String, path: Option<String>) {
                                 .await;
                         }
 
-                        analyzer.report(false);
+                        analyzer.report(false, true);
                         last_run = Instant::now();
                     }
                 }
