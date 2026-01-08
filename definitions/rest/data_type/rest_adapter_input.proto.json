@@ -1,48 +1,41 @@
 {
-  "variant": "OBJECT",
-  "identifier": "REST_ADAPTER_INPUT",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Rest Adapter Input"
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "http;rest;adapter;input"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Rest Adapter Input"
-    }
-  ],
-  "rules": [
-    {
-      "containsKey": {
-        "key": "body",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "OBJECT"
-        }
-      }
-    },
-    {
-      "containsKey": {
-        "key": "headers",
-        "dataTypeIdentifier": {
-          "dataTypeIdentifier": "REST_HEADER_INPUT"
-        }
-      }
-    },
-    {
-      "parentType": {
-        "parentType": {
-          "dataTypeIdentifier": "OBJECT"
-        }
-      }
-    }
-  ],
-  "genericKeys": []
+	"variant": "OBJECT",
+	"identifier": "REST_ADAPTER_INPUT",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Rest Adapter Input"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;rest;adapter;input"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Rest Adapter Input"
+		}
+	],
+	"rules": [
+		{
+			"containsKey": {
+				"key": "body",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "OBJECT"
+				}
+			}
+		},
+		{
+			"containsKey": {
+				"key": "headers",
+				"dataTypeIdentifier": {
+					"dataTypeIdentifier": "REST_HEADER_INPUT"
+				}
+			}
+		}
+	],
+	"genericKeys": []
 }

@@ -35,13 +35,6 @@
 					"dataTypeIdentifier": "OBJECT"
 				}
 			}
-		},
-		{
-			"parentType": {
-				"parentType": {
-					"dataTypeIdentifier": "OBJECT"
-				}
-			}
 		}
 	],
 	"genericKeys": []

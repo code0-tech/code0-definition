@@ -51,13 +51,6 @@
 					"dataTypeIdentifier": "HTTP_HEADER_MAP"
 				}
 			}
-		},
-		{
-			"parentType": {
-				"parentType": {
-					"dataTypeIdentifier": "OBJECT"
-				}
-			}
 		}
 	],
 	"genericKeys": []
