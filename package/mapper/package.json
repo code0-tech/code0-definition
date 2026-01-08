@@ -29,7 +29,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@code0-tech/sagittarius-graphql-types": "0.0.0-a395eea54741fc1bb9649341ff6f082cc1c3e67e",
+    "@code0-tech/sagittarius-graphql-types": "0.0.0-4274ec7fd0a5bda56f11bb12be1ba5f30a79252d",
     "@code0-tech/tucana": "0.0.50",
     "@protobuf-ts/runtime": "^2.11.1",
     "@protobuf-ts/runtime-rpc": "^2.11.1",
