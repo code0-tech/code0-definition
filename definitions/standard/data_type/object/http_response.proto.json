@@ -50,5 +50,7 @@
 			}
 		}
 	],
-	"genericKeys": []
+	"genericKeys": [
+		"O"
+	]
 }
