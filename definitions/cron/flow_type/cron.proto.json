@@ -1,0 +1,49 @@
+{
+	"identifier": "CRON",
+	"settings": [
+		{
+			"identifier": "CRON_CODE",
+			"unique": "NONE",
+			"dataTypeIdentifier": "CRON_CODE",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Cron Code"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Specifies the Cron Code for this flow to be called."
+				}
+			]
+		}
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Cron Job"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "A Cron Job is a scheduled task that runs automatically at specified intervals, typically defined using cron expressions. It is commonly used to automate repetitive operations such as data processing, system maintenance, and periodic updates without requiring manual execution."
+		}
+	],
+	"documentation": [],
+	"displayIcon": "tabler:file-time",
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "cron;code;schedule;timer;clock;flow"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Schedule Job ${cron_code}"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "variant": "TYPE",
+  "identifier": "CRON_MONTH",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Cron Month"
+    }
+  ],
+  "rules": [
+    {
+      "regex": {
+        "pattern": "^(\\*|(0?[1-9]|1[0-2])(-(0?[1-9]|1[0-2]))?)(\\/(0?[1-9]|1[0-2]))?(,(\\*|(0?[1-9]|1[0-2])(-(0?[1-9]|1[0-2]))?)(\\/(0?[1-9]|1[0-2]))?)*$"
+      }
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "cron;code;schedule;timer;clock;month"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Cron Month"
+    }
+  ],
+  "genericKeys": []
+}
