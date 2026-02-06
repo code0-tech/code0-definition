@@ -16,7 +16,7 @@
 			"description": [
 				{
 					"code": "en-US",
-					"content": "The value that should be created."
+					"content": "The value to create."
 				}
 			],
 			"documentation": []
