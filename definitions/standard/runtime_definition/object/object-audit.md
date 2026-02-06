@@ -30,7 +30,7 @@
 
 
 ## Todo
-curent get impl looks like:
+current get impl looks like:
 <K. T> get(object: Object<K>, key: Text): T
 
 But this should be changed to:
