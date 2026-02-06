@@ -22,3 +22,18 @@
 
 ## Removed
 - remove
+
+# 06.02.2026
+
+## Added
+- get
+
+
+## Todo
+curent get impl looks like:
+<K. T> get(object: Object<K>, key: Text): T
+
+But this should be changed to:
+<K, T> get(object: Object<K>, key: T keyof K): T ofkey Object<K>
+
+When the tucana definitions are adjusted
