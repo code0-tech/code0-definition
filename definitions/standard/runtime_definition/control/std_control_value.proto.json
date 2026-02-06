@@ -1,0 +1,59 @@
+{
+	"runtimeName": "std::control::value",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericKey": "R"
+			},
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "New Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The value that should be created."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericKey": "R"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"R"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "New Value"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Creates a new value."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "new;create;control;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "New ${value}"
+		}
+	],
+	"deprecationMessage": [],
+	"displayIcon": "tabler:new-section"
+}
