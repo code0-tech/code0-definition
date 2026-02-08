@@ -72,7 +72,7 @@
 	"description": [
 		{
 			"code": "en-US",
-			"content": "Returns the value of a property inside of the object."
+			"content": "Returns the value of a key inside of the object."
 		}
 	],
 	"documentation": [],
