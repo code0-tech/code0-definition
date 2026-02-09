@@ -1,0 +1,93 @@
+{
+	"runtimeName": "std::object::get",
+	"runtimeParameterDefinitions": [
+		{
+			"dataTypeIdentifier": {
+				"genericType": {
+					"dataTypeIdentifier": "OBJECT",
+					"genericMappers": [
+						{
+							"source": [
+								{
+									"genericKey": "O"
+								}
+							],
+							"target": "T",
+							"genericCombinations": []
+						}
+					]
+				}
+			},
+			"runtimeName": "object",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Object"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The object that contains the value referenced by the key."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"dataTypeIdentifier": {
+				"dataTypeIdentifier": "TEXT"
+			},
+			"runtimeName": "key",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Key"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The property name under which the value will be referenced."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"returnTypeIdentifier": {
+		"genericKey": "K"
+	},
+	"throwsError": false,
+	"genericKeys": [
+		"K",
+		"O"
+	],
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Get key of object"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns the value of a key inside of the object."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "get;object;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Get ${key} of ${object}"
+		}
+	],
+	"deprecationMessage": [],
+	"displayIcon": "tabler:cube"
+}
