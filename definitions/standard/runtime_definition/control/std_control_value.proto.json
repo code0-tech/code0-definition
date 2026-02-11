@@ -10,13 +10,13 @@
 			"name": [
 				{
 					"code": "en-US",
-					"content": "New Value"
+					"content": "Value"
 				}
 			],
 			"description": [
 				{
 					"code": "en-US",
-					"content": "The value to create."
+					"content": "The value to save."
 				}
 			],
 			"documentation": []
@@ -32,26 +32,26 @@
 	"name": [
 		{
 			"code": "en-US",
-			"content": "New Value"
+			"content": "Set Value"
 		}
 	],
 	"description": [
 		{
 			"code": "en-US",
-			"content": "Creates a new value."
+			"content": "Saves the given value."
 		}
 	],
 	"documentation": [],
 	"alias": [
 		{
 			"code": "en-US",
-			"content": "new;create;control;std"
+			"content": "value;save;create;control;std"
 		}
 	],
 	"displayMessage": [
 		{
 			"code": "en-US",
-			"content": "New ${value}"
+			"content": "Save ${value}"
 		}
 	],
 	"deprecationMessage": [],
