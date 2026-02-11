@@ -18,3 +18,8 @@ break -> stop
 ## Added 
 - if
 - if-else
+
+# 06.02.2026
+
+## Added
+- value
