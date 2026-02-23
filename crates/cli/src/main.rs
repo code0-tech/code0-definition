@@ -60,6 +60,9 @@ enum Commands {
         /// URL to Sagittarius.
         #[arg(short, long)]
         url: String,
+        /// Optional Version for all definitions
+        #[arg(short, long)]
+        version: Option<String>,
         /// Optional path to root directory of all definitions.
         #[arg(short, long)]
         path: Option<String>,
@@ -87,6 +90,11 @@ async fn main() {
             path,
             ignore_warnings,
         } => command::watch::watch_for_changes(path, !ignore_warnings).await,
-        Commands::Push { token, url, path } => command::push::push(token, url, path).await,
+        Commands::Push {
+            token,
+            url,
+            version,
+            path,
+        } => command::push::push(token, url, version, path).await,
     }
 }
