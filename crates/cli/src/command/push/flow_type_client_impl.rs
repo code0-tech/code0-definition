@@ -1,4 +1,6 @@
 use crate::command::push::auth::get_authorization_metadata;
+use crate::formatter::error_without_trace;
+use crate::formatter::info;
 use tonic::Extensions;
 use tonic::Request;
 use tonic::transport::Channel;
@@ -15,7 +17,9 @@ impl SagittariusFlowTypeServiceClient {
     pub async fn new(sagittarius_url: String, token: String) -> Self {
         let client = match FlowTypeServiceClient::connect(sagittarius_url).await {
             Ok(client) => {
-                log::info!("Successfully connected to Sagittarius FlowType Endpoint!");
+                info(String::from(
+                    "Successfully connected to Sagittarius FlowType Endpoint!",
+                ));
                 client
             }
             Err(err) => panic!(
@@ -36,13 +40,13 @@ impl SagittariusFlowTypeServiceClient {
 
         match self.client.update(request).await {
             Ok(response) => {
-                log::info!(
+                info(format!(
                     "Successfully transferred FlowTypes. Did Sagittarius updated them? {:?}",
-                    &response
-                );
+                    &response.into_inner().success
+                ));
             }
             Err(err) => {
-                log::error!("Failed to update FlowTypes: {:?}", err);
+                error_without_trace(format!("Failed to update FlowTypes: {:?}", err));
             }
         };
     }

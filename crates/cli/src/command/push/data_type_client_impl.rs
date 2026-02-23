@@ -1,4 +1,5 @@
 use crate::command::push::auth::get_authorization_metadata;
+use crate::formatter::{error_without_trace, info};
 use tonic::{Extensions, Request, transport::Channel};
 use tucana::sagittarius::{
     DataTypeUpdateRequest as SagittariusDataTypeUpdateRequest,
@@ -15,7 +16,9 @@ impl SagittariusDataTypeServiceClient {
     pub async fn new(sagittarius_url: String, token: String) -> Self {
         let client = match DataTypeServiceClient::connect(sagittarius_url).await {
             Ok(client) => {
-                log::info!("Successfully connected to Sagittarius DataType Endpoint!");
+                info(String::from(
+                    "Successfully connected to Sagittarius DataType Endpoint!",
+                ));
                 client
             }
             Err(err) => panic!(
@@ -36,13 +39,13 @@ impl SagittariusDataTypeServiceClient {
 
         match self.client.update(request).await {
             Ok(response) => {
-                log::info!(
+                info(format!(
                     "Successfully transferred data types. Did Sagittarius updated them? {:?}",
-                    &response
-                );
+                    &response.into_inner().success
+                ));
             }
             Err(err) => {
-                log::error!("Failed to update DataTypes: {:?}", err);
+                error_without_trace(format!("Failed to update DataTypes: {:?}", err));
             }
         };
     }
