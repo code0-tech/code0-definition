@@ -8,8 +8,18 @@ mod data_type_client_impl;
 mod flow_type_client_impl;
 mod function_client_impl;
 
-pub async fn push(token: String, url: String, path: Option<String>) {
+pub async fn push(
+    token: String,
+    url: String,
+    version_option: Option<String>,
+    path: Option<String>,
+) {
     let dir_path = path.unwrap_or_else(|| "./definitions".to_string());
+
+    let version = match version_option {
+        None => String::from("0.0.0"),
+        Some(v) => v,
+    };
 
     let mut analyzer = Analyser::new(dir_path.as_str());
     let mut data_type_client =
@@ -25,7 +35,11 @@ pub async fn push(token: String, url: String, path: Option<String>) {
             analyzer
                 .data_types
                 .iter()
-                .map(|d| d.definition_data_type.clone())
+                .map(|d| {
+                    let mut def = d.definition_data_type.clone();
+                    def.version = version.clone();
+                    return def;
+                })
                 .collect(),
         )
         .await;
@@ -34,7 +48,11 @@ pub async fn push(token: String, url: String, path: Option<String>) {
             analyzer
                 .flow_types
                 .iter()
-                .map(|d| d.flow_type.clone())
+                .map(|d| {
+                    let mut def = d.flow_type.clone();
+                    def.version = version.clone();
+                    return def;
+                })
                 .collect(),
         )
         .await;
@@ -43,7 +61,11 @@ pub async fn push(token: String, url: String, path: Option<String>) {
             analyzer
                 .functions
                 .iter()
-                .map(|d| d.function.clone())
+                .map(|d| {
+                    let mut def = d.function.clone();
+                    def.version = version.clone();
+                    return def;
+                })
                 .collect(),
         )
         .await;
