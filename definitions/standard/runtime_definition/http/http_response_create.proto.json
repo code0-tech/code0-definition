@@ -16,7 +16,7 @@
 			"description": [
 				{
 					"code": "en-US",
-					"content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
+					"content": "An HTTP status code shows the result of a request (e.g., 200 OK, 404 Not Found, 500 Internal Server Error)."
 				}
 			],
 			"documentation": []
