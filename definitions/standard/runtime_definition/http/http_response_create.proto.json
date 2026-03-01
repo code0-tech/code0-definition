@@ -16,7 +16,7 @@
 			"description": [
 				{
 					"code": "en-US",
-					"content": "An HTTP status code shows the result of a request (e.g., 200 OK, 404 Not Found, 500 Internal Server Error)."
+					"content": "An HTTP status code is a three-digit number (100–599) indicating the result of a request (e.g., 200, 404, 500)."
 				}
 			],
 			"documentation": []
