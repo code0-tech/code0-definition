@@ -2,22 +2,7 @@
 	"runtimeName": "std::object::size",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "OBJECT",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "O"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "OBJECT<T>",
 			"runtimeName": "object",
 			"defaultValue": null,
 			"name": [
@@ -35,11 +20,11 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+	"returnType": "NUMBER",
 	"throwsError": false,
-	"genericKeys": ["O"],
+	"genericKeys": [
+		"T"
+	],
 	"name": [
 		{
 			"code": "en-US",
@@ -66,5 +51,9 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"OBJECT",
+		"NUMBER"
+	],
 	"displayIcon": "tabler:cube"
 }

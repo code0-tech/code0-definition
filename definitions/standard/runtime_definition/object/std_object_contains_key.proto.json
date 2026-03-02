@@ -2,22 +2,7 @@
 	"runtimeName": "std::object::contains_key",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "OBJECT",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "O"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "OBJECT<T>",
 			"runtimeName": "object",
 			"defaultValue": null,
 			"name": [
@@ -35,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "K keyof Object<T>",
 			"runtimeName": "key",
 			"defaultValue": null,
 			"name": [
@@ -55,12 +38,10 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
+	"returnType": "BOOLEAN",
 	"throwsError": false,
 	"genericKeys": [
-		"O"
+		"T"
 	],
 	"name": [
 		{
@@ -88,5 +69,9 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"OBJECT",
+		"BOOLEAN"
+	],
 	"displayIcon": "tabler:cube"
 }

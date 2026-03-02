@@ -2,22 +2,7 @@
 	"runtimeName": "std::object::get",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "OBJECT",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "O"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "OBJECT<T>",
 			"runtimeName": "object",
 			"defaultValue": null,
 			"name": [
@@ -35,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "keyof T",
 			"runtimeName": "key",
 			"defaultValue": null,
 			"name": [
@@ -55,13 +38,11 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericKey": "K"
-	},
+	"returnType": "T[K]",
 	"throwsError": false,
 	"genericKeys": [
 		"K",
-		"O"
+		"T"
 	],
 	"name": [
 		{
@@ -89,5 +70,8 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"OBJECT"
+	],
 	"displayIcon": "tabler:cube"
 }
