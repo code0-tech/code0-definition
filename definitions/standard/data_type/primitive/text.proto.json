@@ -19,12 +19,6 @@
 		}
 	],
 	"signature": "string",
-	"rules": [
-		{
-			"regex": {
-				"pattern": "[\\s\\S]*"
-			}
-		}
-	],
+	"rules": [],
 	"genericKeys": []
 }
