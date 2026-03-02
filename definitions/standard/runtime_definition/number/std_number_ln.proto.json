@@ -2,9 +2,7 @@
 	"runtimeName": "std::number::ln",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
+			"type": "NUMBER",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+	"returnType": "NUMB, trueER",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -53,5 +49,9 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"BOOLEAN",
+		"NUMBER"
+	],
 	"displayIcon": "tabler:math-function"
 }

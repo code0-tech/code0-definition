@@ -1,9 +1,7 @@
 {
 	"runtimeName": "std::number::euler",
 	"runtimeParameterDefinitions": [],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+	"returnType": "NUMBER",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -32,5 +30,8 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"NUMBER"
+	],
 	"displayIcon": "tabler:math-function"
 }

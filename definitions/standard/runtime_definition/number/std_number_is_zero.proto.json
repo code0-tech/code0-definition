@@ -2,9 +2,7 @@
 	"runtimeName": "std::number::is_zero",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
+			"type": "NUMBER",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
+	"returnType": "BOOLEAN",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -51,6 +47,10 @@
 			"code": "en-US",
 			"content": "${value} Equals 0"
 		}
+	],
+	"linkedDataTypeIdentifier": [
+		"NUMBER",
+		"BOOLEAN"
 	],
 	"deprecationMessage": [],
 	"displayIcon": "tabler:math-function"
