@@ -2,9 +2,7 @@
 	"runtimeName": "std::number::as_text",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
+			"type": "NUMBER",
 			"runtimeName": "number",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
+	"returnType": "TEXT",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -53,5 +49,6 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": ["NUMBER", "TEXT"],
 	"displayIcon": "tabler:math-function"
 }

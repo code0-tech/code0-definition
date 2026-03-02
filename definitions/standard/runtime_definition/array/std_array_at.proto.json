@@ -2,22 +2,7 @@
 	"runtimeName": "std::list::at",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<T>",
 			"runtimeName": "list",
 			"defaultValue": null,
 			"name": [
@@ -35,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
+			"type": "NUMBER",
 			"runtimeName": "index",
 			"defaultValue": null,
 			"name": [
@@ -55,12 +38,14 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericKey": "R"
-	},
+	"linked_data_type_identifier": [
+		"LIST",
+		"NUMBER"
+	],
+	"return_type": "T",
 	"throwsError": true,
 	"genericKeys": [
-		"R"
+		"T"
 	],
 	"name": [
 		{

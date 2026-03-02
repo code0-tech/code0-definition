@@ -2,9 +2,7 @@
 	"runtimeName": "std::control::value",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericKey": "R"
-			},
+			"type": "T",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,12 +20,10 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericKey": "R"
-	},
+	"returnType": "R",
 	"throwsError": false,
 	"genericKeys": [
-		"R"
+		"t"
 	],
 	"name": [
 		{

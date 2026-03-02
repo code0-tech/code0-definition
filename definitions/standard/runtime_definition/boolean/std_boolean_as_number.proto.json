@@ -2,9 +2,7 @@
 	"runtimeName": "std::boolean::as_number",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "BOOLEAN"
-			},
+			"type": "BOOLEAN",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+	"returnType": "NUMBER",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -53,5 +49,9 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:toggle-left"
+	"displayIcon": "tabler:toggle-left",
+	"linkedDataTypeIdentifier": [
+		"BOOLEAN",
+		"NUMBER"
+	]
 }

@@ -2,9 +2,7 @@
 	"runtimeName": "std::number::abs",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
+			"type": "NUMBER",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+			"returnType": "NUMBER",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -52,6 +48,7 @@
 			"content": "Absolute Value of ${value}"
 		}
 	],
+	"linkedDataTypeIdentifier": ["NUMBER"],
 	"deprecationMessage": [],
 	"displayIcon": "tabler:math-function"
 }

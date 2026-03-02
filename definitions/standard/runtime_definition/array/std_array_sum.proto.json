@@ -2,22 +2,7 @@
 	"runtimeName": "std::list::sum",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"dataTypeIdentifier": "NUMBER"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<NUMBER>",
 			"runtimeName": "list",
 			"name": [
 				{
@@ -34,9 +19,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+	"returnType": "NUMBER",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -65,5 +48,9 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+	"displayIcon": "tabler:list",
+	"linked_data_type_identifier": [
+		"LIST",
+		"NUMBER"
+	]
 }

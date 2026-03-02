@@ -2,9 +2,7 @@
 	"runtimeName": "rest::control::respond",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "HTTP_RESPONSE"
-			},
+			"type": "HTTP_RESPONSE",
 			"runtimeName": "http_response",
 			"defaultValue": null,
 			"name": [
@@ -22,7 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": null,
+	"returnType": "void",
 	"deprecationMessage": [],
 	"name": [
 		{

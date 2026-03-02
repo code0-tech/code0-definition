@@ -2,22 +2,7 @@
 	"runtimeName": "std::list::reverse",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<T>",
 			"runtimeName": "list",
 			"defaultValue": null,
 			"name": [
@@ -35,26 +20,9 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"genericKey": "R"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
+	"returnType": "LIST<T>",
 	"throwsError": false,
-	"genericKeys": [
-		"R"
-	],
+	"genericKeys": [],
 	"name": [
 		{
 			"code": "en-US",
@@ -81,5 +49,8 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+	"displayIcon": "tabler:list",
+	"linked_data_type_identifier": [
+		"LIST"
+	]
 }

@@ -2,22 +2,7 @@
 	"runtimeName": "std::list::join",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"dataTypeIdentifier": "TEXT"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<TEXT>",
 			"runtimeName": "list",
 			"defaultValue": null,
 			"name": [
@@ -35,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "join_text",
 			"defaultValue": null,
 			"name": [
@@ -55,9 +38,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
+	"returnType": "TEXT",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -86,5 +67,9 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+	"displayIcon": "tabler:list",
+	"linked_data_type_identifier": [
+		"LIST",
+		"TEXT"
+	]
 }

@@ -2,22 +2,7 @@
 	"runtimeName": "std::list::sort",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<T>",
 			"runtimeName": "list",
 			"defaultValue": null,
 			"name": [
@@ -35,22 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "COMPARATOR",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "I",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "COMPARATOR<T>",
 			"runtimeName": "comparator",
 			"defaultValue": null,
 			"name": [
@@ -68,25 +38,10 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"genericKey": "R"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
+	"returnType": "LIST<T>",
 	"throwsError": false,
 	"genericKeys": [
-		"R"
+		"T"
 	],
 	"name": [
 		{
@@ -114,5 +69,8 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration"
+	"displayIcon": "tabler:arrow-iteration",
+	"linked_data_type_identifier": [
+		"LIST"
+	]
 }

@@ -2,22 +2,7 @@
 	"runtimeName": "std::list::concat",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<T>",
 			"runtimeName": "first",
 			"defaultValue": null,
 			"name": [
@@ -35,22 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<T>",
 			"runtimeName": "second",
 			"defaultValue": null,
 			"name": [
@@ -68,25 +38,10 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"genericKey": "R"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
+	"return_type": "LIST<T>",
 	"throwsError": true,
 	"genericKeys": [
-		"R"
+		"T"
 	],
 	"name": [
 		{
@@ -114,5 +69,8 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+	"displayIcon": "tabler:list",
+	"linked_data_type_identifier": [
+		"LIST"
+	]
 }

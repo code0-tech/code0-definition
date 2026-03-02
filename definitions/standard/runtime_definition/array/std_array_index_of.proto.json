@@ -2,22 +2,7 @@
 	"runtimeName": "std::list::index_of",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
+			"type": "LIST<T>",
 			"runtimeName": "list",
 			"defaultValue": null,
 			"name": [
@@ -35,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"genericKey": "R"
-			},
+			"type": "T",
 			"runtimeName": "item",
 			"defaultValue": null,
 			"name": [
@@ -55,9 +38,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+	"returnType": "NUMBER",
 	"throwsError": false,
 	"genericKeys": [
 		"R"
@@ -88,5 +69,9 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+	"displayIcon": "tabler:list",
+	"linked_data_type_identifier": [
+		"LIST",
+		"NUMBER"
+	]
 }
