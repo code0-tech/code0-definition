@@ -19,31 +19,8 @@
 			"content": "HTTP Method"
 		}
 	],
-	"rules": [
-		{
-			"itemOfCollection": {
-				"items": [
-					{
-						"stringValue": "GET"
-					},
-					{
-						"stringValue": "POST"
-					},
-					{
-						"stringValue": "PUT"
-					},
-					{
-						"stringValue": "DELETE"
-					},
-					{
-						"stringValue": "PATCH"
-					},
-					{
-						"stringValue": "HEAD"
-					}
-				]
-			}
-		}
-	],
+	"signature": "'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD'",
+	"linked_data_type_identifiers": [],
+	"rules": [],
 	"genericKeys": []
 }

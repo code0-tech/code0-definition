@@ -1,5 +1,4 @@
 {
-	"variant": "DATATYPE",
 	"identifier": "DATA_TYPE",
 	"name": [
 		{
@@ -19,14 +18,9 @@
 			"content": "DataType"
 		}
 	],
-	"rules": [
-		{
-			"parentType": {
-				"parentType": {
-					"genericKey": "T"
-				}
-			}
-		}
-	],
-	"genericKeys": ["T"]
+	"rules": [],
+	"signature": "T",
+	"genericKeys": [
+		"T"
+	]
 }

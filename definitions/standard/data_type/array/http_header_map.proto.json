@@ -1,5 +1,4 @@
 {
-	"variant": "ARRAY",
 	"identifier": "HTTP_HEADER_MAP",
 	"name": [
 		{
@@ -19,27 +18,11 @@
 			"content": "HTTP Headers"
 		}
 	],
-	"rules": [
-		{
-			"parentType": {
-				"parentType": {
-					"genericType": {
-						"dataTypeIdentifier": "LIST",
-						"genericMappers": [
-							{
-								"source": [
-									{
-										"dataTypeIdentifier": "HTTP_HEADER_ENTRY"
-									}
-								],
-								"target": "T",
-								"genericCombinations": []
-							}
-						]
-					}
-				}
-			}
-		}
+	"rules": [],
+	"genericKeys": [],
+	"linked_data_type_identifiers": [
+		"HTTP_HEADER_ENTRY",
+		"LIST"
 	],
-	"genericKeys": []
+	"signature": "LIST<HTTP_HEADER_ENTRY>"
 }

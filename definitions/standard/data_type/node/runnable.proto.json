@@ -1,5 +1,4 @@
 {
-	"variant": "NODE",
 	"identifier": "RUNNABLE",
 	"name": [
 		{
@@ -20,5 +19,6 @@
 		}
 	],
 	"rules": [],
+	"signature": "void",
 	"genericKeys": []
 }

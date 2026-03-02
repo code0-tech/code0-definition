@@ -1,24 +1,25 @@
 {
-  "variant": "OBJECT",
-  "identifier": "REST_HEADER_INPUT",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Headers"
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "http;rest;header;entry;input"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Headers"
-    }
-  ],
-  "rules": [],
-  "genericKeys": []
+	"identifier": "REST_HEADER_INPUT",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Headers"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;rest;header;entry;input"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Headers"
+		}
+	],
+	"rules": [],
+	"genericKeys": [],
+	"linked_data_type_identifiers": [],
+	"signature": "{}"
 }

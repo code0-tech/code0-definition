@@ -1,5 +1,4 @@
 {
-	"variant": "TYPE",
 	"identifier": "TEXT_ENCODING",
 	"name": [
 		{
@@ -19,16 +18,7 @@
 			"content": "Text Encoding"
 		}
 	],
-	"rules": [
-		{
-			"itemOfCollection": {
-				"items": [
-					{
-						"stringValue": "BASE64"
-					}
-				]
-			}
-		}
-	],
+	"signature": "'BASE64'",
+	"rules": [],
 	"genericKeys": []
 }

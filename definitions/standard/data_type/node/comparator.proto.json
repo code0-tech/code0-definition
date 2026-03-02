@@ -1,5 +1,4 @@
 {
-	"variant": "NODE",
 	"identifier": "COMPARATOR",
 	"name": [
 		{
@@ -19,32 +18,10 @@
 			"content": "Compare ${I}"
 		}
 	],
-	"rules": [
-		{
-			"returnType": {
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "NUMBER"
-				}
-			}
-		},
-		{
-			"inputTypes": {
-				"inputTypes": [
-					{
-						"dataTypeIdentifier": {
-							"genericKey": "I"
-						},
-						"inputIdentifier": "left"
-					},
-					{
-						"dataTypeIdentifier": {
-							"genericKey": "I"
-						},
-						"inputIdentifier": "right"
-					}
-				]
-			}
-		}
+	"rules": [],
+	"signature": "(left: I, right: I) => NUMBER",
+	"linked_data_type_identifiers": [
+		"NUMBER"
 	],
 	"genericKeys": [
 		"I"

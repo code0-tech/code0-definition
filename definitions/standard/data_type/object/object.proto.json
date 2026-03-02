@@ -1,5 +1,4 @@
 {
-	"variant": "OBJECT",
 	"identifier": "OBJECT",
 	"name": [
 		{
@@ -19,15 +18,8 @@
 			"content": "Object"
 		}
 	],
-	"rules": [
-		{
-			"parentType": {
-				"parentType": {
-					"genericKey": "T"
-				}
-			}
-		}
-	],
+	"signature": "T",
+	"rules": [],
 	"genericKeys": [
 		"T"
 	]

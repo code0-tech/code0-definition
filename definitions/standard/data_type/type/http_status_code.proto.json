@@ -1,5 +1,4 @@
 {
-	"variant": "TYPE",
 	"identifier": "HTTP_STATUS_CODE",
 	"name": [
 		{
@@ -18,6 +17,10 @@
 			"code": "en-US",
 			"content": "HTTP Status Code"
 		}
+	],
+	"signature": "NUMBER",
+	"linked_data_type_identifiers": [
+		"NUMBER"
 	],
 	"rules": [
 		{

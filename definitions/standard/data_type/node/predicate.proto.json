@@ -1,5 +1,4 @@
 {
-	"variant": "NODE",
 	"identifier": "PREDICATE",
 	"name": [
 		{
@@ -19,26 +18,10 @@
 			"content": "Predicate of ${T}"
 		}
 	],
-	"rules": [
-		{
-			"returnType": {
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "BOOLEAN"
-				}
-			}
-		},
-		{
-			"inputTypes": {
-				"inputTypes": [
-					{
-						"dataTypeIdentifier": {
-							"genericKey": "T"
-						},
-						"inputIdentifier": "predicate"
-					}
-				]
-			}
-		}
+	"rules": [],
+	"signature": "(item: T) => BOOLEAN",
+	"linked_data_type_identifiers": [
+		"BOOLEAN"
 	],
 	"genericKeys": [
 		"T"

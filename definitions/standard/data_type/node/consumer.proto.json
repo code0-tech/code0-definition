@@ -1,5 +1,4 @@
 {
-	"variant": "NODE",
 	"identifier": "CONSUMER",
 	"name": [
 		{
@@ -19,20 +18,8 @@
 			"content": "Use ${T}"
 		}
 	],
-	"rules": [
-		{
-			"inputTypes": {
-				"inputTypes": [
-					{
-						"dataTypeIdentifier": {
-							"genericKey": "T"
-						},
-						"inputIdentifier": "consumer"
-					}
-				]
-			}
-		}
-	],
+	"rules": [],
+	"signature": "(item: T) => void",
 	"genericKeys": [
 		"T"
 	]

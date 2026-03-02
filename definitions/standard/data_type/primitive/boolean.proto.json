@@ -1,5 +1,4 @@
 {
-	"variant": "PRIMITIVE",
 	"identifier": "BOOLEAN",
 	"name": [
 		{
@@ -19,12 +18,7 @@
 			"content": "Boolean"
 		}
 	],
-	"rules": [
-		{
-			"regex": {
-				"pattern": "^(true|false)$"
-			}
-		}
-	],
+	"signature": "boolean",
+	"rules": [],
 	"genericKeys": []
 }

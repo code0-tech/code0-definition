@@ -1,5 +1,4 @@
 {
-	"variant": "OBJECT",
 	"identifier": "HTTP_REQUEST",
 	"name": [
 		{
@@ -19,52 +18,14 @@
 			"content": "HTTP Request"
 		}
 	],
-	"rules": [
-		{
-			"containsKey": {
-				"key": "method",
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "HTTP_METHOD"
-				}
-			}
-		},
-		{
-			"containsKey": {
-				"key": "url",
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "HTTP_URL"
-				}
-			}
-		},
-		{
-			"containsKey": {
-				"key": "body",
-				"dataTypeIdentifier": {
-					"genericType": {
-						"dataTypeIdentifier": "OBJECT",
-						"genericMappers": [
-							{
-								"source": [
-									{
-										"genericKey": "O"
-									}
-								],
-								"target": "T",
-								"genericCombinations": []
-							}
-						]
-					}
-				}
-			}
-		},
-		{
-			"containsKey": {
-				"key": "headers",
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "HTTP_HEADER_MAP"
-				}
-			}
-		}
+	"signature": "{ method: HTTP_METHOD, url: HTTP_URL, body: T, headers: HTTP_HEADER_MAP }",
+	"rules": [],
+	"linked_data_type_identifiers": [
+		"HTTP_METHOD",
+		"HTTP_URL",
+		"HTTP_HEADER_MAP"
 	],
-	"genericKeys": ["O"]
+	"genericKeys": [
+		"T"
+	]
 }

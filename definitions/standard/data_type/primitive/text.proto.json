@@ -1,5 +1,4 @@
 {
-	"variant": "PRIMITIVE",
 	"identifier": "TEXT",
 	"name": [
 		{
@@ -19,6 +18,7 @@
 			"content": "Text"
 		}
 	],
+	"signature": "string",
 	"rules": [
 		{
 			"regex": {

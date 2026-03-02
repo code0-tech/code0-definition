@@ -1,5 +1,4 @@
 {
-	"variant": "TYPE",
 	"identifier": "HTTP_URL",
 	"name": [
 		{
@@ -18,6 +17,10 @@
 			"code": "en-US",
 			"content": "HTTP Route"
 		}
+	],
+	"signature": "TEXT",
+	"linked_data_type_identifiers": [
+		"TEXT"
 	],
 	"rules": [
 		{
