@@ -2,9 +2,7 @@
 	"runtimeName": "std::text::to_ascii",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,22 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"dataTypeIdentifier": "NUMBER"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
+	"returnType": "LIST<NUMBER>",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -66,5 +49,10 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"TEXT",
+		"LIST",
+		"NUMBER"
+	],
 	"displayIcon": "tabler:abc"
 }

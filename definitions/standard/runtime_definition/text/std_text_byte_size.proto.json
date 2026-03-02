@@ -2,9 +2,7 @@
 	"runtimeName": "std::text::byte_size",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
+	"returnType": "NUMBER",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -53,5 +49,9 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"TEXT",
+		"NUMBER"
+	],
 	"displayIcon": "tabler:abc"
 }

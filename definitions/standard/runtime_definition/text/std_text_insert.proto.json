@@ -2,9 +2,7 @@
 	"runtimeName": "std::text::insert",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
+			"type": "NUMBER",
 			"runtimeName": "position",
 			"defaultValue": null,
 			"name": [
@@ -42,9 +38,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "text",
 			"defaultValue": null,
 			"name": [
@@ -67,9 +61,7 @@
 			]
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
+	"returnType": "TEXT",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -98,5 +90,9 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"TEXT",
+		"NUMBER"
+	],
 	"displayIcon": "tabler:abc"
 }

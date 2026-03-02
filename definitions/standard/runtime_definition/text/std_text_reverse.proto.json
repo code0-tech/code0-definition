@@ -2,9 +2,7 @@
 	"runtimeName": "std::text::reverse",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
+	"returnType": "TEXT",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -53,5 +49,8 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"TEXT"
+	],
 	"displayIcon": "tabler:abc"
 }

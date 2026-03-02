@@ -2,9 +2,7 @@
 	"runtimeName": "std::text::contains",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "substring",
 			"defaultValue": null,
 			"name": [
@@ -42,9 +38,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
+	"returnType": "BOOLEAN",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -71,6 +65,10 @@
 			"code": "en-US",
 			"content": "Check if ${value} contains ${substring}"
 		}
+	],
+	"linkedDataTypeIdentifier": [
+		"TEXT",
+		"BOOLEAN"
 	],
 	"deprecationMessage": [],
 	"displayIcon": "tabler:abc"

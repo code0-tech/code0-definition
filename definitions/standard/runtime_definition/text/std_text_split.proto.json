@@ -2,9 +2,7 @@
 	"runtimeName": "std::text::split",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "delimiter",
 			"defaultValue": null,
 			"name": [
@@ -42,22 +38,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"dataTypeIdentifier": "TEXT"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
+	"returnType": "LIST<TEXT>",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -86,5 +67,9 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"TEXT",
+		"LIST"
+	],
 	"displayIcon": "tabler:abc"
 }

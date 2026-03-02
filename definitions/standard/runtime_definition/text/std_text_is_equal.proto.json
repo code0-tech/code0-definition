@@ -2,9 +2,7 @@
 	"runtimeName": "std::text::is_equal",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "first",
 			"defaultValue": null,
 			"name": [
@@ -22,9 +20,7 @@
 			"documentation": []
 		},
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
+			"type": "TEXT",
 			"runtimeName": "second",
 			"defaultValue": null,
 			"name": [
@@ -42,9 +38,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
+	"returnType": "BOOLEAN",
 	"throwsError": false,
 	"genericKeys": [],
 	"name": [
@@ -73,5 +67,9 @@
 		}
 	],
 	"deprecationMessage": [],
+	"linkedDataTypeIdentifier": [
+		"TEXT",
+		"BOOLEAN"
+	],
 	"displayIcon": "tabler:abc"
 }
