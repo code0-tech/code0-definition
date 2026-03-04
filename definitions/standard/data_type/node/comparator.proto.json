@@ -19,6 +19,7 @@
 		}
 	],
 	"rules": [],
+	"genericKeys": ["I"],
 	"signature": "(left: I, right: I) => NUMBER",
 	"linkedDataTypeIdentifiers": [
 		"NUMBER"

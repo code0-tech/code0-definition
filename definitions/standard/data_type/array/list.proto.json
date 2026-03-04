@@ -18,6 +18,7 @@
 			"content": "List of ${T}"
 		}
 	],
+	"genericKeys": ["T"],
 	"rules": [],
 	"signature": "T[]"
 }

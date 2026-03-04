@@ -18,6 +18,7 @@
       "content": "Object"
     }
   ],
+	"genericKeys": ["T"],
   "signature": "T & {}",
   "rules": []
 }

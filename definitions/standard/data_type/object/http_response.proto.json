@@ -18,6 +18,7 @@
 			"content": "HTTP Response"
 		}
 	],
+	"genericKeys": ["T"],
 	"signature": "{ body: T, headers: HTTP_HEADER_MAP, status_code: HTTP_STATUS_CODE }",
 	"linked_data_type_identifiers": [
 		"HTTP_STATUS_CODE",

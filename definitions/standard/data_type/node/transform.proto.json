@@ -19,5 +19,6 @@
 		}
 	],
 	"rules": [],
+	"genericKeys": ["T", "R" ],
 	"signature": "(item: I) => R"
 }

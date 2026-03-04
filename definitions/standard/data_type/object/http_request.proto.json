@@ -19,6 +19,7 @@
 		}
 	],
 	"signature": "{ method: HTTP_METHOD, url: HTTP_URL, body: T, headers: HTTP_HEADER_MAP }",
+	"genericKeys": ["T"],
 	"rules": [],
 	"linked_data_type_identifiers": [
 		"HTTP_METHOD",
