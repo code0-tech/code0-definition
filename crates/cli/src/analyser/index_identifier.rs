@@ -35,11 +35,4 @@ impl IdentifierIndex {
             .map(|found| except.map(|e| *found != e).unwrap_or(true))
             .unwrap_or(false)
     }
-
-    pub fn has_function(&self, name: &str, except: Option<i16>) -> bool {
-        self.functions
-            .get(&normalize(name))
-            .map(|found| except.map(|e| *found != e).unwrap_or(true))
-            .unwrap_or(false)
-    }
 }

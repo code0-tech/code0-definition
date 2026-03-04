@@ -66,24 +66,25 @@ impl Analyser {
         }
 
         if let Some(identifier) = &flow.input_type_identifier
-            && !self.data_type_identifier_exists(identifier, None)
+            && identifier == ""
         {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
-                DiagnosticKind::UndefinedDataTypeIdentifier {
-                    identifier: identifier.clone(),
+                DiagnosticKind::NullField {
+                    field_name: "input_type_identifier".into(),
                 },
             ));
         }
+
         if let Some(identifier) = &flow.return_type_identifier
-            && !self.data_type_identifier_exists(identifier, None)
+            && identifier == ""
         {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
-                DiagnosticKind::UndefinedDataTypeIdentifier {
-                    identifier: identifier.clone(),
+                DiagnosticKind::NullField {
+                    field_name: "input_type_identifier".into(),
                 },
             ));
         }
