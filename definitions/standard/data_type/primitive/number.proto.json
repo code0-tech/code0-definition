@@ -1,24 +1,24 @@
 {
-	"identifier": "NUMBER",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Number"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "number;integer;float;double;long"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Number"
-		}
-	],
-	"signature": "number",
-	"rules": [],
-	"genericKeys": []
+  "identifier": "NUMBER",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Number"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "number;integer;float;double;long"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Number"
+    }
+  ],
+  "signature": "number",
+  "rules": [],
+  "genericKeys": []
 }

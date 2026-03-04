@@ -1,54 +1,54 @@
 {
-	"runtimeName": "std::number::abs",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number Input"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This is the numeric input. The result will be its absolute (non-negative) value."
-				}
-			],
-			"documentation": []
-		}
-	],
-			"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Absolute Value"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Removes the sign from the input number, returning its non-negative value."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "absolute;abs;magnitude;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Absolute Value of ${value}"
-		}
-	],
-	"linkedDataTypeIdentifier": ["NUMBER"],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::abs",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the numeric input. The result will be its absolute (non-negative) value."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Absolute Value"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes the sign from the input number, returning its non-negative value."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "absolute;abs;magnitude;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Absolute Value of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

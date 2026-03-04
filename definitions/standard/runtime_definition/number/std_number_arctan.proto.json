@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::number::arctan",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Calculates the arctangent (inverse tangent) of the input value."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Arctangent"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Computes the angle in radians whose tangent is the given number."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "arctan;atan;inverse tangent;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Arctangent of ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function",
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	]
+  "runtimeName": "std::number::arctan",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the arctangent (inverse tangent) of the input value."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Arctangent"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Computes the angle in radians whose tangent is the given number."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "arctan;atan;inverse tangent;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Arctangent of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

@@ -1,78 +1,72 @@
 {
-	"runtimeName": "std::list::map",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Each element of this list will be passed through the transform function."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "TRANSFORM<T, R>",
-			"runtimeName": "transform",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Transform Function"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The transform function is applied to every element of the list to produce a new list."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "LIST<R>",
-	"throwsError": false,
-	"genericKeys": [
-		"T",
-		"R"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Map List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Transforms each element in the list using the provided function. This will create a new list of new elements which will be returned."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "map;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Apply ${transform} for each in ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration",
-	"linked_data_type_identifier": [
-		"LIST",
-		"TRANSFORM"
-	]
+  "runtimeName": "std::list::map",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Each element of this list will be passed through the transform function."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "transform",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Transform Function"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The transform function is applied to every element of the list to produce a new list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Map List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Transforms each element in the list using the provided function. This will create a new list of new elements which will be returned."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "map;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Apply ${transform} for each in ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "linkedDataTypeIdentifier": [
+    "LIST",
+    "TRANSFORM"
+  ],
+  "signature": "<T, R>(list: LIST<T>, transform: TRANSFORM<T, R>) => LIST<R>"
 }

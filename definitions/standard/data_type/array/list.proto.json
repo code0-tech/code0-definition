@@ -1,26 +1,26 @@
 {
-	"identifier": "LIST",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Generic List"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "list;array;collection"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "List of ${T}"
-		}
-	],
-	"rules": [],
-	"signature": "T[]",
-	"genericKeys": [
-		"T"
-	]
+  "identifier": "LIST",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Generic List"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "list;array;collection"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "List of ${T}"
+    }
+  ],
+  "rules": [],
+  "signature": "T[]",
+  "genericKeys": [
+    "T"
+  ]
 }

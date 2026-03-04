@@ -1,58 +1,56 @@
 {
-	"runtimeName": "std::text::to_ascii",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Input text to convert to ASCII codes."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "LIST<NUMBER>",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Text to ASCII"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a list of numbers where each number represents the ASCII code of the corresponding character in the input text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "to_ascii;text;string;std;to;ascii"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${value} To Ascii"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT",
-		"LIST",
-		"NUMBER"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::to_ascii",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Input text to convert to ASCII codes."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text to ASCII"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a list of numbers where each number represents the ASCII code of the corresponding character in the input text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to_ascii;text;string;std;to;ascii"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} To Ascii"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT) => LIST<NUMBER>",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "LIST",
+    "NUMBER"
+  ]
 }

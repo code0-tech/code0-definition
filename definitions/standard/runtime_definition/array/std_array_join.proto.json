@@ -1,75 +1,72 @@
 {
-	"runtimeName": "std::list::join",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<TEXT>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List of Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A list of text elements to combined into a single word."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "TEXT",
-			"runtimeName": "join_text",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Join Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The text that will be used to join the list elements into a single string."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "TEXT",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Join Text List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a single concatenated string of text joined by the provided join text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "join;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Joins ${list} using '${join_text}'"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linked_data_type_identifier": [
-		"LIST",
-		"TEXT"
-	]
+  "runtimeName": "std::list::join",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List of Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A list of text elements to combined into a single word."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "join_text",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Join Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text that will be used to join the list elements into a single string."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Join Text List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a single concatenated string of text joined by the provided join text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "join;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Joins ${list} using '${join_text}'"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linked_data_type_identifier": [
+    "LIST",
+    "TEXT"
+  ],
+  "signature": "(list: LIST<TEXT>, join_text: TEXT) => TEXT"
 }

@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::list::max",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<NUMBER>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List of Numbers"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A list of numbers to find the maximum value from."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Find Maximum Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Finds the maximum value in a numeric list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "max;maximum;largest;greatest;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Maximum of ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linked_data_type_identifier": [
-		"LIST",
-		"NUMBER"
-	]
+  "runtimeName": "std::list::max",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List of Numbers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A list of numbers to find the maximum value from."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Maximum Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the maximum value in a numeric list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "max;maximum;largest;greatest;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Maximum of ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "NUMBER"
+  ],
+  "signature": "(list: LIST<NUMBER>) => NUMBER"
 }

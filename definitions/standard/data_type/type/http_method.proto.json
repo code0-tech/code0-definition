@@ -1,26 +1,26 @@
 {
-	"variant": "TYPE",
-	"identifier": "HTTP_METHOD",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "HTTP Method"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "http;method;get;post;put;delete;path;head"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "HTTP Method"
-		}
-	],
-	"signature": "'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD'",
-	"linked_data_type_identifiers": [],
-	"rules": [],
-	"genericKeys": []
+  "variant": "TYPE",
+  "identifier": "HTTP_METHOD",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Method"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;method;get;post;put;delete;path;head"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP Method"
+    }
+  ],
+  "signature": "'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD'",
+  "linked_data_type_identifiers": [],
+  "rules": [],
+  "genericKeys": []
 }

@@ -1,98 +1,94 @@
 {
-	"runtimeName": "std::text::insert",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Original Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The original text into which another text will be inserted."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "position",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Position"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Zero-based index indicating where the new text should be inserted."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "TEXT",
-			"runtimeName": "text",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text to Insert"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The text that will be inserted into the original text."
-				}
-			],
-			"documentation": [
-				{
-					"code": "en-US",
-					"content": "The subtext to be inserted at the specified position."
-				}
-			]
-		}
-	],
-	"returnType": "TEXT",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Insert Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new text where the provided text is inserted at the zero-based position index within the original text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "insert;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Insert ${value} at ${position} into ${text}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT",
-		"NUMBER"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::insert",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The original text into which another text will be inserted."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "position",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Position"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Zero-based index indicating where the new text should be inserted."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "text",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text to Insert"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text that will be inserted into the original text."
+        }
+      ],
+      "documentation": [
+        {
+          "code": "en-US",
+          "content": "The subtext to be inserted at the specified position."
+        }
+      ]
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Insert Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text where the provided text is inserted at the zero-based position index within the original text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "insert;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Insert ${value} at ${position} into ${text}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, position: NUMBER, text: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "NUMBER"
+  ]
 }

@@ -1,55 +1,51 @@
 {
-	"runtimeName": "std::control::value",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "T",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The value to save."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "R",
-	"throwsError": false,
-	"genericKeys": [
-		"t"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Set Value"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Saves the given value."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "value;save;create;control;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Save ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:new-section"
+  "runtimeName": "std::control::value",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The value to save."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Set Value"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Saves the given value."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "value;save;create;control;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Save ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:new-section",
+  "signature": "<T>(value: T) => T"
 }

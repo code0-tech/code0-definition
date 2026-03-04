@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::boolean::negate",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "BOOLEAN",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The boolean value to negate."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "BOOLEAN",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Negate Boolean"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Negates a boolean value."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "negate;negative;invert;opposite;boolean;logic;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Negate ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:toggle-left",
-	"linked_data_type_identifier": [
-		"BOOLEAN"
-	]
+  "runtimeName": "std::boolean::negate",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The boolean value to negate."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Negate Boolean"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Negates a boolean value."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "negate;negative;invert;opposite;boolean;logic;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Negate ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:toggle-left",
+  "linked_data_type_identifier": [
+    "BOOLEAN"
+  ],
+  "signature": "(value: BOOLEAN) => BOOLEAN"
 }

@@ -1,77 +1,72 @@
 {
-	"runtimeName": "std::list::for_each",
-	"runtimeParameterDefinitions": [
-		{
-			"tyoe": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Each element of this list will be passed to the provided consumer function for processing."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"tyoe": "CONSUMER<T>",
-			"runtimeName": "consumer",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Consumer Function"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This function is invoked once for each element in the list. It is not expected to return a value."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"return_type": "void",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "For Each Element"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Executes a consumer function for each element in the list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "for_each;array;list;collection;std;for;each"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "For each in ${list} do ${consumer}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration",
-	"linked_data_type_identifier": [
-		"LIST",
-		"CONSUMER"
-	]
+  "runtimeName": "std::list::for_each",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Each element of this list will be passed to the provided consumer function for processing."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "consumer",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Consumer Function"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This function is invoked once for each element in the list. It is not expected to return a value."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "For Each Element"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Executes a consumer function for each element in the list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "for_each;array;list;collection;std;for;each"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "For each in ${list} do ${consumer}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "CONSUMER"
+  ],
+  "signature": "<T>(list: LIST<T>) => void"
 }

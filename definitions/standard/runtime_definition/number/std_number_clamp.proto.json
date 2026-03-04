@@ -1,92 +1,88 @@
 {
-	"runtimeName": "std::number::clamp",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number Input"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The input number that will be limited (clamped) to the specified range."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "min",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Minimum"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The minimum allowed value in the clamping operation."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "max",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Maximum"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The maximum allowed value in the clamping operation."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "MNUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Clamp Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns the given number clamped between the minimum and maximum bounds."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "clamp;limit;bound;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Clamp ${value} between ${min} and ${max}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::clamp",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input number that will be limited (clamped) to the specified range."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "min",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minimum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The minimum allowed value in the clamping operation."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "max",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Maximum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The maximum allowed value in the clamping operation."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Clamp Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the given number clamped between the minimum and maximum bounds."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "clamp;limit;bound;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Clamp ${value} between ${min} and ${max}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER, min: NUMBER, max: NUMBER) => MNUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

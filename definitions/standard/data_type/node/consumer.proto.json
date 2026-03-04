@@ -1,26 +1,26 @@
 {
-	"identifier": "CONSUMER",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Consumer"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "use;consumer;consume;lambda"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Use ${T}"
-		}
-	],
-	"rules": [],
-	"signature": "(item: T) => void",
-	"genericKeys": [
-		"T"
-	]
+  "identifier": "CONSUMER",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Consumer"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "use;consumer;consume;lambda"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Use ${T}"
+    }
+  ],
+  "rules": [],
+  "signature": "(item: T) => void",
+  "genericKeys": [
+    "T"
+  ]
 }

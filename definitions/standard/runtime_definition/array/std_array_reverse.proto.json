@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::list::reverse",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The input list to be reversed."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "LIST<T>",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Reverse List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new list with the elements of the input list in reverse order."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "reverse;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Reverse ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linked_data_type_identifier": [
-		"LIST"
-	]
+  "runtimeName": "std::list::reverse",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input list to be reversed."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Reverse List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new list with the elements of the input list in reverse order."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "reverse;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Reverse ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linked_data_type_identifier": [
+    "LIST"
+  ],
+  "signature": "(list: LIST<T>) => LIST<T>"
 }

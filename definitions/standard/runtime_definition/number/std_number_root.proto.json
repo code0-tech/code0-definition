@@ -1,74 +1,71 @@
 {
-	"runtimeName": "std::number::root",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The numeric input for which the root will be calculated."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "root_exponent",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Root Exponent"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The degree of the root to extract."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Root"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Calculates the nth root of the input number, where n is specified by the root exponent."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "root;nth root;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${root_exponent} Root of ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::root",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The numeric input for which the root will be calculated."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "root_exponent",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Root Exponent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The degree of the root to extract."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Root"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the nth root of the input number, where n is specified by the root exponent."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "root;nth root;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${root_exponent} Root of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER, root_exponent: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

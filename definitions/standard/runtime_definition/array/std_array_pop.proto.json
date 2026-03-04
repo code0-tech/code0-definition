@@ -1,58 +1,54 @@
 {
-	"runtimeName": "std::list::pop",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list to remove the last item from."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "T",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Pop from List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Removes the last element from the specified list and returns it. The list will be modified."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "pop;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Remove Last Item of ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linkedDataTypeIdentifier": [
-		"LIST"
-	]
+  "runtimeName": "std::list::pop",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list to remove the last item from."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Pop from List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes the last element from the specified list and returns it. The list will be modified."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "pop;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Remove Last Item of ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "signature": "<T>(list: LIST<T>) => T",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ]
 }

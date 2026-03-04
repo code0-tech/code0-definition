@@ -1,27 +1,27 @@
 {
-	"identifier": "TRANSFORM",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Transform"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "transform"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Transform ${I} to ${R}"
-		}
-	],
-	"rules": [],
-	"signature": "(item: I) => R",
-	"genericKeys": [
-		"I",
-		"R"
-	]
+  "identifier": "TRANSFORM",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Transform"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "transform"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Transform ${I} to ${R}"
+    }
+  ],
+  "rules": [],
+  "signature": "(item: I) => R",
+  "genericKeys": [
+    "I",
+    "R"
+  ]
 }

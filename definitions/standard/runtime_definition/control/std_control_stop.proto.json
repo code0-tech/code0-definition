@@ -1,38 +1,37 @@
 {
-	"runtimeName": "std::control::stop",
-	"runtimeParameterDefinitions": [],
-	"returnType": "void",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Stop"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "stop;control;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Stop"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:xbox-x",
-	"linked_data_type_identifier": [
-		"LIST",
-		"NUMBER"
-	]
+  "runtimeName": "std::control::stop",
+  "runtimeParameterDefinitions": [],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Stop"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Terminates the current execution context entirely, halting all ongoing and future iterations. Once invoked, no additional steps or loops within this context will be executed. This node behaves like a global stop or termination signal within the flow."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "stop;control;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Stop"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:xbox-x",
+  "linked_data_type_identifier": [
+    "LIST",
+    "NUMBER"
+  ],
+  "signature": "() => void"
 }

@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::text::lowercase",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Converts all characters in the input text to lowercase."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "TEXT",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Text to Lowercase"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new text with all characters converted to lowercase."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "lowercase;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${value} to Lowercase"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::lowercase",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts all characters in the input text to lowercase."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text to Lowercase"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text with all characters converted to lowercase."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "lowercase;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} to Lowercase"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::number::is_positive",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The number to check for positivity."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "BOOLEAN",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Is Positive Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Evaluates the input number and returns true if it is positive (greater than zero), otherwise false."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "positive;greater than zero;number;math;std;is"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${value} Is Greater than 0"
-		}
-	],
-	"linkedDataTypeIdentifier": [
-		"NUMBER",
-		"BOOLEAN"
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::is_positive",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to check for positivity."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Positive Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Evaluates the input number and returns true if it is positive (greater than zero), otherwise false."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "positive;greater than zero;number;math;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} Is Greater than 0"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER) => BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER",
+    "BOOLEAN"
+  ]
 }

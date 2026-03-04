@@ -1,24 +1,24 @@
 {
-	"identifier": "TEXT_ENCODING",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Text Encoding"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "text;encoding;base64"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Text Encoding"
-		}
-	],
-	"signature": "'BASE64'",
-	"rules": [],
-	"genericKeys": []
+  "identifier": "TEXT_ENCODING",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text Encoding"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "text;encoding;base64"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Text Encoding"
+    }
+  ],
+  "signature": "'BASE64'",
+  "rules": [],
+  "genericKeys": []
 }

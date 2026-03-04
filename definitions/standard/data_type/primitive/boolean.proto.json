@@ -1,24 +1,24 @@
 {
-	"identifier": "BOOLEAN",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Boolean"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "bool;boolean;bit"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Boolean"
-		}
-	],
-	"signature": "boolean",
-	"rules": [],
-	"genericKeys": []
+  "identifier": "BOOLEAN",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "bool;boolean;bit"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "signature": "boolean",
+  "rules": [],
+  "genericKeys": []
 }

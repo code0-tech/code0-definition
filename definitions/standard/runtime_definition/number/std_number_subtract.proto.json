@@ -1,74 +1,71 @@
 {
-	"runtimeName": "std::number::subtract",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "first",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Minuend"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The number from which another number (the subtrahend) is to be subtracted."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "second",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Subtrahend"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The number to subtract from the first number (the minuend)."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Subtract"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Subtracts the second number from the first number."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "subtract;minus;difference;sub;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${first} Minus ${second}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::subtract",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minuend"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number from which another number (the subtrahend) is to be subtracted."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Subtrahend"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to subtract from the first number (the minuend)."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Subtract"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Subtracts the second number from the first number."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "subtract;minus;difference;sub;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} Minus ${second}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(first: NUMBER, second: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

@@ -1,37 +1,36 @@
 {
-	"runtimeName": "std::number::euler",
-	"runtimeParameterDefinitions": [],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Euler's Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Provides the constant value of Euler's number, approximately 2.71828, which is the base of the natural logarithm."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "euler;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Euler's Number"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::euler",
+  "runtimeParameterDefinitions": [],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Euler's Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Provides the constant value of Euler's number, approximately 2.71828, which is the base of the natural logarithm."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "euler;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Euler's Number"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "() => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

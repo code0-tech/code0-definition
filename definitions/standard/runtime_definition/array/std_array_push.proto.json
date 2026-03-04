@@ -1,77 +1,72 @@
 {
-	"runtimeName": "std::list::push",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list to which an item will be added."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "T",
-			"runtimeName": "item",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Item"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The value to be added at the end of the list."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Push to List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Adds a new element to the end of the list and returns the new length of the list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "push;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Push ${item} into ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linkedDataTypeIdentifier": [
-		"LIST",
-		"NUMBER"
-	]
+  "runtimeName": "std::list::push",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list to which an item will be added."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "item",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Item"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The value to be added at the end of the list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Push to List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Adds a new element to the end of the list and returns the new length of the list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "push;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Push ${item} into ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "signature": "<T>(list: LIST<T>, item: T) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "NUMBER"
+  ]
 }

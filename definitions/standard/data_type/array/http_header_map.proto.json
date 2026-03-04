@@ -1,28 +1,28 @@
 {
-	"identifier": "HTTP_HEADER_MAP",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "HTTP Headers"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "http;headers"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "HTTP Headers"
-		}
-	],
-	"rules": [],
-	"genericKeys": [],
-	"linked_data_type_identifiers": [
-		"HTTP_HEADER_ENTRY",
-		"LIST"
-	],
-	"signature": "LIST<HTTP_HEADER_ENTRY>"
+  "identifier": "HTTP_HEADER_MAP",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Headers"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;headers"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP Headers"
+    }
+  ],
+  "rules": [],
+  "genericKeys": [],
+  "linked_data_type_identifiers": [
+    "HTTP_HEADER_ENTRY",
+    "LIST"
+  ],
+  "signature": "LIST<HTTP_HEADER_ENTRY>"
 }

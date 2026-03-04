@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::list::sum",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<NUMBER>",
-			"runtimeName": "list",
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Calculates the sum of all numbers in the given list."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Sum of Numbers"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns the total sum of the elements in the numeric list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "sum;total;add all;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Sum of ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linked_data_type_identifier": [
-		"LIST",
-		"NUMBER"
-	]
+  "runtimeName": "std::list::sum",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the sum of all numbers in the given list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Sum of Numbers"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the total sum of the elements in the numeric list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sum;total;add all;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sum of ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "NUMBER"
+  ],
+  "signature": "(list: LIST<NUMBER>) => NUMBER"
 }

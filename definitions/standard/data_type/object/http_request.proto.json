@@ -1,31 +1,31 @@
 {
-	"identifier": "HTTP_REQUEST",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "HTTP Request"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "http;request"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "HTTP Request"
-		}
-	],
-	"signature": "{ method: HTTP_METHOD, url: HTTP_URL, body: T, headers: HTTP_HEADER_MAP }",
-	"rules": [],
-	"linked_data_type_identifiers": [
-		"HTTP_METHOD",
-		"HTTP_URL",
-		"HTTP_HEADER_MAP"
-	],
-	"genericKeys": [
-		"T"
-	]
+  "identifier": "HTTP_REQUEST",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Request"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;request"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP Request"
+    }
+  ],
+  "signature": "{ method: HTTP_METHOD, url: HTTP_URL, body: T, headers: HTTP_HEADER_MAP }",
+  "rules": [],
+  "linked_data_type_identifiers": [
+    "HTTP_METHOD",
+    "HTTP_URL",
+    "HTTP_HEADER_MAP"
+  ],
+  "genericKeys": [
+    "T"
+  ]
 }

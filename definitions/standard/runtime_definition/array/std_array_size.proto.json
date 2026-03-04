@@ -1,59 +1,55 @@
 {
-	"runtimeName": "std::list::size",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list whose number of elements is to be returned."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "List Size"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "This function returns the count of elements present in the given list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "size;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Size of ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linked_data_type_identifier": [
-		"NUMBER",
-		"LIST"
-	]
+  "runtimeName": "std::list::size",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list whose number of elements is to be returned."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "List Size"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "This function returns the count of elements present in the given list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "size;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Size of ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linked_data_type_identifier": [
+    "NUMBER",
+    "LIST"
+  ],
+  "signature": "<T>(list: LIST<T>) => NUMBER"
 }

@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::text::trim",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The input text from which leading and trailing whitespace characters will be removed."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "TEXT",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Trim Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new text with all leading and trailing whitespace characters removed from the input text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "trim;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Trim ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::trim",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text from which leading and trailing whitespace characters will be removed."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Trim Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text with all leading and trailing whitespace characters removed from the input text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "trim;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Trim ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

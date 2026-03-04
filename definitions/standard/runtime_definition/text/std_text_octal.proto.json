@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::text::octal",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The text to be converted to its octal representation."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "TEXT",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Text to Octal"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Converts a text into an octal representation."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "octal;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${value} to Octal"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::octal",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text to be converted to its octal representation."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text to Octal"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts a text into an octal representation."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "octal;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} to Octal"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

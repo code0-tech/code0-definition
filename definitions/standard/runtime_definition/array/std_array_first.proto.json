@@ -1,58 +1,54 @@
 {
-	"runtimeName": "std::list::first",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list from which to retrieve the first element."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"return_type": "T",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "First Element of List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Retrieves the first element from the list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "first;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Get First Element in ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linked_data_type_identifier": [
-		"LIST"
-	]
+  "runtimeName": "std::list::first",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list from which to retrieve the first element."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "First Element of List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Retrieves the first element from the list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "first;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get First Element in ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ],
+  "signature": "<T>(list: LIST<T>) => T"
 }

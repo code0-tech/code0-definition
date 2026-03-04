@@ -1,78 +1,73 @@
 {
-	"runtimeName": "std::list::find_index",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list in which to find the index of an element that satisfies the predicate."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "PREDICATE<T>",
-			"runtimeName": "predicate",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Search Predicate"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A function that takes an element of the list and returns a boolean indicating if the element satisfies the search criteria."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"return_type": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Find Index of Element in List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "find index;index of;position;array;list;collection;std;find;index"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Index of Element in ${list} matching ${predicate}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration",
-	"linked_data_type_identifier": [
-		"LIST",
-		"NUMBER",
-		"PREDICATE"
-	]
+  "runtimeName": "std::list::find_index",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list in which to find the index of an element that satisfies the predicate."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "predicate",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Search Predicate"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A function that takes an element of the list and returns a boolean indicating if the element satisfies the search criteria."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Index of Element in List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the zero-based index of the first element for which the predicate returns true. If no element matches, returns -1."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "find index;index of;position;array;list;collection;std;find;index"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Index of Element in ${list} matching ${predicate}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "linked_data_type_identifier": [
+    "LIST",
+    "NUMBER",
+    "PREDICATE"
+  ],
+  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>) => NUMBER"
 }

@@ -1,77 +1,72 @@
 {
-	"runtimeName": "std::list::find_last",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list in which an element satisfying the predicate will be searched."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "PREDICATE<T>",
-			"runtimeName": "predicate",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Search Predicate"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"return_type": "T",
-	"throwsError": true,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Find Last Element in List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns the last element from the input list for which the predicate returns true. If no element matches, returns null or equivalent."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "find last;last index;last position;array;list;collection;std;find;last"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Last Element of ${list} matching ${predicate}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration",
-	"linked_data_type_identifier": [
-		"LIST",
-		"PREDICATE"
-	]
+  "runtimeName": "std::list::find_last",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list in which an element satisfying the predicate will be searched."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "predicate",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Search Predicate"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A function that takes an element of the list and returns a boolean indicating if the element matches the search criteria."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": true,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Last Element in List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the last element from the input list for which the predicate returns true. If no element matches, returns null or equivalent."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "find last;last index;last position;array;list;collection;std;find;last"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Last Element of ${list} matching ${predicate}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "linked_data_type_identifier": [
+    "LIST",
+    "PREDICATE"
+  ],
+  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>) => T"
 }

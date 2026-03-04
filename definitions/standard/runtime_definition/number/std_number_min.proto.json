@@ -1,74 +1,71 @@
 {
-	"runtimeName": "std::number::min",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "first",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "First Number"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The first number to compare."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "second",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Second Number"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The second number to compare."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Minimum"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Compares two numbers and returns the minimum value."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "min;minimum;smallest;least;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Minimum of ${first} and ${second}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::min",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first number to compare."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second number to compare."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Minimum"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Compares two numbers and returns the minimum value."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "min;minimum;smallest;least;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Minimum of ${first} and ${second}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(first: NUMBER, second: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

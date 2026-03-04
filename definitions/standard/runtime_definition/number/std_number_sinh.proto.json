@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::number::sinh",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number Input"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The number for which to calculate the hyperbolic sine."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Hyperbolic Sine"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Calculates the hyperbolic sine (sinh) of the input value."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "sinh;hyperbolic sine;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Hyperbolic Sine of ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::sinh",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number for which to calculate the hyperbolic sine."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Hyperbolic Sine"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the hyperbolic sine (sinh) of the input value."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sinh;hyperbolic sine;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Hyperbolic Sine of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

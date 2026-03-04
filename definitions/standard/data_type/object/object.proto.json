@@ -1,26 +1,26 @@
 {
-	"identifier": "OBJECT",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Object"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "object;struct;data"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Object"
-		}
-	],
-	"signature": "T & {}",
-	"rules": [],
-	"genericKeys": [
-		"T"
-	]
+  "identifier": "OBJECT",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Object"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "object;struct;data"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Object"
+    }
+  ],
+  "signature": "T & {}",
+  "rules": [],
+  "genericKeys": [
+    "T"
+  ]
 }

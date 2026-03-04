@@ -1,75 +1,72 @@
 {
-	"runtimeName": "std::text::is_equal",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "first",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "First Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The first text to compare."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "TEXT",
-			"runtimeName": "second",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Second Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The second text to compare."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "BOOLEAN",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Is Equal"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "equal;equals;same;text;string;std;is"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${first} Equals ${second}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT",
-		"BOOLEAN"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::is_equal",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first text to compare."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second text to compare."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Equal"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Determines if the two given text inputs are exactly the same, returning true if equal, false otherwise."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "equal;equals;same;text;string;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} Equals ${second}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(first: TEXT, second: TEXT) => BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "BOOLEAN"
+  ]
 }

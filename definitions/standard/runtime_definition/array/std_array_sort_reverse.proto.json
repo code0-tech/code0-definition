@@ -1,76 +1,71 @@
 {
-	"runtimeName": "std::list::sort_reverse",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The input list to be sorted in reverse order."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "COMPARATOR<T>",
-			"runtimeName": "comparator",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Comparator"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "LIST<T>",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Sort List in Reverse"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new list with the elements sorted in descending order according to the comparator function provided."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "sort_reverse;array;list;collection;std;sort;reverse"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Reversed-Sort ${list} using ${comparator}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration",
-	"linked_data_type_identifier": [
-		"LIST"
-	]
+  "runtimeName": "std::list::sort_reverse",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input list to be sorted in reverse order."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "comparator",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Comparator"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Sort List in Reverse"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new list with the elements sorted in descending order according to the comparator function provided."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sort_reverse;array;list;collection;std;sort;reverse"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Reversed-Sort ${list} using ${comparator}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ],
+  "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>) => LIST<T>"
 }

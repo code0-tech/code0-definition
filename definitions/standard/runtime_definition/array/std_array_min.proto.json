@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::list::min",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<NUMBER>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A list of numbers to find the minimum value from."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Find Minimum Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Finds the minimum value in a numeric list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "min;minimum;smallest;least;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Minimum of ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linkedDataTypeIdentifier": [
-		"LIST",
-		"NUMBER"
-	]
+  "runtimeName": "std::list::min",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A list of numbers to find the minimum value from."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Find Minimum Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Finds the minimum value in a numeric list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "min;minimum;smallest;least;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Minimum of ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "signature": "(list: LIST<NUMBER>) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "NUMBER"
+  ]
 }

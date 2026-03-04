@@ -1,58 +1,54 @@
 {
-	"runtimeName": "std::list::to_unique",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The input list from which duplicates will be removed."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "LIST<T>",
-	"throwsError": false,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "To Unique"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new list containing only the unique elements from the input list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "to_unique;array;list;collection;std;to;unique"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Remove duplicates in ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list",
-	"linked_data_type_identifier": [
-		"LIST"
-	]
+  "runtimeName": "std::list::to_unique",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input list from which duplicates will be removed."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "To Unique"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new list containing only the unique elements from the input list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to_unique;array;list;collection;std;to;unique"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Remove duplicates in ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linked_data_type_identifier": [
+    "LIST"
+  ],
+  "signature": "<T>(list: LIST<T>) => LIST<T>"
 }

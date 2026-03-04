@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::number::square_root",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The number to find the square root of."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Square Root"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Calculates the positive square root of the input number."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "square root;sqrt;root;number;math;std;square"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Square Root of ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::square_root",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to find the square root of."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Square Root"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the positive square root of the input number."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "square root;sqrt;root;number;math;std;square"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Square Root of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

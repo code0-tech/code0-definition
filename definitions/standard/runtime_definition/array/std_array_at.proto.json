@@ -1,77 +1,72 @@
 {
-	"runtimeName": "std::list::at",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list from which to retrieve an element."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "index",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Index"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The zero-based index of the element to retrieve."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"linked_data_type_identifier": [
-		"LIST",
-		"NUMBER"
-	],
-	"return_type": "T",
-	"throwsError": true,
-	"genericKeys": [
-		"T"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Get Element of List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Retrieves the element at a specified index from a list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "at;array;list;collection;std;index"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Get element at ${index} of ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+  "runtimeName": "std::list::at",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list from which to retrieve an element."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "index",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The zero-based index of the element to retrieve."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "NUMBER"
+  ],
+  "throwsError": true,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Get Element of List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Retrieves the element at a specified index from a list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "at;array;list;collection;std;index"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get element at ${index} of ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "signature": "<T>(list: LIST<T>, index: NUMBER) => void"
 }

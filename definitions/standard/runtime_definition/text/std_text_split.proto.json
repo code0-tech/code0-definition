@@ -1,75 +1,72 @@
 {
-	"runtimeName": "std::text::split",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The input text to be split."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "TEXT",
-			"runtimeName": "delimiter",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Delimiter"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The delimiter text to split the text by."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "LIST<TEXT>",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Split"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a list of subtext obtained by splitting the input text at each occurrence of the delimiter."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "split;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Splits ${value} on '${delimiter}'"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT",
-		"LIST"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::split",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text to be split."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "delimiter",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Delimiter"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The delimiter text to split the text by."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Split"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a list of subtext obtained by splitting the input text at each occurrence of the delimiter."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "split;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Splits ${value} on '${delimiter}'"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, delimiter: TEXT) => LIST<TEXT>",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "LIST"
+  ]
 }

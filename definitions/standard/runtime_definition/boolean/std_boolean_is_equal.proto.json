@@ -1,74 +1,71 @@
 {
-	"runtimeName": "std::boolean::is_equal",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "BOOLEAN",
-			"runtimeName": "first",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "First"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The first boolean value to compare."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "BOOLEAN",
-			"runtimeName": "second",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Second"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The second boolean value to compare."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "BOOLEAN",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Is Equal"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Compares two boolean values for equality. Returns true if they are the same, false otherwise."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "equal;equals;same;boolean;logic;std;is"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${first} Equals ${second}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:toggle-left",
-	"linked_data_type_identifier": [
-		"BOOLEAN"
-	]
+  "runtimeName": "std::boolean::is_equal",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The first boolean value to compare."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The second boolean value to compare."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Equal"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Compares two boolean values for equality. Returns true if they are the same, false otherwise."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "equal;equals;same;boolean;logic;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} Equals ${second}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:toggle-left",
+  "linked_data_type_identifier": [
+    "BOOLEAN"
+  ],
+  "signature": "(first: BOOLEAN, second: BOOLEAN) => BOOLEAN"
 }

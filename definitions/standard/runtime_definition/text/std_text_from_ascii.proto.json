@@ -1,58 +1,56 @@
 {
-	"runtimeName": "std::text::from_ascii",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<NUMBER>",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "ASCII Code"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "List of ASCII numeric codes representing characters."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "TEXT",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Text from ASCII"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Converts a list of ASCII codes back into the corresponding text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "from_ascii;text;string;std;from;ascii"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${value} to Text"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT",
-		"NUMBER",
-		"LIST"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::from_ascii",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "ASCII Code"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "List of ASCII numeric codes representing characters."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text from ASCII"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts a list of ASCII codes back into the corresponding text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from_ascii;text;string;std;from;ascii"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} to Text"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: LIST<NUMBER>) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "NUMBER",
+    "LIST"
+  ]
 }

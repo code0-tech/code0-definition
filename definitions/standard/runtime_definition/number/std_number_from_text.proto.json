@@ -1,56 +1,54 @@
 {
-	"runtimeName": "std::number::from_text",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "text",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The text string to convert to a number."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Number from Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Attempts to parse the provided text input and return its numeric equivalent."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "from text;parse;convert;number;math;std;from;text"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Convert ${text} to Number"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::from_text",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "text",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text string to convert to a number."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Number from Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Attempts to parse the provided text input and return its numeric equivalent."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from text;parse;convert;number;math;std;from;text"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${text} to Number"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(text: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

@@ -1,56 +1,55 @@
 {
-	"runtimeName": "std::text::swapcase",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "TEXT",
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Swaps the case of each letter in the input text: uppercase letters become lowercase, and vice versa."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"type": "TEXT",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Swap Case"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Converts uppercase letters to lowercase and lowercase letters to uppercase in the given text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "swapcase;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Swapcase of ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"TEXT"
-	],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::swapcase",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Swaps the case of each letter in the input text: uppercase letters become lowercase, and vice versa."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "type": "TEXT",
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Swap Case"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts uppercase letters to lowercase and lowercase letters to uppercase in the given text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "swapcase;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Swapcase of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

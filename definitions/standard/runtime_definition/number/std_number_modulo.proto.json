@@ -1,74 +1,71 @@
 {
-	"runtimeName": "std::number::modulo",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "NUMBER",
-			"runtimeName": "first",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The number to apply the modulo operator onto."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "NUMBER",
-			"runtimeName": "second",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Modulo"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The modulo operator."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnType": "NUMBER",
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Modulo"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Computes the modulus (remainder) of dividing the first numeric input by the second."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "modulo;mod;remainder;modulus;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${first} Modulus ${second}"
-		}
-	],
-	"deprecationMessage": [],
-	"linkedDataTypeIdentifier": [
-		"NUMBER"
-	],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::modulo",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to apply the modulo operator onto."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Modulo"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The modulo operator."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Modulo"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Computes the modulus (remainder) of dividing the first numeric input by the second."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "modulo;mod;remainder;modulus;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} Modulus ${second}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(first: NUMBER, second: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

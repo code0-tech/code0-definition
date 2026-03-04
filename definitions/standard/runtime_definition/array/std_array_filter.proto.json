@@ -1,76 +1,71 @@
 {
-	"runtimeName": "std::list::filter",
-	"runtimeParameterDefinitions": [
-		{
-			"type": "LIST<T>",
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list to be filtered."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"type": "PREDICATE<T>",
-			"runtimeName": "predicate",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Filter Predicate"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A function that takes an element of the list and returns a boolean indicating whether the element should be included in the output list."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"return_type": "LIST<T>",
-	"throwsError": false,
-	"genericKeys": [
-		"R"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Filter List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new list containing only the elements from the input list for which the predicate returns true."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "filter;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Filter elements in ${list} matching ${predicate}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration",
-	"linked_data_type_identifier": [
-		"LIST"
-	]
+  "runtimeName": "std::list::filter",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list to be filtered."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "predicate",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Filter Predicate"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A function that takes an element of the list and returns a boolean indicating whether the element should be included in the output list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Filter List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new list containing only the elements from the input list for which the predicate returns true."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "filter;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Filter elements in ${list} matching ${predicate}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ],
+  "signature": "<R>(list: LIST<T>, predicate: PREDICATE<T>) => LIST<T>"
 }

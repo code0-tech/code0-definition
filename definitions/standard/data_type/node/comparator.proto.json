@@ -1,29 +1,29 @@
 {
-	"identifier": "COMPARATOR",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Comparator"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "compare;comparator"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Compare ${I}"
-		}
-	],
-	"rules": [],
-	"signature": "(left: I, right: I) => NUMBER",
-	"linked_data_type_identifiers": [
-		"NUMBER"
-	],
-	"genericKeys": [
-		"I"
-	]
+  "identifier": "COMPARATOR",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Comparator"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "compare;comparator"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Compare ${I}"
+    }
+  ],
+  "rules": [],
+  "signature": "(left: I, right: I) => NUMBER",
+  "linked_data_type_identifiers": [
+    "NUMBER"
+  ],
+  "genericKeys": [
+    "I"
+  ]
 }
