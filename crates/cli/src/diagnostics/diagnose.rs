@@ -23,22 +23,8 @@ impl Diagnose {
     pub fn print(&self) -> String {
         let path = format!("{}:{}:{}", Path::new(&self.definition.path).display(), 1, 1);
         match &self.kind {
-            EmptyGenericMapper => error(
-                format!(
-                    "`{}` defined a generic_type but its mapper are empty!`",
-                    self.definition_name
-                ),
-                &path,
-            ),
             DeserializationError { description } => error(
                 format!("A JSON paring error occurred: `{}`", description),
-                &path,
-            ),
-            GenericKeyNotInMappingTarget { key, target } => error(
-                format!(
-                    "`{}` is mapping the key: {} onto the target: {}. But the target did not define this generic_key!",
-                    self.definition_name, key, target
-                ),
                 &path,
             ),
             DuplicateDataTypeIdentifier { identifier } => error(
@@ -80,27 +66,6 @@ impl Diagnose {
                 format!(
                     "`{}` has a field (`{}`) that is null!",
                     self.definition_name, field_name
-                ),
-                &path,
-            ),
-            ForbiddenVariant => error(
-                format!(
-                    "The data_type variant of `{}` is 0 and thus incorrect!",
-                    self.definition_name
-                ),
-                &path,
-            ),
-            UnusedGenericKey { key } => error(
-                format!(
-                    "`{}` defined a generic_key (`{}`) that is never used!",
-                    self.definition_name, key
-                ),
-                &path,
-            ),
-            UndefinedGenericKey { key } => error(
-                format!(
-                    "`{}` uses a generic_key (`{}`) that's not defined!",
-                    self.definition_name, key
                 ),
                 &path,
             ),
