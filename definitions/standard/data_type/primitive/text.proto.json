@@ -1,24 +1,23 @@
 {
-  "identifier": "TEXT",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Text"
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "text;char;literal;string"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Text"
-    }
-  ],
-  "signature": "string",
-  "rules": [],
-  "genericKeys": []
+	"identifier": "TEXT",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Text"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "text;char;literal;string"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Text"
+		}
+	],
+	"signature": "string",
+	"rules": []
 }

@@ -1,29 +1,26 @@
 {
-  "identifier": "PREDICATE",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Predicate"
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "predicate"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Predicate of ${T}"
-    }
-  ],
-  "rules": [],
-  "signature": "(item: T) => BOOLEAN",
-  "linked_data_type_identifiers": [
-    "BOOLEAN"
-  ],
-  "genericKeys": [
-    "T"
-  ]
+	"identifier": "PREDICATE",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Predicate"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "predicate"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Predicate of ${T}"
+		}
+	],
+	"rules": [],
+	"signature": "(item: T) => BOOLEAN",
+	"linked_data_type_identifiers": [
+		"BOOLEAN"
+	]
 }

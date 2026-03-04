@@ -1,30 +1,27 @@
 {
-  "identifier": "HTTP_RESPONSE",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "HTTP Response"
-    }
-  ],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "http;response;object"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "HTTP Response"
-    }
-  ],
-  "signature": "{ body: T, headers: HTTP_HEADER_MAP, status_code: HTTP_STATUS_CODE }",
-  "linked_data_type_identifiers": [
-    "HTTP_STATUS_CODE",
-    "HTTP_HEADER_MAP"
-  ],
-  "rules": [],
-  "genericKeys": [
-    "T"
-  ]
+	"identifier": "HTTP_RESPONSE",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "HTTP Response"
+		}
+	],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "http;response;object"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "HTTP Response"
+		}
+	],
+	"signature": "{ body: T, headers: HTTP_HEADER_MAP, status_code: HTTP_STATUS_CODE }",
+	"linked_data_type_identifiers": [
+		"HTTP_STATUS_CODE",
+		"HTTP_HEADER_MAP"
+	],
+	"rules": []
 }

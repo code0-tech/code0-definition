@@ -19,8 +19,5 @@
     }
   ],
   "signature": "T & {}",
-  "rules": [],
-  "genericKeys": [
-    "T"
-  ]
+  "rules": []
 }
