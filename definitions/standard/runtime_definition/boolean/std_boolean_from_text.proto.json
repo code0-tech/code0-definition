@@ -49,7 +49,7 @@
   "displayIcon": "tabler:toggle-left",
   "signature": "(value: TEXT) => BOOLEAN",
   "linkedDataTypeIdentifiers": [
-    "LIST",
-    "NUMBER"
+    "TEXT",
+    "BOOLEAN"
   ]
 }

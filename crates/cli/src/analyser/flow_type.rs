@@ -84,7 +84,7 @@ impl Analyser {
                 name.clone(),
                 original.clone(),
                 DiagnosticKind::NullField {
-                    field_name: "input_type_identifier".into(),
+                    field_name: "return_type_identifier".into(),
                 },
             ));
         }

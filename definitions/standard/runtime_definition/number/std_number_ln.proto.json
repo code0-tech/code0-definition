@@ -1,55 +1,54 @@
 {
-  "runtimeName": "std::number::ln",
-  "runtimeParameterDefinitions": [
-    {
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Input Number"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The numeric input whose natural logarithm (log base e) will be calculated."
-        }
-      ],
-      "documentation": []
-    }
-  ],
-  "throwsError": false,
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Natural Logarithm"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Calculates the natural logarithm (log base e) of a number."
-    }
-  ],
-  "documentation": [],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "natural log;ln;log e;number;math;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Natural Logarithm of ${value}"
-    }
-  ],
-  "deprecationMessage": [],
-  "displayIcon": "tabler:math-function",
-  "signature": "(value: NUMBER) => NUMBER",
-  "linkedDataTypeIdentifiers": [
-    "BOOLEAN",
-    "NUMBER"
-  ]
+	"runtimeName": "std::number::ln",
+	"runtimeParameterDefinitions": [
+		{
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Input Number"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The numeric input whose natural logarithm (log base e) will be calculated."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"throwsError": false,
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Natural Logarithm"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Calculates the natural logarithm (log base e) of a number."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "natural log;ln;log e;number;math;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Natural Logarithm of ${value}"
+		}
+	],
+	"deprecationMessage": [],
+	"displayIcon": "tabler:math-function",
+	"signature": "(value: NUMBER) => NUMBER",
+	"linkedDataTypeIdentifiers": [
+		"NUMBER"
+	]
 }

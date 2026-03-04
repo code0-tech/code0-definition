@@ -1,54 +1,55 @@
 {
-  "runtimeName": "std::object::keys",
-  "runtimeParameterDefinitions": [
-    {
-      "runtimeName": "object",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Object"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Returns a list of all the keys (property names) of the given object."
-        }
-      ],
-      "documentation": []
-    }
-  ],
-  "throwsError": false,
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Get Object Keys"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns a list containing all keys of the specified object."
-    }
-  ],
-  "documentation": [],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "keys;object;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Keys of ${object}"
-    }
-  ],
-  "deprecationMessage": [],
-  "displayIcon": "tabler:cube",
-  "signature": "<T>(object: OBJECT<T>) => LIST<keyof OBJECT<T>>",
-  "linkedDataTypeIdentifiers": [
-    "OBJECT"
-  ]
+	"runtimeName": "std::object::keys",
+	"runtimeParameterDefinitions": [
+		{
+			"runtimeName": "object",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Object"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Returns a list of all the keys (property names) of the given object."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"throwsError": false,
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Get Object Keys"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a list containing all keys of the specified object."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "keys;object;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Keys of ${object}"
+		}
+	],
+	"deprecationMessage": [],
+	"displayIcon": "tabler:cube",
+	"signature": "<T>(object: OBJECT<T>) => LIST<keyof OBJECT<T>>",
+	"linkedDataTypeIdentifiers": [
+		"OBJECT",
+		"LIST"
+	]
 }
