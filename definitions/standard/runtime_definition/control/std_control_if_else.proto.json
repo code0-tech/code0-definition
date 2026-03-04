@@ -53,7 +53,6 @@
       "documentation": []
     }
   ],
-  "returnTypeIdentifier": null,
   "throwsError": false,
   "name": [
     {
@@ -87,9 +86,9 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-ramp-right",
-  "linked_data_type_identifier": [
+  "signature": "(condition: BOOLEAN, runnable: RUNNABLE, else_runnable: RUNNABLE) => void",
+  "linkedDataTypeIdentifiers": [
     "BOOLEAN",
     "RUNNABLE"
-  ],
-  "signature": "(condition: BOOLEAN, runnable: RUNNABLE, else_runnable: RUNNABLE) => void"
+  ]
 }

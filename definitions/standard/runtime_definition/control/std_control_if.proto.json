@@ -64,9 +64,9 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-ramp-right-2",
-  "linked_data_type_identifier": [
+  "signature": "(condition: BOOLEAN, runnable: RUNNABLE) => void",
+  "linkedDataTypeIdentifiers": [
     "BOOLEAN",
     "RUNNABLE"
-  ],
-  "signature": "(condition: BOOLEAN, runnable: RUNNABLE) => void"
+  ]
 }

@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-iteration",
-  "linkedDataTypeIdentifier": [
+  "linkedDataTypeIdentifiers": [
     "LIST",
     "TRANSFORM"
   ],

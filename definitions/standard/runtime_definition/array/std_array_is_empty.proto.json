@@ -47,9 +47,9 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:list",
-  "linked_data_type_identifier": [
+  "signature": "<R>(list: LIST<T>) => BOOLEAN",
+  "linkedDataTypeIdentifiers": [
     "LIST",
     "BOOLEAN"
-  ],
-  "signature": "<R>(list: LIST<T>) => BOOLEAN"
+  ]
 }

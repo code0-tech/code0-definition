@@ -19,7 +19,6 @@
       "documentation": []
     }
   ],
-  "type": "LIST<keyof T>",
   "throwsError": false,
   "name": [
     {

@@ -47,9 +47,9 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:list",
-  "linked_data_type_identifier": [
+  "signature": "<T>(list: LIST<T>) => NUMBER",
+  "linkedDataTypeIdentifiers": [
     "NUMBER",
     "LIST"
-  ],
-  "signature": "<T>(list: LIST<T>) => NUMBER"
+  ]
 }

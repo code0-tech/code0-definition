@@ -53,9 +53,6 @@
       "documentation": []
     }
   ],
-  "returnTypeIdentifier": {
-    "dataTypeIdentifier": "HTTP_RESPONSE"
-  },
   "throwsError": false,
   "name": [
     {
@@ -84,10 +81,10 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:world-www",
-  "linked_data_type_identifier": [
+  "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: HTTP_HEADER_MAP, payload: T) => HTTP_RESPONSE",
+  "linkedDataTypeIdentifiers": [
     "HTTP_STATUS_CODE",
     "HTTP_HEADER_MAP",
     "HTTP_RESPONSE"
-  ],
-  "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: HTTP_HEADER_MAP, payload: T) => HTTP_RESPONSE"
+  ]
 }

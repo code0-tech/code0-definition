@@ -29,9 +29,9 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:xbox-x",
-  "linked_data_type_identifier": [
+  "signature": "() => void",
+  "linkedDataTypeIdentifiers": [
     "LIST",
     "NUMBER"
-  ],
-  "signature": "() => void"
+  ]
 }

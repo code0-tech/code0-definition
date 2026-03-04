@@ -64,8 +64,8 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-iteration",
-  "linked_data_type_identifier": [
+  "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>) => LIST<T>",
+  "linkedDataTypeIdentifiers": [
     "LIST"
-  ],
-  "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>) => LIST<T>"
+  ]
 }

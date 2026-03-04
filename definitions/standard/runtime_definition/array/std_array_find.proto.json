@@ -64,9 +64,9 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-iteration",
-  "linked_data_type_identifier": [
+  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>) => T",
+  "linkedDataTypeIdentifiers": [
     "LIST",
     "PREDICATE"
-  ],
-  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>) => T"
+  ]
 }

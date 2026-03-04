@@ -64,10 +64,10 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-iteration",
-  "linked_data_type_identifier": [
+  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>) => NUMBER",
+  "linkedDataTypeIdentifiers": [
     "LIST",
     "NUMBER",
     "PREDICATE"
-  ],
-  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>) => NUMBER"
+  ]
 }

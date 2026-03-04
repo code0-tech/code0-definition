@@ -64,9 +64,9 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:list",
-  "linked_data_type_identifier": [
+  "signature": "(list: LIST<TEXT>, join_text: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
     "LIST",
     "TEXT"
-  ],
-  "signature": "(list: LIST<TEXT>, join_text: TEXT) => TEXT"
+  ]
 }

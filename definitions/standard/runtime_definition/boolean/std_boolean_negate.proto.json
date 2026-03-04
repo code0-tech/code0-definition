@@ -47,8 +47,8 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:toggle-left",
-  "linked_data_type_identifier": [
+  "signature": "(value: BOOLEAN) => BOOLEAN",
+  "linkedDataTypeIdentifiers": [
     "BOOLEAN"
-  ],
-  "signature": "(value: BOOLEAN) => BOOLEAN"
+  ]
 }
