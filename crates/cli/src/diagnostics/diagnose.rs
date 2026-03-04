@@ -24,7 +24,7 @@ impl Diagnose {
         let path = format!("{}:{}:{}", Path::new(&self.definition.path).display(), 1, 1);
         match &self.kind {
             DeserializationError { description } => error(
-                format!("A JSON paring error occurred: `{}`", description),
+                format!("A JSON parsing error occurred: `{}`", description),
                 &path,
             ),
             DuplicateDataTypeIdentifier { identifier } => error(
