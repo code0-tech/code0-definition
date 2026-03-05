@@ -68,5 +68,5 @@
     "LIST",
     "CONSUMER"
   ],
-  "signature": "<T>(list: LIST<T>) => void"
+  "signature": "<T>(list: LIST<T>, consumer: CONSUMER<T>) => void"
 }
