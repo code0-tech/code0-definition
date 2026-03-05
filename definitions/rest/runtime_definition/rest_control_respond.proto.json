@@ -3,7 +3,6 @@
   "runtimeParameterDefinitions": [
     {
       "runtimeName": "http_response",
-      "defaultValue": null,
       "name": [
         {
           "code": "en-US",

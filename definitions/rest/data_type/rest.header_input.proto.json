@@ -19,6 +19,6 @@
     }
   ],
   "rules": [],
-  "linked_data_type_identifiers": [],
+  "linked_data_type_identifiers": ["OBJECT"],
   "signature": "{}"
 }

@@ -5,7 +5,6 @@
       "identifier": "HTTP_URL",
       "unique": "PROJECT",
       "dataTypeIdentifier": "HTTP_URL",
-      "defaultValue": null,
       "name": [
         {
           "code": "en-US",
@@ -23,7 +22,6 @@
       "identifier": "HTTP_METHOD",
       "unique": "NONE",
       "dataTypeIdentifier": "HTTP_METHOD",
-      "defaultValue": null,
       "name": [
         {
           "code": "en-US",
