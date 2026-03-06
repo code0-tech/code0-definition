@@ -73,7 +73,7 @@ export async function DefinitionMapper(path: string): Promise<Feature[]> {
     };
 
     dataTypes
-        .map((f) => ({ name: f.feature, type: getDataType(f.type.identifier, constructed) }))
+        .map((f) => ({ name: f.feature, type: getDataType(f.type, constructed) }))
         .forEach((dt) => dt.type && getFeature(dt.name).dataTypes.push(dt.type));
 
     runtimeFunctions

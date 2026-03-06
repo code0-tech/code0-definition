@@ -9,7 +9,6 @@ import {
 } from "@code0-tech/tucana/pb/shared.data_type_pb.js"
 import { ConstructedDataTypes, getID } from "../definition/mapper.js";
 import { getTranslationConnection } from "./translation.js";
-import { Value } from "@code0-tech/tucana/pb/shared.struct_pb.js";
 
 enum DataTypeRulesVariant {
 	/** The rule checks if a number falls within a specified range. */
