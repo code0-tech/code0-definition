@@ -81,7 +81,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:math-function",
-  "signature": "(value: NUMBER, min: NUMBER, max: NUMBER) => MNUMBER",
+  "signature": "(value: NUMBER, min: NUMBER, max: NUMBER) => NUMBER",
   "linkedDataTypeIdentifiers": [
     "NUMBER"
   ]
