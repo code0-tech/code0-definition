@@ -80,8 +80,6 @@ export async function DefinitionMapper(path: string): Promise<Feature[]> {
         .map((f) => ({ name: f.feature, type: mapFunction(f.func, constructed) }))
         .forEach((rf) => rf.type && getFeature(rf.name).runtimeFunctions.push(rf.type));
 
-    console.dir(flowTypes, {depth: null})
-
     flowTypes
         .map((f) => ({ name: f.feature, type: mapFlowType(f.flow, constructed) }))
         .forEach((ft) => ft.type && getFeature(ft.name).flowTypes.push(ft.type));
