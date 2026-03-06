@@ -1,97 +1,88 @@
 {
-	"runtimeName": "std::text::replace_last",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Original Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This text contains the subtext that will be replaced only once—the last occurrence."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "old",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Old Subtext"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Only the last occurrence of this subtext will be replaced in the original text."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "new",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "New Subtext"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This subtext will replace only the last occurrence of the old subtext."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Replace Last Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Replaces the last occurrence of a specified subtext with another subtext in the input text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "replace_last;text;string;std;replace;last"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "In ${value} replace the last ${old} with ${new}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::replace_last",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This text contains the subtext that will be replaced only once—the last occurrence."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "old",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Old Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Only the last occurrence of this subtext will be replaced in the original text."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "new",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "New Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This subtext will replace only the last occurrence of the old subtext."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Replace Last Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Replaces the last occurrence of a specified subtext with another subtext in the input text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "replace_last;text;string;std;replace;last"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "In ${value} replace the last ${old} with ${new}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, old: TEXT, new: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

@@ -1,5 +1,4 @@
 {
-  "variant": "OBJECT",
   "identifier": "REST_HEADER_INPUT",
   "name": [
     {
@@ -20,5 +19,6 @@
     }
   ],
   "rules": [],
-  "genericKeys": []
+  "linked_data_type_identifiers": ["OBJECT"],
+  "signature": "OBJECT<{}>"
 }

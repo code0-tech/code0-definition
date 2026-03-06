@@ -1,56 +1,27 @@
 {
-	"variant": "OBJECT",
-	"identifier": "REST_ADAPTER_INPUT",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Rest Adapter Input"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "http;rest;adapter;input"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Rest Adapter Input"
-		}
-	],
-	"rules": [
-		{
-			"containsKey": {
-				"key": "body",
-				"dataTypeIdentifier": {
-					"genericType": {
-						"dataTypeIdentifier": "OBJECT",
-						"genericMappers": [
-							{
-								"source": [
-									{
-										"genericKey": "O"
-									}
-								],
-								"target": "T",
-								"genericCombinations": []
-							}
-						]
-					}
-				}
-			}
-		},
-		{
-			"containsKey": {
-				"key": "headers",
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "REST_HEADER_INPUT"
-				}
-			}
-		}
-	],
-	"genericKeys": [
-		"O"
-	]
+  "identifier": "REST_ADAPTER_INPUT",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Rest Adapter Input"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;rest;adapter;input"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Rest Adapter Input"
+    }
+  ],
+  "rules": [],
+	"genericKeys": ["T"],
+  "linked_data_type_identifiers": [
+    "REST_HEADER_INPUT"
+  ],
+  "signature": "{ body: T, headers: REST_HEADER_INPUT }"
 }

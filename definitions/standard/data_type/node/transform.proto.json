@@ -1,5 +1,4 @@
 {
-	"variant": "NODE",
 	"identifier": "TRANSFORM",
 	"name": [
 		{
@@ -19,29 +18,7 @@
 			"content": "Transform ${I} to ${R}"
 		}
 	],
-	"rules": [
-		{
-			"returnType": {
-				"dataTypeIdentifier": {
-					"genericKey": "R"
-				}
-			}
-		},
-		{
-			"inputTypes": {
-				"inputTypes": [
-					{
-						"dataTypeIdentifier": {
-							"genericKey": "I"
-						},
-						"inputIdentifier": "transform"
-					}
-				]
-			}
-		}
-	],
-	"genericKeys": [
-		"I",
-		"R"
-	]
+	"rules": [],
+	"genericKeys": ["T", "R"],
+	"signature": "(item: I) => R"
 }

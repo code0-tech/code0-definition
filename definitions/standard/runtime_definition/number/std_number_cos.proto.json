@@ -1,57 +1,54 @@
 {
-	"runtimeName": "std::number::cos",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "radians",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Radians"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Computes the cosine of the given angle in radians."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Cosine"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Calculates the cosine value of the input angle measured in radians."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "cos;cosine;trigonometry;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Cosine of ${radians}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::cos",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "radians",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Radians"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the cosine of the given angle in radians."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Cosine"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the cosine value of the input angle measured in radians."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "cos;cosine;trigonometry;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Cosine of ${radians}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(radians: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

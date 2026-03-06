@@ -1,119 +1,108 @@
 {
-	"runtimeName": "http::request::create",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "HTTP_METHOD"
-			},
-			"runtimeName": "http_method",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "HTTP Method"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "HTTP_HEADER_MAP"
-			},
-			"runtimeName": "headers",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "HTTP Headers"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A collection of key-value pairs containing additional request metadata."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "HTTP_URL"
-			},
-			"runtimeName": "url",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Request URL"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Specifies the endpoint address, including protocol, host, path, and query parameters, where the request is directed."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"genericKey": "P"
-			},
-			"runtimeName": "payload",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Request Body"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Contains the request payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "HTTP_REQUEST"
-	},
-	"throwsError": false,
-	"genericKeys": [
-		"P"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Create HTTP-Request"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Creates an HTTP-Request object with the specified method, headers, url and payload."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "create;request;http"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Create Http-Request with Method: ${http_method}, Headers: ${headers}, Url: ${url} and Payload: ${payload}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:world-www"
+  "runtimeName": "http::request::create",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "http_method",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Method"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "headers",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A collection of key-value pairs containing additional request metadata."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "url",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request URL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the endpoint address, including protocol, host, path, and query parameters, where the request is directed."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "payload",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request Body"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Contains the request payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Create HTTP-Request"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Creates an HTTP-Request object with the specified method, headers, url and payload."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "create;request;http"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Create Http-Request with Method: ${http_method}, Headers: ${headers}, Url: ${url} and Payload: ${payload}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:world-www",
+  "signature": "<T>(http_method: HTTP_METHOD, headers: HTTP_HEADER_MAP, url: HTTP_URL, payload: T) => HTTP_REQUEST",
+  "linkedDataTypeIdentifiers": [
+    "HTTP_URL",
+    "HTTP_METHOD",
+    "HTTP_HEADER_MAP",
+    "HTTP_REQUEST"
+  ]
 }

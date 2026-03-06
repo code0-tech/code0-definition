@@ -1,77 +1,71 @@
 {
-	"runtimeName": "std::number::round",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The numeric input that will be rounded to the nearest value."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "decimals",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Decimal Places"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Specifies how many decimal digits to keep after rounding."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Round Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Rounds a number to the nearest value at the specified number of decimal places."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "round;nearest;approximate;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Round ${value} with ${decimals} Decimal Places"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::round",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The numeric input that will be rounded to the nearest value."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "decimals",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Decimal Places"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies how many decimal digits to keep after rounding."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Round Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Rounds a number to the nearest value at the specified number of decimal places."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "round;nearest;approximate;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Round ${value} with ${decimals} Decimal Places"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER, decimals: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

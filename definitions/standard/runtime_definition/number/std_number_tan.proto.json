@@ -1,57 +1,54 @@
 {
-	"runtimeName": "std::number::tan",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "radians",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Radians"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Computes the tangent of the given angle in radians."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Tangent"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Calculates the tangent value of the input angle measured in radians."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "tan;tangent;trigonometry;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Tangent of ${radians}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::tan",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "radians",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Radians"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Computes the tangent of the given angle in radians."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Tangent"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the tangent value of the input angle measured in radians."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "tan;tangent;trigonometry;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Tangent of ${radians}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(radians: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

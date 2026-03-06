@@ -1,5 +1,4 @@
 {
-  "variant": "TYPE",
   "identifier": "CRON_DAY_OF_MONTH",
   "name": [
     {
@@ -26,5 +25,6 @@
       "content": "Cron Day of Month"
     }
   ],
-  "genericKeys": []
+  "linked_data_type_identifiers": [],
+  "signature": "string"
 }

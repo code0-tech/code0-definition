@@ -1,69 +1,54 @@
 {
-	"runtimeName": "std::list::sum",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"dataTypeIdentifier": "NUMBER"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
-			"runtimeName": "list",
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Calculates the sum of all numbers in the given list."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Sum of Numbers"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns the total sum of the elements in the numeric list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "sum;total;add all;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Sum of ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+  "runtimeName": "std::list::sum",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Calculates the sum of all numbers in the given list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Sum of Numbers"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the total sum of the elements in the numeric list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sum;total;add all;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sum of ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "NUMBER"
+  ],
+  "signature": "(list: LIST<NUMBER>) => NUMBER"
 }

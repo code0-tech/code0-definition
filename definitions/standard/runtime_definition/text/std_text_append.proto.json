@@ -1,77 +1,71 @@
 {
-	"runtimeName": "std::text::append",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Original Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The base text that will have another text appended to its end."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "suffix",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Suffix"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The text that will be appended to the end of the original text."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Append Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new text consisting of the original text followed by the specified suffix."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "append;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Append ${suffix} at the End of ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::append",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The base text that will have another text appended to its end."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "suffix",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Suffix"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text that will be appended to the end of the original text."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Append Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text consisting of the original text followed by the specified suffix."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "append;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Append ${suffix} at the End of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, suffix: TEXT) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

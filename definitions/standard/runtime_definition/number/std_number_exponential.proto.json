@@ -1,77 +1,71 @@
 {
-	"runtimeName": "std::number::exponential",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "base",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Base"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This is the numeric value that will be raised to the power of the exponent."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "exponent",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Exponent"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This numeric value indicates the power to which the base is raised."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Exponential"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Computes the result of raising the base to the power specified by the exponent."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "exponential;exp;e power;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${base} to the Exponent of ${exponent}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::exponential",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "base",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Base"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the numeric value that will be raised to the power of the exponent."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "exponent",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Exponent"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This numeric value indicates the power to which the base is raised."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Exponential"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Computes the result of raising the base to the power specified by the exponent."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "exponential;exp;e power;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${base} to the Exponent of ${exponent}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(base: NUMBER, exponent: NUMBER) => NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

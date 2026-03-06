@@ -1,128 +1,72 @@
 {
-	"runtimeName": "std::list::map",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "IN"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Each element of this list will be passed through the transform function."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "TRANSFORM",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "IN"
-								}
-							],
-							"target": "I",
-							"genericCombinations": []
-						},
-						{
-							"source": [
-								{
-									"genericKey": "OUT"
-								}
-							],
-							"target": "R",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
-			"runtimeName": "transform",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Transform Function"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The transform function is applied to every element of the list to produce a new list."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"genericKey": "OUT"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
-	"throwsError": false,
-	"genericKeys": [
-		"IN",
-		"OUT"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Map List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Transforms each element in the list using the provided function. This will create a new list of new elements which will be returned."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "map;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Apply ${transform} for each in ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-iteration"
+  "runtimeName": "std::list::map",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Each element of this list will be passed through the transform function."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "transform",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Transform Function"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The transform function is applied to every element of the list to produce a new list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Map List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Transforms each element in the list using the provided function. This will create a new list of new elements which will be returned."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "map;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Apply ${transform} for each in ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "linkedDataTypeIdentifiers": [
+    "LIST",
+    "TRANSFORM"
+  ],
+  "signature": "<T, R>(list: LIST<T>, transform: TRANSFORM<T, R>) => LIST<R>"
 }

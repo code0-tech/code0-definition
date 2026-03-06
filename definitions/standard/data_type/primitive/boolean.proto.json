@@ -1,30 +1,23 @@
 {
-	"variant": "PRIMITIVE",
-	"identifier": "BOOLEAN",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Boolean"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "bool;boolean;bit"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Boolean"
-		}
-	],
-	"rules": [
-		{
-			"regex": {
-				"pattern": "^(true|false)$"
-			}
-		}
-	],
-	"genericKeys": []
+  "identifier": "BOOLEAN",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "bool;boolean;bit"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "signature": "boolean",
+  "rules": []
 }

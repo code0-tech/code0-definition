@@ -1,92 +1,72 @@
 {
-	"runtimeName": "std::object::contains_key",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "OBJECT",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "O"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
-			"runtimeName": "object",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Object"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The object to check for the presence of a key."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "key",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Key"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The key to check for existence in the object."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
-	"throwsError": false,
-	"genericKeys": [
-		"O"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Contains Key"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns true if the given key is a property of the object; otherwise, returns false."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "contains_key;object;std;contains;key"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Checks if ${object} Contains ${key}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:cube"
+  "runtimeName": "std::object::contains_key",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "object",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The object to check for the presence of a key."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "key",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Key"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The key to check for existence in the object."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Contains Key"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the given key is a property of the object; otherwise, returns false."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "contains_key;object;std;contains;key"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Checks if ${object} Contains ${key}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:cube",
+  "signature": "<T>(object: OBJECT<T>, key: keyof Object<T>) => BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "OBJECT",
+    "BOOLEAN"
+  ]
 }

@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::boolean::as_text",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "BOOLEAN"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Converts a boolean to a text."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Boolean as Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Will convert the boolean to text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "to text;string;format number;boolean;logic;std;as;text"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Convert ${value} to text"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:toggle-left"
+  "runtimeName": "std::boolean::as_text",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a boolean to a text."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean as Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Will convert the boolean to text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to text;string;format number;boolean;logic;std;as;text"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${value} to text"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:toggle-left",
+  "signature": "(value: BOOLEAN) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "BOOLEAN",
+    "TEXT"
+  ]
 }

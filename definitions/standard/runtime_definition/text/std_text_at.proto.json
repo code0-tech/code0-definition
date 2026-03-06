@@ -1,77 +1,72 @@
 {
-	"runtimeName": "std::text::at",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The input text from which a character will be retrieved by index."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "index",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Index"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The zero-based position of the character to extract."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Character at Index"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Retrieves a single character from the input text based on the provided zero-based index."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "at;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Get Character of ${value} at ${index}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::at",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text from which a character will be retrieved by index."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "index",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Index"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The zero-based position of the character to extract."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Character at Index"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Retrieves a single character from the input text based on the provided zero-based index."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "at;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get Character of ${value} at ${index}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, index: NUMBER) => TEXT",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER",
+    "TEXT"
+  ]
 }

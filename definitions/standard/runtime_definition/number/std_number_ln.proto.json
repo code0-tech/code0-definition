@@ -2,9 +2,6 @@
 	"runtimeName": "std::number::ln",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
 			"runtimeName": "value",
 			"defaultValue": null,
 			"name": [
@@ -22,11 +19,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
 	"throwsError": false,
-	"genericKeys": [],
 	"name": [
 		{
 			"code": "en-US",
@@ -53,5 +46,9 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+	"displayIcon": "tabler:math-function",
+	"signature": "(value: NUMBER) => NUMBER",
+	"linkedDataTypeIdentifiers": [
+		"NUMBER"
+	]
 }

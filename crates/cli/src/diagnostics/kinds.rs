@@ -8,12 +8,7 @@ pub enum DiagnosticKind {
     DuplicateRuntimeFunctionIdentifier { identifier: String },
     DuplicateRuntimeParameterIdentifier { identifier: String },
     UndefinedDataTypeIdentifier { identifier: String },
-    EmptyGenericMapper,
-    GenericKeyNotInMappingTarget { key: String, target: String },
     NullField { field_name: String },
-    ForbiddenVariant,
-    UnusedGenericKey { key: String },
-    UndefinedGenericKey { key: String },
     UndefinedTranslation { translation_field: String },
     MissingTranslation { translation_field: String },
 }
@@ -27,13 +22,8 @@ impl DiagnosticKind {
             | DuplicateFlowTypeIdentifier { .. }
             | DuplicateRuntimeFunctionIdentifier { .. }
             | DuplicateRuntimeParameterIdentifier { .. }
-            | GenericKeyNotInMappingTarget { .. }
-            | EmptyGenericMapper
             | UndefinedDataTypeIdentifier { .. }
             | NullField { .. }
-            | ForbiddenVariant
-            | UnusedGenericKey { .. }
-            | UndefinedGenericKey { .. }
             | MissingTranslation { .. } => Severity::Error,
             UndefinedTranslation { .. } => Severity::Warning,
         }

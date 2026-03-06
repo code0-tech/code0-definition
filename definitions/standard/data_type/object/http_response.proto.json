@@ -1,5 +1,4 @@
 {
-	"variant": "OBJECT",
 	"identifier": "HTTP_RESPONSE",
 	"name": [
 		{
@@ -19,38 +18,11 @@
 			"content": "HTTP Response"
 		}
 	],
-	"rules": [
-		{
-			"containsKey": {
-				"key": "headers",
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "HTTP_HEADER_MAP"
-				}
-			}
-		},
-		{
-			"containsKey": {
-				"key": "body",
-				"dataTypeIdentifier": {
-					"genericType": {
-						"dataTypeIdentifier": "OBJECT",
-						"genericMappers": [
-							{
-								"source": [
-									{
-										"genericKey": "O"
-									}
-								],
-								"target": "T",
-								"genericCombinations": []
-							}
-						]
-					}
-				}
-			}
-		}
+	"genericKeys": ["T"],
+	"signature": "{ body: T, headers: HTTP_HEADER_MAP, status_code: HTTP_STATUS_CODE }",
+	"linked_data_type_identifiers": [
+		"HTTP_STATUS_CODE",
+		"HTTP_HEADER_MAP"
 	],
-	"genericKeys": [
-		"O"
-	]
+	"rules": []
 }

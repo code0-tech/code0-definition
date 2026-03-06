@@ -2,22 +2,6 @@
 	"runtimeName": "std::object::keys",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "OBJECT",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "O"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
 			"runtimeName": "object",
 			"defaultValue": null,
 			"name": [
@@ -35,24 +19,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"dataTypeIdentifier": "TEXT"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
 	"throwsError": false,
-	"genericKeys": ["O"],
 	"name": [
 		{
 			"code": "en-US",
@@ -79,5 +46,10 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:cube"
+	"displayIcon": "tabler:cube",
+	"signature": "<T>(object: OBJECT<T>) => LIST<keyof OBJECT<T>>",
+	"linkedDataTypeIdentifiers": [
+		"OBJECT",
+		"LIST"
+	]
 }
