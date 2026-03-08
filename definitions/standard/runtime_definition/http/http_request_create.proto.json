@@ -98,11 +98,11 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:world-www",
-  "signature": "<T>(http_method: HTTP_METHOD, headers: HTTP_HEADER_MAP, url: HTTP_URL, payload: T) => HTTP_REQUEST",
+  "signature": "<T>(http_method: HTTP_METHOD, headers: OBJECT<{}>, url: HTTP_URL, payload: T) => HTTP_REQUEST",
   "linkedDataTypeIdentifiers": [
     "HTTP_URL",
     "HTTP_METHOD",
-    "HTTP_HEADER_MAP",
+    "OBJECT",
     "HTTP_REQUEST"
   ]
 }
