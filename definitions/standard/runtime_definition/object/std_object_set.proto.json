@@ -1,88 +1,89 @@
 {
-  "runtimeName": "std::object::set",
-  "runtimeParameterDefinitions": [
-    {
-      "runtimeName": "object",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Object"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The original object that will be modified with the specified key-value pair."
-        }
-      ],
-      "documentation": []
-    },
-    {
-      "runtimeName": "key",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Key"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The property name under which the value will be stored in the object."
-        }
-      ],
-      "documentation": []
-    },
-    {
-      "runtimeName": "value",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Value"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "The value to assign to the object property identified by the key."
-        }
-      ],
-      "documentation": []
-    }
-  ],
-  "throwsError": false,
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Set Object Key"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Returns a new object with the specified key set to the given value."
-    }
-  ],
-  "documentation": [],
-  "alias": [
-    {
-      "code": "en-US",
-      "content": "set;object;std"
-    }
-  ],
-  "displayMessage": [
-    {
-      "code": "en-US",
-      "content": "Set ${key} to ${value} of ${object}"
-    }
-  ],
-  "deprecationMessage": [],
-  "displayIcon": "tabler:cube",
-  "signature": "<T, K extends keyof OBJECT<T>>(object: OBJECT<T>, key: keyof OBJECT<T>, value: T[K]) => OBJECT<T>",
-  "linkedDataTypeIdentifiers": [
-    "OBJECT"
-  ]
+	"runtimeName": "std::object::set",
+	"runtimeParameterDefinitions": [
+		{
+			"runtimeName": "object",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Object"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The original object that will be modified with the specified key-value pair."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"runtimeName": "key",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Key"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The property name under which the value will be stored in the object."
+				}
+			],
+			"documentation": []
+		},
+		{
+			"runtimeName": "value",
+			"defaultValue": null,
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Value"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "The value to assign to the object property identified by the key."
+				}
+			],
+			"documentation": []
+		}
+	],
+	"throwsError": false,
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Set Object Key"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Returns a new object with the specified key set to the given value."
+		}
+	],
+	"documentation": [],
+	"alias": [
+		{
+			"code": "en-US",
+			"content": "set;object;std"
+		}
+	],
+	"displayMessage": [
+		{
+			"code": "en-US",
+			"content": "Set ${key} to ${value} of ${object}"
+		}
+	],
+	"deprecationMessage": [],
+	"displayIcon": "tabler:cube",
+	"signature": "<T, K extends keyof OBJECT<T>, V>(object: OBJECT<T>, key: TEXT, value: V) => OBJECT<T>",
+	"linkedDataTypeIdentifiers": [
+		"OBJECT",
+		"TEXT"
+	]
 }
