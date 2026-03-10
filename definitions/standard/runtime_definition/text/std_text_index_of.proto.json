@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:abc",
-  "signature": "(value: TEXT, substring: TEXT) => NUMBER",
+  "signature": "(value: TEXT, substring: TEXT): NUMBER",
   "linkedDataTypeIdentifiers": [
     "TEXT",
     "NUMBER"

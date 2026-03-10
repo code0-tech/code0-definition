@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-iteration",
-  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>) => NUMBER",
+  "signature": "<T>(list: LIST<T>, predicate: PREDICATE<T>): NUMBER",
   "linkedDataTypeIdentifiers": [
     "LIST",
     "NUMBER",

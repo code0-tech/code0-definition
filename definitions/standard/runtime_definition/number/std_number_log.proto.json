@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:math-function",
-  "signature": "(value: NUMBER, base: NUMBER) => NUMBER",
+  "signature": "(value: NUMBER, base: NUMBER): NUMBER",
   "linkedDataTypeIdentifiers": [
     "NUMBER"
   ]

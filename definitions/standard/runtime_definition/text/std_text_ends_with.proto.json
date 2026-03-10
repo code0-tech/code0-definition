@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:abc",
-  "signature": "(value: TEXT, suffix: TEXT) => BOOLEAN",
+  "signature": "(value: TEXT, suffix: TEXT): BOOLEAN",
   "linkedDataTypeIdentifiers": [
     "TEXT",
     "BOOLEAN"

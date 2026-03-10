@@ -81,7 +81,7 @@
 	],
 	"deprecationMessage": [],
 	"displayIcon": "tabler:cube",
-	"signature": "<T, K extends TEXT, V>(object: OBJECT<T>, key: K, value: V) => OBJECT<T & Record<K, V>>",
+	"signature": "<T, K extends TEXT, V>(object: OBJECT<T>, key: K, value: V): OBJECT<T & Record<K, V>>",
 	"linkedDataTypeIdentifiers": [
 		"OBJECT",
 		"TEXT"

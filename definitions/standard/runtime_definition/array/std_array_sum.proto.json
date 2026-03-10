@@ -50,5 +50,5 @@
     "LIST",
     "NUMBER"
   ],
-  "signature": "(list: LIST<NUMBER>) => NUMBER"
+  "signature": "(list: LIST<NUMBER>): NUMBER"
 }

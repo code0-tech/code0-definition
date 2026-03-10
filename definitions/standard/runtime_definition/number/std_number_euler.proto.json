@@ -29,7 +29,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:math-function",
-  "signature": "() => NUMBER",
+  "signature": "(): NUMBER",
   "linkedDataTypeIdentifiers": [
     "NUMBER"
   ]

@@ -50,5 +50,5 @@
   "linkedDataTypeIdentifiers": [
     "LIST"
   ],
-  "signature": "<T>(list: LIST<T>) => T"
+  "signature": "<T>(list: LIST<T>): T"
 }

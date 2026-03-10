@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:math-function",
-  "signature": "(value: NUMBER, root_exponent: NUMBER) => NUMBER",
+  "signature": "(value: NUMBER, root_exponent: NUMBER): NUMBER",
   "linkedDataTypeIdentifiers": [
     "NUMBER"
   ]
