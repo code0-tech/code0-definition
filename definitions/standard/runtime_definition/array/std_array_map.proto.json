@@ -68,5 +68,5 @@
     "LIST",
     "TRANSFORM"
   ],
-  "signature": "<T, R>(list: LIST<T>, transform: TRANSFORM<T, R>) => LIST<R>"
+  "signature": "<T, R>(list: LIST<T>, transform: TRANSFORM<T, R>): LIST<R>"
 }

@@ -47,7 +47,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:cube",
-  "signature": "<T>(object: OBJECT<T>) => NUMBER",
+  "signature": "<T>(object: OBJECT<T>): NUMBER",
   "linkedDataTypeIdentifiers": [
     "OBJECT",
     "NUMBER"

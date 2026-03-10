@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:abc",
-  "signature": "(value: TEXT, encoding: TEXT_ENCODING) => TEXT",
+  "signature": "(value: TEXT, encoding: TEXT_ENCODING): TEXT",
   "linkedDataTypeIdentifiers": [
     "TEXT",
     "TEXT_ENCODING"

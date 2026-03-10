@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:math-function",
-  "signature": "(first: NUMBER, second: NUMBER) => BOOLEAN",
+  "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
   "linkedDataTypeIdentifiers": [
     "NUMBER",
     "BOOLEAN"

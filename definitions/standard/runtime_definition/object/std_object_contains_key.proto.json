@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:cube",
-  "signature": "<T>(object: OBJECT<T>, key: keyof Object<T>) => BOOLEAN",
+  "signature": "<T>(object: OBJECT<T>, key: keyof Object<T>): BOOLEAN",
   "linkedDataTypeIdentifiers": [
     "OBJECT",
     "BOOLEAN"

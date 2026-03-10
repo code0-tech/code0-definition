@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:list",
-  "signature": "<T>(list: LIST<T>, item: T) => LIST<T>",
+  "signature": "<T>(list: LIST<T>, item: T): LIST<T>",
   "linkedDataTypeIdentifiers": [
     "LIST"
   ]

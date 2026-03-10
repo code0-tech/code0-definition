@@ -47,7 +47,7 @@
 	],
 	"deprecationMessage": [],
 	"displayIcon": "tabler:math-function",
-	"signature": "(text: TEXT) => NUMBER",
+	"signature": "(text: TEXT): NUMBER",
 	"linkedDataTypeIdentifiers": [
 		"NUMBER",
 		"TEXT"

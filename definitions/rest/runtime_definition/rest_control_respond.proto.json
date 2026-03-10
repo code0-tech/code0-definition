@@ -47,5 +47,5 @@
   "throwsError": false,
   "displayIcon": "tabler:cube-sent",
   "linkedDataTypeIdentifiers": ["HTTP_RESPONSE"],
-  "signature": "(http_response: HTTP_RESPONSE) => void"
+  "signature": "(http_response: HTTP_RESPONSE): void"
 }

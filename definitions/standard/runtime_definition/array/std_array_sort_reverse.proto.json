@@ -67,5 +67,5 @@
   "linkedDataTypeIdentifiers": [
     "LIST"
   ],
-  "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>) => LIST<T>"
+  "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>): LIST<T>"
 }

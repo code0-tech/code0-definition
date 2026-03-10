@@ -47,5 +47,5 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:arrow-back",
-  "signature": "<T>(value: T) => T"
+  "signature": "<T>(value: T): T"
 }

@@ -64,7 +64,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:abc",
-  "signature": "(value: TEXT, delimiter: TEXT) => LIST<TEXT>",
+  "signature": "(value: TEXT, delimiter: TEXT): LIST<TEXT>",
   "linkedDataTypeIdentifiers": [
     "TEXT",
     "LIST"
