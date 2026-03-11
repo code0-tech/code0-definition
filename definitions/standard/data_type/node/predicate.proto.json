@@ -21,7 +21,7 @@
 	"rules": [],
 	"genericKeys": ["T"],
 	"type": "(item: T): BOOLEAN",
-	"linked_data_type_identifiers": [
+	"linkedDataTypeIdentifiers": [
 		"BOOLEAN"
 	]
 }
