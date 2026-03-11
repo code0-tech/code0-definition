@@ -8,6 +8,18 @@ impl Analyser {
         let name = flow.identifier.clone();
         let original = aft.original_definition.clone();
 
+        for linked in flow.linked_data_type_identifiers.clone() {
+            if !self.data_type_identifier_exists(linked.as_str(), None) {
+                self.reporter.add(Diagnose::new(
+                    name.clone(),
+                    original.clone(),
+                    DiagnosticKind::UndefinedDataTypeIdentifier {
+                        identifier: linked.clone(),
+                    },
+                ));
+            }
+        }
+
         if flow.display_icon.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
@@ -90,6 +102,18 @@ impl Analyser {
         }
 
         for setting in &flow.settings {
+            for linked in setting.linked_data_type_identifiers.clone() {
+                if !self.data_type_identifier_exists(linked.as_str(), None) {
+                    self.reporter.add(Diagnose::new(
+                        name.clone(),
+                        original.clone(),
+                        DiagnosticKind::UndefinedDataTypeIdentifier {
+                            identifier: linked.clone(),
+                        },
+                    ));
+                }
+            }
+
             if setting.name.is_empty() {
                 self.reporter.add(Diagnose::new(
                     setting.identifier.clone(),
@@ -108,12 +132,12 @@ impl Analyser {
                     },
                 ));
             }
-            if !self.data_type_identifier_exists(&setting."type", None) {
+            if !self.data_type_identifier_exists(&setting.r#type, None) {
                 self.reporter.add(Diagnose::new(
                     name.clone(),
                     original.clone(),
                     DiagnosticKind::UndefinedDataTypeIdentifier {
-                        identifier: setting."type".clone(),
+                        identifier: setting.r#type.clone(),
                     },
                 ));
             }
