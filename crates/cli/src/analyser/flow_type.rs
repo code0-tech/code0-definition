@@ -65,26 +65,26 @@ impl Analyser {
             ));
         }
 
-        if let Some(identifier) = &flow.input_type_identifier
+        if let Some(identifier) = &flow.input_type
             && identifier == ""
         {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
                 DiagnosticKind::NullField {
-                    field_name: "input_type_identifier".into(),
+                    field_name: "input_type".into(),
                 },
             ));
         }
 
-        if let Some(identifier) = &flow.return_type_identifier
+        if let Some(identifier) = &flow.return_type
             && identifier == ""
         {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
                 DiagnosticKind::NullField {
-                    field_name: "return_type_identifier".into(),
+                    field_name: "return_type".into(),
                 },
             ));
         }
@@ -108,12 +108,12 @@ impl Analyser {
                     },
                 ));
             }
-            if !self.data_type_identifier_exists(&setting.data_type_identifier, None) {
+            if !self.data_type_identifier_exists(&setting.type, None) {
                 self.reporter.add(Diagnose::new(
                     name.clone(),
                     original.clone(),
                     DiagnosticKind::UndefinedDataTypeIdentifier {
-                        identifier: setting.data_type_identifier.clone(),
+                        identifier: setting.type.clone(),
                     },
                 ));
             }

@@ -47,12 +47,12 @@ impl Analyser {
             ));
         }
 
-        if dt.signature == "" {
+        if dt.type == "" {
             self.reporter.add(Diagnose::new(
                 dt.identifier.clone(),
                 adt.original_definition.clone(),
                 DiagnosticKind::NullField {
-                    field_name: "signature".into(),
+                    field_name: "type".into(),
                 },
             ));
         }
