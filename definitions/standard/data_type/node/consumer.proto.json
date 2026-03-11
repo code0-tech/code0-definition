@@ -20,5 +20,5 @@
 	],
 	"rules": [],
 	"genericKeys": ["T"],
-	"signature": "(item: T): void"
+	"type": "(item: T): void"
 }

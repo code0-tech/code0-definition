@@ -18,7 +18,7 @@
       "content": "HTTP Method"
     }
   ],
-  "signature": "'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD'",
+  "type": "'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD'",
   "linked_data_type_identifiers": [],
   "rules": []
 }
