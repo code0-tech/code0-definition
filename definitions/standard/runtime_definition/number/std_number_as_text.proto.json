@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::number::as_text",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "number",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Number"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The number to convert to text."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Number as Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Converts a number into text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "to text;string;format number;number;math;std;as;text"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Convert ${number} to Text"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::as_text",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "number",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to convert to text."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Number as Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts a number into text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "to text;string;format number;number;math;std;as;text"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${number} to Text"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(number: NUMBER): TEXT",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER",
+    "TEXT"
+  ]
 }

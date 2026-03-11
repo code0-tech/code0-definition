@@ -1,57 +1,54 @@
 {
-	"runtimeName": "std::text::uppercase",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Converts all characters in the input text to uppercase."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Uppercase"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Transforms all letters in the text to their uppercase equivalents."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "uppercase;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Uppercase ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::uppercase",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts all characters in the input text to uppercase."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Uppercase"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Transforms all letters in the text to their uppercase equivalents."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "uppercase;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Uppercase ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT): TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

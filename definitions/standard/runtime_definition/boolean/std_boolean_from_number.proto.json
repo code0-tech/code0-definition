@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::boolean::from_number",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Converts a number to a boolean."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Boolean from Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Will convert the number to a boolean."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "from number;to boolean;convert;boolean;logic;std;from;number"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Convert ${value} to boolean"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:toggle-left"
+  "runtimeName": "std::boolean::from_number",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts a number to a boolean."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean from Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Will convert the number to a boolean."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from number;to boolean;convert;boolean;logic;std;from;number"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Convert ${value} to boolean"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:toggle-left",
+  "signature": "(value: NUMBER): BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "BOOLEAN",
+    "NUMBER"
+  ]
 }

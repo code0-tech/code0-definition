@@ -1,5 +1,4 @@
 {
-  "variant": "TYPE",
   "identifier": "CRON_DAY_OF_WEEK",
   "name": [
     {
@@ -26,5 +25,6 @@
       "content": "Cron Day of Week"
     }
   ],
-  "genericKeys": []
+  "linked_data_type_identifiers": [],
+  "signature": "string | 'MON' | 'TUE' | 'WED' | 'THU' | 'FRI' | 'SAT' | 'SUN'"
 }

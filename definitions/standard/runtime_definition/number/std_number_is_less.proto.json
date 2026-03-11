@@ -1,77 +1,72 @@
 {
-	"runtimeName": "std::number::is_less",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "first",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "First Number"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This is the number that will be evaluated to determine if it is less than the second number."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "second",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Second Number"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This is the number that the first number will be compared to."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Is Less"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns true if the first numeric input is less than the second; otherwise, returns false."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "less;smaller;fewer;number;math;std;is"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${first} Less than ${second}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::is_less",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "First Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the number that will be evaluated to determine if it is less than the second number."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Second Number"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the number that the first number will be compared to."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Is Less"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the first numeric input is less than the second; otherwise, returns false."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "less;smaller;fewer;number;math;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} Less than ${second}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(first: NUMBER, second: NUMBER): BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER",
+    "BOOLEAN"
+  ]
 }

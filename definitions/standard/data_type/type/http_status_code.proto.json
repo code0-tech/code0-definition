@@ -1,31 +1,33 @@
 {
-	"variant": "TYPE",
-	"identifier": "HTTP_STATUS_CODE",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "HTTP Status Code"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "http;status;code"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "HTTP Status Code"
-		}
-	],
-	"rules": [
-		{
-			"numberRange": {
-				"from": 100,
-				"to": 599
-			}
-		}
-	],
-	"genericKeys": []
+  "identifier": "HTTP_STATUS_CODE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP Status Code"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;status;code"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP Status Code"
+    }
+  ],
+  "signature": "NUMBER",
+  "linked_data_type_identifiers": [
+    "NUMBER"
+  ],
+  "rules": [
+    {
+      "numberRange": {
+        "from": 100,
+        "to": 599
+      }
+    }
+  ]
 }

@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::number::is_zero",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This is the numeric input evaluated to determine whether it equals zero."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "BOOLEAN"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Number Is Zero"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns true if the input number is zero. Otherwise returns false."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "zero;equals zero;number;math;std;is"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${value} Equals 0"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::is_zero",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the numeric input evaluated to determine whether it equals zero."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Number Is Zero"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the input number is zero. Otherwise returns false."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "zero;equals zero;number;math;std;is"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} Equals 0"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER): BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER",
+    "BOOLEAN"
+  ]
 }

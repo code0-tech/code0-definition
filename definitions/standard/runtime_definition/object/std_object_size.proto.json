@@ -1,70 +1,55 @@
 {
-	"runtimeName": "std::object::size",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "OBJECT",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "O"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
-			"runtimeName": "object",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Object"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Returns the number of keys present in the given object."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": ["O"],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Get Object Size"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns an integer count of all enumerable property keys in the specified object."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "size;object;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Size of ${object}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:cube"
+  "runtimeName": "std::object::size",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "object",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Returns the number of keys present in the given object."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Get Object Size"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns an integer count of all enumerable property keys in the specified object."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "size;object;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Size of ${object}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:cube",
+  "signature": "<T>(object: OBJECT<T>): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "OBJECT",
+    "NUMBER"
+  ]
 }

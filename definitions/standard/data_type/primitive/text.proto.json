@@ -1,5 +1,4 @@
 {
-	"variant": "PRIMITIVE",
 	"identifier": "TEXT",
 	"name": [
 		{
@@ -19,12 +18,6 @@
 			"content": "Text"
 		}
 	],
-	"rules": [
-		{
-			"regex": {
-				"pattern": "[\\s\\S]*"
-			}
-		}
-	],
-	"genericKeys": []
+	"signature": "string",
+	"rules": []
 }

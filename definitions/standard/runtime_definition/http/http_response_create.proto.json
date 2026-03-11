@@ -1,99 +1,90 @@
 {
-	"runtimeName": "http::response::create",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "HTTP_STATUS_CODE"
-			},
-			"runtimeName": "http_status_code",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "HTTP Status Code"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "An HTTP status code is a three-digit number (100–599) indicating the result of a request (e.g., 200, 404, 500)."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "HTTP_HEADER_MAP"
-			},
-			"runtimeName": "headers",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "HTTP Headers"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A collection of key-value pairs containing additional response metadata."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"genericKey": "P"
-			},
-			"runtimeName": "payload",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Request Body"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Contains the response payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "HTTP_RESPONSE"
-	},
-	"throwsError": false,
-	"genericKeys": [
-		"P"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Create HTTP-Response"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Creates an HTTP-Response object with the specified method, headers and payload."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "create;response;http"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Create Http-Response with Method: ${http_method}, Headers: ${headers} and Payload: ${payload}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:world-www"
+  "runtimeName": "http::response::create",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "http_status_code",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Status Code"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "An HTTP status code is a three-digit number (100–599) indicating the result of a request (e.g., 200, 404, 500)."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "headers",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A collection of key-value pairs containing additional response metadata."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "payload",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request Body"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Contains the response payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Create HTTP-Response"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Creates an HTTP-Response object with the specified method, headers and payload."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "create;response;http"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Create Http-Response with Method: ${http_method}, Headers: ${headers} and Payload: ${payload}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:world-www",
+  "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: OBJECT<{}>, payload: T): HTTP_RESPONSE",
+  "linkedDataTypeIdentifiers": [
+    "HTTP_STATUS_CODE",
+    "OBJECT",
+    "HTTP_RESPONSE"
+  ]
 }

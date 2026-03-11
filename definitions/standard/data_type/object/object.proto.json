@@ -1,34 +1,24 @@
 {
-	"variant": "OBJECT",
-	"identifier": "OBJECT",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Object"
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "object;struct;data"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Object"
-		}
-	],
-	"rules": [
-		{
-			"parentType": {
-				"parentType": {
-					"genericKey": "T"
-				}
-			}
-		}
-	],
-	"genericKeys": [
-		"T"
-	]
+  "identifier": "OBJECT",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Object"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "object;struct;data"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Object"
+    }
+  ],
+	"genericKeys": ["T"],
+  "signature": "T & {}",
+  "rules": []
 }

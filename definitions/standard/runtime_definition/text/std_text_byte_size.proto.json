@@ -1,57 +1,55 @@
 {
-	"runtimeName": "std::text::byte_size",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The text whose byte size is to be calculated."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Byte Size"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Computes the size in bytes of the provided text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "byte_size;text;string;std;byte;size"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Byte-Size of ${value}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::byte_size",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text whose byte size is to be calculated."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Byte Size"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Computes the size in bytes of the provided text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "byte_size;text;string;std;byte;size"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Byte-Size of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "NUMBER"
+  ]
 }

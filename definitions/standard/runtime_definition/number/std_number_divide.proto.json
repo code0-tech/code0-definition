@@ -1,77 +1,69 @@
 {
-	"runtimeName": "std::number::divide",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "first",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Dividend"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This is the numerator or the number that will be divided by the second value."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "second",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Divisor"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "This is the denominator or the value that divides the first number."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": true,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Divide Numbers"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns the result of dividing the first numeric input (dividend) by the second (divisor)."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "divide;division;quotient;div;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${first} Divided by ${second}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::divide",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "first",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Dividend"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the numerator or the number that will be divided by the second value."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "second",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Divisor"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the denominator or the value that divides the first number."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": true,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Divide Numbers"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the result of dividing the first numeric input (dividend) by the second (divisor)."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "divide;division;quotient;div;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${first} Divided by ${second}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(first: NUMBER, second: NUMBER): NUMBER",
+  "linkedDataTypeIdentifiers": []
 }

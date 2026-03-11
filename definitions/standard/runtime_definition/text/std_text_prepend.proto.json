@@ -1,77 +1,71 @@
 {
-	"runtimeName": "std::text::prepend",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Original Text"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The base text that will have another text prepended to its beginning."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "prefix",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Prefix"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The text that will be added to the start of the original text."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "TEXT"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Prepend Text"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a new text consisting of the specified prefix followed by the original text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "prepend;text;string;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Prepend ${value} with ${prefix}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::prepend",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The base text that will have another text prepended to its beginning."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "prefix",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Prefix"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The text that will be added to the start of the original text."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Prepend Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text consisting of the specified prefix followed by the original text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "prepend;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Prepend ${value} with ${prefix}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, prefix: TEXT): TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
 }

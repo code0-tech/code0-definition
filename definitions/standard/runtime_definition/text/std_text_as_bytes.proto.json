@@ -1,70 +1,56 @@
 {
-	"runtimeName": "std::text::as_bytes",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Converts the input text into a list of byte values."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"dataTypeIdentifier": "NUMBER"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Text As Bytes"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Converts a text into a list of byte values."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "as_bytes;text;string;std;as;bytes"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "${value} As Bytes"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::as_bytes",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Converts the input text into a list of byte values."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Text As Bytes"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts a text into a list of byte values."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "as_bytes;text;string;std;as;bytes"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "${value} As Bytes"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT): LIST<NUMBER>",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "LIST",
+    "NUMBER"
+  ]
 }

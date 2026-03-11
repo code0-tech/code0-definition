@@ -1,5 +1,4 @@
 {
-  "variant": "TYPE",
   "identifier": "CRON_MONTH",
   "name": [
     {
@@ -26,5 +25,6 @@
       "content": "Cron Month"
     }
   ],
-  "genericKeys": []
+  "linked_data_type_identifiers": [],
+  "signature": "string | 'JAN' | 'FEB' | 'MAR' | 'APR' | 'MAY' | 'JUN' | 'JUL' | 'AUG' | 'SEP' | 'OCT' | 'NOV' | 'DEC' "
 }

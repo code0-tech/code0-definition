@@ -1,98 +1,54 @@
 {
-	"runtimeName": "std::list::flat",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericType": {
-										"dataTypeIdentifier": "LIST",
-										"genericMappers": [
-											{
-												"source": [
-													{
-														"genericKey": "R"
-													}
-												],
-												"target": "T",
-												"genericCombinations": []
-											}
-										]
-									}
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Nested List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "A list containing sub-lists that will be flattened into a single-level list."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"genericKey": "R"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
-	"throwsError": false,
-	"genericKeys": [
-		"R"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Flatten List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Flattens a nested list into a single-level list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "flat;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Flatten ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+  "runtimeName": "std::list::flat",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Nested List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A list containing sub-lists that will be flattened into a single-level list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Flatten List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Flattens a nested list into a single-level list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "flat;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Flatten ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "signature": "<T>(list: LIST<LIST<T>>): LIST<T>",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ]
 }

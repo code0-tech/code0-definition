@@ -1,70 +1,55 @@
 {
-	"runtimeName": "std::text::chars",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
-			"runtimeName": "value",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Text Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Splits the input text into a list of its constituent characters."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"genericType": {
-			"dataTypeIdentifier": "LIST",
-			"genericMappers": [
-				{
-					"source": [
-						{
-							"dataTypeIdentifier": "TEXT"
-						}
-					],
-					"target": "T",
-					"genericCombinations": []
-				}
-			]
-		}
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Characters"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Creates a list where each element is a single character from the original text."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "characters;letters;split;text;string;std;chars"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Turns ${value} into a List of Characters"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:abc"
+  "runtimeName": "std::text::chars",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Splits the input text into a list of its constituent characters."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Characters"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Creates a list where each element is a single character from the original text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "characters;letters;split;text;string;std;chars"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Turns ${value} into a List of Characters"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT): LIST<TEXT>",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "LIST"
+  ]
 }

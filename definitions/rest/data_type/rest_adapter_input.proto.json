@@ -1,5 +1,4 @@
 {
-	"variant": "OBJECT",
 	"identifier": "REST_ADAPTER_INPUT",
 	"name": [
 		{
@@ -19,38 +18,12 @@
 			"content": "Rest Adapter Input"
 		}
 	],
-	"rules": [
-		{
-			"containsKey": {
-				"key": "body",
-				"dataTypeIdentifier": {
-					"genericType": {
-						"dataTypeIdentifier": "OBJECT",
-						"genericMappers": [
-							{
-								"source": [
-									{
-										"genericKey": "O"
-									}
-								],
-								"target": "T",
-								"genericCombinations": []
-							}
-						]
-					}
-				}
-			}
-		},
-		{
-			"containsKey": {
-				"key": "headers",
-				"dataTypeIdentifier": {
-					"dataTypeIdentifier": "REST_HEADER_INPUT"
-				}
-			}
-		}
-	],
+	"rules": [],
 	"genericKeys": [
-		"O"
-	]
+		"T"
+	],
+	"linked_data_type_identifiers": [
+		"OBJECT"
+	],
+	"signature": "{ body: T, headers: OBJECT<{}> }"
 }

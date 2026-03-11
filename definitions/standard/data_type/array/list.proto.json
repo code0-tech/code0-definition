@@ -1,5 +1,4 @@
 {
-	"variant": "ARRAY",
 	"identifier": "LIST",
 	"name": [
 		{
@@ -19,16 +18,7 @@
 			"content": "List of ${T}"
 		}
 	],
-	"rules": [
-		{
-			"containsType": {
-				"dataTypeIdentifier": {
-					"genericKey": "T"
-				}
-			}
-		}
-	],
-	"genericKeys": [
-		"T"
-	]
+	"genericKeys": ["T"],
+	"rules": [],
+	"signature": "T[]"
 }

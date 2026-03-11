@@ -1,100 +1,94 @@
 {
-	"runtimeName": "std::control::if_else",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "BOOLEAN"
-			},
-			"runtimeName": "condition",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Condition"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Boolean that determines which branch to execute. If true the Runnable runs otherwise the Else Runnable runs."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "RUNNABLE"
-			},
-			"runtimeName": "runnable",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Runnable"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Defines the runnable that runs if the condition evaluates to true."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "RUNNABLE"
-			},
-			"runtimeName": "else_runnable",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Else Runnable"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Defines the runnable that runs if the condition evaluates to false."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": null,
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "If-Else"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Evaluates a condition and executes either the Then Runnable or the Else Runnable."
-		}
-	],
-	"documentation": [
-		{
-			"code": "en-US",
-			"content": "Evaluates a boolean condition. If true, executes the Runnable. Otherwise executes the Else Runnable."
-		}
-	],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "if_else;control;std;if;else"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "If ${condition} is True do ${then_runnable} else ${else_runnable}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:arrow-ramp-right"
+  "runtimeName": "std::control::if_else",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "condition",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Condition"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Boolean that determines which branch to execute. If true the Runnable runs otherwise the Else Runnable runs."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "runnable",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Runnable"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines the runnable that runs if the condition evaluates to true."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "else_runnable",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Else Runnable"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines the runnable that runs if the condition evaluates to false."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "If-Else"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Evaluates a condition and executes either the Then Runnable or the Else Runnable."
+    }
+  ],
+  "documentation": [
+    {
+      "code": "en-US",
+      "content": "Evaluates a boolean condition. If true, executes the Runnable. Otherwise executes the Else Runnable."
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "if_else;control;std;if;else"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "If ${condition} is True do ${then_runnable} else ${else_runnable}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-ramp-right",
+  "signature": "(condition: BOOLEAN, runnable: RUNNABLE, else_runnable: RUNNABLE): void",
+  "linkedDataTypeIdentifiers": [
+    "BOOLEAN",
+    "RUNNABLE"
+  ]
 }

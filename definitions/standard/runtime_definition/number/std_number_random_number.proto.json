@@ -1,77 +1,71 @@
 {
-	"runtimeName": "std::number::random_number",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "min",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Minimum Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Defines the lower bound (inclusive) for the random number generation."
-				}
-			],
-			"documentation": []
-		},
-		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "NUMBER"
-			},
-			"runtimeName": "max",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Maximum Value"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "Defines the upper bound (inclusive) for the random number generation."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
-	"throwsError": false,
-	"genericKeys": [],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Random Number"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Returns a randomly generated number within the given range, inclusive of both minimum and maximum."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "random;rand;random number;number;math;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Random Number Between ${min} and ${max}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+  "runtimeName": "std::number::random_number",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "min",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minimum Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines the lower bound (inclusive) for the random number generation."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "max",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Maximum Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines the upper bound (inclusive) for the random number generation."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Random Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a randomly generated number within the given range, inclusive of both minimum and maximum."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "random;rand;random number;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Random Number Between ${min} and ${max}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(min: NUMBER, max: NUMBER): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
 }

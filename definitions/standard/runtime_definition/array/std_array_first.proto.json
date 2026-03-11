@@ -1,72 +1,54 @@
 {
-	"runtimeName": "std::list::first",
-	"runtimeParameterDefinitions": [
-		{
-			"dataTypeIdentifier": {
-				"genericType": {
-					"dataTypeIdentifier": "LIST",
-					"genericMappers": [
-						{
-							"source": [
-								{
-									"genericKey": "R"
-								}
-							],
-							"target": "T",
-							"genericCombinations": []
-						}
-					]
-				}
-			},
-			"runtimeName": "list",
-			"defaultValue": null,
-			"name": [
-				{
-					"code": "en-US",
-					"content": "Input List"
-				}
-			],
-			"description": [
-				{
-					"code": "en-US",
-					"content": "The list from which to retrieve the first element."
-				}
-			],
-			"documentation": []
-		}
-	],
-	"returnTypeIdentifier": {
-		"genericKey": "R"
-	},
-	"throwsError": false,
-	"genericKeys": [
-		"R"
-	],
-	"name": [
-		{
-			"code": "en-US",
-			"content": "First Element of List"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Retrieves the first element from the list."
-		}
-	],
-	"documentation": [],
-	"alias": [
-		{
-			"code": "en-US",
-			"content": "first;array;list;collection;std"
-		}
-	],
-	"displayMessage": [
-		{
-			"code": "en-US",
-			"content": "Get First Element in ${list}"
-		}
-	],
-	"deprecationMessage": [],
-	"displayIcon": "tabler:list"
+  "runtimeName": "std::list::first",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The list from which to retrieve the first element."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "First Element of List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Retrieves the first element from the list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "first;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get First Element in ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ],
+  "signature": "<T>(list: LIST<T>): T"
 }

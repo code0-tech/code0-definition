@@ -1,9 +1,7 @@
 {
 	"runtimeName": "std::control::stop",
 	"runtimeParameterDefinitions": [],
-	"returnTypeIdentifier": null,
 	"throwsError": false,
-	"genericKeys": [],
 	"name": [
 		{
 			"code": "en-US",
@@ -30,5 +28,7 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:xbox-x"
+	"displayIcon": "tabler:xbox-x",
+	"signature": "(): void",
+	"linkedDataTypeIdentifiers": []
 }

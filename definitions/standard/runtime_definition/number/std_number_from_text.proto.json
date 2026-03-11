@@ -2,9 +2,6 @@
 	"runtimeName": "std::number::from_text",
 	"runtimeParameterDefinitions": [
 		{
-			"dataTypeIdentifier": {
-				"dataTypeIdentifier": "TEXT"
-			},
 			"runtimeName": "text",
 			"defaultValue": null,
 			"name": [
@@ -22,11 +19,7 @@
 			"documentation": []
 		}
 	],
-	"returnTypeIdentifier": {
-		"dataTypeIdentifier": "NUMBER"
-	},
 	"throwsError": false,
-	"genericKeys": [],
 	"name": [
 		{
 			"code": "en-US",
@@ -53,5 +46,10 @@
 		}
 	],
 	"deprecationMessage": [],
-	"displayIcon": "tabler:math-function"
+	"displayIcon": "tabler:math-function",
+	"signature": "(text: TEXT): NUMBER",
+	"linkedDataTypeIdentifiers": [
+		"NUMBER",
+		"TEXT"
+	]
 }
