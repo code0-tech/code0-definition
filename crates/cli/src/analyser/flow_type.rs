@@ -108,12 +108,12 @@ impl Analyser {
                     },
                 ));
             }
-            if !self.data_type_identifier_exists(&setting.type, None) {
+            if !self.data_type_identifier_exists(&setting."type", None) {
                 self.reporter.add(Diagnose::new(
                     name.clone(),
                     original.clone(),
                     DiagnosticKind::UndefinedDataTypeIdentifier {
-                        identifier: setting.type.clone(),
+                        identifier: setting."type".clone(),
                     },
                 ));
             }
