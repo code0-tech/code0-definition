@@ -4,7 +4,10 @@
 		{
 			"identifier": "CRON_MINUTE",
 			"unique": "NONE",
-			"dataTypeIdentifier": "CRON_MINUTE",
+			"type": "CRON_MINUTE",
+			"linked_data_type_identifiers": [
+				"CRON_MINUTE"
+			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -22,7 +25,10 @@
 		{
 			"identifier": "CRON_HOUR",
 			"unique": "NONE",
-			"dataTypeIdentifier": "CRON_HOUR",
+			"type": "CRON_HOUR",
+			"linked_data_type_identifiers": [
+				"CRON_HOUR"
+			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -40,7 +46,10 @@
 		{
 			"identifier": "CRON_DAY_OF_MONTH",
 			"unique": "NONE",
-			"dataTypeIdentifier": "CRON_DAY_OF_MONTH",
+			"type": "CRON_DAY_OF_MONTH",
+			"linked_data_type_identifiers": [
+				"CRON_DAY_OF_MONTH"
+			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -58,7 +67,10 @@
 		{
 			"identifier": "CRON_MONTH",
 			"unique": "NONE",
-			"dataTypeIdentifier": "CRON_MONTH",
+			"type": "CRON_MONTH",
+			"linked_data_type_identifiers": [
+				"CRON_MONTH"
+			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -76,7 +88,10 @@
 		{
 			"identifier": "CRON_DAY_OF_WEEK",
 			"unique": "NONE",
-			"dataTypeIdentifier": "CRON_DAY_OF_WEEK",
+			"type": "CRON_DAY_OF_WEEK",
+			"linked_data_type_identifiers": [
+				"CRON_DAY_OF_WEEK"
+			],
 			"defaultValue": null,
 			"name": [
 				{
