@@ -19,7 +19,7 @@
 		}
 	],
 	"type": "TEXT",
-	"linked_data_type_identifiers": [
+	"linkedDataTypeIdentifiers": [
 		"TEXT"
 	],
 	"rules": [

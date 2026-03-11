@@ -5,7 +5,7 @@
       "identifier": "HTTP_URL",
       "unique": "PROJECT",
       "type": "HTTP_URL",
-      "linked_data_type_identifiers": [
+      "linkedDataTypeIdentifiers": [
         "HTTP_URL"
       ],
       "name": [
@@ -25,7 +25,7 @@
       "identifier": "HTTP_METHOD",
       "unique": "NONE",
       "type": "HTTP_METHOD",
-      "linked_data_type_identifiers": [
+      "linkedDataTypeIdentifiers": [
         "HTTP_METHOD"
       ],
       "name": [
@@ -44,7 +44,7 @@
   ],
   "inputType": "REST_ADAPTER_INPUT",
   "returnType": "HTTP_RESPONSE",
-  "linked_data_type_identifiers": [
+  "linkedDataTypeIdentifiers": [
     "REST_ADAPTER_INPUT",
     "HTTP_RESPONSE"
   ],

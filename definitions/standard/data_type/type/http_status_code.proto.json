@@ -19,7 +19,7 @@
     }
   ],
   "type": "NUMBER",
-  "linked_data_type_identifiers": [
+  "linkedDataTypeIdentifiers": [
     "NUMBER"
   ],
   "rules": [
