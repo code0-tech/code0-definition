@@ -18,8 +18,8 @@
       "content": "HTTP Status Code"
     }
   ],
-  "signature": "NUMBER",
-  "linked_data_type_identifiers": [
+  "type": "NUMBER",
+  "linkedDataTypeIdentifiers": [
     "NUMBER"
   ],
   "rules": [

@@ -20,5 +20,5 @@
 	],
 	"genericKeys": ["T"],
 	"rules": [],
-	"signature": "T[]"
+	"type": "T[]"
 }

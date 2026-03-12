@@ -19,8 +19,8 @@
 		}
 	],
 	"genericKeys": ["T"],
-	"signature": "{ body: T, headers: OBJECT<{}>, status_code: HTTP_STATUS_CODE }",
-	"linked_data_type_identifiers": [
+	"type": "{ body: T, headers: OBJECT<{}>, status_code: HTTP_STATUS_CODE }",
+	"linkedDataTypeIdentifiers": [
 		"HTTP_STATUS_CODE",
 		"OBJECT"
 	],

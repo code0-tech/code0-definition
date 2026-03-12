@@ -22,8 +22,8 @@
 	"genericKeys": [
 		"T"
 	],
-	"linked_data_type_identifiers": [
+	"linkedDataTypeIdentifiers": [
 		"OBJECT"
 	],
-	"signature": "{ body: T, headers: OBJECT<{}> }"
+	"type": "{ body: T, headers: OBJECT<{}> }"
 }

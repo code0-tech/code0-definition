@@ -4,7 +4,10 @@
     {
       "identifier": "HTTP_URL",
       "unique": "PROJECT",
-      "dataTypeIdentifier": "HTTP_URL",
+      "type": "HTTP_URL",
+      "linkedDataTypeIdentifiers": [
+        "HTTP_URL"
+      ],
       "name": [
         {
           "code": "en-US",
@@ -21,7 +24,10 @@
     {
       "identifier": "HTTP_METHOD",
       "unique": "NONE",
-      "dataTypeIdentifier": "HTTP_METHOD",
+      "type": "HTTP_METHOD",
+      "linkedDataTypeIdentifiers": [
+        "HTTP_METHOD"
+      ],
       "name": [
         {
           "code": "en-US",
@@ -36,8 +42,12 @@
       ]
     }
   ],
-  "inputTypeIdentifier": "REST_ADAPTER_INPUT",
-  "returnTypeIdentifier": "HTTP_RESPONSE",
+  "inputType": "REST_ADAPTER_INPUT",
+  "returnType": "HTTP_RESPONSE",
+  "linkedDataTypeIdentifiers": [
+    "REST_ADAPTER_INPUT",
+    "HTTP_RESPONSE"
+  ],
   "editable": false,
   "name": [
     {

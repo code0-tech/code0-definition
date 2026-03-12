@@ -18,6 +18,6 @@
 			"content": "Text"
 		}
 	],
-	"signature": "string",
+	"type": "string",
 	"rules": []
 }

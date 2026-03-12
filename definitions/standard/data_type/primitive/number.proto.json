@@ -18,6 +18,6 @@
 			"content": "Number"
 		}
 	],
-	"signature": "number",
+	"type": "number",
 	"rules": []
 }
