@@ -29,7 +29,7 @@
   "description": [
     {
       "code": "en-US",
-      "content": "Removes all digit characters from the input number, effectively stripping it down to its non-digit components (such as decimal points, signs, or other symbols)."
+      "content": "Removes all digit characters from the input number, effectively stripping it down to its non-digit components."
     }
   ],
   "documentation": [],
