@@ -1,0 +1,54 @@
+{
+  "runtimeName": "std::number::remove_digits",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "number",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the numeric input. The result will be its value without any digits."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Remove Digits from Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Removes all digit characters from the input number, effectively stripping it down to its non-digit components (such as decimal points, signs, or other symbols)."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "remove:digits;strip;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Remove Digits from ${number}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(number: NUMBER): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
+}
