@@ -1,0 +1,55 @@
+{
+  "runtimeName": "std::number::has_digits",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "number",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to check for digit characters."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Has Digits in Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Checks if the given number contains any digit characters"
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "has;digits;contains;number;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Does ${number} have digits"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(number: NUMBER): BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER",
+    "BOOLEAN"
+  ]
+}
