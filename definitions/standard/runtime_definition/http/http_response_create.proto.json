@@ -81,7 +81,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:world-www",
-  "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: OBJECT<{}>, payload: T): HTTP_RESPONSE",
+  "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: OBJECT<{}>, payload: T): HTTP_RESPONSE<T>",
   "linkedDataTypeIdentifiers": [
     "HTTP_STATUS_CODE",
     "OBJECT",
