@@ -68,5 +68,5 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:list",
-  "signature": "<T>(list: LIST<T>, index: NUMBER): void"
+  "signature": "<T>(list: LIST<T>, index: NUMBER): T"
 }
