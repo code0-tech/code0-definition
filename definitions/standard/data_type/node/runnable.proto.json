@@ -19,5 +19,5 @@
 		}
 	],
 	"rules": [],
-	"type": "(): void"
+	"type": "() => void"
 }

@@ -20,5 +20,5 @@
 	],
 	"rules": [],
 	"genericKeys": ["I", "R"],
-	"type": "(item: I): R"
+	"type": "(item: I) => R"
 }

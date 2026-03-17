@@ -20,7 +20,7 @@
 	],
 	"rules": [],
 	"genericKeys": ["I"],
-	"type": "(left: I, right: I): NUMBER",
+	"type": "(left: I, right: I) => NUMBER",
 	"linkedDataTypeIdentifiers": [
 		"NUMBER"
 	]
