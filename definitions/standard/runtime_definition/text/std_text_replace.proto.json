@@ -19,7 +19,7 @@
       "documentation": []
     },
     {
-      "runtimeName": "old",
+      "runtimeName": "oldText",
       "defaultValue": null,
       "name": [
         {
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "runtimeName": "new",
+      "runtimeName": "newText",
       "defaultValue": null,
       "name": [
         {
@@ -81,7 +81,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:abc",
-  "signature": "(value: TEXT, old: TEXT, new: TEXT): TEXT",
+  "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
   "linkedDataTypeIdentifiers": [
     "TEXT"
   ]
