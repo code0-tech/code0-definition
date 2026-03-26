@@ -19,6 +19,6 @@
     }
   ],
 	"genericKeys": ["T"],
-  "type": "T & {}",
+  "type": "{ [K in keyof T]: T[K] }",
   "rules": []
 }
