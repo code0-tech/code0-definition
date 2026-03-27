@@ -42,11 +42,9 @@
       ]
     }
   ],
-  "inputType": "REST_ADAPTER_INPUT",
-  "returnType": "HTTP_RESPONSE",
+  "inputType": "REST_ADAPTER_INPUT<{}>",
   "linkedDataTypeIdentifiers": [
-    "REST_ADAPTER_INPUT",
-    "HTTP_RESPONSE"
+    "REST_ADAPTER_INPUT"
   ],
   "editable": false,
   "name": [
