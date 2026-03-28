@@ -1,0 +1,23 @@
+{
+  "identifier": "TYPE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Type"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "type;data type;data-type;datatype;type definition;type-definition;type-def;typedef"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Type of ${T}"
+    }
+  ],
+  "type": "T",
+  "genericKeys": ["T"]
+}
