@@ -2,12 +2,8 @@
   "identifier": "REST",
   "settings": [
     {
-      "identifier": "HTTP_URL",
+      "identifier": "httpURL",
       "unique": "PROJECT",
-      "type": "HTTP_URL",
-      "linkedDataTypeIdentifiers": [
-        "HTTP_URL"
-      ],
       "name": [
         {
           "code": "en-US",
@@ -22,12 +18,8 @@
       ]
     },
     {
-      "identifier": "HTTP_METHOD",
+      "identifier": "httpMethod",
       "unique": "NONE",
-      "type": "HTTP_METHOD",
-      "linkedDataTypeIdentifiers": [
-        "HTTP_METHOD"
-      ],
       "name": [
         {
           "code": "en-US",
@@ -42,11 +34,7 @@
       ]
     }
   ],
-  "inputType": "REST_ADAPTER_INPUT<{}>",
-  "linkedDataTypeIdentifiers": [
-    "REST_ADAPTER_INPUT"
-  ],
-  "editable": false,
+  "editable": true,
   "name": [
     {
       "code": "en-US",
@@ -72,5 +60,11 @@
       "content": "http;rest;route;web;webhook"
     }
   ],
-  "displayIcon": "tabler:world-www"
+  "displayIcon": "tabler:world-www",
+  "signature": "(httpURL: HTTP_URL, httpMethod: HTTP_METHOD): REST_ADAPTER_INPUT<{}>",
+  "linkedDataTypeIdentifiers": [
+    "HTTP_URL",
+    "HTTP_METHOD",
+    "REST_ADAPTER_INPUT"
+  ]
 }
