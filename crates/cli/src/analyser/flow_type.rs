@@ -77,43 +77,17 @@ impl Analyser {
             ));
         }
 
-        if let Some(identifier) = &flow.input_type
-            && identifier == ""
-        {
+        if &flow.signature == "" {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
                 DiagnosticKind::NullField {
-                    field_name: "input_type".into(),
-                },
-            ));
-        }
-
-        if let Some(identifier) = &flow.return_type
-            && identifier == ""
-        {
-            self.reporter.add(Diagnose::new(
-                name.clone(),
-                original.clone(),
-                DiagnosticKind::NullField {
-                    field_name: "return_type".into(),
+                    field_name: "signature".into(),
                 },
             ));
         }
 
         for setting in &flow.settings {
-            for linked in setting.linked_data_type_identifiers.clone() {
-                if !self.data_type_identifier_exists(linked.as_str(), None) {
-                    self.reporter.add(Diagnose::new(
-                        name.clone(),
-                        original.clone(),
-                        DiagnosticKind::UndefinedDataTypeIdentifier {
-                            identifier: linked.clone(),
-                        },
-                    ));
-                }
-            }
-
             if setting.name.is_empty() {
                 self.reporter.add(Diagnose::new(
                     setting.identifier.clone(),
@@ -129,15 +103,6 @@ impl Analyser {
                     original.clone(),
                     DiagnosticKind::UndefinedTranslation {
                         translation_field: "flow_setting.description".into(),
-                    },
-                ));
-            }
-            if !self.data_type_identifier_exists(&setting.r#type, None) {
-                self.reporter.add(Diagnose::new(
-                    name.clone(),
-                    original.clone(),
-                    DiagnosticKind::UndefinedDataTypeIdentifier {
-                        identifier: setting.r#type.clone(),
                     },
                 ));
             }
