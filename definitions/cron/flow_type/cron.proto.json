@@ -2,12 +2,8 @@
 	"identifier": "CRON",
 	"settings": [
 		{
-			"identifier": "CRON_MINUTE",
+			"identifier": "cronMinute",
 			"unique": "NONE",
-			"type": "CRON_MINUTE",
-			"linkedDataTypeIdentifiers": [
-				"CRON_MINUTE"
-			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -23,12 +19,8 @@
 			]
 		},
 		{
-			"identifier": "CRON_HOUR",
+			"identifier": "cronHour",
 			"unique": "NONE",
-			"type": "CRON_HOUR",
-			"linkedDataTypeIdentifiers": [
-				"CRON_HOUR"
-			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -44,12 +36,8 @@
 			]
 		},
 		{
-			"identifier": "CRON_DAY_OF_MONTH",
+			"identifier": "cronDayOfMonth",
 			"unique": "NONE",
-			"type": "CRON_DAY_OF_MONTH",
-			"linkedDataTypeIdentifiers": [
-				"CRON_DAY_OF_MONTH"
-			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -65,12 +53,8 @@
 			]
 		},
 		{
-			"identifier": "CRON_MONTH",
+			"identifier": "cronMonth",
 			"unique": "NONE",
-			"type": "CRON_MONTH",
-			"linkedDataTypeIdentifiers": [
-				"CRON_MONTH"
-			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -86,12 +70,8 @@
 			]
 		},
 		{
-			"identifier": "CRON_DAY_OF_WEEK",
+			"identifier": "cronDayOfWeek",
 			"unique": "NONE",
-			"type": "CRON_DAY_OF_WEEK",
-			"linkedDataTypeIdentifiers": [
-				"CRON_DAY_OF_WEEK"
-			],
 			"defaultValue": null,
 			"name": [
 				{
@@ -132,5 +112,7 @@
 			"code": "en-US",
 			"content": "Schedule Job ${cron_code}"
 		}
-	]
+	],
+	"signature": "(cronMinute: CRON_MINUTE, cronHour: CRON_HOUR, cronDayOfMonth: CRON_DAY_OF_MONTH, cronMonth: CRON_MONTH, cronDayOfWeek: CRON_DAY_OF_WEEK): void",
+	"linkedDataTypeIdentifiers": ["CRON_MINUTE", "CRON_HOUR", "CRON_DAY_OF_MONTH", "CRON_MONTH", "CRON_DAY_OF_WEEK"]
 }
