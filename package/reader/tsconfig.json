@@ -1,13 +1,13 @@
 {
   "exclude": ["node_modules", "build", "dist"],
-  "include": ["node_modules/@code0-tech/tucana/pb/**/*.ts"],
+  "include": ["src/**/*"],
   "types": [
     "typePatches"
   ],
   "compilerOptions": {
-    "lib": ["ESNext"],
-    "module": "NodeNext",
-    "target": "ESNext",
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "target": "es2020",
     "skipLibCheck": true,
     "strict": true,
     "paths": {
@@ -17,7 +17,7 @@
     },
     "baseUrl": "src/",
     "sourceMap": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
