@@ -1,14 +1,12 @@
 import {readdir, readFile} from "node:fs/promises";
 import {join, extname} from "node:path";
-
-import {FlowType} from "@code0-tech/tucana/pb/shared.flow_definition_pb.js";
-import {RuntimeFunctionDefinition} from "@code0-tech/tucana/pb/shared.runtime_function_pb.js";
-import {DefinitionDataType} from "@code0-tech/tucana/pb/shared.data_type_pb.js";
+import {DefinitionDataType, FlowType, FunctionDefinition, RuntimeFunctionDefinition} from "@code0-tech/tucana/shared";
 
 export const enum MetaType {
     FlowType = "FlowType",
     DataType = "DataType",
     RuntimeFunction = "RuntimeFunction",
+    Function = "Function"
 }
 
 export interface DefinitionError {
@@ -22,6 +20,7 @@ export interface Feature {
     data_types: DefinitionDataType[];
     flow_types: FlowType[];
     runtime_functions: RuntimeFunctionDefinition[];
+    functions: FunctionDefinition[];
     errors: DefinitionError[];
 }
 
@@ -58,7 +57,8 @@ const toMetaType = (folder: string): MetaType | null =>
     ({
         flow_type: MetaType.FlowType,
         data_type: MetaType.DataType,
-        runtime_definition: MetaType.RuntimeFunction
+        runtime_definition: MetaType.RuntimeFunction,
+        function: MetaType.Function,
     } as const)[folder] ?? null;
 
 const emptyFeature = (name: string): Feature => ({
@@ -66,6 +66,7 @@ const emptyFeature = (name: string): Feature => ({
     data_types: [],
     flow_types: [],
     runtime_functions: [],
+    functions: [],
     errors: [],
 });
 
@@ -93,9 +94,22 @@ const collectJsonFiles = async (dir: string): Promise<string[]> => {
 
 const addDefinition = (feature: Feature, def: string, type: MetaType) => {
     try {
-        if (type === MetaType.DataType) feature.data_types.push(DefinitionDataType.fromJsonString(def));
-        else if (type === MetaType.FlowType) feature.flow_types.push(FlowType.fromJsonString(def));
-        else feature.runtime_functions.push(RuntimeFunctionDefinition.fromJsonString(def));
+        switch (type) {
+            case MetaType.DataType:
+                feature.data_types.push(DefinitionDataType.fromJsonString(def));
+                break
+            case MetaType.FlowType:
+                feature.flow_types.push(FlowType.fromJsonString(def));
+                break
+            case MetaType.RuntimeFunction:
+                feature.runtime_functions.push(RuntimeFunctionDefinition.fromJsonString(def));
+                break
+            case MetaType.Function:
+                feature.functions.push(FunctionDefinition.fromJsonString(def));
+                break
+            default:
+                throw new Error(`Unknown MetaType: ${type}`);
+        }
     } catch (err) {
         feature.errors.push({
             definition: extractIdentifier(def, type),
