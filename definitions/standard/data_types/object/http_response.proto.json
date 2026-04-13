@@ -19,7 +19,7 @@
 		}
 	],
 	"genericKeys": ["T"],
-	"type": "{ body: T, headers: OBJECT<{}>, status_code: HTTP_STATUS_CODE }",
+	"type": "{ payload: T, headers: OBJECT<{}>, http_status_code: HTTP_STATUS_CODE }",
 	"linkedDataTypeIdentifiers": [
 		"HTTP_STATUS_CODE",
 		"OBJECT"

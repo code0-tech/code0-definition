@@ -25,5 +25,5 @@
 	"linkedDataTypeIdentifiers": [
 		"OBJECT"
 	],
-	"type": "{ body: T, headers: OBJECT<{}> }"
+	"type": "{ payload: T, headers: OBJECT<{}> }"
 }
