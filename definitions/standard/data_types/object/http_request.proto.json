@@ -18,7 +18,7 @@
 			"content": "HTTP Request"
 		}
 	],
-	"type": "{ method: HTTP_METHOD, url: HTTP_URL, body: T, headers: OBJECT<{}> }",
+	"type": "{ http_method: HTTP_METHOD, url: HTTP_URL, payload: T, headers: OBJECT<{}> }",
 	"genericKeys": ["T"],
 	"rules": [],
 	"linkedDataTypeIdentifiers": [
