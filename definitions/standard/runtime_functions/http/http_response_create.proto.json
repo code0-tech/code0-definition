@@ -41,7 +41,7 @@
       "name": [
         {
           "code": "en-US",
-          "content": "Request Body"
+          "content": "Request Payload"
         }
       ],
       "description": [
@@ -76,7 +76,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Create Http-Response with Method: ${http_method}, Headers: ${headers} and Payload: ${payload}"
+      "content": "Create HTTP-Response for status ${http_status_code} and payload ${payload}"
     }
   ],
   "deprecationMessage": [],

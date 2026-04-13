@@ -58,7 +58,7 @@
       "name": [
         {
           "code": "en-US",
-          "content": "Request Body"
+          "content": "Request Payload"
         }
       ],
       "description": [
@@ -93,7 +93,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Create Http-Request with Method: ${http_method}, Headers: ${headers}, Url: ${url} and Payload: ${payload}"
+      "content": "Create HTTP-Request to ${url} with ${payload}"
     }
   ],
   "deprecationMessage": [],
