@@ -1,0 +1,55 @@
+{
+  "runtimeName": "http::request::send",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "http_request",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP request object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Takes an HTTP request object, which includes the HTTP method, url, headers, and payload, and sends it to the specified endpoint."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": true,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Send HTTP request"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Sends a request to the specified url with the given method, headers and payload, and returns the response as an HTTP_RESPONSE object. This function initiates an HTTP request to a specified endpoint, allowing you to interact with web services or APIs by sending data and receiving responses."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "send;sends;execute;request;http"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Send request with ${http_request}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:world-www",
+  "signature": "<T>(http_request: HTTP_REQUEST<T>): HTTP_RESPONSE<any>",
+  "linkedDataTypeIdentifiers": [
+    "HTTP_RESPONSE",
+    "HTTP_REQUEST"
+  ]
+}
