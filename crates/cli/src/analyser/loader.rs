@@ -1,9 +1,10 @@
 use super::core::{AnalysableDataType, AnalysableFlowType, AnalysableFunction, Analyser};
-use crate::analyser::index_identifier::IdentifierIndex;
 use crate::diagnostics::diagnose::Diagnose;
 use crate::diagnostics::kinds::DiagnosticKind;
 use crate::diagnostics::reporter::Reporter;
-use crate::parser::{MetaType, Parser, Reader};
+use crate::parser::Parser;
+use crate::reader::MetaType;
+use crate::{analyser::index_identifier::IdentifierIndex, reader::Reader};
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
 pub fn load_from_path(path: &str) -> Analyser {
@@ -130,6 +131,9 @@ pub fn load_from_path(path: &str) -> Analyser {
                     }
                 }
             }
+            MetaType::RuntimeFlowType => todo!(),
+            MetaType::Function => todo!(),
+            MetaType::Configs => todo!(),
         }
     }
     Analyser {

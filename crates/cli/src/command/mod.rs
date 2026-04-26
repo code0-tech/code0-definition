@@ -1,5 +1,5 @@
 pub mod download;
-pub mod feature;
+pub mod search_module;
 pub mod push;
 pub mod report;
 pub mod search;

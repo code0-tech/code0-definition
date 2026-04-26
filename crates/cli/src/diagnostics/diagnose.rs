@@ -2,7 +2,7 @@ use crate::diagnostics::kinds::DiagnosticKind;
 use crate::diagnostics::kinds::DiagnosticKind::*;
 use crate::diagnostics::severity::Severity;
 use crate::formatter::{error, warning};
-use crate::parser::Meta;
+use crate::reader::Meta;
 use std::path::Path;
 
 #[derive(Debug, Clone)]
