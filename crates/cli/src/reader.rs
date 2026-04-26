@@ -26,7 +26,7 @@ impl std::fmt::Display for MetaType {
             MetaType::RuntimeFlowType => write!(f, "RuntimeFlowType"),
             MetaType::Function => write!(f, "Function"),
             MetaType::Configs => write!(f, "Configs"),
-            MetaType::ModuleDefinition => write!(f, "ModuleConfiguration"),
+            MetaType::ModuleDefinition => write!(f, "ModuleDefinition"),
         }
     }
 }
