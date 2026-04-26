@@ -1,19 +1,18 @@
 {
-  "identifier": "draco-rest",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "REST"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Trigger Flows unsing a HTTP-Server."
-    }
-  ],
-  "documentation": "",
-  "author": "CodeZero",
-  "icon": "tabler:cube-sent",
-  "version": "1.0.0"
+	"identifier": "draco-rest",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "REST"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Trigger Flows unsing a HTTP-Server."
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:cube-sent"
 }

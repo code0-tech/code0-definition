@@ -1,19 +1,18 @@
 {
-  "identifier": "taurus-control",
-  "name": [
-    {
-      "code": "en-US",
-      "content": "Control"
-    }
-  ],
-  "description": [
-    {
-      "code": "en-US",
-      "content": "Flow control."
-    }
-  ],
-  "documentation": "",
-  "author": "CodeZero",
-  "icon": "tabler:arrow-ramp-right-2",
-  "version": "1.0.0"
+	"identifier": "taurus-control",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Control"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Flow control."
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:arrow-ramp-right-2"
 }
