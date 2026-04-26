@@ -1,7 +1,7 @@
-use crate::{analyser::index_identifier::IdentifierIndex, reader::Meta};
 use crate::diagnostics::diagnose::Diagnose;
 use crate::diagnostics::kinds::DiagnosticKind;
 use crate::diagnostics::reporter::Reporter;
+use crate::{analyser::index_identifier::IdentifierIndex, reader::Meta};
 use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
 
 #[derive(Clone)]

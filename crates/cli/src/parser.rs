@@ -1,4 +1,5 @@
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use tucana::shared::{
     DefinitionDataType, FlowType, FunctionDefinition, Module, ModuleConfigurationDefinition,
     RuntimeFlowType, RuntimeFunctionDefinition, Translation,
@@ -10,6 +11,7 @@ use crate::reader::{Meta, MetaType, Reader};
 pub struct DefinitionError {
     pub definition: String,
     pub definition_type: crate::reader::MetaType,
+    pub path: String,
     pub error: String,
 }
 
@@ -18,7 +20,7 @@ pub struct Parser {
     pub modules: Vec<DefinitionModule>,
 }
 
-#[derive(Serialize, Clone, Debug, Default)]
+#[derive(Serialize, Deserialize, Clone, Debug, Default)]
 pub struct ModuleConfiguration {
     pub identifier: String,
     pub name: Vec<Translation>,
@@ -26,6 +28,7 @@ pub struct ModuleConfiguration {
     pub documentation: String,
     pub author: String,
     pub icon: String,
+    #[serde(default, skip_serializing_if = "String::is_empty")]
     pub version: String,
 }
 
@@ -79,19 +82,21 @@ impl Parser {
 
     pub fn from_reader(reader: Reader) -> Self {
         let mut modules: Vec<DefinitionModule> = vec![];
+        let mut module_indices_by_name: HashMap<String, usize> = HashMap::new();
 
         for meta in &reader.meta {
-            let module = modules
-                .iter_mut()
-                .find(|m| m.config.identifier == meta.name);
-
-            if let Some(existing) = module {
-                Parser::append_meta(existing, meta);
+            let module_index = if let Some(index) = module_indices_by_name.get(&meta.name) {
+                *index
             } else {
                 let mut new_mod = DefinitionModule::default();
                 Parser::append_meta(&mut new_mod, meta);
                 modules.push(new_mod);
-            }
+                let new_index = modules.len() - 1;
+                module_indices_by_name.insert(meta.name.clone(), new_index);
+                continue;
+            };
+
+            Parser::append_meta(&mut modules[module_index], meta);
         }
 
         Parser { modules }
@@ -132,6 +137,7 @@ impl Parser {
                 Err(err) => feature.errors.push(DefinitionError {
                     definition: Parser::extract_identifier(definition, MetaType::DataType),
                     definition_type: MetaType::DataType,
+                    path: meta.path.clone(),
                     error: err.to_string(),
                 }),
             },
@@ -140,6 +146,7 @@ impl Parser {
                 Err(err) => feature.errors.push(DefinitionError {
                     definition: Parser::extract_identifier(definition, MetaType::FlowType),
                     definition_type: MetaType::FlowType,
+                    path: meta.path.clone(),
                     error: err.to_string(),
                 }),
             },
@@ -152,6 +159,7 @@ impl Parser {
                             MetaType::RuntimeFunction,
                         ),
                         definition_type: MetaType::RuntimeFunction,
+                        path: meta.path.clone(),
                         error: err.to_string(),
                     }),
                 }
@@ -165,6 +173,7 @@ impl Parser {
                             MetaType::RuntimeFlowType,
                         ),
                         definition_type: MetaType::RuntimeFlowType,
+                        path: meta.path.clone(),
                         error: err.to_string(),
                     }),
                 }
@@ -174,6 +183,7 @@ impl Parser {
                 Err(err) => feature.errors.push(DefinitionError {
                     definition: Parser::extract_identifier(definition, MetaType::Function),
                     definition_type: MetaType::Function,
+                    path: meta.path.clone(),
                     error: err.to_string(),
                 }),
             },
@@ -181,11 +191,23 @@ impl Parser {
                 match serde_json::from_str::<ModuleConfigurationDefinition>(definition) {
                     Ok(v) => feature.module_configs.push(v),
                     Err(err) => feature.errors.push(DefinitionError {
+                        definition: Parser::extract_identifier(definition, MetaType::Configs),
+                        definition_type: MetaType::Configs,
+                        path: meta.path.clone(),
+                        error: err.to_string(),
+                    }),
+                }
+            }
+            MetaType::ModuleDefinition => {
+                match serde_json::from_str::<ModuleConfiguration>(definition) {
+                    Ok(v) => feature.config = v,
+                    Err(err) => feature.errors.push(DefinitionError {
                         definition: Parser::extract_identifier(
                             definition,
-                            MetaType::RuntimeFlowType,
+                            MetaType::ModuleDefinition,
                         ),
-                        definition_type: MetaType::RuntimeFlowType,
+                        definition_type: MetaType::ModuleDefinition,
+                        path: meta.path.clone(),
                         error: err.to_string(),
                     }),
                 }

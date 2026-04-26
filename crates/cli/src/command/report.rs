@@ -1,6 +1,7 @@
 use tucana::shared::Module;
 
 use crate::analyser::core::Analyser;
+use crate::command::parse_errors::fail_on_parser_errors;
 use crate::formatter::{success, success_table};
 use crate::parser::Parser;
 use crate::table::summary_table;
@@ -14,6 +15,7 @@ pub fn report_errors(path: Option<String>) {
             panic!("Error reading definitions");
         }
     };
+    fail_on_parser_errors(&parser);
 
     let mut analyser = Analyser::new(dir_path.as_str());
     analyser.report(true, true);

@@ -1,13 +1,14 @@
 use std::{
     fs::{self, DirEntry},
     io::{Error, ErrorKind},
-    path::Path,
+    path::{Path, PathBuf},
 };
 
 use serde::Serialize;
 
 #[derive(Serialize, Debug, Clone, Copy)]
 pub enum MetaType {
+    ModuleDefinition,
     FlowType,
     RuntimeFlowType,
     DataType,
@@ -25,6 +26,7 @@ impl std::fmt::Display for MetaType {
             MetaType::RuntimeFlowType => write!(f, "RuntimeFlowType"),
             MetaType::Function => write!(f, "Function"),
             MetaType::Configs => write!(f, "Configs"),
+            MetaType::ModuleDefinition => write!(f, "ModuleConfiguration"),
         }
     }
 }
@@ -82,83 +84,79 @@ impl Meta {
 ///
 /// Expecting the file system to look like:
 /// - <path>
-///   - <feature>
+///   - <module>
 ///     - <flow_types>
 ///     - <data_types>
 ///     - <runtime_functions>
-///    - <feature>
+///     - module.json
+///    - <module>
 ///     - <flow_types>
 ///     - <data_types>
 ///     - <runtime_functions>
+///     - module.json
 impl Reader {
     pub fn from_path(path: &str) -> Option<Reader> {
         let mut result: Vec<Meta> = vec![];
+        let root = Path::new(path);
 
-        // Reading the path folder
-        for feature_path in fs::read_dir(path).unwrap() {
-            let feature_path_result = match feature_path {
-                Ok(path) => path,
+        if !root.exists() || !root.is_dir() {
+            return None;
+        }
+
+        for module_path in find_module_directories(root) {
+            let module_name = module_name_from_paths(root, &module_path);
+
+            // Handle direct module definition file.
+            let module_definition_file = module_path.join("module.json");
+            if module_definition_file.is_file() {
+                if let Ok(meta_result) = Meta::read_from_file(
+                    module_name.clone(),
+                    MetaType::ModuleDefinition,
+                    module_definition_file,
+                ) {
+                    result.push(meta_result);
+                }
+            }
+
+            // Handle all typed definition directories.
+            let type_entries = match fs::read_dir(&module_path) {
+                Ok(entries) => entries,
                 Err(_) => continue,
             };
 
-            let feature_name = match get_file_name(&feature_path_result) {
-                Some(file_name) => file_name,
-                None => continue,
-            };
-
-            // Reading the feature folder
-            for type_path in fs::read_dir(feature_path_result.path()).unwrap() {
+            for type_path in type_entries {
                 let type_path_result = match type_path {
                     Ok(path) => path,
                     Err(_) => continue,
                 };
 
+                let file_type = match type_path_result.file_type() {
+                    Ok(file_type) => file_type,
+                    Err(_) => continue,
+                };
+
+                if !file_type.is_dir() {
+                    continue;
+                }
+
                 let meta_type = match get_file_name(&type_path_result) {
-                    Some(name) => match name.as_str() {
-                        "flow_type" => MetaType::FlowType,
-                        "data_type" => MetaType::DataType,
-                        "runtime_definition" => MetaType::RuntimeFunction,
-                        _ => continue,
+                    Some(name) => match meta_type_from_dir_name(name.as_str()) {
+                        Some(meta_type) => meta_type,
+                        None => continue,
                     },
                     None => continue,
                 };
 
-                // Reading the type folder
-                for definition_path in fs::read_dir(type_path_result.path()).unwrap() {
-                    let definition_path_result = match definition_path {
-                        Ok(path) => path,
-                        Err(_) => continue,
-                    };
+                let mut definition_files = vec![];
+                collect_json_files_recursively(type_path_result.path(), &mut definition_files);
+                definition_files.sort();
 
-                    if definition_path_result.file_type().unwrap().is_file() {
-                        let meta = Meta::read_from_file(
-                            feature_name.clone(),
-                            meta_type,
-                            definition_path_result.path(),
-                        );
+                for definition_file in definition_files {
+                    let meta =
+                        Meta::read_from_file(module_name.clone(), meta_type, definition_file);
 
-                        if let Ok(meta_result) = meta {
-                            result.push(meta_result);
-                        }
-                    } else {
-                        for sub_definition_path in
-                            fs::read_dir(definition_path_result.path()).unwrap()
-                        {
-                            let sub_definition_path_result = match sub_definition_path {
-                                Ok(path) => path,
-                                Err(_) => continue,
-                            };
-
-                            let meta = Meta::read_from_file(
-                                feature_name.clone(),
-                                meta_type,
-                                sub_definition_path_result.path(),
-                            );
-
-                            if let Ok(meta_result) = meta {
-                                result.push(meta_result);
-                            }
-                        }
+                    if let Ok(meta_result) = meta {
+                        result.push(meta_result);
                     }
                 }
             }
@@ -167,6 +165,130 @@ impl Reader {
         Some(Reader { meta: result })
     }
 }
+
+fn find_module_directories(root: &Path) -> Vec<PathBuf> {
+    let mut module_directories = vec![];
+    let mut stack = vec![root.to_path_buf()];
+
+    while let Some(current) = stack.pop() {
+        let entries = match fs::read_dir(&current) {
+            Ok(entries) => entries,
+            Err(_) => continue,
+        };
+
+        let mut sub_directories = vec![];
+        let mut looks_like_module = false;
+
+        for entry in entries {
+            let entry = match entry {
+                Ok(entry) => entry,
+                Err(_) => continue,
+            };
+
+            let entry_type = match entry.file_type() {
+                Ok(entry_type) => entry_type,
+                Err(_) => continue,
+            };
+
+            if entry_type.is_file() {
+                if entry.file_name().to_str() == Some("module.json") {
+                    looks_like_module = true;
+                }
+                continue;
+            }
+
+            if !entry_type.is_dir() {
+                continue;
+            }
+
+            let directory_name = match get_file_name(&entry) {
+                Some(name) => name,
+                None => continue,
+            };
+
+            if meta_type_from_dir_name(directory_name.as_str()).is_some() {
+                looks_like_module = true;
+            } else {
+                sub_directories.push(entry.path());
+            }
+        }
+
+        if looks_like_module {
+            module_directories.push(current);
+        } else {
+            stack.extend(sub_directories);
+        }
+    }
+
+    module_directories.sort();
+    module_directories
+}
+
+fn module_name_from_paths(root: &Path, module_path: &Path) -> String {
+    let relative = module_path
+        .strip_prefix(root)
+        .ok()
+        .and_then(|p| p.to_str())
+        .unwrap_or_default();
+
+    if relative.is_empty() || relative == "." {
+        module_path
+            .file_name()
+            .and_then(|n| n.to_str())
+            .unwrap_or("module")
+            .to_string()
+    } else {
+        relative.to_string()
+    }
+}
+
+fn meta_type_from_dir_name(name: &str) -> Option<MetaType> {
+    match name {
+        "runtime_flow_type" | "runtime_flow_types" => Some(MetaType::RuntimeFlowType),
+        "flow_type" | "flow_types" => Some(MetaType::FlowType),
+        "data_type" | "data_types" => Some(MetaType::DataType),
+        "runtime_functions" => Some(MetaType::RuntimeFunction),
+        "functions" => Some(MetaType::Function),
+        "configuration" | "configurations" => Some(MetaType::Configs),
+        "module" => Some(MetaType::ModuleDefinition),
+        _ => None,
+    }
+}
+
+fn collect_json_files_recursively(path: PathBuf, result: &mut Vec<PathBuf>) {
+    let dir_entries = match fs::read_dir(path) {
+        Ok(entries) => entries,
+        Err(_) => return,
+    };
+
+    for entry in dir_entries {
+        let entry = match entry {
+            Ok(entry) => entry,
+            Err(_) => continue,
+        };
+
+        let file_type = match entry.file_type() {
+            Ok(file_type) => file_type,
+            Err(_) => continue,
+        };
+
+        let entry_path = entry.path();
+        if file_type.is_file() {
+            let is_json = entry_path
+                .extension()
+                .and_then(|ext| ext.to_str())
+                .map(|ext| ext.eq_ignore_ascii_case("json"))
+                .unwrap_or(false);
+
+            if is_json {
+                result.push(entry_path);
+            }
+        } else if file_type.is_dir() {
+            collect_json_files_recursively(entry_path, result);
+        }
+    }
+}
+
 fn get_file_name(entry: &DirEntry) -> Option<String> {
     entry
         .file_name()

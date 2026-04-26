@@ -1,3 +1,4 @@
+use crate::command::parse_errors::fail_on_parser_errors;
 use crate::formatter::{info, success};
 use crate::parser::Parser;
 use colored::Colorize;
@@ -11,6 +12,7 @@ pub fn search_definition(name: String, path: Option<String>) {
             panic!("Error reading definitions");
         }
     };
+    fail_on_parser_errors(&parser);
 
     search_and_display_definitions(&name, &parser);
 }
