@@ -1,8 +1,12 @@
 use crate::diagnostics::diagnose::Diagnose;
 use crate::diagnostics::kinds::DiagnosticKind;
 use crate::diagnostics::reporter::Reporter;
+use crate::parser::ModuleConfiguration;
 use crate::{analyser::index_identifier::IdentifierIndex, reader::Meta};
-use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
+use tucana::shared::{
+    DefinitionDataType, FlowType, FunctionDefinition, ModuleConfigurationDefinition,
+    RuntimeFlowType, RuntimeFunctionDefinition,
+};
 
 #[derive(Clone)]
 pub struct AnalysableDataType {
@@ -25,12 +29,44 @@ pub struct AnalysableFunction {
     pub id: i16,
 }
 
+#[derive(Clone)]
+pub struct AnalysableRuntimeFlowType {
+    pub original_definition: Meta,
+    pub runtime_flow_type: RuntimeFlowType,
+    pub id: i16,
+}
+
+#[derive(Clone)]
+pub struct AnalysableFunctionDefinition {
+    pub original_definition: Meta,
+    pub function_definition: FunctionDefinition,
+    pub id: i16,
+}
+
+#[derive(Clone)]
+pub struct AnalysableModuleConfigurationDefinition {
+    pub original_definition: Meta,
+    pub module_configuration_definition: ModuleConfigurationDefinition,
+    pub id: i16,
+}
+
+#[derive(Clone)]
+pub struct AnalysableModuleDefinition {
+    pub original_definition: Meta,
+    pub module_definition: ModuleConfiguration,
+    pub id: i16,
+}
+
 pub struct Analyser {
     pub reporter: Reporter,
     pub(crate) index: IdentifierIndex,
     pub data_types: Vec<AnalysableDataType>,
     pub flow_types: Vec<AnalysableFlowType>,
     pub functions: Vec<AnalysableFunction>,
+    pub runtime_flow_types: Vec<AnalysableRuntimeFlowType>,
+    pub function_definitions: Vec<AnalysableFunctionDefinition>,
+    pub module_configuration_definitions: Vec<AnalysableModuleConfigurationDefinition>,
+    pub module_definitions: Vec<AnalysableModuleDefinition>,
 }
 
 impl Analyser {
@@ -48,6 +84,18 @@ impl Analyser {
         }
         for f in self.functions.clone() {
             self.analyse_runtime_function(&f);
+        }
+        for rft in self.runtime_flow_types.clone() {
+            self.analyse_runtime_flow_type(&rft);
+        }
+        for f in self.function_definitions.clone() {
+            self.analyse_function_definition(&f);
+        }
+        for config in self.module_configuration_definitions.clone() {
+            self.analyse_module_configuration_definition(&config);
+        }
+        for module in self.module_definitions.clone() {
+            self.analyse_module_definition(&module);
         }
         self.reporter.print(will_exit, true, with_warning);
     }
