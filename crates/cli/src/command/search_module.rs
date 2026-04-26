@@ -102,7 +102,7 @@ pub fn search_module(name: Option<String>, path: Option<String>) {
         .map(|x| x.into_module())
         .collect();
 
-    let summary = summary_table(&mods);
+    let summary = summary_table(mods);
     success_table(summary);
 
     success(format!(

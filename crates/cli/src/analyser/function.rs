@@ -78,7 +78,7 @@ impl Analyser {
             ));
         }
 
-        if function.signature == "" {
+        if function.signature.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),

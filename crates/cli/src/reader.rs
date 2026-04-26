@@ -108,15 +108,14 @@ impl Reader {
 
             // Handle direct module definition file.
             let module_definition_file = module_path.join("module.json");
-            if module_definition_file.is_file() {
-                if let Ok(meta_result) = Meta::read_from_file(
+            if module_definition_file.is_file()
+                && let Ok(meta_result) = Meta::read_from_file(
                     module_name.clone(),
                     MetaType::ModuleDefinition,
                     module_definition_file,
                 ) {
                     result.push(meta_result);
                 }
-            }
 
             // Handle all typed definition directories.
             let type_entries = match fs::read_dir(&module_path) {
