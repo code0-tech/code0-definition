@@ -41,9 +41,30 @@ impl Diagnose {
                 ),
                 &path,
             ),
+            DuplicateRuntimeFlowTypeIdentifier { identifier } => error(
+                format!(
+                    "The runtime_flow_type `{}` is already defined resulting in a duplicate!",
+                    identifier
+                ),
+                &path,
+            ),
             DuplicateRuntimeFunctionIdentifier { identifier } => error(
                 format!(
                     "The runtime_function `{}` is already defined resulting in a duplicate!",
+                    identifier
+                ),
+                &path,
+            ),
+            DuplicateFunctionIdentifier { identifier } => error(
+                format!(
+                    "The function `{}` is already defined resulting in a duplicate!",
+                    identifier
+                ),
+                &path,
+            ),
+            DuplicateModuleConfigurationIdentifier { identifier } => error(
+                format!(
+                    "The module_configuration `{}` is already defined resulting in a duplicate!",
                     identifier
                 ),
                 &path,
