@@ -1,0 +1,18 @@
+{
+	"identifier": "taurus",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Boolean"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Cron"
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:alarm"
+}

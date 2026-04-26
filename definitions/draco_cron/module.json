@@ -1,0 +1,18 @@
+{
+	"identifier": "draco-cron",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Cron"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Cron"
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:alarm"
+}
