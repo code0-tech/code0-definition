@@ -2,7 +2,7 @@ use crate::diagnostics::kinds::DiagnosticKind;
 use crate::diagnostics::kinds::DiagnosticKind::*;
 use crate::diagnostics::severity::Severity;
 use crate::formatter::{error, warning};
-use crate::parser::Meta;
+use crate::reader::Meta;
 use std::path::Path;
 
 #[derive(Debug, Clone)]
@@ -41,9 +41,30 @@ impl Diagnose {
                 ),
                 &path,
             ),
+            DuplicateRuntimeFlowTypeIdentifier { identifier } => error(
+                format!(
+                    "The runtime_flow_type `{}` is already defined resulting in a duplicate!",
+                    identifier
+                ),
+                &path,
+            ),
             DuplicateRuntimeFunctionIdentifier { identifier } => error(
                 format!(
                     "The runtime_function `{}` is already defined resulting in a duplicate!",
+                    identifier
+                ),
+                &path,
+            ),
+            DuplicateFunctionIdentifier { identifier } => error(
+                format!(
+                    "The function `{}` is already defined resulting in a duplicate!",
+                    identifier
+                ),
+                &path,
+            ),
+            DuplicateModuleConfigurationIdentifier { identifier } => error(
+                format!(
+                    "The module_configuration `{}` is already defined resulting in a duplicate!",
                     identifier
                 ),
                 &path,

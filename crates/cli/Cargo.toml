@@ -2,7 +2,7 @@
 name = "code0-cli"
 version = "0.0.0"
 edition = "2024"
-description = "The cli for managing the Code0-Definitions"
+description = "The CLI for managing the CodeZero's definitions"
 repository = "https://github.com/code0-tech/code0-definitions"
 homepage = "https://code0.tech"
 license = "Apache-2.0"
@@ -22,5 +22,6 @@ futures = { workspace = true }
 zip = { workspace = true }
 bytes = { workspace = true }
 prost = { workspace = true }
-tonic = "0.14.2"
-log = "0.4.28"
+tonic  = { workspace = true }
+log = { workspace = true }
+

@@ -39,15 +39,13 @@ pub async fn watch_for_changes(path: Option<String>, with_warning: bool) {
                         last_run = Instant::now();
                     }
                 }
-                EventKind::Remove(_) => {
-                    if last_run.elapsed() > Duration::from_millis(500) {
-                        default(String::from(
-                            "\n\n\n--------------------------------------------------------------------------\n\n",
-                        ));
-                        info(String::from("Change detected! Regenerating report..."));
-                        Analyser::new(dir_path.as_str()).report(false, with_warning);
-                        last_run = Instant::now();
-                    }
+                EventKind::Remove(_) if last_run.elapsed() > Duration::from_millis(500) => {
+                    default(String::from(
+                        "\n\n\n--------------------------------------------------------------------------\n\n",
+                    ));
+                    info(String::from("Change detected! Regenerating report..."));
+                    Analyser::new(dir_path.as_str()).report(false, with_warning);
+                    last_run = Instant::now();
                 }
                 _ => {}
             }

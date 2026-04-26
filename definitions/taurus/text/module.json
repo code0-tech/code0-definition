@@ -1,0 +1,18 @@
+{
+	"identifier": "taurus-text",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Text"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Work with Text."
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:abc"
+}

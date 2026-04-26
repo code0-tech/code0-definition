@@ -77,7 +77,7 @@ impl Analyser {
             ));
         }
 
-        if &flow.signature == "" {
+        if flow.signature.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),

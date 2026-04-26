@@ -5,7 +5,10 @@ pub enum DiagnosticKind {
     DeserializationError { description: String },
     DuplicateDataTypeIdentifier { identifier: String },
     DuplicateFlowTypeIdentifier { identifier: String },
+    DuplicateRuntimeFlowTypeIdentifier { identifier: String },
     DuplicateRuntimeFunctionIdentifier { identifier: String },
+    DuplicateFunctionIdentifier { identifier: String },
+    DuplicateModuleConfigurationIdentifier { identifier: String },
     DuplicateRuntimeParameterIdentifier { identifier: String },
     UndefinedDataTypeIdentifier { identifier: String },
     NullField { field_name: String },
@@ -20,7 +23,10 @@ impl DiagnosticKind {
             DeserializationError { .. }
             | DuplicateDataTypeIdentifier { .. }
             | DuplicateFlowTypeIdentifier { .. }
+            | DuplicateRuntimeFlowTypeIdentifier { .. }
             | DuplicateRuntimeFunctionIdentifier { .. }
+            | DuplicateFunctionIdentifier { .. }
+            | DuplicateModuleConfigurationIdentifier { .. }
             | DuplicateRuntimeParameterIdentifier { .. }
             | UndefinedDataTypeIdentifier { .. }
             | NullField { .. }

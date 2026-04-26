@@ -1,12 +1,12 @@
-use crate::analyser::core::{AnalysableFunction, Analyser};
+use crate::analyser::core::{AnalysableFunctionDefinition, Analyser};
 use crate::diagnostics::diagnose::Diagnose;
 use crate::diagnostics::kinds::DiagnosticKind;
 
 impl Analyser {
-    pub fn analyse_runtime_function(&mut self, af: &AnalysableFunction) {
-        let name = af.function.runtime_name.clone();
-        let function = &af.function;
-        let original = af.original_definition.clone();
+    pub fn analyse_function_definition(&mut self, afd: &AnalysableFunctionDefinition) {
+        let name = afd.function_definition.runtime_name.clone();
+        let function = &afd.function_definition;
+        let original = afd.original_definition.clone();
 
         for linked in function.linked_data_type_identifiers.clone() {
             if !self.data_type_identifier_exists(linked.as_str(), None) {
@@ -89,7 +89,7 @@ impl Analyser {
         }
 
         let mut param_names: Vec<String> = vec![];
-        for parameter in &function.runtime_parameter_definitions {
+        for parameter in &function.parameter_definitions {
             if parameter.name.is_empty() {
                 self.reporter.add(Diagnose::new(
                     name.clone(),
@@ -128,6 +128,14 @@ impl Analyser {
                 ));
             }
             param_names.push(parameter.runtime_name.clone());
+        }
+
+        if self.index.has_function_definition(&name, Some(afd.id)) {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::DuplicateFunctionIdentifier { identifier: name },
+            ));
         }
     }
 }

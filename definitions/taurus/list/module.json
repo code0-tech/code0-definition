@@ -1,0 +1,18 @@
+{
+  "identifier": "taurus-list",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Lists"
+    }
+  ],
+  "documentation": "",
+  "author": "CodeZero",
+  "icon": "tabler:list"
+}

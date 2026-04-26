@@ -1,41 +1,74 @@
-use serde::Serialize;
-use std::io::ErrorKind;
-use std::{
-    fs::{self, DirEntry},
-    io::Error,
-    path::Path,
+use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
+use tucana::shared::{
+    DefinitionDataType, FlowType, FunctionDefinition, Module, ModuleConfigurationDefinition,
+    RuntimeFlowType, RuntimeFunctionDefinition, Translation,
 };
-use tucana::shared::{DefinitionDataType, FlowType, RuntimeFunctionDefinition};
+
+use crate::reader::{Meta, MetaType, Reader};
 
 #[derive(Serialize, Clone, Debug)]
 pub struct DefinitionError {
     pub definition: String,
-    pub definition_type: MetaType,
+    pub definition_type: crate::reader::MetaType,
+    pub path: String,
     pub error: String,
 }
 
 #[derive(Debug)]
 pub struct Parser {
-    pub features: Vec<Feature>,
+    pub modules: Vec<DefinitionModule>,
 }
 
-#[derive(Serialize, Clone, Debug)]
-pub struct Feature {
-    pub name: String,
+#[derive(Serialize, Deserialize, Clone, Debug, Default)]
+pub struct ModuleConfiguration {
+    pub identifier: String,
+    pub name: Vec<Translation>,
+    pub description: Vec<Translation>,
+    pub documentation: String,
+    pub author: String,
+    pub icon: String,
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub version: String,
+}
+
+#[derive(Serialize, Clone, Debug, Default)]
+pub struct DefinitionModule {
+    // Configuration of module `module.json`
+    pub config: ModuleConfiguration,
+    // DataTypes of module `/data_types`
     pub data_types: Vec<DefinitionDataType>,
+    // FlowTypes of module `/flow_types`
     pub flow_types: Vec<FlowType>,
+    // RuntimeFlowTypes of module `/runtime_flow_types`
+    pub runtime_flow_types: Vec<RuntimeFlowType>,
+    // Functions of module `/functions`
+    pub functions: Vec<FunctionDefinition>,
+    // RuntimeFunctions of module `/runtime_functions`
     pub runtime_functions: Vec<RuntimeFunctionDefinition>,
+    // Settings of module `/configurations`
+    pub module_configs: Vec<ModuleConfigurationDefinition>,
+
+    // Errors found while parsing
     pub errors: Vec<DefinitionError>,
 }
 
-impl Feature {
-    fn new(name: String) -> Self {
-        Feature {
-            name,
-            data_types: Vec::new(),
-            flow_types: Vec::new(),
-            runtime_functions: Vec::new(),
-            errors: Vec::new(),
+impl DefinitionModule {
+    pub fn into_module(self) -> Module {
+        Module {
+            identifier: self.config.identifier,
+            name: self.config.name,
+            description: self.config.description,
+            documentation: self.config.documentation,
+            author: self.config.author,
+            icon: self.config.icon,
+            version: self.config.version,
+            flow_types: self.flow_types,
+            runtime_flow_types: self.runtime_flow_types,
+            function_definitions: self.functions,
+            runtime_function_definitions: self.runtime_functions,
+            definition_data_types: self.data_types,
+            configurations: self.module_configs,
         }
     }
 }
@@ -48,27 +81,31 @@ impl Parser {
     }
 
     pub fn from_reader(reader: Reader) -> Self {
-        let mut features: Vec<Feature> = vec![];
+        let mut modules: Vec<DefinitionModule> = vec![];
+        let mut module_indices_by_name: HashMap<String, usize> = HashMap::new();
 
         for meta in &reader.meta {
-            let feature = features.iter_mut().find(|f| f.name == meta.name);
-
-            if let Some(existing) = feature {
-                Parser::append_meta(existing, meta);
+            let module_index = if let Some(index) = module_indices_by_name.get(&meta.name) {
+                *index
             } else {
-                let mut new_feature = Feature::new(meta.name.clone());
-                Parser::append_meta(&mut new_feature, meta);
-                features.push(new_feature);
-            }
+                let mut new_mod = DefinitionModule::default();
+                Parser::append_meta(&mut new_mod, meta);
+                modules.push(new_mod);
+                let new_index = modules.len() - 1;
+                module_indices_by_name.insert(meta.name.clone(), new_index);
+                continue;
+            };
+
+            Parser::append_meta(&mut modules[module_index], meta);
         }
 
-        Parser { features }
+        Parser { modules }
     }
 
     pub fn extract_identifier(definition: &str, meta_type: MetaType) -> String {
         let field_name = match meta_type {
-            MetaType::DataType | MetaType::FlowType => "identifier",
-            MetaType::RuntimeFunction => "runtime_name",
+            MetaType::RuntimeFunction | MetaType::Function => "runtime_name",
+            _ => "identifier",
         };
 
         // Look for the field pattern: "field_name": "value" or "field_name":"value"
@@ -92,7 +129,7 @@ impl Parser {
         definition.to_string()
     }
 
-    fn append_meta(feature: &mut Feature, meta: &Meta) {
+    fn append_meta(feature: &mut DefinitionModule, meta: &Meta) {
         let definition = meta.definition_string.as_str();
         match meta.r#type {
             MetaType::DataType => match serde_json::from_str::<DefinitionDataType>(definition) {
@@ -100,6 +137,7 @@ impl Parser {
                 Err(err) => feature.errors.push(DefinitionError {
                     definition: Parser::extract_identifier(definition, MetaType::DataType),
                     definition_type: MetaType::DataType,
+                    path: meta.path.clone(),
                     error: err.to_string(),
                 }),
             },
@@ -108,6 +146,7 @@ impl Parser {
                 Err(err) => feature.errors.push(DefinitionError {
                     definition: Parser::extract_identifier(definition, MetaType::FlowType),
                     definition_type: MetaType::FlowType,
+                    path: meta.path.clone(),
                     error: err.to_string(),
                 }),
             },
@@ -120,173 +159,59 @@ impl Parser {
                             MetaType::RuntimeFunction,
                         ),
                         definition_type: MetaType::RuntimeFunction,
+                        path: meta.path.clone(),
+                        error: err.to_string(),
+                    }),
+                }
+            }
+            MetaType::RuntimeFlowType => {
+                match serde_json::from_str::<RuntimeFlowType>(definition) {
+                    Ok(v) => feature.runtime_flow_types.push(v),
+                    Err(err) => feature.errors.push(DefinitionError {
+                        definition: Parser::extract_identifier(
+                            definition,
+                            MetaType::RuntimeFlowType,
+                        ),
+                        definition_type: MetaType::RuntimeFlowType,
+                        path: meta.path.clone(),
+                        error: err.to_string(),
+                    }),
+                }
+            }
+            MetaType::Function => match serde_json::from_str::<FunctionDefinition>(definition) {
+                Ok(v) => feature.functions.push(v),
+                Err(err) => feature.errors.push(DefinitionError {
+                    definition: Parser::extract_identifier(definition, MetaType::Function),
+                    definition_type: MetaType::Function,
+                    path: meta.path.clone(),
+                    error: err.to_string(),
+                }),
+            },
+            MetaType::Configs => {
+                match serde_json::from_str::<ModuleConfigurationDefinition>(definition) {
+                    Ok(v) => feature.module_configs.push(v),
+                    Err(err) => feature.errors.push(DefinitionError {
+                        definition: Parser::extract_identifier(definition, MetaType::Configs),
+                        definition_type: MetaType::Configs,
+                        path: meta.path.clone(),
+                        error: err.to_string(),
+                    }),
+                }
+            }
+            MetaType::ModuleDefinition => {
+                match serde_json::from_str::<ModuleConfiguration>(definition) {
+                    Ok(v) => feature.config = v,
+                    Err(err) => feature.errors.push(DefinitionError {
+                        definition: Parser::extract_identifier(
+                            definition,
+                            MetaType::ModuleDefinition,
+                        ),
+                        definition_type: MetaType::ModuleDefinition,
+                        path: meta.path.clone(),
                         error: err.to_string(),
                     }),
                 }
             }
         }
     }
-}
-
-#[derive(Serialize, Debug, Clone, Copy)]
-pub enum MetaType {
-    FlowType,
-    DataType,
-    RuntimeFunction,
-}
-
-impl std::fmt::Display for MetaType {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            MetaType::FlowType => write!(f, "FlowType"),
-            MetaType::DataType => write!(f, "DataType"),
-            MetaType::RuntimeFunction => write!(f, "RuntimeFunction"),
-        }
-    }
-}
-
-pub struct Reader {
-    pub meta: Vec<Meta>,
-}
-
-#[derive(Clone, Debug)]
-pub struct Meta {
-    pub name: String,
-    pub r#type: MetaType,
-    pub definition_string: String,
-    pub path: String,
-}
-
-impl Meta {
-    pub fn read_from_file<P>(name: String, r#type: MetaType, file_path: P) -> Result<Meta, Error>
-    where
-        P: AsRef<Path>,
-    {
-        let path = match file_path.as_ref().to_str() {
-            Some(path) => path,
-            None => return Err(Error::new(ErrorKind::InvalidInput, "Invalid path")),
-        };
-
-        if !path.ends_with("json") {
-            return Err(Error::new(
-                ErrorKind::InvalidInput,
-                format!(
-                    "File {} does not end with .json",
-                    file_path.as_ref().display()
-                ),
-            ));
-        }
-
-        let content = match fs::read_to_string(&file_path) {
-            Ok(content) => content,
-            Err(err) => {
-                println!("Error reading file: {err}");
-                return Err(err);
-            }
-        };
-
-        Ok(Meta {
-            name,
-            r#type,
-            definition_string: content,
-            path: path.to_string(),
-        })
-    }
-}
-
-/// Reader
-///
-/// Expecting the file system to look like:
-/// - <path>
-///   - <feature>
-///     - <flow_types>
-///     - <data_types>
-///     - <runtime_functions>
-///    - <feature>
-///     - <flow_types>
-///     - <data_types>
-///     - <runtime_functions>
-impl Reader {
-    pub fn from_path(path: &str) -> Option<Reader> {
-        let mut result: Vec<Meta> = vec![];
-
-        // Reading the path folder
-        for feature_path in fs::read_dir(path).unwrap() {
-            let feature_path_result = match feature_path {
-                Ok(path) => path,
-                Err(_) => continue,
-            };
-
-            let feature_name = match get_file_name(&feature_path_result) {
-                Some(file_name) => file_name,
-                None => continue,
-            };
-
-            // Reading the feature folder
-            for type_path in fs::read_dir(feature_path_result.path()).unwrap() {
-                let type_path_result = match type_path {
-                    Ok(path) => path,
-                    Err(_) => continue,
-                };
-
-                let meta_type = match get_file_name(&type_path_result) {
-                    Some(name) => match name.as_str() {
-                        "flow_type" => MetaType::FlowType,
-                        "data_type" => MetaType::DataType,
-                        "runtime_definition" => MetaType::RuntimeFunction,
-                        _ => continue,
-                    },
-                    None => continue,
-                };
-
-                // Reading the type folder
-                for definition_path in fs::read_dir(type_path_result.path()).unwrap() {
-                    let definition_path_result = match definition_path {
-                        Ok(path) => path,
-                        Err(_) => continue,
-                    };
-
-                    if definition_path_result.file_type().unwrap().is_file() {
-                        let meta = Meta::read_from_file(
-                            feature_name.clone(),
-                            meta_type,
-                            definition_path_result.path(),
-                        );
-
-                        if let Ok(meta_result) = meta {
-                            result.push(meta_result);
-                        }
-                    } else {
-                        for sub_definition_path in
-                            fs::read_dir(definition_path_result.path()).unwrap()
-                        {
-                            let sub_definition_path_result = match sub_definition_path {
-                                Ok(path) => path,
-                                Err(_) => continue,
-                            };
-
-                            let meta = Meta::read_from_file(
-                                feature_name.clone(),
-                                meta_type,
-                                sub_definition_path_result.path(),
-                            );
-
-                            if let Ok(meta_result) = meta {
-                                result.push(meta_result);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        Some(Reader { meta: result })
-    }
-}
-
-fn get_file_name(entry: &DirEntry) -> Option<String> {
-    entry
-        .file_name()
-        .to_str()
-        .map(|file_name| file_name.to_string())
 }
