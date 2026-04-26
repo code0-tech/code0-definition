@@ -113,9 +113,10 @@ impl Reader {
                     module_name.clone(),
                     MetaType::ModuleDefinition,
                     module_definition_file,
-                ) {
-                    result.push(meta_result);
-                }
+                )
+            {
+                result.push(meta_result);
+            }
 
             // Handle all typed definition directories.
             let type_entries = match fs::read_dir(&module_path) {
