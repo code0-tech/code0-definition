@@ -1,18 +1,19 @@
 {
-	"identifier": "cron",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Cron"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Cron"
-		}
-	],
-	"documentation": "",
-	"author": "CodeZero",
-	"icon": "tabler:alarm"
+  "identifier": "taurus-list",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Lists"
+    }
+  ],
+  "documentation": "",
+  "author": "CodeZero",
+  "icon": "tabler:list",
+  "version": "1.0.0"
 }

@@ -1,18 +1,19 @@
 {
-	"identifier": "cron",
-	"name": [
-		{
-			"code": "en-US",
-			"content": "Cron"
-		}
-	],
-	"description": [
-		{
-			"code": "en-US",
-			"content": "Cron"
-		}
-	],
-	"documentation": "",
-	"author": "CodeZero",
-	"icon": "tabler:alarm"
+  "identifier": "taurus-object",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Object"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Objects."
+    }
+  ],
+  "documentation": "",
+  "author": "CodeZero",
+  "icon": "tabler:cube",
+  "version": "1.0.0"
 }

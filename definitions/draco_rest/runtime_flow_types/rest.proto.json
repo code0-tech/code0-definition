@@ -1,39 +1,5 @@
 {
   "identifier": "REST",
-  "settings": [
-    {
-      "identifier": "httpURL",
-      "unique": "PROJECT",
-      "name": [
-        {
-          "code": "en-US",
-          "content": "URL"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Specifies the HTTP URL endpoint."
-        }
-      ]
-    },
-    {
-      "identifier": "httpMethod",
-      "unique": "NONE",
-      "name": [
-        {
-          "code": "en-US",
-          "content": "Method"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
-        }
-      ]
-    }
-  ],
   "editable": true,
   "name": [
     {
@@ -66,5 +32,39 @@
     "HTTP_URL",
     "HTTP_METHOD",
     "REST_ADAPTER_INPUT"
+  ],
+  "runtimeSettings": [
+    {
+      "identifier": "httpURL",
+      "unique": "PROJECT",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "URL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the HTTP URL endpoint."
+        }
+      ]
+    },
+    {
+      "identifier": "httpMethod",
+      "unique": "NONE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Method"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
+        }
+      ]
+    }
   ]
 }
