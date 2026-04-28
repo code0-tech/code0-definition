@@ -1,0 +1,18 @@
+{
+	"identifier": "taurus-object",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Object"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Work with Objects."
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:cube"
+}

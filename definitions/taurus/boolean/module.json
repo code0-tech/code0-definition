@@ -1,0 +1,18 @@
+{
+  "identifier": "taurus-boolean",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Boolean"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Booleans."
+    }
+  ],
+  "documentation": "",
+  "author": "CodeZero",
+  "icon": "tabler:toggle-left"
+}

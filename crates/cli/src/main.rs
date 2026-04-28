@@ -2,6 +2,7 @@ use clap::{Parser as ClapParser, Subcommand};
 
 pub mod diagnostics;
 pub mod parser;
+pub mod reader;
 
 mod analyser;
 mod command;
@@ -26,8 +27,8 @@ enum Commands {
         #[arg(short, long)]
         path: Option<String>,
     },
-    /// Generate a report for a or all feature(s).
-    Feature {
+    /// Generate a report for a or all module(s).
+    Module {
         /// Optional name of the definition set.
         #[arg(short, long)]
         name: Option<String>,
@@ -81,7 +82,7 @@ async fn main() {
 
     match cli.command {
         Commands::Report { path } => command::report::report_errors(path),
-        Commands::Feature { name, path } => command::feature::search_feature(name, path),
+        Commands::Module { name, path } => command::search_module::search_module(name, path),
         Commands::Search { name, path } => command::search::search_definition(name, path),
         Commands::Download { tag, features } => {
             command::download::handle_download(tag, features).await

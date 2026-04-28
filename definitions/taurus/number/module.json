@@ -1,0 +1,18 @@
+{
+	"identifier": "taurus-number",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Number"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Work with Numbers."
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:math-function"
+}

@@ -1,0 +1,18 @@
+{
+  "identifier": "taurus-http",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with HTTP."
+    }
+  ],
+  "documentation": "",
+  "author": "CodeZero",
+  "icon": "tabler:world-www"
+}

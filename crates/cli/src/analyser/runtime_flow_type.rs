@@ -1,14 +1,14 @@
-use crate::analyser::core::{AnalysableFunction, Analyser};
+use crate::analyser::core::{AnalysableRuntimeFlowType, Analyser};
 use crate::diagnostics::diagnose::Diagnose;
 use crate::diagnostics::kinds::DiagnosticKind;
 
 impl Analyser {
-    pub fn analyse_runtime_function(&mut self, af: &AnalysableFunction) {
-        let name = af.function.runtime_name.clone();
-        let function = &af.function;
-        let original = af.original_definition.clone();
+    pub fn analyse_runtime_flow_type(&mut self, arft: &AnalysableRuntimeFlowType) {
+        let flow = &arft.runtime_flow_type;
+        let name = flow.identifier.clone();
+        let original = arft.original_definition.clone();
 
-        for linked in function.linked_data_type_identifiers.clone() {
+        for linked in flow.linked_data_type_identifiers.clone() {
             if !self.data_type_identifier_exists(linked.as_str(), None) {
                 self.reporter.add(Diagnose::new(
                     name.clone(),
@@ -20,7 +20,7 @@ impl Analyser {
             }
         }
 
-        if function.display_icon.is_empty() {
+        if flow.display_icon.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
@@ -29,8 +29,7 @@ impl Analyser {
                 },
             ))
         }
-
-        if function.alias.is_empty() {
+        if flow.alias.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
@@ -40,7 +39,7 @@ impl Analyser {
             ));
         }
 
-        if function.display_message.is_empty() {
+        if flow.display_message.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
@@ -50,7 +49,7 @@ impl Analyser {
             ));
         }
 
-        if function.name.is_empty() {
+        if flow.name.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
@@ -59,7 +58,7 @@ impl Analyser {
                 },
             ));
         }
-        if function.description.is_empty() {
+        if flow.description.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
@@ -68,7 +67,7 @@ impl Analyser {
                 },
             ));
         }
-        if function.documentation.is_empty() {
+        if flow.documentation.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
@@ -78,7 +77,7 @@ impl Analyser {
             ));
         }
 
-        if function.signature.is_empty() {
+        if flow.signature.is_empty() {
             self.reporter.add(Diagnose::new(
                 name.clone(),
                 original.clone(),
@@ -88,46 +87,33 @@ impl Analyser {
             ));
         }
 
-        let mut param_names: Vec<String> = vec![];
-        for parameter in &function.runtime_parameter_definitions {
-            if parameter.name.is_empty() {
+        for setting in &flow.runtime_settings {
+            if setting.name.is_empty() {
                 self.reporter.add(Diagnose::new(
-                    name.clone(),
+                    setting.identifier.clone(),
                     original.clone(),
                     DiagnosticKind::UndefinedTranslation {
-                        translation_field: "name".into(),
+                        translation_field: "runtime_flow_setting.name".into(),
                     },
                 ));
             }
-            if parameter.description.is_empty() {
+            if setting.description.is_empty() {
                 self.reporter.add(Diagnose::new(
-                    name.clone(),
+                    setting.identifier.clone(),
                     original.clone(),
                     DiagnosticKind::UndefinedTranslation {
-                        translation_field: "description".into(),
+                        translation_field: "runtime_flow_setting.description".into(),
                     },
                 ));
             }
-            if parameter.documentation.is_empty() {
-                self.reporter.add(Diagnose::new(
-                    name.clone(),
-                    original.clone(),
-                    DiagnosticKind::UndefinedTranslation {
-                        translation_field: "documentation".into(),
-                    },
-                ));
-            }
+        }
 
-            if param_names.contains(&parameter.runtime_name) {
-                self.reporter.add(Diagnose::new(
-                    name.clone(),
-                    original.clone(),
-                    DiagnosticKind::DuplicateRuntimeParameterIdentifier {
-                        identifier: parameter.runtime_name.clone(),
-                    },
-                ));
-            }
-            param_names.push(parameter.runtime_name.clone());
+        if self.index.has_runtime_flow_type(&name, Some(arft.id)) {
+            self.reporter.add(Diagnose::new(
+                name.clone(),
+                original.clone(),
+                DiagnosticKind::DuplicateRuntimeFlowTypeIdentifier { identifier: name },
+            ));
         }
     }
 }

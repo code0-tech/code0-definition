@@ -47,7 +47,7 @@ impl Analyser {
             ));
         }
 
-        if dt.r#type == "" {
+        if dt.r#type.is_empty() {
             self.reporter.add(Diagnose::new(
                 dt.identifier.clone(),
                 adt.original_definition.clone(),
