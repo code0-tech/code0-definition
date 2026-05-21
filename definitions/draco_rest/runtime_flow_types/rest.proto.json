@@ -27,13 +27,29 @@
     }
   ],
   "displayIcon": "tabler:world-www",
-  "signature": "(httpURL: HTTP_URL, httpMethod: HTTP_METHOD): REST_ADAPTER_INPUT<{}>",
+  "signature": "<T>(input_schema: TYPE<T>, httpURL: HTTP_URL, httpMethod: HTTP_METHOD): REST_ADAPTER_INPUT<T>",
   "linkedDataTypeIdentifiers": [
     "HTTP_URL",
     "HTTP_METHOD",
     "REST_ADAPTER_INPUT"
   ],
   "runtimeSettings": [
+    {
+      "identifier": "input_schema",
+      "unique": "NONE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input schema"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Input schema which defines the expected structure of the incoming request data."
+        }
+      ]
+    },
     {
       "identifier": "httpURL",
       "unique": "PROJECT",
