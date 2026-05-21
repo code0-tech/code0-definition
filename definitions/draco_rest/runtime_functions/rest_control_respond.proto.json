@@ -2,23 +2,59 @@
   "runtimeName": "rest::control::respond",
   "runtimeParameterDefinitions": [
     {
-      "runtimeName": "http_response",
+      "runtimeName": "http_status_code",
+      "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "Http Response"
+          "content": "HTTP Status Code"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "Takes an HTTP response object and transmits it to the requesting client. This parameter represents the final output of the server, including headers, status code, and body content."
+          "content": "An HTTP status code is a three-digit number (100–599) indicating the result of a request (e.g., 200, 404, 500)."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "headers",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP response headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A collection of key-value pairs containing additional response metadata."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "payload",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Response Payload"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Contains the response payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
         }
       ],
       "documentation": []
     }
   ],
   "deprecationMessage": [],
+  "throwsError": false,
   "name": [
     {
       "code": "en-US",
@@ -41,11 +77,13 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Sends ${http_response} as a Response"
+      "content": "Sends response with status ${http_status_code} and payload ${payload}"
     }
   ],
-  "throwsError": false,
   "displayIcon": "tabler:cube-sent",
-  "linkedDataTypeIdentifiers": ["HTTP_RESPONSE"],
-  "signature": "<T>(http_response: HTTP_RESPONSE<T>): void"
+  "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: OBJECT<{}>, payload: T): void",
+  "linkedDataTypeIdentifiers": [
+    "HTTP_STATUS_CODE",
+    "OBJECT"
+  ]
 }
