@@ -1,0 +1,109 @@
+{
+  "runtime_definition_name": "http::request::send",
+  "runtimeName": "http::request::send",
+  "parameter_definitions": [
+    {
+      "runtimeName": "http_method",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Method"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "headers",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A collection of key-value pairs containing additional request metadata."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "url",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request URL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the endpoint address, including protocol, host, path, and query parameters, where the request is directed."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "payload",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request Payload"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Contains the request payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": true,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Send HTTP request"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Sends a request to the specified url with the given method, headers and payload, and returns the response as an HTTP_RESPONSE object. This function initiates an HTTP request to a specified endpoint, allowing you to interact with web services or APIs by sending data and receiving responses."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "send;sends;execute;request;http"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Send request to ${url} with ${payload}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:world-www",
+  "signature": "<T>(http_method: HTTP_METHOD, headers: OBJECT<{}>, url: HTTP_URL, payload: T): HTTP_RESPONSE<any>",
+  "linkedDataTypeIdentifiers": [
+    "HTTP_METHOD",
+    "OBJECT",
+    "HTTP_URL",
+    "HTTP_RESPONSE"
+  ]
+}

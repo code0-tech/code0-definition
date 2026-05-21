@@ -1,0 +1,89 @@
+{
+  "runtime_definition_name": "std::number::clamp",
+  "runtimeName": "std::number::clamp",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input number that will be limited (clamped) to the specified range."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "min",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Minimum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The minimum allowed value in the clamping operation."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "max",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Maximum"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The maximum allowed value in the clamping operation."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Clamp Number"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the given number clamped between the minimum and maximum bounds."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "clamp;limit;bound;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Clamp ${value} between ${min} and ${max}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER, min: NUMBER, max: NUMBER): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
+}

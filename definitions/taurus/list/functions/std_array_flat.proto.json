@@ -1,0 +1,55 @@
+{
+  "runtime_definition_name": "std::list::flat",
+  "runtimeName": "std::list::flat",
+  "parameter_definitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Nested List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A list containing sub-lists that will be flattened into a single-level list."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Flatten List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Flattens a nested list into a single-level list."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "flat;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Flatten ${list}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:list",
+  "signature": "<T>(list: LIST<LIST<T>>): LIST<T>",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ]
+}

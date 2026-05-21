@@ -1,0 +1,72 @@
+{
+  "runtime_definition_name": "std::list::sort",
+  "runtimeName": "std::list::sort",
+  "parameter_definitions": [
+    {
+      "runtimeName": "list",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "List"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input list to be sorted."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "comparator",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Comparator"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A function that takes two elements and returns a negative, zero, or positive number to indicate their ordering."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Sort List"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new list with the elements sorted according to the comparator function provided."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sort;array;list;collection;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sort ${list} using ${comparator}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-iteration",
+  "signature": "<T>(list: LIST<T>, comparator: COMPARATOR<T>): LIST<T>",
+  "linkedDataTypeIdentifiers": [
+    "LIST"
+  ]
+}
