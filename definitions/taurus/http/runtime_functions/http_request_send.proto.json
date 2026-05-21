@@ -2,18 +2,69 @@
   "runtimeName": "http::request::send",
   "runtimeParameterDefinitions": [
     {
-      "runtimeName": "http_request",
+      "runtimeName": "http_method",
       "defaultValue": null,
       "name": [
         {
           "code": "en-US",
-          "content": "HTTP request object"
+          "content": "HTTP Method"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "Takes an HTTP request object, which includes the HTTP method, url, headers, and payload, and sends it to the specified endpoint."
+          "content": "Defines the HTTP method to be used, such as GET, POST, PUT, or DELETE."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "headers",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "A collection of key-value pairs containing additional request metadata."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "url",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request URL"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the endpoint address, including protocol, host, path, and query parameters, where the request is directed."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "payload",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Request Payload"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Contains the request payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
         }
       ],
       "documentation": []
@@ -42,14 +93,16 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Send request with ${http_request}"
+      "content": "Send request to ${url} with ${payload}"
     }
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:world-www",
-  "signature": "<T>(http_request: HTTP_REQUEST<T>): HTTP_RESPONSE<any>",
+  "signature": "<T>(http_method: HTTP_METHOD, headers: OBJECT<{}>, url: HTTP_URL, payload: T): HTTP_RESPONSE<any>",
   "linkedDataTypeIdentifiers": [
-    "HTTP_RESPONSE",
-    "HTTP_REQUEST"
+    "HTTP_METHOD",
+    "OBJECT",
+    "HTTP_URL",
+    "HTTP_RESPONSE"
   ]
 }
