@@ -1,0 +1,73 @@
+{
+  "runtime_definition_name": "std::text::ends_with",
+  "runtimeName": "std::text::ends_with",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The input text to check."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "suffix",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Suffix"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The suffix to test against the input text."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Ends With"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns true if the input text ends with the given suffix. Otherwise, returns false."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "ends_with;text;string;std;ends;with"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Check if ${value} Ends With ${suffix}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, suffix: TEXT): BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "TEXT",
+    "BOOLEAN"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "runtime_definition_name": "std::text::replace",
+  "runtimeName": "std::text::replace",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This is the text in which all occurrences of the old subtext will be replaced."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "oldText",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Old Subtext"
+        }
+      ],
+      "documentation": [],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "All occurrences of this subtext in the original text will be replaced."
+        }
+      ]
+    },
+    {
+      "runtimeName": "newText",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "New Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This subtext will replace each occurrence of the old subtext."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Replace Subtext"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns a new text where every instance of the old subtext is replaced by the new subtext."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "replace;text;string;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Replace ${old} with ${new} Inside ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
+}

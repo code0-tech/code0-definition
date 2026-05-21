@@ -1,0 +1,55 @@
+{
+  "runtime_definition_name": "std::number::sin",
+  "runtimeName": "std::number::sin",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number for which to calculate the sine."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Sine"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Calculates the sine of the input value."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "sin;sine;trigonometry;number;math;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Sine of ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
+}

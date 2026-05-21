@@ -1,0 +1,52 @@
+{
+  "runtime_definition_name": "std::control::return",
+  "runtimeName": "std::control::return",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Return Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The value to be returned to the upper context."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Return"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Ends the current context and returns the specified value to the upper scope."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "return;control;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Return ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:arrow-back",
+  "signature": "<T>(value: T): T"
+}

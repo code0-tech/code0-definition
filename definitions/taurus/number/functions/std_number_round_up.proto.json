@@ -1,0 +1,72 @@
+{
+  "runtime_definition_name": "std::number::round_up",
+  "runtimeName": "std::number::round_up",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Number Input"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number to be rounded up."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "decimals",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Decimal Places"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The number of decimal places to round up to."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Round Up"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Performs rounding on the given value, always rounding up to the nearest value at the given decimal precision."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "round up;ceil;ceiling;number;math;std;round;up"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Round Upwards ${value} with ${decimals} Decimal Places"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:math-function",
+  "signature": "(value: NUMBER, decimals: NUMBER): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "NUMBER"
+  ]
+}

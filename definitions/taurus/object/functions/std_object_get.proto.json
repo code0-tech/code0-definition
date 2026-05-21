@@ -1,0 +1,72 @@
+{
+  "runtime_definition_name": "std::object::get",
+  "runtimeName": "std::object::get",
+  "parameter_definitions": [
+    {
+      "runtimeName": "object",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Object"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The object that contains the value referenced by the key."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "key",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Key"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The property name under which the value will be referenced."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Get key of object"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the value of a key inside of the object."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "get;object;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Get ${key} of ${object}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:cube",
+  "signature": "<T, K extends keyof T>(object: OBJECT<T>, key: K): T[K]",
+  "linkedDataTypeIdentifiers": [
+    "OBJECT"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "runtime_definition_name": "std::text::replace_last",
+  "runtimeName": "std::text::replace_last",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Original Text"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This text contains the subtext that will be replaced only once—the last occurrence."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "oldText",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Old Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Only the last occurrence of this subtext will be replaced in the original text."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "newText",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "New Subtext"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "This subtext will replace only the last occurrence of the old subtext."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Replace Last Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Replaces the last occurrence of a specified subtext with another subtext in the input text."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "replace_last;text;string;std;replace;last"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "In ${value} replace the last ${old} with ${new}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:abc",
+  "signature": "(value: TEXT, oldText: TEXT, newText: TEXT): TEXT",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ]
+}

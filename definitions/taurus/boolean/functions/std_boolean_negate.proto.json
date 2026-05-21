@@ -1,0 +1,55 @@
+{
+  "runtime_definition_name": "std::boolean::negate",
+  "runtimeName": "std::boolean::negate",
+  "parameter_definitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The boolean value to negate."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Negate Boolean"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Negates a boolean value."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "negate;negative;invert;opposite;boolean;logic;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Negate ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:toggle-left",
+  "signature": "(value: BOOLEAN): BOOLEAN",
+  "linkedDataTypeIdentifiers": [
+    "BOOLEAN"
+  ]
+}
