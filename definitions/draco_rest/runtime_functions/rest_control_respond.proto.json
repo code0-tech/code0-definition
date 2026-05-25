@@ -80,7 +80,7 @@
       "content": "Sends response with status ${http_status_code} and payload ${payload}"
     }
   ],
-  "displayIcon": "tabler:cube-sent",
+  "displayIcon": "tabler:cube-send",
   "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: OBJECT<{}>, payload: T): void",
   "linkedDataTypeIdentifiers": [
     "HTTP_STATUS_CODE",
