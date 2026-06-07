@@ -18,7 +18,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Trigger Rest-Flow on ${method} with a Request to ${route}"
+      "content": "Trigger Rest-Flow on ${httpMethod} with a Request to ${httpURL}"
     }
   ],
   "alias": [

@@ -1,0 +1,16 @@
+{
+	"identifier": "test",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Text"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Work with Text."
+		}
+	],
+	"type": "TEXT"
+}

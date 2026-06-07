@@ -12,6 +12,24 @@
 			"content": "Work with Text."
 		}
 	],
+	"configurations": [
+		{
+			"identifier": "test",
+			"name": [
+				{
+					"code": "en-US",
+					"content": "Text"
+				}
+			],
+			"description": [
+				{
+					"code": "en-US",
+					"content": "Work with Text."
+				}
+			],
+			"type": "TEXT"
+		}
+	],
 	"documentation": "",
 	"author": "CodeZero",
 	"icon": "tabler:abc"

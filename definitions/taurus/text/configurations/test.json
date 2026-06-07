@@ -1,0 +1,16 @@
+{
+	"identifier": "test2",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "List"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Work with List."
+		}
+	],
+	"type": "LIST<TEXT>"
+}

@@ -23,7 +23,7 @@
   "displayMessage": [
     {
       "code": "en-US",
-      "content": "Schedule Job ${cron_code}"
+      "content": "Runs flow every ${cronMinute}min ${cronHour}hour ${cronMonth}month"
     }
   ],
   "signature": "(cronMinute: CRON_MINUTE, cronHour: CRON_HOUR, cronDayOfMonth: CRON_DAY_OF_MONTH, cronMonth: CRON_MONTH, cronDayOfWeek: CRON_DAY_OF_WEEK): void",
