@@ -98,7 +98,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:world-www",
-  "signature": "<T>(http_method: HTTP_METHOD, headers: OBJECT<{}>, url: HTTP_URL, payload: T): HTTP_RESPONSE<any>",
+  "signature": "<A extends HTTP_AUTH_TYPE, S extends HTTP_SCHEMA>(http_method: HTTP_METHOD, url: HTTP_URL, http_auth: A, http_auth_value: HTTP_AUTH_VALUE<A>, http_auth_place: HTTP_AUTH_PLACE<A>, http_schema: S, payload: HTTP_PAYLOAD<S>, headers?: OBJECT<{}>): HTTP_RESPONSE<any>",
   "linkedDataTypeIdentifiers": [
     "HTTP_METHOD",
     "OBJECT",

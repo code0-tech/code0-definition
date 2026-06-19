@@ -18,7 +18,9 @@
       "content": "Object"
     }
   ],
-	"genericKeys": ["T"],
+  "genericKeys": [
+    "T"
+  ],
   "type": "{ [K in keyof T]: T[K] }",
   "rules": []
 }
