@@ -37,6 +37,23 @@
       "documentation": []
     },
     {
+      "runtimeName": "http_schema",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Content Type"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the MIME type of the response payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+        }
+      ],
+      "documentation": []
+    },
+    {
       "runtimeName": "payload",
       "defaultValue": null,
       "name": [
@@ -48,7 +65,7 @@
       "description": [
         {
           "code": "en-US",
-          "content": "Contains the response payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
+          "content": "Contains the response payload. For application/json the value must be an OBJECT, for all other content types a plain string is expected."
         }
       ],
       "documentation": []
@@ -82,9 +99,11 @@
     }
   ],
   "displayIcon": "tabler:cube-send",
-  "signature": "<T>(http_status_code: HTTP_STATUS_CODE, headers: OBJECT<{}>, payload: T): void",
+  "signature": "<S extends HTTP_SCHEMA>(http_status_code: HTTP_STATUS_CODE, headers: OBJECT<{}>, http_schema: S, payload: HTTP_PAYLOAD<S>): void",
   "linkedDataTypeIdentifiers": [
     "HTTP_STATUS_CODE",
-    "OBJECT"
+    "OBJECT",
+    "HTTP_SCHEMA",
+    "HTTP_PAYLOAD"
   ]
 }
