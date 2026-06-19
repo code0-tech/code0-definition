@@ -25,5 +25,5 @@
 	"linkedDataTypeIdentifiers": [
 		"OBJECT"
 	],
-	"type": "{ payload: T, headers: OBJECT<{}> }"
+	"type": "{ payload: T, headers: OBJECT<{}>, query_params: OBJECT<{}>, path_params: OBJECT<{}> }"
 }
