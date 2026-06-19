@@ -20,6 +20,6 @@
   ],
   "genericKeys": ["T"],
   "type": "T extends 'application/json' ? OBJECT<{}> : T extends undefined ? undefined : string",
-  "linkedDataTypeIdentifiers": [],
+  "linkedDataTypeIdentifiers": ["OBJECT"],
   "rules": []
 }
