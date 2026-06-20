@@ -27,10 +27,12 @@
     }
   ],
   "displayIcon": "tabler:world-www",
-  "signature": "<T>(input_schema: TYPE<T>, httpURL: HTTP_URL, httpMethod: HTTP_METHOD): REST_ADAPTER_INPUT<T>",
+  "signature": "<A extends REST_AUTH_TYPE, T>(input_schema: TYPE<T>, httpURL: HTTP_URL, httpMethod: HTTP_METHOD, httpAuth: A, httpAuthValue: REST_AUTH_VALUE<A>): REST_ADAPTER_INPUT<T>",
   "linkedDataTypeIdentifiers": [
     "HTTP_URL",
     "HTTP_METHOD",
+    "REST_AUTH_TYPE",
+    "REST_AUTH_VALUE",
     "REST_ADAPTER_INPUT"
   ],
   "runtimeSettings": [
@@ -79,6 +81,38 @@
         {
           "code": "en-US",
           "content": "Specifies the HTTP request method (e.g., GET, POST, PUT, DELETE)."
+        }
+      ]
+    },
+    {
+      "identifier": "httpAuth",
+      "unique": "NONE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Authentication type"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the authentication mechanism used for the incoming Webhook request (e.g., Bearer JWT, Bearer static, Basic)."
+        }
+      ]
+    },
+    {
+      "identifier": "httpAuthValue",
+      "unique": "NONE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Authentication value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Provides the credential value matching the selected authentication type (e.g., token string or username/password pair)."
         }
       ]
     }

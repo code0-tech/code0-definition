@@ -1,0 +1,24 @@
+{
+  "identifier": "REST_AUTH_TYPE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Webhook credential variant"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;method;get;post;put;delete;path;head"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Webhook credential variant"
+    }
+  ],
+  "type": "'Bearer JWT' | 'Bearer static' | 'Basic'",
+  "linkedDataTypeIdentifiers": [],
+  "rules": []
+}
