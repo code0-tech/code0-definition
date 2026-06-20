@@ -3,13 +3,13 @@
 	"name": [
 		{
 			"code": "en-US",
-			"content": "REST"
+			"content": "Webhook"
 		}
 	],
 	"description": [
 		{
 			"code": "en-US",
-			"content": "Trigger Flows unsing a HTTP-Server."
+			"content": "Trigger webhook on a specified endpoint."
 		}
 	],
 	"documentation": "",
