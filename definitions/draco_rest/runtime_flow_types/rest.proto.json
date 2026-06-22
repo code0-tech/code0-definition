@@ -27,8 +27,9 @@
     }
   ],
   "displayIcon": "tabler:world-www",
-  "signature": "<A extends REST_AUTH_TYPE, T>(input_schema: TYPE<T>, httpURL: HTTP_URL, httpMethod: HTTP_METHOD, httpAuth: A, httpAuthValue: REST_AUTH_VALUE<A>): REST_ADAPTER_INPUT<T>",
+  "signature": "<A extends REST_AUTH_TYPE, T>(httpSchema: HTTP_SCHEMA, httpURL: HTTP_URL, httpMethod: HTTP_METHOD, httpAuth: A, httpAuthValue: REST_AUTH_VALUE<A>, input_schema: TYPE<T>): REST_ADAPTER_INPUT<T>",
   "linkedDataTypeIdentifiers": [
+    "HTTP_SCHEMA",
     "HTTP_URL",
     "HTTP_METHOD",
     "REST_AUTH_TYPE",
@@ -37,18 +38,18 @@
   ],
   "runtimeSettings": [
     {
-      "identifier": "input_schema",
+      "identifier": "httpSchema",
       "unique": "NONE",
       "name": [
         {
           "code": "en-US",
-          "content": "Input schema"
+          "content": "Content Type"
         }
       ],
       "description": [
         {
           "code": "en-US",
-          "content": "Input schema which defines the expected structure of the incoming request data."
+          "content": "Specifies the MIME type of the incoming request payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
         }
       ]
     },
@@ -113,6 +114,22 @@
         {
           "code": "en-US",
           "content": "Provides the credential value matching the selected authentication type (e.g., token string or username/password pair)."
+        }
+      ]
+    },
+    {
+      "identifier": "input_schema",
+      "unique": "NONE",
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Input schema"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Input schema which defines the expected structure of the incoming request data."
         }
       ]
     }
