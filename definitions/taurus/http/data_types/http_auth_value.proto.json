@@ -9,7 +9,7 @@
   "alias": [
     {
       "code": "en-US",
-      "content": "http;method;get;post;put;delete;path;head"
+      "content": "http;auth;credential;value;bearer;basic;username;password;token"
     }
   ],
   "displayMessage": [
