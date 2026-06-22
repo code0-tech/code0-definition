@@ -19,23 +19,6 @@
       "documentation": []
     },
     {
-      "runtimeName": "headers",
-      "defaultValue": null,
-      "name": [
-        {
-          "code": "en-US",
-          "content": "HTTP Headers"
-        }
-      ],
-      "description": [
-        {
-          "code": "en-US",
-          "content": "A collection of key-value pairs containing additional request metadata."
-        }
-      ],
-      "documentation": []
-    },
-    {
       "runtimeName": "url",
       "defaultValue": null,
       "name": [
@@ -53,6 +36,74 @@
       "documentation": []
     },
     {
+      "runtimeName": "http_auth",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Auth Type"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the authentication variant to use, such as Bearer, Basic, X-API-Key, or a custom scheme. Use undefined to send the request without authentication."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "http_auth_value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Auth Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Provides the credentials for the selected authentication type. For Basic auth, supply an object with username and password; for all other types, provide a token or key string."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "http_auth_place",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Auth Placement"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Defines where the authentication credentials are attached to the request. Bearer and Basic auth always use Header; custom schemes can be placed in the Header or as a URL query parameter."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "http_schema",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Content Type"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "Specifies the MIME type of the request payload, such as application/json, application/xml, or text/plain. This determines the expected format of the payload parameter."
+        }
+      ],
+      "documentation": []
+    },
+    {
       "runtimeName": "payload",
       "defaultValue": null,
       "name": [
@@ -64,7 +115,24 @@
       "description": [
         {
           "code": "en-US",
-          "content": "Contains the request payload, such as JSON, XML, form data, or binary content, depending on the Content-Type header."
+          "content": "Contains the request payload. For application/json the value must be an OBJECT, for all other content types a plain string is expected."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "headers",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "HTTP Headers"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "An optional collection of key-value pairs containing additional request metadata such as custom headers."
         }
       ],
       "documentation": []
@@ -98,11 +166,16 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:world-www",
-  "signature": "<T>(http_method: HTTP_METHOD, headers: OBJECT<{}>, url: HTTP_URL, payload: T): HTTP_RESPONSE<any>",
+  "signature": "<A extends HTTP_AUTH_TYPE, S extends HTTP_SCHEMA>(http_method: HTTP_METHOD, url: HTTP_URL, http_auth: A, http_auth_value: HTTP_AUTH_VALUE<A>, http_auth_place: HTTP_AUTH_PLACE<A>, http_schema: S, payload: HTTP_PAYLOAD<S>, headers?: OBJECT<{}>): HTTP_RESPONSE<any>",
   "linkedDataTypeIdentifiers": [
     "HTTP_METHOD",
-    "OBJECT",
     "HTTP_URL",
+    "HTTP_AUTH_TYPE",
+    "HTTP_AUTH_VALUE",
+    "HTTP_AUTH_PLACE",
+    "HTTP_SCHEMA",
+    "HTTP_PAYLOAD",
+    "OBJECT",
     "HTTP_RESPONSE"
   ]
 }

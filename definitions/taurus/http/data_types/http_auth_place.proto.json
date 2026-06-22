@@ -1,0 +1,25 @@
+{
+  "identifier": "HTTP_AUTH_PLACE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP credential placement"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;auth;credential;place;placement;location;header;url"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP credential placement"
+    }
+  ],
+  "genericKeys": ["T"],
+  "type": "T extends 'Bearer' ? 'Header' : T extends 'Basic' ? 'Header' : T extends undefined ? undefined : 'Header' | 'Url'",
+  "linkedDataTypeIdentifiers": [],
+  "rules": []
+}

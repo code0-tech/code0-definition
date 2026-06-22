@@ -1,0 +1,24 @@
+{
+  "identifier": "HTTP_AUTH_TYPE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP credential variant"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;auth;credential;type;variant;bearer;basic;api-key"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP credential variant"
+    }
+  ],
+  "type": "'Bearer' | 'Basic' | 'X-API-Key' | string | undefined",
+  "linkedDataTypeIdentifiers": [],
+  "rules": []
+}

@@ -1,0 +1,25 @@
+{
+  "identifier": "REST_AUTH_VALUE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Webhook credential value"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "webhook;rest;auth;credential;value;bearer;basic;username;password;token"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Webhook credential value"
+    }
+  ],
+  "genericKeys": ["T"],
+  "type": "T extends 'Basic' ? { username: string, password: string } : T extends undefined ? undefined : string",
+  "linkedDataTypeIdentifiers": [],
+  "rules": []
+}

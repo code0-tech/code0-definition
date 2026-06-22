@@ -1,0 +1,25 @@
+{
+  "identifier": "HTTP_AUTH_VALUE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP credential value"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;auth;credential;value;bearer;basic;username;password;token"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP credential value"
+    }
+  ],
+  "genericKeys": ["T"],
+  "type": "T extends 'Basic' ? { username: string, password: string } : T extends undefined ? undefined : string",
+  "linkedDataTypeIdentifiers": [],
+  "rules": []
+}

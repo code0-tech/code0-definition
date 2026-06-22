@@ -1,0 +1,24 @@
+{
+  "identifier": "HTTP_SCHEMA",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "HTTP schema"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "http;schema;content-type;mime;media-type;json;xml;text;csv"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "HTTP schema"
+    }
+  ],
+  "type": "'application/json' | 'application/xml' | 'text/plain' | 'text/csv' | string | undefined",
+  "linkedDataTypeIdentifiers": [],
+  "rules": []
+}
