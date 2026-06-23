@@ -18,7 +18,7 @@
       "content": "Webhook credential variant"
     }
   ],
-  "type": "'Bearer JWT' | 'Bearer static' | 'Basic'",
+  "type": "'Bearer JWT' | 'Bearer static' | 'Basic' | undefined | null",
   "linkedDataTypeIdentifiers": [],
   "rules": []
 }

@@ -18,7 +18,7 @@
       "content": "HTTP schema"
     }
   ],
-  "type": "'application/json' | 'application/xml' | 'text/plain' | 'text/csv' | string | undefined",
+  "type": "'application/json' | 'application/xml' | 'text/plain' | 'text/csv' | string | undefined | null",
   "linkedDataTypeIdentifiers": [],
   "rules": []
 }

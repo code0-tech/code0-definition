@@ -19,7 +19,7 @@
     }
   ],
   "genericKeys": ["T"],
-  "type": "T extends 'Bearer' ? 'Header' : T extends 'Basic' ? 'Header' : T extends undefined ? undefined : 'Header' | 'Url'",
+  "type": "T extends 'Bearer' ? 'Header' : T extends 'Basic' ? 'Header' : T extends undefined ? undefined : T extends null ? null : 'Header' | 'Url'",
   "linkedDataTypeIdentifiers": [],
   "rules": []
 }
