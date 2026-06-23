@@ -18,7 +18,7 @@
       "content": "HTTP credential variant"
     }
   ],
-  "type": "'Bearer' | 'Basic' | 'X-API-Key' | string | undefined",
+  "type": "'Bearer' | 'Basic' | 'X-API-Key' | string | undefined | null",
   "linkedDataTypeIdentifiers": [],
   "rules": []
 }
