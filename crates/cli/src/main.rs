@@ -75,6 +75,9 @@ enum Commands {
         /// Optional path to root directory of all definitions.
         #[arg(short, long)]
         path: Option<String>,
+        /// Optional path to generated output directory.
+        #[arg(short, long)]
+        out: Option<String>,
     },
     Download {
         #[arg(short, long)]
@@ -105,5 +108,8 @@ async fn main() {
             version,
             path,
         } => command::push::push(token, url, version, path).await,
+        Commands::Publish { version, path, out } => {
+            command::publish::publish(version, path, out).await
+        }
     }
 }
