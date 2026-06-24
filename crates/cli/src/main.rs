@@ -68,6 +68,14 @@ enum Commands {
         #[arg(short, long)]
         path: Option<String>,
     },
+    Publish {
+        // Version field for all definitons
+        #[arg(short, long)]
+        version: String,
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+    },
     Download {
         #[arg(short, long)]
         tag: Option<String>,
