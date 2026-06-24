@@ -5,3 +5,4 @@ pub mod report;
 pub mod search;
 pub mod search_module;
 pub mod watch;
+pub mod publish;
