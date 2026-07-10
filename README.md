@@ -4,7 +4,7 @@ This repository contains all definitions for Code0. These definitions will be us
 ## Definition CLI
 
 ### Setup
-First download cargo to use the cli.
+First install Cargo to use the CLI.
 [Install Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
 Then run:
@@ -12,60 +12,84 @@ Then run:
 cargo install code0-cli
 ```
 
-After the cli compiled succesfully you can use it via:
+After the CLI compiles successfully, use it via:
 ```bash
 code0-cli
 ```
 
 ### Usage
-(Stay inside the root directory when running the command)
+Stay inside the repository root when running commands against the local `definitions` folder. Most commands use `./definitions` by default.
 
 #### Download
-Will download the latest Definitions from the Code0 Definition Repository.
+Downloads `definitions.zip` from the Code0 definition GitHub releases and extracts it into `./definitions`.
 
-If no feature is specified, all features will be downloaded. If a feature is specified, only that feature will be kept & can be loaded by one of the following languages: TypeScript, Rust.
-
--f (--features) is a list of features that will be downloaded.
--t (--tag) is the version tag of the release you want to select.
+-t (--tag) selects a specific release tag.
+-f (--features) keeps only the listed extracted definition folders.
 
 ```bash
 code0-cli download
 code0-cli download -t def-0.0.8
-code0-cli download -f feature_1 feature_2 feature_3
-code0-cli download -t def-0.0.8 -f feature_1 feature_2 feature_3
+code0-cli download -f taurus-number taurus-text
+code0-cli download -t def-0.0.8 -f taurus-number taurus-text
 ```
 
-#### General Report
-Will create a report of all errors in the definitions.
+#### Report
+Validates the definitions and prints a summary report.
 
 ```bash
 code0-cli report
 code0-cli report -p /path/to/definitions
 ```
 
-#### Feature Report
-Will create a report of all errors in the definitions for a specific feature. Will also report on all specified functions, data types, and flow types.
+#### Module
+Prints definition details for all modules, or for one module by identifier.
 
 ```bash
-code0-cli feature
-code0-cli feature -p /path/to/definitions
-code0-cli feature -f feature_name
-code0-cli feature -f feature_name -p /path/to/definitions
+code0-cli module
+code0-cli module -n taurus-number
+code0-cli module -p /path/to/definitions
+code0-cli module -n taurus-number -p /path/to/definitions
 ```
 
 #### Watch for Changes
-Will run the report each time a definition file changes.
+Runs the analyser whenever a definition file changes.
 
 ```bash
 code0-cli watch
 code0-cli watch -p /path/to/definitions
+code0-cli watch --ignore-warnings
 ```
 
-#### Definition
-Will search for a specific definition.
+#### Search
+Searches for a specific definition by identifier or runtime name and prints the matching JSON.
 
 ```bash
-code0-cli definition -n definition_name
-code0-cli definition -n definition_name -p /path/to/definitions
+code0-cli search -n std::number::add
+code0-cli search -n std::number::add -p /path/to/definitions
 ```
 
+#### Publish
+Generates publishable definitions from the source definitions. By default, it reads from `./definitions` and writes to `./out`.
+
+```bash
+code0-cli publish -v 0.0.8
+code0-cli publish -v 0.0.8 -p /path/to/definitions
+code0-cli publish -v 0.0.8 -p /path/to/definitions -o /path/to/out
+```
+
+To replace the source folder with the generated output, use:
+
+```bash
+code0-cli publish -v 0.0.8 --path definitions --out out
+rm -rf definitions
+mv out definitions
+```
+
+#### Push
+Pushes definitions to a Sagittarius endpoint.
+
+```bash
+code0-cli push -t "$SAGITTARIUS_TOKEN" -u "https://sagittarius.example.com"
+code0-cli push -t "$SAGITTARIUS_TOKEN" -u "https://sagittarius.example.com" -v 0.0.8
+code0-cli push -t "$SAGITTARIUS_TOKEN" -u "https://sagittarius.example.com" -p /path/to/definitions
+```
