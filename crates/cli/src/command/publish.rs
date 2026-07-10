@@ -192,7 +192,7 @@ fn write_module(module: &Module, out_dir_path: &Path) {
         icon: &module.icon,
         version: &module.version,
     };
-    write_json_file(&module_path.join("meta.json"), &meta);
+    write_json_file(&module_path.join("module.json"), &meta);
 
     write_definition_collection::<DefinitionDataType, _>(
         &module_path,
