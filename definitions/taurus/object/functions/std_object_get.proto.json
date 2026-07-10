@@ -65,7 +65,7 @@
   ],
   "deprecationMessage": [],
   "displayIcon": "tabler:cube",
-  "signature": "<T, K extends keyof T>(object: OBJECT<T>, key: K): T[K]",
+  "signature": "<T, K extends keyof T>(object: OBJECT<T>, key: K | string): T[K]",
   "linkedDataTypeIdentifiers": [
     "OBJECT"
   ]
