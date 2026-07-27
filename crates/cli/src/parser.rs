@@ -56,7 +56,7 @@ pub struct DefinitionModule {
 impl DefinitionModule {
     pub fn into_module(self) -> Module {
         Module {
-            identifier: self.config.identifier,
+            identifier: self.config.identifier.clone(),
             name: self.config.name,
             description: self.config.description,
             documentation: self.config.documentation,
@@ -70,6 +70,7 @@ impl DefinitionModule {
             definition_data_types: self.data_types,
             configurations: self.module_configs,
             definitions: Vec::new(),
+            definition_source: self.config.identifier,
         }
     }
 }

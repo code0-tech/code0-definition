@@ -28,10 +28,17 @@ impl SagittariusModuleServiceClient {
     }
 
     pub async fn update(&mut self, modules: Vec<Module>) {
+        let available_defintition_soruces: Vec<String> = modules
+            .iter()
+            .map(|x| x.definition_source.clone())
+            .collect();
         let request = Request::from_parts(
             get_authorization_metadata(&self.token),
             Extensions::new(),
-            ModuleUpdateRequest { modules },
+            ModuleUpdateRequest {
+                modules,
+                available_defintition_soruces,
+            },
         );
 
         match self.client.update(request).await {
