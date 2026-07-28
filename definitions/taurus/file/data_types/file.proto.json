@@ -19,8 +19,11 @@
     }
   ],
   "genericKeys": [
-    "M"
+    "M extends TEXT"
   ],
   "type": "{ contentType: M; valueType: 'base64'; value: string }",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ],
   "rules": []
 }
