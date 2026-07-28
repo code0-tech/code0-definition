@@ -1,0 +1,29 @@
+{
+  "identifier": "FILE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "File"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "file;document;blob;attachment;binary"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "File"
+    }
+  ],
+  "genericKeys": [
+    "M extends TEXT"
+  ],
+  "type": "{ contentType: M; valueType: 'base64'; value: string }",
+  "linkedDataTypeIdentifiers": [
+    "TEXT"
+  ],
+  "rules": []
+}

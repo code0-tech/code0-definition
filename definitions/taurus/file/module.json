@@ -1,0 +1,18 @@
+{
+  "identifier": "taurus-file",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "File"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Work with Files."
+    }
+  ],
+  "documentation": "",
+  "author": "CodeZero",
+  "icon": "tabler:file"
+}

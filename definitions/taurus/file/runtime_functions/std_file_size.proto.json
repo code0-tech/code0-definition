@@ -1,0 +1,56 @@
+{
+  "runtimeName": "std::file::size",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "file",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "File"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The file whose size in bytes is to be returned."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "File Size"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the size of the given file in bytes."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "size;file;bytes;length;document;blob;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Size of ${file}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:file",
+  "signature": "<M extends TEXT>(file: FILE<M>): NUMBER",
+  "linkedDataTypeIdentifiers": [
+    "FILE",
+    "NUMBER",
+    "TEXT"
+  ]
+}
