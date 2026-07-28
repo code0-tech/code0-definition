@@ -1,0 +1,72 @@
+{
+  "runtimeName": "std::date::format",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "date",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Date"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The date that will be formatted."
+        }
+      ],
+      "documentation": []
+    },
+    {
+      "runtimeName": "pattern",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Pattern"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The pattern used to format the date, for example DD:MM:YYYY or YY:MM:DD."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": true,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Format Date"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Converts a date into a formatted text using the given pattern. Throws an error if the pattern is invalid."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "format;pattern;stringify;to text;display;date;time;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Format ${date} as ${pattern}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:calendar-cog",
+  "signature": "(date: DATE, pattern: TEXT): TEXT",
+  "linkedDataTypeIdentifiers": [
+    "DATE",
+    "TEXT"
+  ]
+}
