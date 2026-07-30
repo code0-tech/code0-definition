@@ -1,0 +1,18 @@
+{
+	"identifier": "taurus-date",
+	"name": [
+		{
+			"code": "en-US",
+			"content": "Date"
+		}
+	],
+	"description": [
+		{
+			"code": "en-US",
+			"content": "Work with Dates."
+		}
+	],
+	"documentation": "",
+	"author": "CodeZero",
+	"icon": "tabler:calendar"
+}

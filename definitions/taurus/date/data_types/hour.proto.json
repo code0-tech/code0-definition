@@ -1,0 +1,31 @@
+{
+  "identifier": "HOUR",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Hour"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "hour;hours;hr;time"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Hour"
+    }
+  ],
+  "type": "number",
+  "rules": [
+    {
+      "number_range": {
+        "from": 0,
+        "to": 23,
+        "steps": 1
+      }
+    }
+  ]
+}

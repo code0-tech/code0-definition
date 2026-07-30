@@ -1,0 +1,55 @@
+{
+  "runtimeName": "std::date::from_text",
+  "runtimeParameterDefinitions": [
+    {
+      "runtimeName": "value",
+      "defaultValue": null,
+      "name": [
+        {
+          "code": "en-US",
+          "content": "Value"
+        }
+      ],
+      "description": [
+        {
+          "code": "en-US",
+          "content": "The textual representation of the date, for example an ISO 8601 string like 2026-07-28T10:15:30Z."
+        }
+      ],
+      "documentation": []
+    }
+  ],
+  "throwsError": true,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Date from Text"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Parses a date from its textual representation. Throws an error if the text cannot be parsed into a valid date."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "from text;parse;string;iso;from;date;time;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Date from text ${value}"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:calendar-plus",
+  "signature": "(value: TEXT): DATE",
+  "linkedDataTypeIdentifiers": [
+    "DATE",
+    "TEXT"
+  ]
+}

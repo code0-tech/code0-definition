@@ -1,0 +1,23 @@
+{
+  "identifier": "DATE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Date"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "date;day;day of month;calendar day"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Date"
+    }
+  ],
+  "type": "number",
+  "rules": []
+}

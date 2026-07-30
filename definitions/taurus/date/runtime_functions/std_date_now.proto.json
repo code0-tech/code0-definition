@@ -1,0 +1,36 @@
+{
+  "runtimeName": "std::date::now",
+  "runtimeParameterDefinitions": [],
+  "throwsError": false,
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Now"
+    }
+  ],
+  "description": [
+    {
+      "code": "en-US",
+      "content": "Returns the current date and time as a date."
+    }
+  ],
+  "documentation": [],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "now;current;today;current date;current time;date;time;std"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Now"
+    }
+  ],
+  "deprecationMessage": [],
+  "displayIcon": "tabler:calendar",
+  "signature": "(): DATE",
+  "linkedDataTypeIdentifiers": [
+    "DATE"
+  ]
+}

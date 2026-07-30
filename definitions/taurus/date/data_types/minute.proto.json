@@ -1,0 +1,31 @@
+{
+  "identifier": "MINUTE",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Minute"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "minute;minutes;min;time"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Minute"
+    }
+  ],
+  "type": "number",
+  "rules": [
+    {
+      "number_range": {
+        "from": 0,
+        "to": 59,
+        "steps": 1
+      }
+    }
+  ]
+}

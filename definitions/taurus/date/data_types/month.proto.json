@@ -1,0 +1,23 @@
+{
+  "identifier": "MONTH",
+  "name": [
+    {
+      "code": "en-US",
+      "content": "Month"
+    }
+  ],
+  "alias": [
+    {
+      "code": "en-US",
+      "content": "month;months;month of year;calendar month"
+    }
+  ],
+  "displayMessage": [
+    {
+      "code": "en-US",
+      "content": "Month"
+    }
+  ],
+  "type": "'JAN' | 'FEB' | 'MAR' | 'APR' | 'MAY' | 'JUN' | 'JUL' | 'AUG' | 'SEP' | 'OCT' | 'NOV' | 'DEC'",
+  "rules": []
+}
