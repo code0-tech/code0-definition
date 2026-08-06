@@ -6,7 +6,7 @@ description = "The CLI for managing the CodeZero's definitions"
 repository = "https://github.com/code0-tech/code0-definitions"
 homepage = "https://code0.tech"
 license = "Apache-2.0"
-readme = "../../README.md"
+readme = "../README.md"
 
 [dependencies]
 clap = { workspace = true, features = ["derive"] }
@@ -24,4 +24,3 @@ bytes = { workspace = true }
 prost = { workspace = true }
 tonic  = { workspace = true }
 log = { workspace = true }
-

@@ -1,8 +1,8 @@
 use crate::command::push::auth::get_authorization_metadata;
 use crate::formatter::{error_without_trace, info};
 use tonic::{Extensions, Request, transport::Channel};
-use tucana::sagittarius::ModuleUpdateRequest;
-use tucana::sagittarius::module_service_client::ModuleServiceClient;
+use tucana::sagittarius_rails::ModuleUpdateRequest;
+use tucana::sagittarius_rails::module_service_client::ModuleServiceClient;
 use tucana::shared::Module;
 
 pub struct SagittariusModuleServiceClient {
@@ -28,7 +28,7 @@ impl SagittariusModuleServiceClient {
     }
 
     pub async fn update(&mut self, modules: Vec<Module>) {
-        let available_defintition_soruces: Vec<String> = modules
+        let available_definition_sources: Vec<String> = modules
             .iter()
             .map(|x| x.definition_source.clone())
             .collect();
@@ -37,7 +37,7 @@ impl SagittariusModuleServiceClient {
             Extensions::new(),
             ModuleUpdateRequest {
                 modules,
-                available_defintition_soruces,
+                available_definition_sources,
             },
         );
 
