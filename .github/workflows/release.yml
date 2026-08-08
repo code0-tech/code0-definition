@@ -3,10 +3,11 @@ name: Publish YML
 on:
   push:
     tags:
-      - '*'
+      - 'cli-*'
+      - 'def-*'
 
 jobs:
-  publish-defintions:
+  publish-definitions:
     permissions:
       contents: write
       packages: read
@@ -19,6 +20,9 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
 
+      # Shared with the producer builds `poll` kicks off below: they are
+      # separate cargo projects in a scratch directory, but they resolve
+      # against this same registry and git checkout cache.
       - name: Cache cargo registry
         uses: actions/cache@v6
         with:
@@ -29,6 +33,21 @@ jobs:
           key: ${{ runner.os }}-cargo-publish-definitions-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-cargo-
+
+      # Assembles ./definitions by cloning every producer in collector.toml at
+      # its pinned ref and running its export. Nothing is read from this
+      # repository -- the definitions live in taurus and the centaurus actions,
+      # and only exist as files once this step has run.
+      - name: Poll definitions from the producers
+        run: cargo run -- poll
+
+      # A producer only ever sees its own modules, so cross-module references
+      # (an action pointing at a taurus data type) cannot be checked until the
+      # whole set is assembled. This is the only place that validation is
+      # possible, which is why it gates the release rather than each producer's
+      # own CI.
+      - name: Validate the assembled definitions
+        run: cargo run -- report
 
       - name: Generate published definitions
         run: |
@@ -59,7 +78,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/cli-')
     defaults:
       run:
-        working-directory: "./crates/cli"
+        working-directory: "./cli"
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7

@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/cli"]
+members = ["cli"]
 resolver = "3"
 
 [workspace.package]
@@ -8,7 +8,8 @@ edition = "2024"
 [workspace.dependencies]
 serde = "1.0.219"
 serde_json = "1.0.140"
-tucana = "0.0.76"
+toml = "0.9.8"
+tucana = "0.0.80"
 clap = "4.5.41"
 colored = "3.0"
 tabled = "0.21"

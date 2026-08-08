@@ -1,0 +1,136 @@
+use clap::{Parser as ClapParser, Subcommand};
+
+pub mod diagnostics;
+pub mod parser;
+pub mod reader;
+
+mod analyser;
+mod command;
+mod formatter;
+mod table;
+
+/// Top-level CLI for 'definition'
+#[derive(ClapParser)]
+#[command(name = "definition")]
+#[command(version = "1.0")]
+#[command(about = "Manage definitions, reports, and features")]
+struct Cli {
+    #[command(subcommand)]
+    command: Commands,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    /// Assemble the definitions by running the producers that own them.
+    Poll {
+        /// Optional path to the collector config.
+        #[arg(short, long)]
+        config: Option<String>,
+        /// Optional path to the assembled output directory.
+        #[arg(short, long)]
+        out: Option<String>,
+        /// Optional subset of the configured sources to poll.
+        #[clap(short = 'n', long, value_parser, num_args = 1.., value_delimiter = ' ')]
+        only: Option<Vec<String>>,
+        /// Should keep the checkouts instead of deleting them, false on default
+        #[arg(short, long, default_value_t = false)]
+        keep: bool,
+    },
+    /// Generate a general report.
+    Report {
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+    },
+    /// Generate a report for a or all module(s).
+    Module {
+        /// Optional name of the definition set.
+        #[arg(short, long)]
+        name: Option<String>,
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+    },
+    /// Look up a specific definition.
+    Search {
+        /// Required name of the definition.
+        #[arg(short, long)]
+        name: String,
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+    },
+    /// Watch for changes to and regenerate error reports.
+    Watch {
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+        /// Should ignore warnings, true on default
+        #[arg(short, long, default_value_t = false)]
+        ignore_warnings: bool,
+    },
+    Push {
+        /// Runtime Token for Sagittarius.
+        #[arg(short, long)]
+        token: String,
+        /// URL to Sagittarius.
+        #[arg(short, long)]
+        url: String,
+        /// Optional Version for all definitions
+        #[arg(short, long)]
+        version: Option<String>,
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+    },
+    Publish {
+        // Version field for all definitons
+        #[arg(short, long)]
+        version: String,
+        /// Optional path to root directory of all definitions.
+        #[arg(short, long)]
+        path: Option<String>,
+        /// Optional path to generated output directory.
+        #[arg(short, long)]
+        out: Option<String>,
+    },
+    Download {
+        #[arg(short, long)]
+        tag: Option<String>,
+        #[clap(short, long, value_parser, num_args = 1.., value_delimiter = ' ')]
+        features: Option<Vec<String>>,
+    },
+}
+
+#[tokio::main]
+async fn main() {
+    let cli = Cli::parse();
+
+    match cli.command {
+        Commands::Poll {
+            config,
+            out,
+            only,
+            keep,
+        } => command::poll::poll(config, out, only, keep),
+        Commands::Report { path } => command::report::report_errors(path),
+        Commands::Module { name, path } => command::search_module::search_module(name, path),
+        Commands::Search { name, path } => command::search::search_definition(name, path),
+        Commands::Download { tag, features } => {
+            command::download::handle_download(tag, features).await
+        }
+        Commands::Watch {
+            path,
+            ignore_warnings,
+        } => command::watch::watch_for_changes(path, !ignore_warnings).await,
+        Commands::Push {
+            token,
+            url,
+            version,
+            path,
+        } => command::push::push(token, url, version, path).await,
+        Commands::Publish { version, path, out } => {
+            command::publish::publish(version, path, out).await
+        }
+    }
+}

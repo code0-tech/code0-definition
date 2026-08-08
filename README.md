@@ -20,6 +20,25 @@ code0-cli
 ### Usage
 Stay inside the repository root when running commands against the local `definitions` folder. Most commands use `./definitions` by default.
 
+The `definitions` folder is not committed. It is assembled by `poll` from the repositories that own the definitions, so run that first — every other command reads what it produced.
+
+#### Poll
+Assembles `./definitions` by running the producers declared in `collector.toml`. Each source is cloned at its pinned ref into a scratch directory, its export command is run, the result is copied into the output tree, and the clone is deleted.
+
+Polling fails if a producer does not emit a module it declares, or emits one whose identifier does not match.
+
+-c (--config) selects a different collector config.
+-o (--out) writes somewhere other than the configured output.
+-n (--only) polls a subset of the configured sources.
+-k (--keep) keeps the checkouts for inspection instead of deleting them.
+
+```bash
+code0-cli poll
+code0-cli poll -n taurus
+code0-cli poll -n rest-action cron-action
+code0-cli poll -c /path/to/collector.toml -o /path/to/definitions
+```
+
 #### Download
 Downloads `definitions.zip` from the Code0 definition GitHub releases and extracts it into `./definitions`.
 

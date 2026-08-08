@@ -1,0 +1,68 @@
+# Sources the `poll` command assembles the definition tree from.
+#
+# Definitions are no longer files at rest in this repository. They live inside
+# the producers that implement them -- taurus registers them through
+# `inventory`, hercules actions through `Action` -- and are only recoverable by
+# running those producers. `code0-cli poll` clones each source at its pinned
+# ref, runs its export command into a scratch directory, copies the result
+# here, and deletes the clone.
+
+# Where the assembled tree is written. Every other command defaults to this
+# same path, so `poll` followed by `report` / `publish` needs no extra flags.
+out = "./definitions"
+
+# `layout` describes where a producer's export command writes:
+#   "module" -- writes one module directly into the directory it is given, so
+#               it is handed `<out>/<module>`. Requires exactly one entry in
+#               `modules`. This is what `hercules::Action::export` does.
+#   "tree"   -- writes one directory per module into the directory it is
+#               given, so it is handed `<out>`. This is what a taurus export
+#               built on `build_modules()` does.
+
+[[source]]
+name = "taurus"
+repo = "https://github.com/code0-tech/taurus"
+ref = "main"
+# Taurus exports through a taurus-core example rather than a subcommand on the
+# taurus binary, so there is no server to avoid starting here.
+export = [
+    "cargo",
+    "run",
+    "--release",
+    "--quiet",
+    "-p",
+    "taurus-core",
+    "--example",
+    "export_definitions",
+    "--",
+]
+layout = "tree"
+modules = [
+    "taurus-boolean",
+    "taurus-control",
+    "taurus-date",
+    "taurus-file",
+    "taurus-http",
+    "taurus-list",
+    "taurus-number",
+    "taurus-object",
+    "taurus-text",
+]
+
+[[source]]
+name = "rest-action"
+repo = "https://github.com/code0-tech/centaurus"
+ref = "main"
+workdir = "actions/rest-action"
+export = ["cargo", "run", "--release", "--quiet", "--", "export"]
+layout = "module"
+modules = ["rest-action"]
+
+[[source]]
+name = "cron-action"
+repo = "https://github.com/code0-tech/centaurus"
+ref = "main"
+workdir = "actions/cron-action"
+export = ["cargo", "run", "--release", "--quiet", "--", "export"]
+layout = "module"
+modules = ["cron-action"]
