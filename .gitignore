@@ -9,3 +9,6 @@ reader/**/*.js
 *.d.ts
 **/dist
 /out
+# Assembled by `code0-cli poll`, never hand-maintained.
+/definitions
+/definitions.zip

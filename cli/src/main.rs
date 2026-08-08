@@ -21,6 +21,21 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
+    /// Assemble the definitions by running the producers that own them.
+    Poll {
+        /// Optional path to the collector config.
+        #[arg(short, long)]
+        config: Option<String>,
+        /// Optional path to the assembled output directory.
+        #[arg(short, long)]
+        out: Option<String>,
+        /// Optional subset of the configured sources to poll.
+        #[clap(short = 'n', long, value_parser, num_args = 1.., value_delimiter = ' ')]
+        only: Option<Vec<String>>,
+        /// Should keep the checkouts instead of deleting them, false on default
+        #[arg(short, long, default_value_t = false)]
+        keep: bool,
+    },
     /// Generate a general report.
     Report {
         /// Optional path to root directory of all definitions.
@@ -92,6 +107,12 @@ async fn main() {
     let cli = Cli::parse();
 
     match cli.command {
+        Commands::Poll {
+            config,
+            out,
+            only,
+            keep,
+        } => command::poll::poll(config, out, only, keep),
         Commands::Report { path } => command::report::report_errors(path),
         Commands::Module { name, path } => command::search_module::search_module(name, path),
         Commands::Search { name, path } => command::search::search_definition(name, path),
