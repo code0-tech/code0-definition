@@ -39,6 +39,7 @@ export = [
 layout = "tree"
 modules = [
     "taurus-boolean",
+    "taurus-color",
     "taurus-control",
     "taurus-date",
     "taurus-file",
