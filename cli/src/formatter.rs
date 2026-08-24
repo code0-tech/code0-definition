@@ -30,6 +30,10 @@ pub fn error_without_trace(string: String) {
     println!("\n{}: {}", "error".red(), string)
 }
 
+pub fn warn_without_trace(string: String) {
+    println!("\n{}: {}", "warning".yellow(), string)
+}
+
 pub fn error_highlight(highlight: String, string: String) {
     println!("{} {}", highlight.red(), string);
 }
