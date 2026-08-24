@@ -18,6 +18,10 @@ out = "./definitions"
 #   "tree"   -- writes one directory per module into the directory it is
 #               given, so it is handed `<out>`. This is what a taurus export
 #               built on `build_modules()` does.
+#
+# `modules` lists the modules a source is expected to produce. Polling warns
+# and skips one that is missing rather than failing, so a module still under
+# development doesn't need to be exported every time.
 
 [[source]]
 name = "taurus"

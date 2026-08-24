@@ -21,7 +21,7 @@ use std::sync::Mutex;
 use serde::Deserialize;
 use tabled::Tabled;
 
-use crate::formatter::{error_without_trace, info, success, success_table};
+use crate::formatter::{error_without_trace, info, success, success_table, warn_without_trace};
 
 const DEFAULT_CONFIG: &str = "./collector.toml";
 
@@ -52,9 +52,9 @@ pub struct Source {
     pub env: BTreeMap<String, String>,
     #[serde(default)]
     pub layout: Layout,
-    /// Modules this source is expected to produce. Polling fails if any of
-    /// them is missing afterwards, so a producer that silently stops emitting
-    /// a module cannot slip into a release.
+    /// Modules this source is expected to produce. Polling warns, rather
+    /// than failing, if one of them is missing afterwards -- useful while a
+    /// module is still under development and not always exported yet.
     pub modules: Vec<String>,
 }
 
@@ -169,10 +169,11 @@ pub fn poll(
         for module in &source.modules {
             let module_dir = out_dir.join(module);
             if !module_dir.is_dir() {
-                fail(format!(
-                    "`{}` finished without producing the module `{}` it declares in {}.",
+                warn_without_trace(format!(
+                    "`{}` finished without producing the module `{}` it declares in {}. Skipping it.",
                     source.name, module, config_path
                 ));
+                continue;
             }
 
             verify_module(&module_dir, &source.name, module);
