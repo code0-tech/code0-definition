@@ -245,7 +245,26 @@ fn write_modules(modules: &[Module], out_dir_path: &str) {
     }
 }
 
-pub async fn publish(version: String, in_path: Option<String>, out_path: Option<String>) {
+fn write_modules_compact(modules: &[Module], out_dir_path: &str) {
+    let out_dir_path = PathBuf::from(out_dir_path);
+
+    if out_dir_path.exists() {
+        fs::remove_dir_all(&out_dir_path).expect("Error deleting output folder");
+    }
+    fs::create_dir_all(&out_dir_path).expect("Error creating output folder");
+
+    for module in modules {
+        let module_path = out_dir_path.join(format!("{}.json", safe_file_name(&module.identifier)));
+        write_json_file(&module_path, module);
+    }
+}
+
+pub async fn publish(
+    version: String,
+    in_path: Option<String>,
+    out_path: Option<String>,
+    compact: bool,
+) {
     let in_dir_path = in_path.unwrap_or_else(|| "./definitions".to_string());
     let out_dir_path = out_path.unwrap_or_else(|| "./out".to_string());
 
@@ -266,5 +285,9 @@ pub async fn publish(version: String, in_path: Option<String>, out_path: Option<
         .map(|x| configure_module(&x, version.clone()))
         .collect();
 
-    write_modules(&modules, out_dir_path.as_str());
+    if compact {
+        write_modules_compact(&modules, out_dir_path.as_str());
+    } else {
+        write_modules(&modules, out_dir_path.as_str());
+    }
 }
