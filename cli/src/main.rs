@@ -93,6 +93,11 @@ enum Commands {
         /// Optional path to generated output directory.
         #[arg(short, long)]
         out: Option<String>,
+        /// Instead of writing one file per definition, write a single
+        /// compact `<module>.json` file per module containing the full
+        /// Module protobuf message.
+        #[arg(short, long, default_value_t = false)]
+        compact: bool,
     },
     Download {
         #[arg(short, long)]
@@ -129,8 +134,11 @@ async fn main() {
             version,
             path,
         } => command::push::push(token, url, version, path).await,
-        Commands::Publish { version, path, out } => {
-            command::publish::publish(version, path, out).await
-        }
+        Commands::Publish {
+            version,
+            path,
+            out,
+            compact,
+        } => command::publish::publish(version, path, out, compact).await,
     }
 }

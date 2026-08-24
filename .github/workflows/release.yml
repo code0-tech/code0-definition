@@ -53,7 +53,7 @@ jobs:
         run: |
           VERSION="${{ github.ref_name }}"
           VERSION="${VERSION#*-}"   # removes everything up to the first dash
-          cargo run -- publish --version "$VERSION" --path definitions --out out
+          cargo run -- publish --version "$VERSION" --path definitions --out out --compact
           rm -rf definitions
           mv out definitions
 
