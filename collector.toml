@@ -21,7 +21,9 @@ out = "./definitions"
 #
 # `modules` lists the modules a source is expected to produce. Polling warns
 # and skips one that is missing rather than failing, so a module still under
-# development doesn't need to be exported every time.
+# development doesn't need to be exported every time. It does the same for
+# the reverse case: a module the export produced but that isn't listed here
+# is warned about and discarded rather than failing the release.
 
 [[source]]
 name = "taurus"
@@ -40,6 +42,9 @@ export = [
     "export_definitions",
     "--",
 ]
+# Without this, taurus defaults to development mode and also exports its
+# dev-only modules (e.g. taurus-dev), which don't belong in a release.
+env = { ENVIRONMENT = "production" }
 layout = "tree"
 modules = [
     "taurus-boolean",
