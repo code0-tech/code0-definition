@@ -213,7 +213,7 @@ async fn convert_bytes_to_folder(bytes: Bytes, zip_path: &str) {
             None => continue,
         };
 
-        if file.name().ends_with('/') {
+        if file.is_dir() {
             if let Err(e) = fs::create_dir_all(&out_path) {
                 panic!("Failed to create directory {}: {:?}", out_path.display(), e);
             }
